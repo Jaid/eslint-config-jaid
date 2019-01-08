@@ -1,0 +1,33 @@
+react/jsx-boolean-value:
+  - WARN
+  - never
+react/jsx-child-element-spacing: WARN
+react/jsx-curly-brace-presence: WARN
+react/jsx-curly-spacing: WARN
+react/jsx-equals-spacing: WARN
+react/jsx-handler-names: WARN
+react/jsx-indent:
+  - WARN
+  - 2
+react/jsx-indent-props:
+  - WARN
+  - 2
+react/jsx-key: WARN
+react/jsx-max-props-per-line:
+  - WARN
+  - maximum: 1
+    when: multiline
+react/jsx-no-duplicate-props: WARN
+react/jsx-no-target-blank: ERROR
+react/jsx-no-undef:
+  - WARN
+  - allowGlobals: true
+react/jsx-pascal-case: WARN
+react/jsx-tag-spacing:
+  - WARN
+  - afterOpening: never
+    beforeClosing: never
+    beforeSelfClosing: never
+    closingSlash: never
+react/jsx-uses-react: ERROR
+react/jsx-uses-vars: ERROR

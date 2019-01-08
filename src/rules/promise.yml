@@ -1,0 +1,8 @@
+promise/avoid-new: WARN
+promise/catch-or-return: ERROR
+promise/no-callback-in-promise: WARN
+promise/no-promise-in-callback: WARN
+promise/no-return-in-finally: WARN
+promise/no-return-wrap: WARN
+promise/param-names: ERROR
+promise/prefer-await-to-callbacks: WARN

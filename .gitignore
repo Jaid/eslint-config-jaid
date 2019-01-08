@@ -1,0 +1,14 @@
+# NodeJS / npm
+/node_modules/
+/package-lock.json
+/shrinkwrap.yaml
+
+# Yarn
+/yarn-error.log
+
+# Build folder
+/build/
+
+# Text editors
+/.idea
+# /.vscode # This is allowed, I'm using it

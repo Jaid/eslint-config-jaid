@@ -1,0 +1,35 @@
+react/button-has-type: WARN
+react/default-props-match-prop-types: WARN
+react/destructuring-assignment:
+  - WARN
+  - never
+react/forbid-dom-props:
+  - WARN
+  - forbid:
+      - style
+react/forbid-foreign-prop-types: WARN
+react/no-access-state-in-setstate: WARN
+react/no-children-prop: WARN
+react/no-danger-with-children: ERROR
+react/no-deprecated: WARN
+react/no-did-mount-set-state: WARN
+react/no-did-update-set-state: WARN
+react/no-direct-mutation-state: ERROR
+react/no-find-dom-node: WARN
+react/no-is-mounted: WARN
+react/no-redundant-should-component-update: WARN
+react/no-render-return-value: WARN
+react/no-string-refs: WARN
+react/no-this-in-sfc: WARN
+react/no-typos: WARN
+react/no-unknown-property: WARN
+react/no-unused-prop-types: WARN
+react/no-will-update-set-state: WARN
+react/prefer-es6-class: WARN
+react/prop-types: WARN
+react/react-in-jsx-scope: WARN
+react/require-render-return: WARN
+react/self-closing-comp: WARN
+react/sort-comp: WARN
+react/style-prop-object: WARN
+react/void-dom-elements-no-children: WARN
