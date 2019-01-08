@@ -50,7 +50,7 @@ linebreak-style:
   - unix
 lines-around-comment: WARN
 lines-between-class-members: WARN
-multiline-comment-style: 'OFF'
+multiline-comment-style: OFF
 new-cap: WARN
 no-array-constructor: WARN
 no-multi-assign: WARN
@@ -80,7 +80,7 @@ padded-blocks:
   - blocks: never
     classes: always
     switches: never
-padding-line-between-statements: 'OFF'
+padding-line-between-statements: OFF
 quote-props:
   - WARN
   - as-needed
