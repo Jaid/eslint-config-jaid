@@ -12,7 +12,7 @@ import pkg from "../package.json"
 const presets = fs.readdirSync(path.join(__dirname, "presets"))
 
 for (const preset of presets) {
-  const {includedDependencies, rules, default: config, pkg: presetPkg} = require(`./presets/${preset}`)
+  const {includedDependencies, rules, config, pkg: presetPkg} = require(`./presets/${preset}`).default
   const buildPath = path.resolve(__dirname, "..", "build", preset)
   fs.ensureDirSync(buildPath)
   empSync(buildPath)

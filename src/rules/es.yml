@@ -1,9 +1,7 @@
 array-callback-return: WARN
 callback-return: WARN
 constructor-super: ERROR
-eqeqeq:
-  - ERROR
-  - smart
+eqeqeq: [ERROR, smart]
 getter-return: WARN
 no-alert: WARN
 no-buffer-constructor: ERROR
@@ -79,9 +77,7 @@ prefer-template: WARN
 radix: WARN
 require-await: WARN
 require-yield: WARN
-semi:
-  - WARN
-  - never
+semi: [WARN, never]
 use-isnan: ERROR
 valid-typeof: WARN
 yoda: ERROR

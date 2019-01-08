@@ -2,52 +2,32 @@ array-bracket-newline:
   - WARN
   - multiline: true
 array-bracket-spacing: WARN
-array-element-newline:
-  - WARN
-  - consistent
-arrow-body-style:
-  - WARN
-  - as-needed
-arrow-parens:
-  - WARN
-  - as-needed
+array-element-newline: [WARN, consistent]
+arrow-body-style: [WARN, as-needed]
+arrow-parens: [WARN, as-needed]
 arrow-spacing: WARN
 block-spacing: WARN
 brace-style: WARN
-comma-dangle:
-  - WARN
-  - never
+comma-dangle: [WARN, never]
 comma-spacing: WARN
 comma-style: WARN
 computed-property-spacing: WARN
-curly:
-  - WARN
-  - all
-dot-location:
-  - WARN
-  - property
+curly: [WARN, all]
+dot-location: [WARN, property]
 dot-notation: WARN
-eol-last:
-  - WARN
-  - never
+eol-last: [WARN, never]
 func-call-spacing: WARN
 func-style:
   - WARN
   - expression
   - allowArrowFunctions: true
-function-paren-newline:
-  - WARN
-  - never
+function-paren-newline: [WARN, never]
 implicit-arrow-linebreak: WARN
-indent:
-  - WARN
-  - 2
+indent: [WARN, 2]
 jsx-quotes: WARN
 key-spacing: WARN
 keyword-spacing: WARN
-linebreak-style:
-  - ERROR
-  - unix
+linebreak-style: [ERROR, unix]
 lines-around-comment: WARN
 lines-between-class-members: WARN
 multiline-comment-style: OFF
@@ -60,6 +40,17 @@ no-trailing-spaces: WARN
 no-underscore-dangle: WARN
 no-unneeded-ternary: WARN
 no-whitespace-before-property: WARN
+semi-style: WARN
+no-with: ERROR
+no-extend-native: WARN
+no-new-object: ERROR
+no-tabs: WARN
+consistent-return: WARN
+no-eq-null: WARN
+prefer-const: WARN
+no-lonely-if: WARN
+no-floating-decimal: WARN
+no-invalid-this: ERROR
 object-curly-newline:
   - WARN
   - ObjectExpression:
@@ -69,30 +60,19 @@ object-curly-newline:
     ObjectPattern: never
 object-curly-spacing: WARN
 object-property-newline: WARN
-one-var:
-  - WARN
-  - never
-operator-linebreak:
-  - WARN
-  - before
+one-var: [WARN, never]
+operator-linebreak: [WARN, before]
 padded-blocks:
   - WARN
   - blocks: never
     classes: always
     switches: never
 padding-line-between-statements: OFF
-quote-props:
-  - WARN
-  - as-needed
+quote-props: [WARN, as-needed]
 quotes: WARN
 rest-spread-spacing: WARN
-sort-imports:
-  - WARN
-  - ignoreCase: true
 space-before-blocks: WARN
-space-before-function-paren:
-  - WARN
-  - never
+space-before-function-paren: [WARN, never]
 space-in-parens: WARN
 space-infix-ops: WARN
 spaced-comment: WARN

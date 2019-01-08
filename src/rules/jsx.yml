@@ -1,17 +1,11 @@
-react/jsx-boolean-value:
-  - WARN
-  - never
+react/jsx-boolean-value: [WARN, never]
 react/jsx-child-element-spacing: WARN
 react/jsx-curly-brace-presence: WARN
 react/jsx-curly-spacing: WARN
 react/jsx-equals-spacing: WARN
 react/jsx-handler-names: WARN
-react/jsx-indent:
-  - WARN
-  - 2
-react/jsx-indent-props:
-  - WARN
-  - 2
+react/jsx-indent: [WARN, 2]
+react/jsx-indent-props: [WARN, 2]
 react/jsx-key: WARN
 react/jsx-max-props-per-line:
   - WARN

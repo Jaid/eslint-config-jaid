@@ -1,0 +1,22 @@
+import/order:
+  - WARN
+  - groups:
+    - builtin
+    - external
+    - [internal, parent]
+    - [index, sibling]
+    newlines-between: always
+import/newline-after-import: WARN
+import/first: WARN
+import/no-duplicates: WARN
+import/extensions:
+  - WARN
+  - always
+  - js: never
+    jsx: never
+    wasm: never
+import/no-mutable-exports: WARN
+import/no-deprecated: WARN
+import/no-useless-path-segments: WARN
+import/no-self-import: WARN
+import/no-absolute-path: WARN

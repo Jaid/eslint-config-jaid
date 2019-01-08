@@ -16,7 +16,7 @@ Execute this:
 
 ```sh
 npm install --save-dev eslint
-npx install-peerdeps --dev --yarn eslint-config-jaid
+npx install-peerdeps --dev eslint-config-jaid
 ```
 
 And add this to your `package.json`:

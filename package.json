@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-jaid",
   "private": true,
-  "version": "1.4.0",
+  "version": "1.5.0",
   "author": {
     "name": "Jaid",
     "url": "https://github.com/jaid",
@@ -13,14 +13,14 @@
   },
   "scripts": {
     "build": "cross-env babel-node ./src/build.js",
-    "release": "npm run build && yarn workspaces run publish --non-interactive"
+    "release": "npm run build && yarn workspaces run publish --non-interactive",
+    "unused-rules": "npm run build && cross-env eslint-find-rules --unused ./build/react/index.json"
   },
   "peerDependencies": {
     "eslint": "^5.12.0"
   },
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^5.12.0",
     "@babel/core": "^7.2.2",
     "@babel/node": "^7.2.2",
     "@babel/plugin-proposal-pipeline-operator": "^7.2.0",
@@ -28,6 +28,8 @@
     "chalk": "^2.4.2",
     "cross-env": "^5.2.0",
     "emp": "^2.0.0",
+    "eslint": "^5.12.0",
+    "eslint-find-rules": "^3.3.1",
     "filter-obj": "^1.1.0",
     "fs-extra": "^7.0.1",
     "js-yaml": "^3.12.1",
@@ -37,9 +39,11 @@
   },
   "dependencies": {
     "babel-eslint": "^10.0.1",
+    "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-optimize-regex": "^1.1.6",
     "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-react": "^7.12.3"
+    "eslint-plugin-react": "^7.12.3",
+    "eslint-plugin-unicorn": "^6.0.1"
   },
   "workspaces": [
     "build/*"
