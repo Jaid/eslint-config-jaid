@@ -32,10 +32,7 @@ for (const preset of presets) {
     ...pick(pkg, ["license", "version", "author", "repository", "peerDependencies"]),
     ...presetPkg,
     dependencies,
-    main: "index.json",
-    // scripts: {
-    //   release: `yarn publish --non-interactive --new-version=${pkg.version}`
-    // }
+    main: "index.json"
   }
   fs.outputJsonSync(path.join(buildPath, "package.json"), generatedPkg)
   fs.copyFileSync(path.join(__dirname, "..", "license.txt"), path.join(buildPath, "license.txt"))
