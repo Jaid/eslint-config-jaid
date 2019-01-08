@@ -15,14 +15,15 @@ Well, fine.
 Execute this:
 
 ```sh
-npx install-peerdeps --dev eslint-config-jaid
+npm install --save-dev eslint
+npx install-peerdeps --dev --yarn eslint-config-jaid
 ```
 
 And add this to your `package.json`:
 
 ```json
 {
-  "eslint": {
+  "eslintConfig": {
     "extends": "jaid"
   }
 }
