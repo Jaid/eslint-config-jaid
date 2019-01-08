@@ -20,8 +20,8 @@ export default {
     "react"
   ],
   config: {
-    parser: base.parser,
-    parserOptions: base.parserOptions,
+    parser: base.config.parser,
+    parserOptions: base.config.parserOptions,
     plugins: [
       ...base.config.plugins,
       "react",
