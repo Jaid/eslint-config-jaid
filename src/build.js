@@ -26,16 +26,16 @@ for (const preset of presets) {
     const loadedRules = jsYaml.safeLoad(minifiedYamlString)
     Object.assign(appliedRules, loadedRules)
   }
-  fs.outputJsonSync(path.join(buildPath, "index.json"), {config, rules: appliedRules})
+  fs.outputJsonSync(path.join(buildPath, "index.json"), {...config, rules: appliedRules})
   const dependencies = filterObj(pkg.dependencies, key => includedDependencies.includes(key))
   const generatedPkg = {
     ...pick(pkg, ["license", "version", "author", "repository", "peerDependencies"]),
     ...presetPkg,
     dependencies,
     main: "index.json",
-    scripts: {
-      release: `yarn publish --non-interactive --new-version=${pkg.version}`
-    }
+    // scripts: {
+    //   release: `yarn publish --non-interactive --new-version=${pkg.version}`
+    // }
   }
   fs.outputJsonSync(path.join(buildPath, "package.json"), generatedPkg)
   fs.copyFileSync(path.join(__dirname, "..", "license.txt"), path.join(buildPath, "license.txt"))

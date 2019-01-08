@@ -13,7 +13,7 @@
   },
   "scripts": {
     "build": "cross-env babel-node ./src/build.js",
-    "release": "npm run build && yarn workspaces run release"
+    "release": "npm run build && yarn workspaces run publish --non-interactive"
   },
   "peerDependencies": {
     "eslint": "^5.12.0"
