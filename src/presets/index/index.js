@@ -40,6 +40,7 @@ export default {
     plugins: [
       "promise",
       "optimize-regex",
+      "unicorn"
       "import"
     ]
   }
