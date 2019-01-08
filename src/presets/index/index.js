@@ -8,7 +8,8 @@ export const pkg = {
     "formatting",
     "lint",
     "style-guide",
-    "style"
+    "style",
+    "jaid"
   ]
 }
 
@@ -31,5 +32,8 @@ export default {
     ecmaVersion: 10,
     sourceType: "module"
   },
-  plugins: ["promise", "optimize-regex"]
+  plugins: [
+    "promise",
+    "optimize-regex"
+  ]
 }

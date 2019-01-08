@@ -10,7 +10,8 @@ export const pkg = {
     "style-guide",
     "style",
     "react",
-    "jsx"
+    "jsx",
+    "jaid"
   ]
 }
 
@@ -36,7 +37,11 @@ export default {
     ecmaVersion: 10,
     sourceType: "module"
   },
-  plugins: ["promise", "optimize-regex"],
+  plugins: [
+    "promise",
+    "optimize-regex",
+    "react"
+  ],
   settings: {
     react: {
       version: "detect"

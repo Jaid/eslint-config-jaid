@@ -86,6 +86,9 @@ quote-props:
   - as-needed
 quotes: WARN
 rest-spread-spacing: WARN
+sort-imports:
+  - WARN
+  - ignoreCase: true
 space-before-blocks: WARN
 space-before-function-paren:
   - WARN
