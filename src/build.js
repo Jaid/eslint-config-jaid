@@ -34,7 +34,7 @@ for (const preset of presets) {
     dependencies,
     main: "index.json",
     scripts: {
-      release: "yarn publish --non-interactive"
+      release: `yarn publish --non-interactive --new-version=${pkg.version}`
     }
   }
   fs.outputJsonSync(path.join(buildPath, "package.json"), generatedPkg)
