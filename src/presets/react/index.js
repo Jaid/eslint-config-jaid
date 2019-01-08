@@ -11,10 +11,7 @@ export const pkg = {
     "style",
     "react",
     "jsx"
-  ],
-  scripts: {
-    release: "npm publish"
-  }
+  ]
 }
 
 export const includedDependencies = [

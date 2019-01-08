@@ -9,10 +9,7 @@ export const pkg = {
     "lint",
     "style-guide",
     "style"
-  ],
-  scripts: {
-    release: "npm publish"
-  }
+  ]
 }
 
 export const includedDependencies = [

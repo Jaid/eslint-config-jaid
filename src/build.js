@@ -29,12 +29,16 @@ for (const preset of presets) {
   fs.outputJsonSync(path.join(buildPath, "index.json"), {config, rules: appliedRules})
   const dependencies = filterObj(pkg.dependencies, key => includedDependencies.includes(key))
   const generatedPkg = {
-    ...pick(pkg, ["license", "version", "author", "repository"]),
+    ...pick(pkg, ["license", "version", "author", "repository", "peerDependencies"]),
     ...presetPkg,
     dependencies,
-    main: "index.json"
+    main: "index.json",
+    scripts: {
+      release: "yarn publish --non-interactive"
+    }
   }
   fs.outputJsonSync(path.join(buildPath, "package.json"), generatedPkg)
   fs.copyFileSync(path.join(__dirname, "..", "license.txt"), path.join(buildPath, "license.txt"))
-  console.log(`${chalk.green(presetPkg.name || preset)} ${prettyBytes(countSizeSync(buildPath))}`)
+  fs.copyFileSync(path.join(__dirname, "..", "readme.md"), path.join(buildPath, "readme.md"))
+  console.log(`${chalk.green(presetPkg.name)} ${prettyBytes(countSizeSync(buildPath))}`)
 }
