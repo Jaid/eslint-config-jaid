@@ -35,7 +35,8 @@
     "js-yaml": "^3.12.1",
     "list-dir-content-size": "^0.0.5",
     "lodash": "^4.17.11",
-    "pretty-bytes": "^5.1.0"
+    "pretty-bytes": "^5.1.0",
+    "sort-keys": "^2.0.0"
   },
   "dependencies": {
     "babel-eslint": "^10.0.1",

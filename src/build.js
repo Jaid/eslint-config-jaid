@@ -8,6 +8,7 @@ import chalk from "chalk"
 import {countSizeSync} from "list-dir-content-size"
 import prettyBytes from "pretty-bytes"
 import pkg from "../package.json"
+import sortKeys from "sort-keys"
 
 const presets = fs.readdirSync(path.join(__dirname, "presets"))
 
@@ -26,14 +27,18 @@ for (const preset of presets) {
     const loadedRules = jsYaml.safeLoad(minifiedYamlString)
     Object.assign(appliedRules, loadedRules)
   }
-  fs.outputJsonSync(path.join(buildPath, "index.json"), {...config, rules: appliedRules})
+  const eslintConfig = {
+    ...config,
+    rules: appliedRules |> sortKeys
+  } |> sortKeys
+  fs.outputJsonSync(path.join(buildPath, "index.json"), eslintConfig)
   const dependencies = filterObj(pkg.dependencies, key => includedDependencies.includes(key))
   const generatedPkg = {
     ...pick(pkg, ["license", "version", "author", "repository", "peerDependencies"]),
     ...presetPkg,
-    dependencies,
+    dependencies: dependencies |> sortKeys,
     main: "index.json"
-  }
+  } |> sortKeys
   fs.outputJsonSync(path.join(buildPath, "package.json"), generatedPkg)
   fs.copyFileSync(path.join(__dirname, "..", "license.txt"), path.join(buildPath, "license.txt"))
   fs.copyFileSync(path.join(__dirname, "..", "readme.md"), path.join(buildPath, "readme.md"))
