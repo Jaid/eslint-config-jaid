@@ -75,7 +75,11 @@ quote-props: [WARN, as-needed]
 quotes: WARN
 rest-spread-spacing: WARN
 space-before-blocks: WARN
-space-before-function-paren: [WARN, never]
+space-before-function-paren:
+  - WARN
+  - anonymous: always
+    named: never
+    asyncArrow: always
 space-in-parens: WARN
 space-infix-ops: WARN
 spaced-comment: WARN
