@@ -37,7 +37,10 @@ no-multi-assign: WARN
 no-multiple-empty-lines: ERROR
 no-nested-ternary: WARN
 no-trailing-spaces: WARN
-no-underscore-dangle: WARN
+no-underscore-dangle:
+  - WARN
+  - allow:
+    - __REDUX_DEVTOOLS_EXTENSION_COMPOSE__ # See https://github.com/zalmoxisus/redux-devtools-extension
 no-unneeded-ternary: WARN
 no-whitespace-before-property: WARN
 semi-style: WARN

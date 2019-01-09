@@ -5,6 +5,7 @@ export default {
     keywords: [
       "eslint-preset",
       "eslint",
+      "eslint-config",
       "format",
       "formatting",
       "lint",
