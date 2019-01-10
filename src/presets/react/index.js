@@ -19,6 +19,7 @@ export default {
     "jsx",
     "react"
   ],
+  extend: base.extend,
   config: {
     parser: base.config.parser,
     parserOptions: base.config.parserOptions,

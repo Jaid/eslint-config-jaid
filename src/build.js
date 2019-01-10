@@ -13,7 +13,7 @@ import sortKeys from "sort-keys"
 const presets = fs.readdirSync(path.join(__dirname, "presets"))
 
 for (const preset of presets) {
-  const {includedDependencies, rules, config, pkg: presetPkg} = require(`./presets/${preset}`).default
+  const {includedDependencies, rules, config, extend, pkg: presetPkg} = require(`./presets/${preset}`).default
   const buildPath = path.resolve(__dirname, "..", "build", preset)
   fs.ensureDirSync(buildPath)
   empSync(buildPath)
@@ -29,6 +29,7 @@ for (const preset of presets) {
   }
   const eslintConfig = {
     ...config,
+    extends: extend,
     rules: appliedRules |> sortKeys
   } |> sortKeys
   fs.outputJsonSync(path.join(buildPath, "index.json"), eslintConfig)

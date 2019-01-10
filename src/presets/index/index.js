@@ -14,7 +14,10 @@ export default {
       "jaid",
       "promise",
       "import",
-      "unicorn"
+      "unicorn",
+      "lodash",
+      "no-lodash",
+      "underscore"
     ]
   },
   includedDependencies: [
@@ -22,7 +25,8 @@ export default {
     "eslint-plugin-optimize-regex",
     "eslint-plugin-promise",
     "eslint-plugin-unicorn",
-    "eslint-plugin-import"
+    "eslint-plugin-import",
+    "eslint-plugin-you-dont-need-lodash-underscore"
   ],
   rules: [
     "es",
@@ -31,6 +35,9 @@ export default {
     "regex",
     "unicorn",
     "import"
+  ],
+  extend: [
+    "you-dont-need-lodash-underscore:all-warn"
   ],
   config: {
     parser: "babel-eslint",
