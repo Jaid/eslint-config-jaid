@@ -13,4 +13,4 @@ unicorn/new-for-builtins: WARN
 unicorn/prefer-spread: WARN
 unicorn/error-message: WARN
 unicorn/prefer-add-event-listener: WARN
-unicorn/prefer-exponentiation-operator: ERROR
+unicorn/prefer-exponentiation-operator: WARN

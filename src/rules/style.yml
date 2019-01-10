@@ -27,14 +27,14 @@ indent: [WARN, 2]
 jsx-quotes: WARN
 key-spacing: WARN
 keyword-spacing: WARN
-linebreak-style: [ERROR, unix]
+linebreak-style: [WARN, unix]
 lines-around-comment: WARN
 lines-between-class-members: WARN
 multiline-comment-style: OFF
 new-cap: WARN
 no-array-constructor: WARN
 no-multi-assign: WARN
-no-multiple-empty-lines: ERROR
+no-multiple-empty-lines: WARN
 no-nested-ternary: WARN
 no-trailing-spaces: WARN
 no-underscore-dangle:
@@ -44,16 +44,16 @@ no-underscore-dangle:
 no-unneeded-ternary: WARN
 no-whitespace-before-property: WARN
 semi-style: WARN
-no-with: ERROR
+no-with: WARN
 no-extend-native: WARN
-no-new-object: ERROR
+no-new-object: WARN
 no-tabs: WARN
 consistent-return: WARN
 no-eq-null: WARN
 prefer-const: WARN
 no-lonely-if: WARN
 no-floating-decimal: WARN
-no-invalid-this: ERROR
+no-invalid-this: WARN
 object-curly-newline:
   - WARN
   - ObjectExpression:
@@ -85,5 +85,5 @@ space-infix-ops: WARN
 spaced-comment: WARN
 switch-colon-spacing: WARN
 template-curly-spacing: WARN
-template-tag-spacing: ERROR
+template-tag-spacing: WARN
 yield-star-spacing: WARN

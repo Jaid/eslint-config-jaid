@@ -10,11 +10,11 @@ react/forbid-dom-props:
 react/forbid-foreign-prop-types: WARN
 react/no-access-state-in-setstate: WARN
 react/no-children-prop: WARN
-react/no-danger-with-children: ERROR
+react/no-danger-with-children: WARN
 react/no-deprecated: WARN
 react/no-did-mount-set-state: WARN
 react/no-did-update-set-state: WARN
-react/no-direct-mutation-state: ERROR
+react/no-direct-mutation-state: WARN
 react/no-find-dom-node: WARN
 react/no-is-mounted: WARN
 react/no-redundant-should-component-update: WARN
