@@ -8,7 +8,7 @@ arrow-parens: [WARN, as-needed]
 arrow-spacing: WARN
 block-spacing: WARN
 brace-style: WARN
-comma-dangle: [WARN, never]
+comma-dangle: [WARN, always-multiline]
 comma-spacing: WARN
 comma-style: WARN
 computed-property-spacing: WARN
