@@ -37,7 +37,7 @@ export default {
     "import"
   ],
   extend: [
-    "you-dont-need-lodash-underscore:all-warn"
+    "plugin:you-dont-need-lodash-underscore/all-warn"
   ],
   config: {
     parser: "babel-eslint",
