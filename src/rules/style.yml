@@ -54,7 +54,6 @@ no-with: WARN
 no-extend-native: WARN
 no-new-object: WARN
 no-tabs: WARN
-consistent-return: WARN
 no-eq-null: WARN
 prefer-const: WARN
 no-lonely-if: WARN
