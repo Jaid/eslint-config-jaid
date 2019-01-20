@@ -1,14 +1,26 @@
-# NodeJS / npm
+# dotenv
+.env
+
+# Node packages
 /node_modules/
-/package-lock.json
-/shrinkwrap.yaml
 
 # Yarn
+/yarn.lock
 /yarn-error.log
 
-# Build folder
-/build/
+# npm
+#/package-lock.json
+/npm-debug.log
+/npm-debug.log.*
 
-# Text editors
-/.idea
-# /.vscode # This is allowed, I'm using it
+# pnpm
+/shrinkwrap.yaml
+/pnpm-debug.log
+
+# Generated or temporary content
+/build/
+/dist/
+
+# IDEs
+/.vscode/
+/.idea/

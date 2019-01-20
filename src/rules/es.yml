@@ -75,7 +75,6 @@ prefer-promise-reject-errors: WARN
 prefer-spread: WARN
 prefer-template: WARN
 radix: WARN
-require-await: WARN
 require-yield: WARN
 semi: [WARN, never]
 use-isnan: WARN
