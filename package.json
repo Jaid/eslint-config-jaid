@@ -4,7 +4,7 @@
   "version": "1.10.0",
   "scripts": {
     "build": "cross-env babel-node ./src/build.js",
-    "release": "npm run build && yarn workspaces run publish --non-interactive",
+    "release": "npm run build && foreach -g \"build/*\" -x \"npm publish build/#{base}\"",
     "unused-rules": "npm run build && cross-env eslint-find-rules --unused ./build/react/index.json"
   },
   "peerDependencies": {
@@ -31,6 +31,7 @@
     "eslint-config-jaid": "^1.9.0",
     "eslint-find-rules": "^3.3.1",
     "filter-obj": "^1.1.0",
+    "foreach-cli": "^1.8.1",
     "fs-extra": "^7.0.1",
     "js-yaml": "^3.12.1",
     "list-dir-content-size": "^0.0.5",
@@ -47,8 +48,5 @@
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-unicorn": "^7.0.0",
     "eslint-plugin-you-dont-need-lodash-underscore": "^6.4.0"
-  },
-  "workspaces": [
-    "build/*"
-  ]
+  }
 }
