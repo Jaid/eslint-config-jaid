@@ -1,24 +1,7 @@
 export default {
-  pkg: {
+  publishimoConfig: {
     name: "eslint-config-jaid",
-    description: "Personal ESLint preset. Intentionally ugly to write code that looks like I feel.",
-    keywords: [
-      "eslint-preset",
-      "eslint",
-      "eslint-config",
-      "format",
-      "formatting",
-      "lint",
-      "style-guide",
-      "style",
-      "jaid",
-      "promise",
-      "import",
-      "unicorn",
-      "lodash",
-      "no-lodash",
-      "underscore"
-    ]
+    fetchGithub: true,
   },
   includedDependencies: [
     "babel-eslint",
@@ -26,7 +9,7 @@ export default {
     "eslint-plugin-promise",
     "eslint-plugin-unicorn",
     "eslint-plugin-import",
-    "eslint-plugin-you-dont-need-lodash-underscore"
+    "eslint-plugin-you-dont-need-lodash-underscore",
   ],
   rules: [
     "es",
@@ -34,22 +17,20 @@ export default {
     "promise",
     "regex",
     "unicorn",
-    "import"
+    "import",
   ],
-  extend: [
-    "plugin:you-dont-need-lodash-underscore/all-warn"
-  ],
+  extend: ["plugin:you-dont-need-lodash-underscore/all-warn"],
   config: {
     parser: "babel-eslint",
     parserOptions: {
       ecmaVersion: 10,
-      sourceType: "module"
+      sourceType: "module",
     },
     plugins: [
       "promise",
       "optimize-regex",
       "unicorn",
-      "import"
-    ]
-  }
+      "import",
+    ],
+  },
 }

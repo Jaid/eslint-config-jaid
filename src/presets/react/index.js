@@ -1,24 +1,21 @@
 import base from "../index"
 
 export default {
-  pkg: {
-    name: `${base.pkg.name}-react`,
+  publishimoConfig: {
+    name: `${base.publishimoConfig.name}-react`,
+    fetchGithub: base.publishimoConfig.fetchGithub,
+    repository: "https://github.com/Jaid/eslint-config-jaid",
     description: "Personal ESLint preset for React/JSX. Intentionally ugly to write code that looks like I feel.",
-    keywords: [
-      ...base.pkg.keywords,
-      "react",
-      "jsx"
-    ]
   },
   includedDependencies: [
     ...base.includedDependencies,
-    "eslint-plugin-react"
+    "eslint-plugin-react",
   ],
   rules: [
     ...base.rules,
     "jsx",
     "react",
-    "unicorn-web"
+    "unicorn-web",
   ],
   extend: base.extend,
   config: {
@@ -30,8 +27,8 @@ export default {
     ],
     settings: {
       react: {
-        version: "detect"
-      }
-    }
-  }
+        version: "detect",
+      },
+    },
+  },
 }

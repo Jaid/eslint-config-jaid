@@ -1,16 +1,7 @@
 {
-  "name": "eslint-config-jaid",
+  "name": "root",
   "private": true,
   "version": "1.9.0",
-  "author": {
-    "name": "Jaid",
-    "url": "https://github.com/jaid",
-    "email": "jaid.jsx@gmail.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jaid/eslint-config-jaid"
-  },
   "scripts": {
     "build": "cross-env babel-node ./src/build.js",
     "release": "npm run build && yarn workspaces run publish --non-interactive",
@@ -18,6 +9,14 @@
   },
   "peerDependencies": {
     "eslint": "^5.12.0"
+  },
+  "eslintConfig": {
+    "extends": "jaid"
+  },
+  "author": {
+    "name": "Jaid",
+    "email": "jaid.jsx@gmail.com",
+    "github": true
   },
   "license": "MIT",
   "devDependencies": {
@@ -29,6 +28,7 @@
     "cross-env": "^5.2.0",
     "emp": "^2.0.0",
     "eslint": "^5.12.1",
+    "eslint-config-jaid": "^1.9.0",
     "eslint-find-rules": "^3.3.1",
     "filter-obj": "^1.1.0",
     "fs-extra": "^7.0.1",
@@ -36,6 +36,7 @@
     "list-dir-content-size": "^0.0.5",
     "lodash": "^4.17.11",
     "pretty-bytes": "^5.1.0",
+    "publishimo": "^3.2.0",
     "sort-keys": "^2.0.0"
   },
   "dependencies": {
