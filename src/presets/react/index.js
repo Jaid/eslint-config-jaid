@@ -17,7 +17,8 @@ export default {
   rules: [
     ...base.rules,
     "jsx",
-    "react"
+    "react",
+    "unicorn-web"
   ],
   extend: base.extend,
   config: {
