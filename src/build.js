@@ -9,7 +9,6 @@ import chalk from "chalk"
 import {countSizeSync} from "list-dir-content-size"
 import prettyBytes from "pretty-bytes"
 
-
 import sortKeys from "sort-keys"
 import publishimo from "publishimo"
 import pkg from "../package.json"
