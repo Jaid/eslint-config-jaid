@@ -1,2 +1,2 @@
-prefer-query-selector: WARN
-prefer-node-append: WARN
+unicorn/prefer-query-selector: WARN
+unicorn/prefer-node-append: WARN

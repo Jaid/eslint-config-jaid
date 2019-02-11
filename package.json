@@ -1,15 +1,8 @@
 {
-  "name": "root",
   "private": true,
-  "version": "1.11.0",
-  "scripts": {
-    "build": "cross-env babel-node ./src/build.js",
-    "release": "npm run build && foreach -g \"build/*\" -x \"npm publish build/#{base}\"",
-    "unused-rules": "npm run build && cross-env eslint-find-rules --unused ./build/react/index.json"
-  },
-  "peerDependencies": {
-    "eslint": "^5.12.0"
-  },
+  "version": "1.11.1",
+  "author": "Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)",
+  "license": "MIT",
   "babel": {
     "presets": [
       "jaid"
@@ -18,12 +11,18 @@
   "eslintConfig": {
     "extends": "jaid"
   },
-  "author": {
-    "name": "Jaid",
-    "email": "jaid.jsx@gmail.com",
-    "github": true
+  "peerDependencies": {
+    "eslint": "^5.13.0"
   },
-  "license": "MIT",
+  "dependencies": {
+    "babel-eslint": "11.0.0-beta.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-optimize-regex": "^1.1.6",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-unicorn": "^7.1.0",
+    "eslint-plugin-you-dont-need-lodash-underscore": "^6.4.0"
+  },
   "devDependencies": {
     "chalk": "^2.4.2",
     "cross-env": "^5.2.0",
@@ -42,13 +41,9 @@
     "publishimo": "^4.1.0",
     "sort-keys": "^2.0.0"
   },
-  "dependencies": {
-    "babel-eslint": "11.0.0-beta.0",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-optimize-regex": "^1.1.6",
-    "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-react": "^7.12.4",
-    "eslint-plugin-unicorn": "^7.1.0",
-    "eslint-plugin-you-dont-need-lodash-underscore": "^6.4.0"
+  "scripts": {
+    "build": "cross-env babel-node ./src/build.js",
+    "release": "npm run build && foreach -g \"build/*\" -x \"npm publish build/#{base}\"",
+    "unused-rules": "npm run build && cross-env eslint-find-rules --unused ./build/react/index.json"
   }
 }
