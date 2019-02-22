@@ -22,19 +22,20 @@
     "eslint-plugin-you-dont-need-lodash-underscore": "^6.4.0"
   },
   "devDependencies": {
+    "babel-preset-jaid": "4.3.0",
     "chalk": "^2.4.2",
     "cross-env": "^5.2.0",
     "emp": "^2.0.0",
     "eslint": "^5.14.1",
     "eslint-config-jaid": "^1.11.1",
     "eslint-find-rules": "^3.3.1",
-    "babel-preset-jaid": "4.3.0",
     "filter-obj": "^1.1.0",
     "foreach-cli": "^1.8.1",
     "fs-extra": "^7.0.1",
     "js-yaml": "^3.12.1",
     "list-dir-content-size": "^0.0.5",
     "lodash": "^4.17.11",
+    "opn-cli": "^4.0.0",
     "pretty-bytes": "^5.1.0",
     "publishimo": "^5.0.0",
     "sort-keys": "^2.0.0"
