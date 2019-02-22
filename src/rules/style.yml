@@ -3,7 +3,6 @@ array-bracket-newline:
   - multiline: true
 array-bracket-spacing: WARN
 array-element-newline: [WARN, consistent]
-arrow-body-style: [WARN, as-needed]
 arrow-parens: [WARN, as-needed]
 arrow-spacing: WARN
 block-spacing: WARN
@@ -46,7 +45,7 @@ no-trailing-spaces: WARN
 no-underscore-dangle:
   - WARN
   - allow:
-    - __REDUX_DEVTOOLS_EXTENSION_COMPOSE__ # See https://github.com/zalmoxisus/redux-devtools-extension
+      - __REDUX_DEVTOOLS_EXTENSION_COMPOSE__ # See https://github.com/zalmoxisus/redux-devtools-extension
 no-unneeded-ternary: WARN
 no-whitespace-before-property: WARN
 semi-style: WARN
