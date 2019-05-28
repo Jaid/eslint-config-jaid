@@ -8,16 +8,16 @@ import filterObj from "filter-obj"
 import chalk from "chalk"
 import {countSizeSync} from "list-dir-content-size"
 import prettyBytes from "pretty-bytes"
-
 import sortKeys from "sort-keys"
 import publishimo from "publishimo"
+
 import pkg from "../package.json"
 
 const presets = fs.readdirSync(path.join(__dirname, "presets"))
 
 const jobs = presets.map(async preset => {
   const {includedDependencies, rules, config, extend, publishimoConfig} = require(`./presets/${preset}`).default
-  const buildPath = path.resolve(__dirname, "..", "build", preset)
+  const buildPath = path.resolve(__dirname, "..", "dist", "build", preset)
   fs.ensureDirSync(buildPath)
   await emp(buildPath)
   const appliedRules = {}

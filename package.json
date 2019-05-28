@@ -43,7 +43,7 @@
   },
   "scripts": {
     "build": "cross-env babel-node ./src/build.js",
-    "release": "npm run build && cross-env git tag v$npm_package_version && git push --tags && cross-env open-cli https://github.com/$npm_package_author_name/$(basename $PWD)/releases/new?tag=v$npm_package_version && foreach -g \"build/*\" -x \"npm publish build/#{base}\"",
+    "release": "npm run build && cross-env git tag v$npm_package_version && git push --tags && cross-env open-cli https://github.com/$npm_package_author_name/$(basename $PWD)/releases/new?tag=v$npm_package_version && foreach -g \"dist/build/*\" -x \"npm publish dist/build/#{base}\"",
     "unused-rules": "npm run build && cross-env eslint-find-rules --unused ./build/react/index.json"
   }
 }
