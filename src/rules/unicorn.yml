@@ -1,5 +1,4 @@
 unicorn/catch-error-name: WARN
-unicorn/no-abusive-eslint-disable: WARN
 unicorn/throw-new-error: WARN
 unicorn/number-literal-case: WARN
 unicorn/escape-case: WARN
@@ -8,7 +7,6 @@ unicorn/no-new-buffer: ERROR
 unicorn/no-hex-escape: WARN
 unicorn/prefer-starts-ends-with: WARN
 unicorn/prefer-type-error: WARN
-unicorn/no-fn-reference-in-iterator: WARN
 unicorn/new-for-builtins: WARN
 unicorn/prefer-spread: WARN
 unicorn/error-message: WARN
