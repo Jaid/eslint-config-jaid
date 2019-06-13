@@ -25,6 +25,7 @@ export default {
     parserOptions: {
       ecmaVersion: 10,
       sourceType: "module",
+      requireConfigFile: false,
     },
     plugins: [
       "promise",
