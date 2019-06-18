@@ -64,7 +64,6 @@ no-useless-concat: WARN
 no-useless-constructor: WARN
 no-useless-escape: WARN
 no-useless-rename: WARN
-no-useless-return: WARN
 no-var: WARN
 no-void: WARN
 object-shorthand: WARN
@@ -80,3 +79,9 @@ semi: [WARN, never]
 use-isnan: WARN
 valid-typeof: WARN
 yoda: WARN
+guard-for-in: WARN
+no-undef-init: WARN
+no-return-assign:
+  - WARN
+  - "always"
+no-use-before-define: WARN

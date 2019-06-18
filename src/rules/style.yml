@@ -91,3 +91,4 @@ switch-colon-spacing: WARN
 template-curly-spacing: WARN
 template-tag-spacing: WARN
 yield-star-spacing: WARN
+no-extra-parens: WARN

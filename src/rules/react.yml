@@ -7,6 +7,12 @@ react/forbid-dom-props:
   - WARN
   - forbid:
       - style
+react/jsx-sort-props:
+  - WARN
+  - ignoreCase: true
+    callbacksLast: true
+    shorthandLast: true
+    reservedFirst: true
 react/forbid-foreign-prop-types: WARN
 react/no-access-state-in-setstate: WARN
 react/no-children-prop: WARN

@@ -12,3 +12,5 @@ unicorn/prefer-spread: WARN
 unicorn/error-message: WARN
 unicorn/prefer-add-event-listener: WARN
 unicorn/prefer-exponentiation-operator: WARN
+unicorn/prefer-flat-map: WARN
+unicorn/prefer-includes: WARN
