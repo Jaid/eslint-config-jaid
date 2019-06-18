@@ -23,12 +23,12 @@
   },
   "devDependencies": {
     "acorn": "^6.1.1",
-    "babel-preset-jaid": "6.6.0",
+    "babel-preset-jaid": "6.7.0",
     "chalk": "^2.4.2",
     "cross-env": "^5.2.0",
     "emp": "^2.0.0",
     "eslint": "^5.16.0",
-    "eslint-config-jaid": "^1.13.0",
+    "eslint-config-jaid": "^1.14.0",
     "eslint-find-rules": "^3.3.1",
     "filter-obj": "^2.0.0",
     "foreach-cli": "^1.8.1",
@@ -38,7 +38,7 @@
     "lodash": "^4.17.11",
     "open-cli": "^5.0.0",
     "pretty-bytes": "^5.2.0",
-    "publishimo": "^5.0.3",
+    "publishimo": "^5.0.4",
     "sort-keys": "^3.0.0"
   },
   "scripts": {
