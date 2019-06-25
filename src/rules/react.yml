@@ -29,7 +29,6 @@ react/no-string-refs: WARN
 react/no-this-in-sfc: WARN
 react/no-typos: WARN
 react/no-unknown-property: WARN
-react/no-unused-prop-types: WARN
 react/no-will-update-set-state: WARN
 react/prefer-es6-class: WARN
 react/prop-types: WARN
