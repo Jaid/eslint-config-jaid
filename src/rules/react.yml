@@ -3,10 +3,6 @@ react/default-props-match-prop-types: WARN
 react/destructuring-assignment:
   - WARN
   - never
-react/forbid-dom-props:
-  - WARN
-  - forbid:
-      - style
 react/jsx-sort-props:
   - WARN
   - ignoreCase: true
