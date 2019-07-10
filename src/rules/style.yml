@@ -33,7 +33,6 @@ jsx-quotes: WARN
 key-spacing: WARN
 keyword-spacing: WARN
 linebreak-style: [WARN, unix]
-lines-around-comment: WARN
 lines-between-class-members: WARN
 multiline-comment-style: OFF
 new-cap: WARN
