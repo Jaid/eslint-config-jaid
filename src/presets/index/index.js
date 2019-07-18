@@ -41,5 +41,9 @@ export default {
       _PKG_DOMAIN: "readonly",
       GOOGLE_ANALYTICS_TRACKING_ID: "readonly",
     },
+    env: {
+      node: true,
+      jest: true,
+    },
   },
 }

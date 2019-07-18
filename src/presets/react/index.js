@@ -30,5 +30,11 @@ export default {
         version: "detect",
       },
     },
+    globals: base.config.globals,
+    env: {
+      ...base.config.env,
+      browser: true,
+      worker: true,
+    },
   },
 }
