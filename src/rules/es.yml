@@ -79,6 +79,7 @@ semi: [WARN, never]
 use-isnan: WARN
 valid-typeof: WARN
 yoda: WARN
+no-undef: WARN
 no-undef-init: WARN
 no-return-assign:
   - WARN
