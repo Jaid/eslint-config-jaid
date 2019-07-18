@@ -35,7 +35,6 @@ keyword-spacing: WARN
 linebreak-style: [WARN, unix]
 lines-between-class-members: WARN
 multiline-comment-style: OFF
-new-cap: WARN
 no-array-constructor: WARN
 no-multi-assign: WARN
 no-multiple-empty-lines: WARN
