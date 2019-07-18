@@ -33,5 +33,12 @@ export default {
       "unicorn",
       "import",
     ],
+    globals: {
+      require: "readonly",
+      _PKG_TITLE: "readonly",
+      _PKG_NAME: "readonly",
+      _PKG_VERSION: "readonly",
+      _PKG_DOMAIN: "readonly",
+    },
   },
 }
