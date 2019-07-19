@@ -22,10 +22,6 @@ dot-location: [WARN, property]
 dot-notation: WARN
 eol-last: [WARN, never]
 func-call-spacing: WARN
-func-style:
-  - WARN
-  - expression
-  - allowArrowFunctions: true
 function-paren-newline: [WARN, never]
 implicit-arrow-linebreak: WARN
 indent: [WARN, 2]
