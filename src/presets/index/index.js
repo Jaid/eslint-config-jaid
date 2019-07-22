@@ -35,7 +35,6 @@ export default {
     ],
     globals: {
       require: "readonly",
-      Promise: "readonly",
       _PKG_TITLE: "readonly",
       _PKG_NAME: "readonly",
       _PKG_VERSION: "readonly",
@@ -43,6 +42,8 @@ export default {
       GOOGLE_ANALYTICS_TRACKING_ID: "readonly",
     },
     env: {
+      es6: true,
+      "shared-node-browser": true,
       node: true,
       jest: true,
     },
