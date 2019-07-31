@@ -1,5 +1,4 @@
 array-callback-return: WARN
-callback-return: WARN
 constructor-super: WARN
 eqeqeq: [WARN, smart]
 getter-return: WARN
