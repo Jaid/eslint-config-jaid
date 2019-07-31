@@ -17,8 +17,8 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-optimize-regex": "^1.1.6",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.14.2",
-    "eslint-plugin-unicorn": "^9.1.1",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-unicorn": "^10.0.0",
     "eslint-plugin-you-dont-need-lodash-underscore": "^6.5.0"
   },
   "devDependencies": {
@@ -28,7 +28,7 @@
     "cross-env": "^5.2.0",
     "emp": "^2.0.0",
     "eslint": "^6.1.0",
-    "eslint-config-jaid": "^1.25.0",
+    "eslint-config-jaid": "^1.26.0",
     "eslint-find-rules": "^3.3.1",
     "filter-obj": "^2.0.0",
     "foreach-cli": "^1.8.1",
@@ -37,7 +37,7 @@
     "list-dir-content-size": "^0.0.5",
     "lodash": "^4.17.15",
     "open-cli": "^5.0.0",
-    "pretty-bytes": "^5.2.0",
+    "pretty-bytes": "^5.3.0",
     "publishimo": "^5.0.6",
     "sort-keys": "^3.0.0"
   },
