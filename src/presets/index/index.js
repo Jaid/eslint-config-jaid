@@ -40,6 +40,7 @@ export default {
       _PKG_VERSION: "readonly",
       _PKG_DOMAIN: "readonly",
       GOOGLE_ANALYTICS_TRACKING_ID: "readonly",
+      __non_webpack_require__: "readonly",
     },
     env: {
       es6: true,
