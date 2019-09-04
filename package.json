@@ -19,7 +19,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-unicorn": "^10.0.0",
-    "eslint-plugin-you-dont-need-lodash-underscore": "^6.6.0"
+    "eslint-plugin-you-dont-need-lodash-underscore": "^6.7.0"
   },
   "devDependencies": {
     "acorn": "^7.0.0",
@@ -27,7 +27,7 @@
     "chalk": "^2.4.2",
     "cross-env": "^5.2.1",
     "emp": "^2.0.0",
-    "eslint-config-jaid": "^1.28.2",
+    "eslint-config-jaid": "^1.28.3",
     "eslint-find-rules": "^3.4.0",
     "filter-obj": "^2.0.0",
     "foreach-cli": "^1.8.1",
