@@ -43,6 +43,7 @@
   "scripts": {
     "build": "cross-env babel-node ./src/build.js",
     "release": "npm run build && foreach -g \"dist/build/*\" -x \"npm publish dist/build/#{base}\"",
-    "unused-rules": "npm run build && cross-env eslint-find-rules --unused dist/build/react/index.json"
+    "unused-rules": "npm run build && cross-env eslint-find-rules --unused dist/build/react/index.json",
+    "test": "echo No test specified!"
   }
 }
