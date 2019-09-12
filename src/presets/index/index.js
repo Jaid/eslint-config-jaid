@@ -26,6 +26,9 @@ export default {
       ecmaVersion: 10,
       sourceType: "module",
       requireConfigFile: false,
+      ecmaFeatures: {
+        legacyDecorators: true,
+      },
     },
     plugins: [
       "promise",
