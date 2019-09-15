@@ -18,6 +18,7 @@ export default {
     "regex",
     "unicorn",
     "import",
+    "lodash",
   ],
   extend: ["plugin:you-dont-need-lodash-underscore/all-warn"],
   config: {
