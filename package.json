@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "babel-eslint": "^10.0.3",
-    "eslint": "^6.3.0",
+    "eslint": "^6.4.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-optimize-regex": "^1.1.6",
     "eslint-plugin-promise": "^4.2.1",
@@ -27,7 +27,7 @@
     "chalk": "^2.4.2",
     "cross-env": "^5.2.1",
     "emp": "^2.0.0",
-    "eslint-config-jaid": "^1.29.0",
+    "eslint-config-jaid": "^1.30.0",
     "eslint-find-rules": "^3.4.0",
     "filter-obj": "^2.0.0",
     "foreach-cli": "^1.8.1",
