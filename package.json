@@ -27,7 +27,7 @@
     "chalk": "^2.4.2",
     "cross-env": "^6.0.3",
     "emp": "^2.0.0",
-    "eslint-config-jaid": "^1.32.0",
+    "eslint-config-jaid": "^1.33.0",
     "eslint-find-rules": "^3.4.0",
     "filter-obj": "^2.0.1",
     "foreach-cli": "^1.8.1",
