@@ -14,3 +14,6 @@ unicorn/prefer-add-event-listener: WARN
 unicorn/prefer-exponentiation-operator: WARN
 unicorn/prefer-flat-map: WARN
 unicorn/prefer-includes: WARN
+unicorn/prefer-string-slice: WARN
+unicorn/consistent-function-scoping: WARN
+unicorn/expiring-todo-comments: WARN
