@@ -62,11 +62,6 @@ object-curly-spacing: WARN
 object-property-newline: WARN
 one-var: [WARN, never]
 operator-linebreak: [WARN, before]
-padded-blocks:
-  - WARN
-  - blocks: never
-    classes: always
-    switches: never
 padding-line-between-statements: OFF
 quote-props: [WARN, as-needed]
 quotes: WARN
