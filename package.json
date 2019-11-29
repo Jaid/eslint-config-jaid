@@ -1,5 +1,4 @@
 {
-  "private": true,
   "version": "1.36.0",
   "author": "Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)",
   "license": "MIT",
@@ -45,5 +44,6 @@
     "release": "npm run build && foreach -g \"dist/build/*\" -x \"npm publish dist/build/#{base}\"",
     "unused-rules": "npm run build && cross-env eslint-find-rules --unused dist/build/react/index.json",
     "test": "echo No test specified!"
-  }
+  },
+  "name": "eslint-config-jaid"
 }
