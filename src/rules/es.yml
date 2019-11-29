@@ -84,3 +84,5 @@ no-return-assign:
   - WARN
   - "always"
 no-use-before-define: WARN
+no-constructor-return: WARN
+no-setter-return: WARN
