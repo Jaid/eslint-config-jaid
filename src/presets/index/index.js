@@ -43,6 +43,7 @@ export default {
       _PKG_NAME: "readonly",
       _PKG_VERSION: "readonly",
       _PKG_DOMAIN: "readonly",
+      _PKG_DESCRIPTION: "readonly",
       GOOGLE_ANALYTICS_TRACKING_ID: "readonly",
       __non_webpack_require__: "readonly",
     },
