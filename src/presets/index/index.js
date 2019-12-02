@@ -9,6 +9,7 @@ export default {
     "eslint-plugin-promise",
     "eslint-plugin-unicorn",
     "eslint-plugin-import",
+    "eslint-plugin-simple-import-sort",
     "eslint-plugin-you-dont-need-lodash-underscore",
   ],
   rules: [
@@ -18,6 +19,7 @@ export default {
     "regex",
     "unicorn",
     "import",
+    "simple-import-sort",
     "lodash",
   ],
   extend: ["plugin:you-dont-need-lodash-underscore/all-warn"],
