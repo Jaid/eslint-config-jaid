@@ -1,11 +1,3 @@
-import/newline-after-import: WARN
-import/first: WARN
-import/no-duplicates: WARN
-import/no-mutable-exports: WARN
-import/no-deprecated: WARN
-import/no-useless-path-segments: WARN
-import/no-self-import: WARN
-import/no-absolute-path: WARN
 simple-import-sort/sort:
   - WARN
   - groups:

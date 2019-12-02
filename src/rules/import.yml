@@ -1,11 +1,3 @@
-# import/order:
-#   - WARN
-#   - groups:
-#     - builtin
-#     - external
-#     - [internal, parent]
-#     - [index, sibling]
-#     newlines-between: always
 import/newline-after-import: WARN
 import/first: WARN
 import/no-duplicates: WARN

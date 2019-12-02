@@ -38,6 +38,7 @@ export default {
       "optimize-regex",
       "unicorn",
       "import",
+      "simple-import-sort",
     ],
     globals: {
       require: "readonly",
