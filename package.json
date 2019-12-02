@@ -45,5 +45,6 @@
     "unused-rules": "npm run build && cross-env eslint-find-rules --unused dist/build/react/index.json",
     "test": "echo No test specified!"
   },
-  "name": "eslint-config-jaid"
+  "name": "eslint-config-jaid",
+  "description": "Personal ESLint preset. Intentionally ugly to write code that looks like I feel."
 }
