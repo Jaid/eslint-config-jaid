@@ -1,30 +1,38 @@
-# ESLint Config
+# eslint-config-jaid
 
-This is just my personal [ESLint](https://github.com/eslint/eslint) config. You most certainly will not think it's pretty, and that's okay! I still recommend you to take a look into the [`src`](https://github.com/Jaid/eslint-config-jaid/tree/master/src) folder, because my ESLint configs are generated with a pretty cool build setup!
 
-# FAQ
+Personal ESLint preset. Intentionally ugly to write code that looks like I feel.
 
-## You can import ready-to-use ESLint configs in a JavaScript project?
+<a href="https://raw.githubusercontent.com/Jaid/eslint-config-jaid/master/license.txt"><img src="https://img.shields.io/github/license/Jaid/eslint-config-jaid?style=flat-square&color=success" alt="License"/></a>
+<a href="https://github.com/Jaid/eslint-config-jaid/commits"><img src="https://img.shields.io/github/commits-since/Jaid/eslint-config-jaid/v1.41.0?style=flat-square&logo=github&color=success" alt="Commits since v1.41.0"/></a> <a href="https://github.com/Jaid/eslint-config-jaid/commits"><img src="https://img.shields.io/github/last-commit/Jaid/eslint-config-jaid?style=flat-square&logo=github&color=red" alt="Last commit"/></a> <a href="https://github.com/Jaid/eslint-config-jaid/issues"><img src="https://img.shields.io/github/issues/Jaid/eslint-config-jaid?style=flat-square&logo=github&color=red" alt="Issues"/></a>
+<a href="https://npmjs.com/package/eslint-config-jaid"><img src="https://img.shields.io/npm/v/eslint-config-jaid?style=flat-square&logo=npm&label=latest%20version&color=red" alt="Latest version on npm"/></a> <a href="https://github.com/Jaid/eslint-config-jaid/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/eslint-config-jaid?style=flat-square&logo=npm&color=red" alt="Dependents"/></a> <a href="https://npmjs.com/package/eslint-config-jaid"><img src="https://img.shields.io/npm/dm/eslint-config-jaid?style=flat-square&logo=npm&color=red" alt="Downloads"/></a>
 
-Yes, it's great! If you need one, you should take a look at [Airbnb's one](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb). It seems to be quite popular. 80000 stars are a lot, aren't they?
 
-## But I want to use yours!
 
-Well, fine.
 
-Execute this:
 
-```sh
-npm install --save-dev eslint
-npx install-peerdeps --dev eslint-config-jaid
-```
 
-And add this to your `package.json`:
+## License
+```text
+MIT License
 
-```json
-{
-  "eslintConfig": {
-    "extends": "jaid"
-  }
-}
+Copyright © 2019, Jaid <jaid.jsx@gmail.com> (github.com/jaid)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 ```
