@@ -23,11 +23,11 @@
   },
   "devDependencies": {
     "acorn": "^7.1.0",
-    "babel-preset-jaid": "7.3.0",
+    "babel-preset-jaid": "7.3.1",
     "chalk": "^3.0.0",
     "cross-env": "^6.0.3",
     "emp": "^2.0.0",
-    "eslint-config-jaid": "^1.41.1",
+    "eslint-config-jaid": "^1.42.0",
     "eslint-find-rules": "^3.4.0",
     "filter-obj": "^2.0.1",
     "foreach-cli": "^1.8.1",
