@@ -1,15 +1,47 @@
 # eslint-config-jaid
 
 
-Personal ESLint preset. Intentionally ugly to write code that looks like I feel.
+<a href="https://raw.githubusercontent.com/Jaid/eslint-config-jaid/master/license.txt"><img src="https://img.shields.io/github/license/Jaid/eslint-config-jaid?style=flat-square" alt="License"/></a>  
+ <a href="https://github.com/Jaid/eslint-config-jaid/commits"><img src="https://img.shields.io/github/commits-since/Jaid/eslint-config-jaid/v1.42.0?style=flat-square&logo=github" alt="Commits since v1.42.0"/></a> <a href="https://github.com/Jaid/eslint-config-jaid/commits"><img src="https://img.shields.io/github/last-commit/Jaid/eslint-config-jaid?style=flat-square&logo=github" alt="Last commit"/></a> <a href="https://github.com/Jaid/eslint-config-jaid/issues"><img src="https://img.shields.io/github/issues/Jaid/eslint-config-jaid?style=flat-square&logo=github" alt="Issues"/></a>  
 
-<a href="https://raw.githubusercontent.com/Jaid/eslint-config-jaid/master/license.txt"><img src="https://img.shields.io/github/license/Jaid/eslint-config-jaid?style=flat-square&color=success" alt="License"/></a>
-<a href="https://github.com/Jaid/eslint-config-jaid/commits"><img src="https://img.shields.io/github/commits-since/Jaid/eslint-config-jaid/v1.41.1?style=flat-square&logo=github&color=success" alt="Commits since v1.41.1"/></a> <a href="https://github.com/Jaid/eslint-config-jaid/commits"><img src="https://img.shields.io/github/last-commit/Jaid/eslint-config-jaid?style=flat-square&logo=github&color=red" alt="Last commit"/></a> <a href="https://github.com/Jaid/eslint-config-jaid/issues"><img src="https://img.shields.io/github/issues/Jaid/eslint-config-jaid?style=flat-square&logo=github&color=red" alt="Issues"/></a>
-<a href="https://npmjs.com/package/eslint-config-jaid"><img src="https://img.shields.io/npm/v/eslint-config-jaid?style=flat-square&logo=npm&label=latest%20version&color=red" alt="Latest version on npm"/></a> <a href="https://github.com/Jaid/eslint-config-jaid/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/eslint-config-jaid?style=flat-square&logo=npm&color=red" alt="Dependents"/></a> <a href="https://npmjs.com/package/eslint-config-jaid"><img src="https://img.shields.io/npm/dm/eslint-config-jaid?style=flat-square&logo=npm&color=red" alt="Downloads"/></a>
-
+**Personal ESLint preset. Intentionally ugly to write code that looks like I feel.**
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Development
+
+
+
+Setting up:
+```bash
+git clone git@github.com:Jaid/eslint-config-jaid.git
+cd eslint-config-jaid
+npm install
+```
+Testing in production environment:
+```bash
+npm run test
+```
 
 
 ## License
