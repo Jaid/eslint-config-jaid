@@ -47,5 +47,6 @@
     "test": "echo No test specified!"
   },
   "name": "eslint-config-jaid",
-  "description": "Personal ESLint preset. Intentionally ugly to write code that looks like I feel."
+  "description": "Personal ESLint preset. Intentionally ugly to write code that looks like I feel.",
+  "funding": "https://github.com/sponsors/jaid"
 }
