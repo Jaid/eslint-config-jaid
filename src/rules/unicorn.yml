@@ -17,3 +17,4 @@ unicorn/prefer-includes: WARN
 unicorn/prefer-string-slice: WARN
 unicorn/consistent-function-scoping: WARN
 unicorn/expiring-todo-comments: WARN
+unicorn/prefer-replace-all: WARN
