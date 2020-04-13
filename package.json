@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "acorn": "^7.1.1",
-    "babel-preset-jaid": "7.3.4",
+    "babel-preset-jaid": "7.3.5",
     "chalk": "^4.0.0",
     "cross-env": "^7.0.2",
     "emp": "^2.0.0",
