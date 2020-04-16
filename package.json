@@ -52,5 +52,26 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/jaid/eslint-config-jaid"
-  }
+  },
+  "homepage": null,
+  "keywords": [
+    "ecmascript",
+    "eslint",
+    "eslint-config",
+    "eslint-configs",
+    "eslint-preset",
+    "eslint-shareable-configs",
+    "eslintconfig",
+    "format",
+    "formatter",
+    "formatting",
+    "jaid",
+    "javascript",
+    "jsx",
+    "lint",
+    "linter",
+    "react",
+    "style",
+    "style-guide"
+  ]
 }
