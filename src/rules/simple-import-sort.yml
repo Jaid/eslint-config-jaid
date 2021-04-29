@@ -1,4 +1,4 @@
-simple-import-sort/sort:
+simple-import-sort/imports:
   - WARN
   - groups:
     - ["^\\u0000"] # Side effects
