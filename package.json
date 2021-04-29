@@ -18,7 +18,7 @@
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-react": "^7.21.2",
     "eslint-plugin-simple-import-sort": "^7.0.0",
-    "eslint-plugin-unicorn": "^22.0.0",
+    "eslint-plugin-unicorn": "^31.0.0",
     "eslint-plugin-you-dont-need-lodash-underscore": "^6.10.0"
   },
   "devDependencies": {
