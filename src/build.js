@@ -29,17 +29,17 @@ const jobs = presets.map(async preset => {
     const loadedRules = jsYaml.load(minifiedYamlString)
     Object.assign(appliedRules, loadedRules)
   }
-  const eslintConfig = {
+  const eslintConfig = sortKeys({
     ...config,
     extends: extend,
-    rules: appliedRules |> sortKeys,
-  } |> sortKeys
+    rules: sortKeys(appliedRules),
+  })
   fs.outputJsonSync(path.join(buildPath, "index.json"), eslintConfig)
   const dependencies = filterObj(pkg.dependencies, key => includedDependencies.includes(key))
   const {generatedPkg} = await publishimo({
     ...pick(pkg, ["license", "version", "author", "repository", "peerDependencies"]),
     ...publishimoConfig,
-    dependencies: dependencies |> sortKeys,
+    dependencies: sortKeys(dependencies),
     main: "index.json",
   })
   fs.outputJsonSync(path.join(buildPath, "package.json"), generatedPkg)
