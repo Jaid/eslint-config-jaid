@@ -16,6 +16,7 @@ export default {
     "es",
     "style",
     "promise",
+    "node",
     "regex",
     "unicorn",
     "unicorn-node",
@@ -35,6 +36,7 @@ export default {
       },
     },
     plugins: [
+      "node",
       "promise",
       "optimize-regex",
       "unicorn",

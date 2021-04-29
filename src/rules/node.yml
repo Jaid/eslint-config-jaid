@@ -1,0 +1,4 @@
+node/no-mixed-requires: WARN
+node/no-new-require: WARN
+node/no-path-concat: WARN
+node/no-sync: WARN

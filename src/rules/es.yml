@@ -30,16 +30,13 @@ no-invalid-regexp: WARN
 no-irregular-whitespace: WARN
 no-iterator: WARN
 no-label-var: WARN
-no-mixed-requires: WARN
 no-multi-spaces: WARN
 no-multi-str: WARN
 no-new: WARN
 no-new-func: WARN
-no-new-require: WARN
 no-new-symbol: WARN
 no-obj-calls: WARN
 no-octal: WARN
-no-path-concat: WARN
 no-proto: WARN
 no-redeclare: WARN
 no-regex-spaces: WARN
