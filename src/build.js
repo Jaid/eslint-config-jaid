@@ -1,15 +1,14 @@
-import path from "path"
-
-import fs from "fs-extra"
-import {emp} from "emp"
-import jsYaml from "js-yaml"
-import {pick} from "lodash"
-import filterObj from "filter-obj"
 import chalk from "chalk"
+import {emp} from "emp"
+import filterObj from "filter-obj"
+import fs from "fs-extra"
+import jsYaml from "js-yaml"
 import {countSizeSync} from "list-dir-content-size"
+import {pick} from "lodash"
+import path from "path"
 import prettyBytes from "pretty-bytes"
-import sortKeys from "sort-keys"
 import publishimo from "publishimo"
+import sortKeys from "sort-keys"
 
 import pkg from "../package.json"
 
@@ -27,7 +26,7 @@ const jobs = presets.map(async preset => {
       .replace(/OFF/g, 0)
       .replace(/WARN/g, 1)
       .replace(/ERROR/g, 2)
-    const loadedRules = jsYaml.safeLoad(minifiedYamlString)
+    const loadedRules = jsYaml.load(minifiedYamlString)
     Object.assign(appliedRules, loadedRules)
   }
   const eslintConfig = {
