@@ -18,6 +18,7 @@ export default {
     "promise",
     "regex",
     "unicorn",
+    "unicorn-node",
     "import",
     "simple-import-sort",
     "lodash",
