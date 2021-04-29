@@ -48,4 +48,6 @@ const jobs = presets.map(async preset => {
   console.log(`${chalk.green(publishimoConfig.name)} ${prettyBytes(countSizeSync(buildPath))}`)
 })
 
-Promise.all(jobs)
+Promise.all(jobs).catch(error => {
+  console.error(error)
+})
