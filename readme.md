@@ -49,4 +49,4 @@ npm run test
 
 ## License
 [MIT License](https://raw.githubusercontent.com/jaid/eslint-config-jaid/master/license.txt)  
-Copyright © 2020, Jaid \<jaid.jsx@gmail.com> (https://github.com/jaid)
+Copyright © 2021, Jaid \<jaid.jsx@gmail.com> (https://github.com/jaid)
