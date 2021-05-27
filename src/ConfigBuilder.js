@@ -17,7 +17,7 @@ export default class ConfigBuilder {
    * @prop {string[]} presets
    * @prop {string} rulesFolder
    * @prop {string} presetsFolder
-   * @prop {string} distFolder
+   * @prop {string} outputFolder
    * @prop {object} pkg
    * @prop {object} staticFiles
    */
@@ -39,9 +39,9 @@ export default class ConfigBuilder {
 
   async run() {
     const jobs = this.options.presets.map(async preset => {
-      const presetSourceFile = path.join(this.options.presetsFolder, "presets", preset)
+      const presetSourceFile = path.join(this.options.presetsFolder, preset)
       const {includedDependencies, rules, config, extend, publishimoConfig} = require(presetSourceFile).default
-      const buildPath = path.resolve(this.options.distFolder, preset)
+      const buildPath = path.resolve(this.options.outputFolder, preset)
       fs.ensureDirSync(buildPath)
       await emp(buildPath)
       const appliedRules = {}
