@@ -3,3 +3,4 @@ you-dont-need-lodash-underscore/uniq: OFF
 you-dont-need-lodash-underscore/is-nil: OFF
 you-dont-need-lodash-underscore/omit: OFF
 you-dont-need-lodash-underscore/is-string: OFF
+you-dont-need-lodash-underscore/is-function: OFF
