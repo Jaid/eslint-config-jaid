@@ -73,8 +73,6 @@ export default class ConfigBuilder {
       }
       console.log(`${chalk.green(publishimoConfig.name)} ${prettyBytes(countSizeSync(buildPath))}`)
     })
-    Promise.all(jobs).catch(error => {
-      console.error(error)
-    })
+    await Promise.all(jobs)
   }
 }
