@@ -31,6 +31,8 @@
 
 
 
+
+
 ## Development
 
 
@@ -50,3 +52,8 @@ npm run test
 ## License
 [MIT License](https://raw.githubusercontent.com/jaid/eslint-config-jaid/master/license.txt)  
 Copyright © 2021, Jaid \<jaid.jsx@gmail.com> (https://github.com/jaid)
+
+<!---
+Readme generated with tldw v7.0.0
+https://github.com/Jaid/tldw
+-->
