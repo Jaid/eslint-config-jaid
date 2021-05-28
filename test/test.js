@@ -17,6 +17,8 @@ const testDistFolder = path.join(distFolder, "test")
 const outputFolder = path.join(testDistFolder, "output")
 const configBuilderFile = path.join(testDistFolder, "ConfigBuilder.js")
 
+const presets = ["index", "react"]
+
 it("should run", async () => {
   await mkdirp(testDistFolder)
   const babelResult = await transformFileAsync(srcFile, {
@@ -29,7 +31,7 @@ it("should run", async () => {
     outputFolder,
     presetsFolder,
     rulesFolder,
-    presets: ["index", "react"],
+    presets,
     staticFiles: {
       "readme.md": path.join(__dirname, "..", "readme.md"),
       "license.txt": path.join(__dirname, "..", "license.txt"),
