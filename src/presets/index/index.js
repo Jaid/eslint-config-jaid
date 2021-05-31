@@ -26,7 +26,7 @@ export default {
   ],
   extend: ["plugin:you-dont-need-lodash-underscore/all-warn"],
   config: {
-    parser: "babel-eslint",
+    parser: "@babel/eslint-parser",
     parserOptions: {
       ecmaVersion: 10,
       sourceType: "module",
