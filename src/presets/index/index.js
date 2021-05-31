@@ -4,8 +4,9 @@ export default {
     fetchGithub: true,
   },
   includedDependencies: [
-    "babel-eslint",
+    "@babel/eslint-parser",
     "eslint-plugin-optimize-regex",
+    "eslint-plugin-node",
     "eslint-plugin-promise",
     "eslint-plugin-unicorn",
     "eslint-plugin-import",
