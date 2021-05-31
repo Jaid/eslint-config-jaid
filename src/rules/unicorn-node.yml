@@ -1,2 +1,4 @@
-unicorn/prefer-module: WARN
-unicorn/prefer-node-protocol: WARN
+# TODO Enable again after switching my whole ecosystem to ESM
+# https://nodejs.org/api/esm.html#esm_node_imports
+# unicorn/prefer-node-protocol: WARN
+# unicorn/prefer-module: WARN
