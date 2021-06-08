@@ -27,7 +27,6 @@ react/no-typos: WARN
 react/no-unknown-property: WARN
 react/no-will-update-set-state: WARN
 react/prefer-es6-class: WARN
-react/prop-types: WARN
 react/react-in-jsx-scope: WARN
 react/require-render-return: WARN
 react/self-closing-comp: WARN
