@@ -18,7 +18,6 @@ export default {
     "style",
     "promise",
     "node",
-    "regex",
     "unicorn",
     "unicorn-node",
     "import",
