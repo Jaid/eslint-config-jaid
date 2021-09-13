@@ -30,3 +30,6 @@ unicorn/prefer-array-index-of: WARN
 unicorn/prefer-regexp-test: WARN
 unicorn/no-array-for-each: WARN
 unicorn/prefer-array-flat: WARN
+unicorn/no-useless-length-check: WARN
+unicorn/no-useless-spread: WARN
+unicorn/no-useless-fallback-in-spread: WARN
