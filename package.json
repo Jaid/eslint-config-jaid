@@ -73,5 +73,6 @@
     "react",
     "style",
     "style-guide"
-  ]
+  ],
+  "type": "module"
 }
