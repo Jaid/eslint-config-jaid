@@ -48,9 +48,9 @@ export default class ConfigBuilder {
       for (const rule of rules) {
         const yamlString = fs.readFileSync(path.join(this.options.rulesFolder, `${rule}.yml`), "utf-8")
         const minifiedYamlString = yamlString
-          .replace(/OFF/g, "0")
-          .replace(/WARN/g, "1")
-          .replace(/ERROR/g, "2")
+          .replaceAll("OFF", "0")
+          .replaceAll("WARN", "1")
+          .replaceAll("ERROR", "2")
         const loadedRules = jsYaml.load(minifiedYamlString)
         Object.assign(appliedRules, loadedRules)
       }

@@ -1,10 +1,9 @@
 import "regenerator-runtime/runtime"
 
-import {mkdirp, writeFile} from "fs-extra"
-
-import {expect, it} from "@jest/globals"
-import path from "path"
 import {transformFileAsync} from "@babel/core"
+import {expect, it} from "@jest/globals"
+import {mkdirp, writeFile} from "fs-extra"
+import path from "path"
 
 const pkg = require("../package.json")
 
