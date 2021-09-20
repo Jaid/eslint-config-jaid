@@ -27,7 +27,6 @@ export default {
   config: {
     parser: "@babel/eslint-parser",
     parserOptions: {
-      ecmaVersion: 10,
       sourceType: "module",
       requireConfigFile: false,
       ecmaFeatures: {
@@ -42,15 +41,13 @@ export default {
       "simple-import-sort",
     ],
     globals: {
-      require: "readonly",
       GOOGLE_ANALYTICS_TRACKING_ID: "readonly",
       __non_webpack_require__: "readonly",
     },
     env: {
-      es6: true,
+      es2021: true,
       "shared-node-browser": true,
       node: true,
-      jest: true,
     },
   },
 }
