@@ -1,9 +1,9 @@
 import "regenerator-runtime/runtime"
 
 import {transformFileAsync} from "@babel/core"
-import {expect, it} from "@jest/globals"
+import {it} from "@jest/globals"
 import {mkdirp, writeFile} from "fs-extra"
-import path from "path"
+import path from "node:path"
 
 const pkg = await fs.readJson("package.json")
 const dirName = path.dirname(fileURLToPath(import.meta.url))
