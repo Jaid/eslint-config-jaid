@@ -1,4 +1,4 @@
-import base from "../index"
+import base from "../index/index.js"
 
 export default {
   publishimoConfig: {

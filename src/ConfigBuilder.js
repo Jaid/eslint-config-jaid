@@ -4,11 +4,12 @@ import filterObj from "filter-obj"
 import fs from "fs-extra"
 import jsYaml from "js-yaml"
 import {countSizeSync} from "list-dir-content-size"
-import {pick} from "lodash"
+import {pick} from "lodash-es"
 import path from "path"
 import prettyBytes from "pretty-bytes"
-import publishimo from "publishimo"
 import sortKeys from "sort-keys"
+
+import publishimo from "./lib/esm/publishimo.js"
 
 export default class ConfigBuilder {
 
