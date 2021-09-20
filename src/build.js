@@ -10,10 +10,10 @@ import prettyBytes from "pretty-bytes"
 import publishimo from "publishimo"
 import sortKeys from "sort-keys"
 
-import pkg from "../package.json"
+const pkg = await fs.readJson("../package.json")
 
 const presets = fs.readdirSync(path.join(__dirname, "presets"))
-
+await fs.readJson
 const jobs = presets.map(async preset => {
   const {includedDependencies, rules, config, extend, publishimoConfig} = require(`./presets/${preset}`).default
   const buildPath = path.resolve(__dirname, "..", "dist", "build", preset)
