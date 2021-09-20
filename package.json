@@ -34,7 +34,7 @@
     "jest": "^27.0.1",
     "js-yaml": "^4.1.0",
     "list-dir-content-size": "^0.0.5",
-    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21",
     "open-cli": "^6.0.1",
     "pretty-bytes": "^5.6.0",
     "publishimo": "^5.0.6",
