@@ -5,7 +5,6 @@ export default {
   },
   includedDependencies: [
     "@babel/eslint-parser",
-    "eslint-plugin-optimize-regex",
     "eslint-plugin-node",
     "eslint-plugin-promise",
     "eslint-plugin-unicorn",
@@ -38,7 +37,6 @@ export default {
     plugins: [
       "node",
       "promise",
-      "optimize-regex",
       "unicorn",
       "import",
       "simple-import-sort",
