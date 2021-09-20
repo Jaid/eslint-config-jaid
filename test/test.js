@@ -1,9 +1,9 @@
 import "regenerator-runtime/runtime"
 
-import {transformFileAsync} from "@babel/core"
 import {it} from "@jest/globals"
-import {mkdirp, writeFile} from "fs-extra"
+import fs from "../src/lib/esm/fs-extra.js"
 import path from "node:path"
+import {fileURLToPath} from "node:url"
 
 const pkg = await fs.readJson("package.json")
 const dirName = path.dirname(fileURLToPath(import.meta.url))
@@ -15,17 +15,11 @@ const srcFile = path.join(srcFolder, "ConfigBuilder.js")
 const distFolder = path.join(dirName, "..", "dist")
 const testDistFolder = path.join(distFolder, "test")
 const outputFolder = path.join(testDistFolder, "output")
-const configBuilderFile = path.join(testDistFolder, "ConfigBuilder.js")
 
 const presets = ["index", "react"]
 
 it("should run", async () => {
-  await mkdirp(testDistFolder)
-  const babelResult = await transformFileAsync(srcFile, {
-    envName: "development",
-  })
-  await writeFile(configBuilderFile, babelResult.code)
-  const ConfigBuilder = require(configBuilderFile).default
+  const {default: ConfigBuilder} = await import(srcFile)
   const configBuilder = new ConfigBuilder({
     pkg,
     outputFolder,

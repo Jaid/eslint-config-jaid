@@ -1,7 +1,7 @@
 import chalk from "chalk"
 import {emp} from "emp"
 import filterObj from "filter-obj"
-import fs from "fs-extra"
+import fs from "../src/lib/esm/fs-extra.js"
 import jsYaml from "js-yaml"
 import {countSizeSync} from "list-dir-content-size"
 import {pick} from "lodash-es"
@@ -14,17 +14,17 @@ import {fileURLToPath} from "node:url"
 const pkg = await fs.readJson("package.json")
 const dirName = path.dirname(fileURLToPath(import.meta.url))
 
-const presets = fs.readdirSync(path.join(dirName, "presets"))
+const presets = await fs.readdir(path.join(dirName, "presets"))
 
 const jobs = presets.map(async preset => {
   const {default: importedModule} = await import(`./presets/${preset}/index.js`)
   const {includedDependencies, rules, config, extend, publishimoConfig} = importedModule
   const buildPath = path.resolve(dirName, "..", "dist", "build", preset)
-  fs.ensureDirSync(buildPath)
+  await fs.ensureDir(buildPath)
   await emp(buildPath)
   const appliedRules = {}
   for (const rule of rules) {
-    const yamlString = fs.readFileSync(path.join(dirName, "rules", `${rule}.yml`), "utf-8")
+    const yamlString = await fs.readFile(path.join(dirName, "rules", `${rule}.yml`), "utf-8")
     const minifiedYamlString = yamlString
       .replaceAll("OFF", "0")
       .replaceAll("WARN", "1")
@@ -37,7 +37,7 @@ const jobs = presets.map(async preset => {
     extends: extend,
     rules: sortKeys(appliedRules),
   })
-  fs.outputJsonSync(path.join(buildPath, "index.json"), eslintConfig)
+  await fs.outputJson(path.join(buildPath, "index.json"), eslintConfig)
   const dependencies = filterObj(pkg.dependencies, key => includedDependencies.includes(key))
   const {generatedPkg} = await publishimo({
     ...pick(pkg, ["license", "version", "author", "repository", "peerDependencies"]),
@@ -45,9 +45,9 @@ const jobs = presets.map(async preset => {
     dependencies: sortKeys(dependencies),
     main: "index.json",
   })
-  fs.outputJsonSync(path.join(buildPath, "package.json"), generatedPkg)
-  fs.copyFileSync(path.join(dirName, "..", "license.txt"), path.join(buildPath, "license.txt"))
-  fs.copyFileSync(path.join(dirName, "..", "readme.md"), path.join(buildPath, "readme.md"))
+  await fs.outputJson(path.join(buildPath, "package.json"), generatedPkg)
+  await fs.copyFile(path.join(dirName, "..", "license.txt"), path.join(buildPath, "license.txt"))
+  await fs.copyFile(path.join(dirName, "..", "readme.md"), path.join(buildPath, "readme.md"))
   console.log(`${chalk.green(publishimoConfig.name)} ${prettyBytes(countSizeSync(buildPath))}`)
 })
 

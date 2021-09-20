@@ -42,7 +42,7 @@
     "tsconfig-jaid": "^2.1.1"
   },
   "scripts": {
-    "build": "cross-env babel-node ./src/build.js",
+    "build": "node src/build.js",
     "release": "npm run build && foreach -g \"dist/build/*\" -x \"npm publish dist/build/#{base}\"",
     "unused-rules": "npm run build && cross-env eslint-find-rules --unused dist/build/react/index.json",
     "test": "NODE_ENV=production jest"
