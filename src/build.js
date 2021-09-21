@@ -9,7 +9,7 @@ import path from "path"
 import prettyBytes from "pretty-bytes"
 import publishimo from "./lib/esm/publishimo.js"
 import sortKeys from "sort-keys"
-import {fileURLToPath} from "node:url"
+import {fileURLToPath, pathToFileURL} from "node:url"
 
 const pkg = await fs.readJson("package.json")
 const dirName = path.dirname(fileURLToPath(import.meta.url))
@@ -17,7 +17,7 @@ const dirName = path.dirname(fileURLToPath(import.meta.url))
 const presets = await fs.readdir(path.join(dirName, "presets"))
 
 const jobs = presets.map(async preset => {
-  const {default: importedModule} = await import(`./presets/${preset}/index.js`)
+  const {default: importedModule} = await import(pathToFileURL(path.resolve(dirName, "presets", preset, "index.js")).toString())
   const {includedDependencies, rules, config, extend, publishimoConfig} = importedModule
   const buildPath = path.resolve(dirName, "..", "dist", "build", preset)
   await fs.ensureDir(buildPath)

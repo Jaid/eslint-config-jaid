@@ -11,6 +11,9 @@ import sortKeys from "sort-keys"
 
 import fs from "./lib/esm/fs-extra.js"
 import publishimo from "./lib/esm/publishimo.js"
+import createDebug from "debug"
+
+const debug = createDebug("eslint-config-jaid")
 
 export default class ConfigBuilder {
 
@@ -40,10 +43,12 @@ export default class ConfigBuilder {
   }
 
   async run() {
+    debug("configBuilder: %O", this)
     const jobs = this.options.presets.map(async preset => {
       const presetSourceFile = path.join(this.options.presetsFolder, preset)
-      const importedModule = await import(presetSourceFile)
+      const {default: importedModule} = await import(presetSourceFile)
       const {includedDependencies, rules, config, extend, publishimoConfig} = importedModule
+      debug("importedModule: %O", importedModule)
       const buildPath = path.resolve(this.options.outputFolder, preset)
       await fs.ensureDir(buildPath)
       await emp(buildPath)
