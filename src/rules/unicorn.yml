@@ -17,7 +17,7 @@ unicorn/prefer-includes: WARN
 unicorn/prefer-string-slice: WARN
 unicorn/consistent-function-scoping: WARN
 unicorn/expiring-todo-comments: WARN
-unicorn/prefer-string-replace-all: WARN # TODO: Maybe disable again if I need to work with an environment that doesn't support replaceAll yet
+unicorn/prefer-string-replace-all: WARN
 unicorn/prefer-number-properties: WARN
 unicorn/no-useless-undefined: WARN
 unicorn/prefer-array-find: WARN
@@ -34,3 +34,5 @@ unicorn/no-useless-length-check: WARN
 unicorn/no-useless-spread: WARN
 unicorn/no-useless-fallback-in-spread: WARN
 unicorn/better-regex: WARN
+unicorn/prefer-module: WARN
+unicorn/prefer-top-level-await: WARN
