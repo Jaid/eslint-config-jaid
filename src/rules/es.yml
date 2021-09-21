@@ -79,7 +79,7 @@ no-undef: WARN
 no-undef-init: WARN
 no-return-assign:
   - WARN
-  - "always"
+  - always
 no-use-before-define: WARN
 no-constructor-return: WARN
 no-setter-return: WARN
