@@ -6,4 +6,6 @@ import/no-deprecated: WARN
 import/no-useless-path-segments: WARN
 import/no-self-import: WARN
 import/no-absolute-path: WARN
-import/no-unresolved: ERROR
+import/no-unresolved:
+  - ERROR
+  - ignore: ["^node:", ^!]
