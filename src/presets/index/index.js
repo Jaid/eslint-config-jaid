@@ -6,6 +6,7 @@ export default {
   includedDependencies: [
     "@babel/eslint-parser",
     "eslint-plugin-node",
+    "eslint-plugin-promise",
     "eslint-plugin-unicorn",
     "eslint-plugin-import",
     "eslint-plugin-simple-import-sort",
@@ -14,6 +15,7 @@ export default {
   rules: [
     "es",
     "style",
+    "promise",
     "node",
     "unicorn",
     "unicorn-node",
