@@ -36,3 +36,5 @@ unicorn/no-useless-fallback-in-spread: WARN
 unicorn/better-regex: WARN
 unicorn/prefer-module: WARN
 unicorn/prefer-top-level-await: WARN
+unicorn/prefer-code-point: WARN
+unicorn/no-await-expression-member: WARN
