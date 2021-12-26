@@ -1,8 +1,11 @@
 import {it, jest} from "@jest/globals"
-import fs from "../src/lib/esm/fs-extra.js"
+
 import path from "node:path"
 import {fileURLToPath} from "node:url"
+
 import createDebug from "debug"
+
+import fs from "../src/lib/esm/fs-extra.js"
 
 const debug = createDebug("eslint-config-jaid")
 
