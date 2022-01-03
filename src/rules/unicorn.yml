@@ -38,3 +38,6 @@ unicorn/prefer-module: WARN
 unicorn/prefer-top-level-await: WARN
 unicorn/prefer-code-point: WARN
 unicorn/no-await-expression-member: WARN
+unicorn/relative-url-style: WARN
+unicorn/no-useless-promise-resolve-reject: WARN
+unicorn/no-thenable: WARN
