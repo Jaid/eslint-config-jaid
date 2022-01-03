@@ -5,13 +5,13 @@
   "dependencies": {
     "@babel/eslint-parser": "^7.16.5",
     "browserslist-config-jaid-node": "3.0.0",
-    "eslint": "^8.5.0",
-    "eslint-plugin-import": "^2.25.3",
+    "eslint": "^8.6.0",
+    "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
-    "eslint-plugin-unicorn": "^39.0.0",
+    "eslint-plugin-unicorn": "^40.0.0",
     "eslint-plugin-you-dont-need-lodash-underscore": "^6.12.0"
   },
   "devDependencies": {
@@ -20,7 +20,7 @@
     "cross-env": "^7.0.3",
     "debug": "^4.3.3",
     "emp": "^2.0.0",
-    "eslint-config-jaid": "^1.58.1",
+    "eslint-config-jaid": "^1.58.2",
     "eslint-find-rules": "^4.0.0",
     "filter-obj": "^3.0.0",
     "foreach-cli": "^1.8.1",
