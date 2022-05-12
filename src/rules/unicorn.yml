@@ -41,3 +41,6 @@ unicorn/no-await-expression-member: WARN
 unicorn/relative-url-style: WARN
 unicorn/no-useless-promise-resolve-reject: WARN
 unicorn/no-thenable: WARN
+unicorn/text-encoding-identifier-case: WARN
+unicorn/prefer-modern-math-apis: WARN
+unicorn/prefer-native-coercion-functions: WARN
