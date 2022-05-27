@@ -3,7 +3,7 @@
   "author": "Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)",
   "license": "MIT",
   "dependencies": {
-    "@babel/eslint-parser": "^7.17.0",
+    "@babel/eslint-parser": "^7.18.2",
     "browserslist-config-jaid-node": "3.0.0",
     "eslint": "^8.16.0",
     "eslint-plugin-import": "^2.26.0",
