@@ -1,15 +1,17 @@
+import path from "node:path"
+import {fileURLToPath, pathToFileURL} from "node:url"
+
 import chalk from "chalk"
 import {emp} from "emp"
 import filterObj from "filter-obj"
-import fs from "../src/lib/esm/fs-extra.js"
 import jsYaml from "js-yaml"
 import {countSizeSync} from "list-dir-content-size"
 import {pick} from "lodash-es"
-import path from "path"
 import prettyBytes from "pretty-bytes"
-import publishimo from "./lib/esm/publishimo.js"
 import sortKeys from "sort-keys"
-import {fileURLToPath, pathToFileURL} from "node:url"
+
+import fs from "./lib/esm/fs-extra.js"
+import publishimo from "./lib/esm/publishimo.js"
 
 const pkg = await fs.readJson("package.json")
 const dirName = path.dirname(fileURLToPath(import.meta.url))

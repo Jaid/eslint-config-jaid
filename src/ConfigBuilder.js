@@ -1,6 +1,7 @@
 import path from "node:path"
 
 import chalk from "chalk"
+import createDebug from "debug"
 import {emp} from "emp"
 import filterObj from "filter-obj"
 import jsYaml from "js-yaml"
@@ -11,7 +12,6 @@ import sortKeys from "sort-keys"
 
 import fs from "./lib/esm/fs-extra.js"
 import publishimo from "./lib/esm/publishimo.js"
-import createDebug from "debug"
 
 const debug = createDebug("eslint-config-jaid")
 
