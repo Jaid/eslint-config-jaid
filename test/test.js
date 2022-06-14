@@ -1,5 +1,3 @@
-import {it, jest} from "@jest/globals"
-
 import path from "node:path"
 import {fileURLToPath} from "node:url"
 
