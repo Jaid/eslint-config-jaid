@@ -43,6 +43,7 @@ export default {
     globals: {
       GOOGLE_ANALYTICS_TRACKING_ID: "readonly",
       __non_webpack_require__: "readonly",
+      jest: "readonly",
     },
     env: {
       es2022: true,
