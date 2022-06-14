@@ -44,7 +44,9 @@ export default {
     globals: {
       GOOGLE_ANALYTICS_TRACKING_ID: "readonly",
       __non_webpack_require__: "readonly",
-      jest: "readonly",
+      it: "readonly", // HACK Needed until resolved: https://github.com/nicolo-ribaudo/jest-light-runner/issues/42
+      afterAll: "readonly", // HACK Needed until resolved: https://github.com/nicolo-ribaudo/jest-light-runner/issues/42
+      expect: "readonly", // HACK Needed until resolved: https://github.com/nicolo-ribaudo/jest-light-runner/issues/42
     },
     env: {
       es2022: true,
