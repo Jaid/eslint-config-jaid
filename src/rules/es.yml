@@ -94,5 +94,7 @@ no-restricted-imports:
         message: Use fs-extra
       - name: "@absolunet/fss"
         message: Use fs-extra
-      - name: "opn"
+      - name: opn
         message: Use open
+      - name: pify
+        message: Use util.promisify
