@@ -1,4 +1,5 @@
 import path from "node:path"
+import {pathToFileURL} from "node:url"
 
 import chalk from "chalk"
 import createDebug from "debug"
@@ -46,7 +47,7 @@ export default class ConfigBuilder {
     debug("configBuilder: %O", this)
     const jobs = this.options.presets.map(async preset => {
       const presetSourceFile = path.join(this.options.presetsFolder, preset)
-      const {default: importedModule} = await import(presetSourceFile)
+      const {default: importedModule} = await import(pathToFileURL(presetSourceFile))
       const {includedDependencies, rules, config, extend, publishimoConfig} = importedModule
       debug("importedModule: %O", importedModule)
       const buildPath = path.resolve(this.options.outputFolder, preset)
