@@ -45,7 +45,7 @@ export default {
       __non_webpack_require__: "readonly",
     },
     env: {
-      es2021: true,
+      es2022: true,
       "shared-node-browser": true,
       node: true,
     },
