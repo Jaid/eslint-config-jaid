@@ -33,3 +33,4 @@ react/self-closing-comp: WARN
 react/sort-comp: WARN
 react/style-prop-object: WARN
 react/void-dom-elements-no-children: WARN
+react/jsx-no-leaked-render: WARN
