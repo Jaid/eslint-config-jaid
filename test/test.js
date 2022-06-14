@@ -1,5 +1,5 @@
 import path from "node:path"
-import {fileURLToPath} from "node:url"
+import {fileURLToPath, pathToFileURL} from "node:url"
 
 import createDebug from "debug"
 
@@ -23,7 +23,7 @@ debug("srcFile: %s", srcFile)
 const presets = ["index"]
 
 it("should run", async () => {
-  const {default: ConfigBuilder} = await import(srcFile)
+  const {default: ConfigBuilder} = await import(pathToFileURL(srcFile))
   const configBuilder = new ConfigBuilder({
     pkg,
     outputFolder,
