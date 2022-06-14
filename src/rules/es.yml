@@ -91,8 +91,8 @@ no-restricted-imports:
       - name: ensure-array
         message: Use sure-array
       - name: "@absolunet/fsp"
-        message: Use extra-fs
+        message: Use fs-extra
       - name: "@absolunet/fss"
-        message: Use extra-fs
+        message: Use fs-extra
       - name: "opn"
         message: Use open
