@@ -98,3 +98,7 @@ no-restricted-imports:
         message: Use open
       - name: pify
         message: Use util.promisify
+      - name: fs/promises
+        message: Use fs-extra (more stable)
+      - name: node:fs/promises
+        message: Use fs-extra (more stable)
