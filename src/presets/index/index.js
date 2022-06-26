@@ -25,7 +25,7 @@ export default {
   ],
   extend: ["plugin:you-dont-need-lodash-underscore/all-warn"],
   config: {
-    parser: "@babel/eslint-parser",
+    parser: "@typescript/eslint",
     parserOptions: {
       ecmaVersion: "latest",
       sourceType: "module",
@@ -40,6 +40,7 @@ export default {
       "unicorn",
       "import",
       "simple-import-sort",
+      "@typescript-eslint"
     ],
     globals: {
       GOOGLE_ANALYTICS_TRACKING_ID: "readonly",
@@ -50,8 +51,8 @@ export default {
     },
     env: {
       es2022: true,
-      "shared-node-browser": true,
       node: true,
+      "shared-node-browser": true,
     },
   },
 }
