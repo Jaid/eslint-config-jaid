@@ -4,7 +4,8 @@ export default {
     fetchGithub: true,
   },
   includedDependencies: [
-    "@babel/eslint-parser",
+    "@typescript-eslint/parser",
+    "@typescript-eslint/eslint-plugin",
     "eslint-plugin-node",
     "eslint-plugin-promise",
     "eslint-plugin-unicorn",
@@ -25,14 +26,10 @@ export default {
   ],
   extend: ["plugin:you-dont-need-lodash-underscore/all-warn"],
   config: {
-    parser: "@typescript/eslint",
+    parser: "@typescript-eslint/parser",
     parserOptions: {
       ecmaVersion: "latest",
       sourceType: "module",
-      requireConfigFile: false,
-      ecmaFeatures: {
-        legacyDecorators: true,
-      },
     },
     plugins: [
       "node",

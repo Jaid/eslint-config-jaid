@@ -20,7 +20,12 @@ export default {
   extend: base.extend,
   config: {
     parser: base.config.parser,
-    parserOptions: base.config.parserOptions,
+    parserOptions: {
+      ...base.config.parserOptions,
+      ecmaFeatures: {
+        jsx: true
+      }
+    },
     plugins: [
       ...base.config.plugins,
       "react",
