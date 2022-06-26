@@ -102,3 +102,5 @@ no-restricted-imports:
         message: Use fs-extra (more stable)
       - name: node:fs/promises
         message: Use fs-extra (more stable)
+      - name: execall
+        message: Use super-regex
