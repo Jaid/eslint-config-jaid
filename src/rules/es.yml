@@ -83,6 +83,7 @@ no-return-assign:
 no-use-before-define: WARN
 no-constructor-return: WARN
 no-setter-return: WARN
+no-constant-binary-expression: WARN
 no-restricted-imports:
   - WARN
   - paths:
