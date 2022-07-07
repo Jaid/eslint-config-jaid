@@ -44,3 +44,4 @@ unicorn/no-thenable: WARN
 unicorn/text-encoding-identifier-case: WARN
 unicorn/prefer-modern-math-apis: WARN
 unicorn/prefer-native-coercion-functions: WARN
+unicorn/prefer-logical-operator-over-ternary: WARN
