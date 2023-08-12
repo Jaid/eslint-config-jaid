@@ -4,6 +4,7 @@ plugins:
   - unicorn
   - import
   - simple-import-sort
+  - import-quotes
   - "@typescript-eslint"
 parser: '@typescript-eslint/parser'
 parserOptions:
