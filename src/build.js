@@ -3,7 +3,7 @@ import {fileURLToPath, pathToFileURL} from "node:url"
 
 import chalk from "chalk"
 import {emp} from "emp"
-import filterObj from "filter-obj"
+import {includeKeys} from "filter-obj"
 import jsYaml from "js-yaml"
 import {countSizeSync} from "list-dir-content-size"
 import {pick} from "lodash-es"
@@ -19,14 +19,15 @@ const dirName = path.dirname(fileURLToPath(import.meta.url))
 const presets = await fs.readdir(path.join(dirName, "presets"))
 
 const jobs = presets.map(async preset => {
-  const {default: importedModule} = await import(pathToFileURL(path.resolve(dirName, "presets", preset, "index.js")).toString())
+  const importUrl = pathToFileURL(path.resolve(dirName, "presets", preset, "index.js")).toString()
+  const {default: importedModule} = await import(importUrl)
   const {includedDependencies, rules, config, extend, publishimoConfig} = importedModule
   const buildPath = path.resolve(dirName, "..", "dist", "build", preset)
   await fs.ensureDir(buildPath)
   await emp(buildPath)
   const appliedRules = {}
   for (const rule of rules) {
-    const yamlString = await fs.readFile(path.join(dirName, "rules", `${rule}.yml`), "utf-8")
+    const yamlString = await fs.readFile(path.join(dirName, "rules", `${rule}.yml`), "utf8")
     const minifiedYamlString = yamlString
       .replaceAll("OFF", "0")
       .replaceAll("WARN", "1")
@@ -40,7 +41,7 @@ const jobs = presets.map(async preset => {
     rules: sortKeys(appliedRules),
   })
   await fs.outputJson(path.join(buildPath, "index.json"), eslintConfig)
-  const dependencies = filterObj(pkg.dependencies, key => includedDependencies.includes(key))
+  const dependencies = includeKeys(pkg.dependencies, key => includedDependencies.includes(key))
   const {generatedPkg} = await publishimo({
     ...pick(pkg, ["license", "version", "author", "repository", "peerDependencies"]),
     ...publishimoConfig,
@@ -53,6 +54,4 @@ const jobs = presets.map(async preset => {
   console.log(`${chalk.green(publishimoConfig.name)} ${prettyBytes(countSizeSync(buildPath))}`)
 })
 
-Promise.all(jobs).catch(error => {
-  console.error(error)
-})
+await Promise.all(jobs)

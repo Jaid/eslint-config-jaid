@@ -35,7 +35,8 @@
     "pretty-bytes": "^6.1.1",
     "publishimo": "^5.0.6",
     "sort-keys": "^5.0.0",
-    "tsconfig-jaid": "^2.3.2"
+    "tsconfig-jaid": "^2.3.2",
+    "read-file-yaml": "^2.0.0"
   },
   "scripts": {
     "build": "node src/build.js",

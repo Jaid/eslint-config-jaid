@@ -23,8 +23,8 @@ export default {
     parserOptions: {
       ...base.config.parserOptions,
       ecmaFeatures: {
-        jsx: true
-      }
+        jsx: true,
+      },
     },
     plugins: [
       ...base.config.plugins,
