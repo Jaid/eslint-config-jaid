@@ -14,7 +14,7 @@ import sortKeys from "sort-keys"
 import fs from "./lib/esm/fs-extra.js"
 import publishimo from "./lib/esm/publishimo.js"
 
-const debug = createDebug("eslint-config-jaid")
+const debug = createDebug(`eslint-config-jaid`)
 
 export default class ConfigBuilder {
 
@@ -38,28 +38,28 @@ export default class ConfigBuilder {
    */
   constructor(options) {
     this.options = {
-      presets: ["index"],
+      presets: [`index`],
       ...options,
     }
   }
 
   async run() {
-    debug("configBuilder: %O", this)
+    debug(`configBuilder: %O`, this)
     const jobs = this.options.presets.map(async preset => {
-      const presetSourceFile = path.join(this.options.presetsFolder, preset, "index.js")
+      const presetSourceFile = path.join(this.options.presetsFolder, preset, `index.js`)
       const {default: importedModule} = await import(pathToFileURL(presetSourceFile))
       const {includedDependencies, rules, config, extend, publishimoConfig} = importedModule
-      debug("importedModule: %O", importedModule)
+      debug(`importedModule: %O`, importedModule)
       const buildPath = path.resolve(this.options.outputFolder, preset)
       await fs.ensureDir(buildPath)
       await emp(buildPath)
       const appliedRules = {}
       for (const rule of rules) {
-        const yamlString = await fs.readFile(path.join(this.options.rulesFolder, `${rule}.yml`), "utf8")
+        const yamlString = await fs.readFile(path.join(this.options.rulesFolder, `${rule}.yml`), `utf8`)
         const minifiedYamlString = yamlString
-          .replaceAll("OFF", "0")
-          .replaceAll("WARN", "1")
-          .replaceAll("ERROR", "2")
+          .replaceAll(`OFF`, `0`)
+          .replaceAll(`WARN`, `1`)
+          .replaceAll(`ERROR`, `2`)
         const loadedRules = jsYaml.load(minifiedYamlString)
         Object.assign(appliedRules, loadedRules)
       }
@@ -68,15 +68,15 @@ export default class ConfigBuilder {
         extends: extend,
         rules: sortKeys(appliedRules),
       })
-      await fs.outputJson(path.join(buildPath, "index.json"), eslintConfig)
+      await fs.outputJson(path.join(buildPath, `index.json`), eslintConfig)
       const dependencies = filterObj(this.options.pkg.dependencies, key => includedDependencies.includes(key))
       const {generatedPkg} = await publishimo({
-        ...pick(this.options.pkg, ["license", "version", "author", "repository", "peerDependencies"]),
+        ...pick(this.options.pkg, [`license`, `version`, `author`, `repository`, `peerDependencies`]),
         ...publishimoConfig,
         dependencies: sortKeys(dependencies),
-        main: "index.json",
+        main: `index.json`,
       })
-      await fs.outputJson(path.join(buildPath, "package.json"), generatedPkg)
+      await fs.outputJson(path.join(buildPath, `package.json`), generatedPkg)
       for (const [fileName, filePath] of Object.entries(this.options.staticFiles)) {
         await fs.copyFile(filePath, path.join(buildPath, fileName))
       }

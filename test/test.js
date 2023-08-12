@@ -5,24 +5,24 @@ import createDebug from "debug"
 
 import fs from "../src/lib/esm/fs-extra.js"
 
-const debug = createDebug("eslint-config-jaid")
+const debug = createDebug(`eslint-config-jaid`)
 
-const pkg = await fs.readJson("package.json")
+const pkg = await fs.readJson(`package.json`)
 const dirName = path.dirname(fileURLToPath(import.meta.url))
 
-const srcFolder = path.join(dirName, "..", "src")
-const presetsFolder = path.join(srcFolder, "presets")
-const rulesFolder = path.join(srcFolder, "rules")
-const srcFile = path.join(srcFolder, "ConfigBuilder.js")
-const distFolder = path.join(dirName, "..", "dist")
-const testDistFolder = path.join(distFolder, "test")
-const outputFolder = path.join(testDistFolder, "output")
+const srcFolder = path.join(dirName, `..`, `src`)
+const presetsFolder = path.join(srcFolder, `presets`)
+const rulesFolder = path.join(srcFolder, `rules`)
+const srcFile = path.join(srcFolder, `ConfigBuilder.js`)
+const distFolder = path.join(dirName, `..`, `dist`)
+const testDistFolder = path.join(distFolder, `test`)
+const outputFolder = path.join(testDistFolder, `output`)
 
-debug("srcFile: %s", srcFile)
+debug(`srcFile: %s`, srcFile)
 
-const presets = ["index"]
+const presets = [`index`]
 
-it("should run", async () => {
+it(`should run`, async () => {
   const {default: ConfigBuilder} = await import(pathToFileURL(srcFile))
   const configBuilder = new ConfigBuilder({
     pkg,
@@ -31,8 +31,8 @@ it("should run", async () => {
     rulesFolder,
     presets,
     staticFiles: {
-      "readme.md": path.join(dirName, "..", "readme.md"),
-      "license.txt": path.join(dirName, "..", "license.txt"),
+      "readme.md": path.join(dirName, `..`, `readme.md`),
+      "license.txt": path.join(dirName, `..`, `license.txt`),
     },
   })
   await configBuilder.run()
