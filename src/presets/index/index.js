@@ -20,6 +20,7 @@ export default {
     `eslint-plugin-import`,
     `eslint-plugin-simple-import-sort`,
     `eslint-plugin-you-dont-need-lodash-underscore`,
+    `eslint-plugin-import-quotes`,
   ],
   rules: [
     `es`,
@@ -31,6 +32,7 @@ export default {
     `import`,
     `simple-import-sort`,
     `lodash`,
+    `import-quotes`,
   ],
   extend: [`plugin:you-dont-need-lodash-underscore/all-warn`],
   config: baseConfig,
