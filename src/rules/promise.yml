@@ -4,3 +4,4 @@ promise/no-promise-in-callback: WARN
 promise/no-return-in-finally: WARN
 promise/no-return-wrap: WARN
 promise/param-names: WARN
+promise/no-multiple-resolved: WARN
