@@ -1,9 +1,9 @@
-import path from "node:path"
-import {fileURLToPath, pathToFileURL} from "node:url"
+import path from 'node:path'
+import {fileURLToPath, pathToFileURL} from 'node:url'
 
-import createDebug from "debug"
+import createDebug from 'debug'
 
-import fs from "../src/lib/esm/fs-extra.js"
+import fs from '../src/lib/esm/fs-extra.js'
 
 const debug = createDebug(`eslint-config-jaid`)
 
