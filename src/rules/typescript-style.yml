@@ -1,0 +1,27 @@
+# https://typescript-eslint.io/rules
+prefix: '@typescript-eslint'
+rules:
+  method-signature-style: WARN # https://typescript-eslint.io/rules/method-signature-style
+  array-type: WARN # https://typescript-eslint.io/rules/array-type
+  class-literal-property-style: WARN
+  no-unnecessary-boolean-literal-compare: WARN
+  prefer-as-const: WARN
+  prefer-function-type: WARN
+  prefer-includes: WARN
+  prefer-optional-chain: WARN
+  prefer-string-starts-ends-with: WARN
+  sort-type-constituents: WARN
+  type-annotation-spacing: WARN
+  consistent-indexed-object-style: WARN
+  consistent-type-assertions: WARN
+  consistent-type-definitions: WARN
+  member-delimiter-style: WARN
+  delimiter-style:
+    - WARN
+    - singleline:
+        delimiter: none
+        requireLast: false
+      multiline:
+        delimiter: none
+        requireLast: false
+  no-meaningless-void-operator: WARN

@@ -6,7 +6,7 @@ import {emp} from 'emp'
 import {includeKeys} from 'filter-obj'
 import jsYaml from 'js-yaml'
 import {countSizeSync} from 'list-dir-content-size'
-import {pick} from 'lodash-es'
+import lodash from 'lodash-es'
 import prettyBytes from 'pretty-bytes'
 import sortKeys from 'sort-keys'
 
@@ -32,8 +32,12 @@ const jobs = presets.map(async preset => {
       .replaceAll(`OFF`, `0`)
       .replaceAll(`WARN`, `1`)
       .replaceAll(`ERROR`, `2`)
-    const loadedRules = jsYaml.load(minifiedYamlString)
-    Object.assign(appliedRules, loadedRules)
+    const ruleConfig = jsYaml.load(minifiedYamlString)
+    if (!ruleConfig.prefix) {
+      Object.assign(appliedRules, ruleConfig.rules)
+    } else {
+      Object.assign(appliedRules, lodash.mapKeys(ruleConfig.rules, (value, key) => `${ruleConfig.prefix}/${key}`))
+    }
   }
   const eslintConfig = sortKeys({
     ...config,
@@ -43,7 +47,7 @@ const jobs = presets.map(async preset => {
   await fs.outputJson(path.join(buildPath, `index.json`), eslintConfig)
   const dependencies = includeKeys(pkg.dependencies, key => includedDependencies.includes(key))
   const {generatedPkg} = await publishimo({
-    ...pick(pkg, [`license`, `version`, `author`, `repository`, `peerDependencies`]),
+    ...lodash.pick(pkg, [`license`, `version`, `author`, `repository`, `peerDependencies`]),
     ...publishimoConfig,
     dependencies: sortKeys(dependencies),
     main: `index.json`,
