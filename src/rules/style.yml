@@ -29,7 +29,6 @@ jsx-quotes: WARN
 key-spacing: WARN
 keyword-spacing: WARN
 linebreak-style: [WARN, unix]
-lines-between-class-members: WARN
 multiline-comment-style: OFF
 no-array-constructor: WARN
 no-multi-assign: WARN
