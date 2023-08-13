@@ -1,0 +1,7 @@
+# https://typescript-eslint.io/rules
+prefix: '@typescript-eslint'
+rules:
+  no-unnecessary-boolean-literal-compare: WARN # https://typescript-eslint.io/rules/no-unnecessary-boolean-literal-compare
+  prefer-includes: WARN # https://typescript-eslint.io/rules/prefer-includes
+  prefer-optional-chain: WARN # https://typescript-eslint.io/rules/prefer-optional-chain
+  prefer-string-starts-ends-with: WARN # https://typescript-eslint.io/rules/prefer-string-starts-ends-with

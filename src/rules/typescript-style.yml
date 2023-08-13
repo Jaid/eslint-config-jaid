@@ -4,12 +4,8 @@ rules:
   method-signature-style: WARN # https://typescript-eslint.io/rules/method-signature-style
   array-type: WARN # https://typescript-eslint.io/rules/array-type
   class-literal-property-style: WARN # https://typescript-eslint.io/rules/class-literal-property-style
-  no-unnecessary-boolean-literal-compare: WARN # https://typescript-eslint.io/rules/no-unnecessary-boolean-literal-compare
   prefer-as-const: WARN # https://typescript-eslint.io/rules/prefer-as-const
   prefer-function-type: WARN # https://typescript-eslint.io/rules/prefer-function-type
-  prefer-includes: WARN # https://typescript-eslint.io/rules/prefer-includes
-  prefer-optional-chain: WARN # https://typescript-eslint.io/rules/prefer-optional-chain
-  prefer-string-starts-ends-with: WARN # https://typescript-eslint.io/rules/prefer-string-starts-ends-with
   sort-type-constituents: WARN # https://typescript-eslint.io/rules/sort-type-constituents
   type-annotation-spacing: WARN # https://typescript-eslint.io/rules/type-annotation-spacing
   consistent-indexed-object-style: WARN # https://typescript-eslint.io/rules/consistent-indexed-object-style
