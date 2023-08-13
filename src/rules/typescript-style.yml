@@ -14,7 +14,7 @@ rules:
   member-delimiter-style: # https://typescript-eslint.io/rules/member-delimiter-style
     - WARN
     - singleline:
-        delimiter: none
+        delimiter: comma
         requireLast: false
       multiline:
         delimiter: none
