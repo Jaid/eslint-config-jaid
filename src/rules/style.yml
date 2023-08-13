@@ -20,7 +20,7 @@ computed-property-spacing: WARN
 curly: [WARN, all]
 dot-location: [WARN, property]
 dot-notation: WARN
-eol-last: [WARN, never]
+eol-last: WARN
 func-call-spacing: WARN
 function-paren-newline: [WARN, never]
 implicit-arrow-linebreak: WARN
