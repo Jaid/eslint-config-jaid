@@ -3,10 +3,10 @@
 prefix: '@typescript-eslint'
 rules:
   dot-notation: WARN # https://typescript-eslint.io/rules/dot-notation
-  no-array-constructor: WARN # https://eslint.org/docs/rules/no-array-constructor
-  no-dupe-class-members: WARN # https://eslint.org/docs/rules/no-dupe-class-members
-  no-redeclare: WARN # https://eslint.org/docs/rules/no-redeclare
-  no-restricted-imports:
+  no-array-constructor: WARN # https://typescript-eslint.io/rules/no-array-constructor
+  no-dupe-class-members: WARN # https://typescript-eslint.io/rules/no-dupe-class-members
+  no-redeclare: WARN # https://typescript-eslint.io/rules/no-redeclare
+  no-restricted-imports: # https://typescript-eslint.io/rules/no-restricted-imports
     - WARN # https://eslint.org/docs/rules/no-restricted-imports
     - paths:
         - name: lodash
@@ -27,7 +27,7 @@ rules:
           message: Use fs-extra (more stable) # https://www.npmjs.com/package/fs-extra
         - name: execall
           message: Use super-regex # https://www.npmjs.com/package/super-regex
-  no-shadow: WARN # https://eslint.org/docs/rules/no-shadow
-  no-throw-literal: WARN # https://eslint.org/docs/rules/no-throw-literal
-  no-useless-constructor: WARN # https://eslint.org/docs/rules/no-useless-constructor
-  no-return-await: WARN # https://eslint.org/docs/rules/no-return-await
+  no-shadow: WARN # https://typescript-eslint.io/rules/no-shadow
+  no-throw-literal: WARN # https://typescript-eslint.io/rules/no-throw-literal
+  no-useless-constructor: WARN # https://typescript-eslint.io/rules/no-useless-constructor
+  no-return-await: WARN # https://typescript-eslint.io/rules/no-return-await
