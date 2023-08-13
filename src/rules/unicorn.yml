@@ -7,7 +7,6 @@ rules:
   no-instanceof-array: WARN
   no-new-buffer: ERROR
   no-hex-escape: WARN
-  prefer-string-starts-ends-with: WARN
   prefer-type-error: WARN
   new-for-builtins: WARN
   prefer-spread: WARN
@@ -15,7 +14,6 @@ rules:
   prefer-add-event-listener: WARN
   prefer-exponentiation-operator: WARN
   prefer-array-flat-map: WARN
-  prefer-includes: WARN
   prefer-string-slice: WARN
   consistent-function-scoping: WARN
   expiring-todo-comments: WARN
