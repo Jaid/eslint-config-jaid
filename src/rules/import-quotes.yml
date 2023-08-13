@@ -1,1 +1,3 @@
-import-quotes/import-quotes: [WARN, single]
+prefix: import-quotes
+rules:
+  import-quotes/import-quotes: [WARN, single]

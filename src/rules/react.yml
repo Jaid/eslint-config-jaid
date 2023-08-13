@@ -1,36 +1,38 @@
-react/button-has-type: WARN
-react/default-props-match-prop-types: WARN
-react/destructuring-assignment:
-  - WARN
-  - never
-react/jsx-sort-props:
-  - WARN
-  - ignoreCase: true
-    callbacksLast: true
-    shorthandLast: true
-    reservedFirst: true
-react/forbid-foreign-prop-types: WARN
-react/no-access-state-in-setstate: WARN
-react/no-children-prop: WARN
-react/no-danger-with-children: WARN
-react/no-deprecated: WARN
-react/no-did-mount-set-state: WARN
-react/no-did-update-set-state: WARN
-react/no-direct-mutation-state: WARN
-react/no-find-dom-node: WARN
-react/no-is-mounted: WARN
-react/no-redundant-should-component-update: WARN
-react/no-render-return-value: WARN
-react/no-string-refs: WARN
-react/no-this-in-sfc: WARN
-react/no-typos: WARN
-react/no-unknown-property: WARN
-react/no-will-update-set-state: WARN
-react/prefer-es6-class: WARN
-react/react-in-jsx-scope: WARN
-react/require-render-return: WARN
-react/self-closing-comp: WARN
-react/sort-comp: WARN
-react/style-prop-object: WARN
-react/void-dom-elements-no-children: WARN
-react/jsx-no-leaked-render: WARN
+prefix: react
+rules:
+  button-has-type: WARN
+  default-props-match-prop-types: WARN
+  destructuring-assignment:
+    - WARN
+    - never
+  jsx-sort-props:
+    - WARN
+    - ignoreCase: true
+      callbacksLast: true
+      shorthandLast: true
+      reservedFirst: true
+  forbid-foreign-prop-types: WARN
+  no-access-state-in-setstate: WARN
+  no-children-prop: WARN
+  no-danger-with-children: WARN
+  no-deprecated: WARN
+  no-did-mount-set-state: WARN
+  no-did-update-set-state: WARN
+  no-direct-mutation-state: WARN
+  no-find-dom-node: WARN
+  no-is-mounted: WARN
+  no-redundant-should-component-update: WARN
+  no-render-return-value: WARN
+  no-string-refs: WARN
+  no-this-in-sfc: WARN
+  no-typos: WARN
+  no-unknown-property: WARN
+  no-will-update-set-state: WARN
+  prefer-es6-class: WARN
+  react-in-jsx-scope: WARN
+  require-render-return: WARN
+  self-closing-comp: WARN
+  sort-comp: WARN
+  style-prop-object: WARN
+  void-dom-elements-no-children: WARN
+  jsx-no-leaked-render: WARN

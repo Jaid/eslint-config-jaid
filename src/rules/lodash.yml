@@ -1,6 +1,8 @@
-you-dont-need-lodash-underscore/last: OFF
-you-dont-need-lodash-underscore/uniq: OFF
-you-dont-need-lodash-underscore/is-nil: OFF
-you-dont-need-lodash-underscore/omit: OFF
-you-dont-need-lodash-underscore/is-string: OFF
-you-dont-need-lodash-underscore/is-function: OFF
+prefix: you-dont-need-lodash-underscore
+rules:
+  last: OFF
+  uniq: OFF
+  is-nil: OFF
+  omit: OFF
+  is-string: OFF
+  is-function: OFF

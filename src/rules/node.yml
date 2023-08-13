@@ -1,5 +1,7 @@
-node/no-mixed-requires: WARN
-node/no-new-require: WARN
-node/no-path-concat: WARN
-node/no-sync: WARN
-node/file-extension-in-import: ERROR
+prefix: node
+rules:
+  no-mixed-requires: WARN
+  no-new-require: WARN
+  no-path-concat: WARN
+  no-sync: WARN
+  file-extension-in-import: ERROR

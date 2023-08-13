@@ -1,7 +1,9 @@
-promise/catch-or-return: WARN
-promise/no-callback-in-promise: WARN
-promise/no-promise-in-callback: WARN
-promise/no-return-in-finally: WARN
-promise/no-return-wrap: WARN
-promise/param-names: WARN
-promise/no-multiple-resolved: WARN
+prefix: promise
+rules:
+  catch-or-return: WARN
+  no-callback-in-promise: WARN
+  no-promise-in-callback: WARN
+  no-return-in-finally: WARN
+  no-return-wrap: WARN
+  param-names: WARN
+  no-multiple-resolved: WARN

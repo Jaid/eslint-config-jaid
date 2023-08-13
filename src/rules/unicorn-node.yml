@@ -1,1 +1,3 @@
-unicorn/prefer-node-protocol: WARN
+prefix: unicorn
+rules:
+  prefer-node-protocol: WARN

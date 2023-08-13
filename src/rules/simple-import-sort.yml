@@ -1,10 +1,12 @@
-simple-import-sort/imports:
-  - WARN
-  - groups:
-    - ["^\\u0000"] # Side effects
-    - ["^@jest/globals$"] # Jest globals
-    - ["^node:"] # Node builtins, see https://nodejs.org/api/esm.html#esm_node_imports
-    - ["^@?\\w"] # Packages
-    - ["^lib/", "^components/"] # lib/, components/
-    - ["^src/", "^root/"] # src/, root/
-    - ["^\\."] # Relative
+prefix: simple-import-sort
+rules:
+  imports:
+    - WARN
+    - groups:
+      - ["^\\u0000"] # Side effects
+      - ["^@jest/globals$"] # Jest globals
+      - ["^node:"] # Node builtins, see https://nodejs.org/api/esm.html#esm_node_imports
+      - ["^@?\\w"] # Packages
+      - ["^lib/", "^components/"] # lib/, components/
+      - ["^src/", "^root/"] # src/, root/
+      - ["^\\."] # Relative

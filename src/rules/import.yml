@@ -1,11 +1,13 @@
-import/newline-after-import: WARN
-import/first: WARN
-import/no-duplicates: WARN
-import/no-mutable-exports: WARN
-import/no-deprecated: WARN
-import/no-useless-path-segments: WARN
-import/no-self-import: WARN
-import/no-absolute-path: WARN
-import/no-unresolved:
-  - ERROR
-  - ignore: ["^node:", ^!]
+prefix: import
+rules:
+  newline-after-import: WARN
+  first: WARN
+  no-duplicates: WARN
+  no-mutable-exports: WARN
+  no-deprecated: WARN
+  no-useless-path-segments: WARN
+  no-self-import: WARN
+  no-absolute-path: WARN
+  no-unresolved:
+    - ERROR
+    - ignore: ["^node:", ^!]

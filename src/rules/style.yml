@@ -1,82 +1,83 @@
-array-bracket-newline:
-  - WARN
-  - multiline: true
-array-bracket-spacing: WARN
-array-element-newline: [WARN, consistent]
-arrow-parens: [WARN, as-needed]
-arrow-spacing: WARN
-block-spacing: WARN
-brace-style: WARN
-comma-dangle:
-  - WARN
-  - arrays: always-multiline
-    objects: always-multiline
-    imports: never
-    exports: never
-    functions: never
-comma-spacing: WARN
-comma-style: WARN
-computed-property-spacing: WARN
-curly: [WARN, all]
-dot-location: [WARN, property]
-dot-notation: WARN
-eol-last: WARN
-func-call-spacing: WARN
-function-paren-newline: [WARN, never]
-implicit-arrow-linebreak: WARN
-indent: [WARN, 2]
-jsx-quotes: WARN
-key-spacing: WARN
-keyword-spacing: WARN
-linebreak-style: [WARN, unix]
-multiline-comment-style: OFF
-no-array-constructor: WARN
-no-multi-assign: WARN
-no-multiple-empty-lines: WARN
-no-nested-ternary: WARN
-no-trailing-spaces: WARN
-no-underscore-dangle:
-  - WARN
-  - allow:
-      - __REDUX_DEVTOOLS_EXTENSION_COMPOSE__ # See https://github.com/zalmoxisus/redux-devtools-extension
-no-unneeded-ternary: WARN
-no-whitespace-before-property: WARN
-semi-style: WARN
-no-with: WARN
-no-extend-native: WARN
-no-new-object: WARN
-no-tabs: WARN
-no-eq-null: WARN
-prefer-const: WARN
-no-lonely-if: WARN
-no-floating-decimal: WARN
-object-curly-newline:
-  - WARN
-  - ObjectExpression:
-      consistent: true
-      minProperties: 2
-      multiline: true
-    ObjectPattern: never
-    ImportDeclaration: never
-object-curly-spacing: WARN
-object-property-newline: WARN
-one-var: [WARN, never]
-operator-linebreak: [WARN, before]
-padding-line-between-statements: OFF
-quote-props: [WARN, as-needed]
-quotes: [WARN, backtick]
-rest-spread-spacing: WARN
-space-before-blocks: WARN
-space-before-function-paren:
-  - WARN
-  - anonymous: always
-    named: never
-    asyncArrow: always
-space-in-parens: WARN
-space-infix-ops: WARN
-spaced-comment: WARN
-switch-colon-spacing: WARN
-template-curly-spacing: WARN
-template-tag-spacing: WARN
-yield-star-spacing: WARN
-no-extra-parens: WARN
+rules:
+  array-bracket-newline:
+    - WARN
+    - multiline: true
+  array-bracket-spacing: WARN
+  array-element-newline: [WARN, consistent]
+  arrow-parens: [WARN, as-needed]
+  arrow-spacing: WARN
+  block-spacing: WARN
+  brace-style: WARN
+  comma-dangle:
+    - WARN
+    - arrays: always-multiline
+      objects: always-multiline
+      imports: never
+      exports: never
+      functions: never
+  comma-spacing: WARN
+  comma-style: WARN
+  computed-property-spacing: WARN
+  curly: [WARN, all]
+  dot-location: [WARN, property]
+  dot-notation: WARN
+  eol-last: WARN
+  func-call-spacing: WARN
+  function-paren-newline: [WARN, never]
+  implicit-arrow-linebreak: WARN
+  indent: [WARN, 2]
+  jsx-quotes: WARN
+  key-spacing: WARN
+  keyword-spacing: WARN
+  linebreak-style: [WARN, unix]
+  multiline-comment-style: OFF
+  no-array-constructor: WARN
+  no-multi-assign: WARN
+  no-multiple-empty-lines: WARN
+  no-nested-ternary: WARN
+  no-trailing-spaces: WARN
+  no-underscore-dangle:
+    - WARN
+    - allow:
+        - __REDUX_DEVTOOLS_EXTENSION_COMPOSE__ # See https://github.com/zalmoxisus/redux-devtools-extension
+  no-unneeded-ternary: WARN
+  no-whitespace-before-property: WARN
+  semi-style: WARN
+  no-with: WARN
+  no-extend-native: WARN
+  no-new-object: WARN
+  no-tabs: WARN
+  no-eq-null: WARN
+  prefer-const: WARN
+  no-lonely-if: WARN
+  no-floating-decimal: WARN
+  object-curly-newline:
+    - WARN
+    - ObjectExpression:
+        consistent: true
+        minProperties: 2
+        multiline: true
+      ObjectPattern: never
+      ImportDeclaration: never
+  object-curly-spacing: WARN
+  object-property-newline: WARN
+  one-var: [WARN, never]
+  operator-linebreak: [WARN, before]
+  padding-line-between-statements: OFF
+  quote-props: [WARN, as-needed]
+  quotes: [WARN, backtick]
+  rest-spread-spacing: WARN
+  space-before-blocks: WARN
+  space-before-function-paren:
+    - WARN
+    - anonymous: always
+      named: never
+      asyncArrow: always
+  space-in-parens: WARN
+  space-infix-ops: WARN
+  spaced-comment: WARN
+  switch-colon-spacing: WARN
+  template-curly-spacing: WARN
+  template-tag-spacing: WARN
+  yield-star-spacing: WARN
+  no-extra-parens: WARN

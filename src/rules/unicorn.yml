@@ -1,50 +1,52 @@
-unicorn/catch-error-name: WARN
-unicorn/throw-new-error: WARN
-unicorn/number-literal-case: WARN
-unicorn/escape-case: WARN
-unicorn/no-instanceof-array: WARN
-unicorn/no-new-buffer: ERROR
-unicorn/no-hex-escape: WARN
-unicorn/prefer-string-starts-ends-with: WARN
-unicorn/prefer-type-error: WARN
-unicorn/new-for-builtins: WARN
-unicorn/prefer-spread: WARN
-unicorn/error-message: WARN
-unicorn/prefer-add-event-listener: WARN
-unicorn/prefer-exponentiation-operator: WARN
-unicorn/prefer-array-flat-map: WARN
-unicorn/prefer-includes: WARN
-unicorn/prefer-string-slice: WARN
-unicorn/consistent-function-scoping: WARN
-unicorn/expiring-todo-comments: WARN
-unicorn/prefer-string-replace-all: WARN
-unicorn/prefer-number-properties: WARN
-unicorn/no-useless-undefined: WARN
-unicorn/prefer-array-find: WARN
-unicorn/numeric-separators-style: WARN
-unicorn/prefer-math-trunc: ERROR
-unicorn/prefer-date-now: ERROR
-unicorn/prefer-string-trim-start-end: WARN
-unicorn/no-new-array: WARN
-unicorn/prefer-array-index-of: WARN
-unicorn/prefer-regexp-test: WARN
-unicorn/no-array-for-each: WARN
-unicorn/prefer-array-flat: WARN
-unicorn/no-useless-length-check: WARN
-unicorn/no-useless-spread: WARN
-unicorn/no-useless-fallback-in-spread: WARN
-unicorn/better-regex: WARN
-unicorn/prefer-module: WARN
-unicorn/prefer-top-level-await: WARN
-unicorn/prefer-code-point: WARN
-unicorn/no-await-expression-member: WARN
-unicorn/relative-url-style: WARN
-unicorn/no-useless-promise-resolve-reject: WARN
-unicorn/no-thenable: WARN
-unicorn/text-encoding-identifier-case: WARN
-unicorn/prefer-modern-math-apis: WARN
-unicorn/prefer-native-coercion-functions: WARN
-unicorn/prefer-logical-operator-over-ternary: WARN
-unicorn/prefer-blob-reading-methods: WARN
-unicorn/prefer-set-size: WARN
-unicorn/no-unnecessary-await: WARN
+prefix: unicorn
+rules:
+  catch-error-name: WARN
+  throw-new-error: WARN
+  number-literal-case: WARN
+  escape-case: WARN
+  no-instanceof-array: WARN
+  no-new-buffer: ERROR
+  no-hex-escape: WARN
+  prefer-string-starts-ends-with: WARN
+  prefer-type-error: WARN
+  new-for-builtins: WARN
+  prefer-spread: WARN
+  error-message: WARN
+  prefer-add-event-listener: WARN
+  prefer-exponentiation-operator: WARN
+  prefer-array-flat-map: WARN
+  prefer-includes: WARN
+  prefer-string-slice: WARN
+  consistent-function-scoping: WARN
+  expiring-todo-comments: WARN
+  prefer-string-replace-all: WARN
+  prefer-number-properties: WARN
+  no-useless-undefined: WARN
+  prefer-array-find: WARN
+  numeric-separators-style: WARN
+  prefer-math-trunc: ERROR
+  prefer-date-now: ERROR
+  prefer-string-trim-start-end: WARN
+  no-new-array: WARN
+  prefer-array-index-of: WARN
+  prefer-regexp-test: WARN
+  no-array-for-each: WARN
+  prefer-array-flat: WARN
+  no-useless-length-check: WARN
+  no-useless-spread: WARN
+  no-useless-fallback-in-spread: WARN
+  better-regex: WARN
+  prefer-module: WARN
+  prefer-top-level-await: WARN
+  prefer-code-point: WARN
+  no-await-expression-member: WARN
+  relative-url-style: WARN
+  no-useless-promise-resolve-reject: WARN
+  no-thenable: WARN
+  text-encoding-identifier-case: WARN
+  prefer-modern-math-apis: WARN
+  prefer-native-coercion-functions: WARN
+  prefer-logical-operator-over-ternary: WARN
+  prefer-blob-reading-methods: WARN
+  prefer-set-size: WARN
+  no-unnecessary-await: WARN

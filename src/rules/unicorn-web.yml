@@ -1,8 +1,10 @@
-unicorn/prefer-query-selector: WARN
-unicorn/prefer-dom-node-append: WARN
-unicorn/prefer-dom-node-remove: WARN
-unicorn/prefer-dataset: WARN
-unicorn/prefer-modern-dom-apis: WARN
-unicorn/prefer-dom-node-text-content: WARN
-unicorn/prefer-keyboard-event-key: WARN
-unicorn/no-invalid-remove-event-listener: WARN
+prefix: unicorn
+rules:
+  prefer-query-selector: WARN
+  prefer-dom-node-append: WARN
+  prefer-dom-node-remove: WARN
+  prefer-dataset: WARN
+  prefer-modern-dom-apis: WARN
+  prefer-dom-node-text-content: WARN
+  prefer-keyboard-event-key: WARN
+  no-invalid-remove-event-listener: WARN
