@@ -57,6 +57,7 @@ object-curly-newline:
       minProperties: 2
       multiline: true
     ObjectPattern: never
+    ImportDeclaration: never
 object-curly-spacing: WARN
 object-property-newline: WARN
 one-var: [WARN, never]
