@@ -12,7 +12,6 @@ rules:
   no-const-assign: WARN
   no-delete-var: WARN
   no-dupe-args: WARN
-  no-dupe-class-members: WARN
   no-dupe-keys: WARN
   no-duplicate-case: WARN
   no-empty-character-class: WARN
@@ -39,16 +38,12 @@ rules:
   no-obj-calls: WARN
   no-octal: WARN
   no-proto: WARN
-  no-redeclare: WARN
   no-regex-spaces: WARN
-  no-return-await: WARN
   no-self-assign: WARN
   no-self-compare: WARN
   no-sequences: WARN
-  no-shadow: WARN
   no-sparse-arrays: WARN
   no-this-before-super: WARN
-  no-throw-literal: WARN
   no-unexpected-multiline: WARN
   no-unreachable: WARN
   no-unsafe-finally: WARN
@@ -58,7 +53,6 @@ rules:
   no-useless-call: WARN
   no-useless-computed-key: WARN
   no-useless-concat: WARN
-  no-useless-constructor: WARN
   no-useless-escape: WARN
   no-useless-rename: WARN
   no-var: WARN
@@ -81,28 +75,7 @@ rules:
   no-return-assign:
     - WARN
     - always
-  no-use-before-define: WARN
   no-constructor-return: WARN
   no-setter-return: WARN
   no-constant-binary-expression: WARN
-  no-restricted-imports:
-    - WARN
-    - paths:
-        - name: lodash
-          message: Use lodash-es
-        - name: ensure-array
-          message: Use sure-array
-        - name: "@absolunet/fsp"
-          message: Use fs-extra
-        - name: "@absolunet/fss"
-          message: Use fs-extra
-        - name: opn
-          message: Use open
-        - name: pify
-          message: Use util.promisify
-        - name: fs/promises
-          message: Use fs-extra (more stable)
-        - name: node:fs/promises
-          message: Use fs-extra (more stable)
-        - name: execall
-          message: Use super-regex
+  no-use-before-define: WARN

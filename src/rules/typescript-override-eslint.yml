@@ -1,0 +1,33 @@
+# These are rules that also exist in eslint, but wher TypeScript provides a more stabile variant of
+# https://typescript-eslint.io/rules/#extension-rules
+prefix: '@typescript-eslint'
+rules:
+  dot-notation: WARN
+  no-array-constructor: WARN
+  no-dupe-class-members: WARN
+  no-redeclare: WARN
+  no-restricted-imports:
+    - WARN
+    - paths:
+        - name: lodash
+          message: Use lodash-es
+        - name: ensure-array
+          message: Use sure-array
+        - name: "@absolunet/fsp"
+          message: Use fs-extra
+        - name: "@absolunet/fss"
+          message: Use fs-extra
+        - name: opn
+          message: Use open
+        - name: pify
+          message: Use util.promisify
+        - name: fs/promises
+          message: Use fs-extra (more stable)
+        - name: node:fs/promises
+          message: Use fs-extra (more stable)
+        - name: execall
+          message: Use super-regex
+  no-shadow: WARN
+  no-throw-literal: WARN
+  no-useless-constructor: WARN
+  no-return-await: WARN

@@ -20,7 +20,6 @@ rules:
   computed-property-spacing: WARN
   curly: [WARN, all]
   dot-location: [WARN, property]
-  dot-notation: WARN
   eol-last: WARN
   func-call-spacing: WARN
   function-paren-newline: [WARN, never]
@@ -31,7 +30,6 @@ rules:
   keyword-spacing: WARN
   linebreak-style: [WARN, unix]
   multiline-comment-style: OFF
-  no-array-constructor: WARN
   no-multi-assign: WARN
   no-multiple-empty-lines: WARN
   no-nested-ternary: WARN
