@@ -22,7 +22,7 @@
     "cross-env": "^7.0.3",
     "debug": "^4.3.4",
     "emp": "^2.0.0",
-    "eslint-config-jaid": "^3.1.0",
+    "eslint-config-jaid": "^3.2.3",
     "eslint-find-rules": "^4.1.0",
     "filter-obj": "^5.1.0",
     "foreach-cli": "^1.8.1",
@@ -36,7 +36,7 @@
     "pretty-bytes": "^6.1.1",
     "publishimo": "^5.0.6",
     "sort-keys": "^5.0.0",
-    "tsconfig-jaid": "^3.2.0",
+    "tsconfig-jaid": "^4.1.1",
     "read-file-yaml": "^2.0.0"
   },
   "scripts": {
