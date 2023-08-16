@@ -9,6 +9,7 @@ type RuleFinderFunction = `getCurrentRules` | `getDeprecatedRules` | `getUnusedR
 
 type Rule = {
   id: string
+  fullId: string
   plugin?: string
 }
 
@@ -22,11 +23,13 @@ export default async (eslintConfigFile: string, ruleFinderFunction: RuleFinderFu
     if (parts.length === 1) {
       return {
         id: ruleId,
+        fullId: ruleId,
         plugin: `eslint`,
       }
     }
     return {
       id: parts[1],
+      fullId: ruleId,
       plugin: parts[0],
     }
   })
