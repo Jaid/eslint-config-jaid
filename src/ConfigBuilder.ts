@@ -5,13 +5,13 @@ import chalk from 'chalk'
 import createDebug from 'debug'
 import {emp} from 'emp'
 import filterObj from 'filter-obj'
+import fs from 'fs-extra'
 import jsYaml from 'js-yaml'
 import {countSizeSync} from 'list-dir-content-size'
 import {pick} from 'lodash-es'
 import prettyBytes from 'pretty-bytes'
 import sortKeys from 'sort-keys'
 
-import fs from './lib/esm/fs-extra.js'
 import publishimo from './lib/esm/publishimo.js'
 
 const debug = createDebug(`eslint-config-jaid`)
@@ -46,7 +46,7 @@ export default class ConfigBuilder {
   async run() {
     debug(`configBuilder: %O`, this)
     const jobs = this.options.presets.map(async preset => {
-      const presetSourceFile = path.join(this.options.presetsFolder, preset, `index.js`)
+      const presetSourceFile = path.join(this.options.presetsFolder, preset, `index.ts`)
       const {default: importedModule} = await import(pathToFileURL(presetSourceFile))
       const {includedDependencies, rules, config, extend, publishimoConfig} = importedModule
       debug(`importedModule: %O`, importedModule)

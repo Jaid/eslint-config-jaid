@@ -1,35 +1,10 @@
 #!/bin/env tsx
 import path from 'node:path'
 
-import eslintFindRules from 'eslint-find-rules'
-import execa from 'execa'
-import * as lodash from 'lodash-es'
-import {firstMatch} from 'super-regex'
+import listRules from 'src/lib/listRules.ts'
 
-await execa(`npm`, [`run`, `build`])
 const rulesFile = path.join(`dist`, `build`, `react`, `index.json`)
-const ruleFinder = await eslintFindRules(rulesFile)
-const unusedRules: string[] = ruleFinder.getUnusedRules().filter(ruleId => {
-  return ruleId.split(`/`).length <= 2
-})
-interface Rule {
-  id: string
-  plugin?: string
-}
-const rules: Rule[] = unusedRules.map(ruleId => {
-  const parts = ruleId.split(`/`)
-  if (parts.length === 1) {
-    return {
-      id: ruleId,
-      plugin: `eslint`,
-    }
-  }
-  return {
-    id: parts[1],
-    plugin: parts[0],
-  }
-})
-const groupedRules = lodash.groupBy(rules, `plugin`)
+const groupedRules = await listRules(rulesFile, `getUnusedRules`)
 for (const [plugin, ruleList] of Object.entries(groupedRules)) {
   console.log(`\n${plugin}:`)
   for (const rule of ruleList) {
