@@ -25,9 +25,7 @@ jobs:
         run: |-
           PATH=$PATH:$(realpath ./node_modules/.bin)
           export PATH
-          src/scripts/activeHtml.ts
-          src/scripts/unusedHtml.ts
-          src/scripts/deprecatedHtml.ts
+          npm run buildPage
       - name: check
         id: check
         shell: bash
