@@ -10,7 +10,7 @@ rules:
   type-annotation-spacing: WARN # https://typescript-eslint.io/rules/type-annotation-spacing
   consistent-indexed-object-style: WARN # https://typescript-eslint.io/rules/consistent-indexed-object-style
   consistent-type-assertions: WARN # https://typescript-eslint.io/rules/consistent-type-assertions
-  consistent-type-definitions: WARN # https://typescript-eslint.io/rules/consistent-type-definitions
+  consistent-type-definitions: [WARN, type] # https://typescript-eslint.io/rules/consistent-type-definitions
   member-delimiter-style: # https://typescript-eslint.io/rules/member-delimiter-style
     - WARN
     - singleline:
