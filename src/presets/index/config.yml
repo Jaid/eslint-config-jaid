@@ -17,3 +17,9 @@ globals:
 env:
   node: true
   shared-node-browser: true
+settings:
+  import/parsers:
+    '@typescript-eslint/parser': [.ts]
+  import/resolver:
+    typescript:
+      alwaysTryTypes: true

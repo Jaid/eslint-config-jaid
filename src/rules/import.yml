@@ -8,6 +8,4 @@ rules:
   no-useless-path-segments: WARN
   no-self-import: WARN
   no-absolute-path: WARN
-  no-unresolved:
-    - ERROR
-    - ignore: ["^node:", ^!]
+  no-unresolved: ERROR

@@ -20,6 +20,7 @@ export default {
     `eslint-plugin-simple-import-sort`,
     `eslint-plugin-you-dont-need-lodash-underscore`,
     `eslint-plugin-import-quotes`,
+    `eslint-import-resolver-typescript`,
   ],
   rules: [
     `typescript`,

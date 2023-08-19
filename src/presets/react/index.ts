@@ -30,6 +30,7 @@ export default {
       `react`,
     ],
     settings: {
+      ...base.config.settings,
       react: {
         version: `detect`,
       },
