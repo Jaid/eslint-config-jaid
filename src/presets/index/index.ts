@@ -29,7 +29,7 @@ export default {
     `typescript-style`,
     `style`,
     `promise`,
-    `n`,
+    `node`,
     `unicorn`,
     `unicorn-node`,
     `import`,
