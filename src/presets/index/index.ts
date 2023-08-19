@@ -36,6 +36,7 @@ export default {
     `simple-import-sort`,
     `import-quotes`,
     `lodash`,
+    `regex`,
   ],
   extend: [`plugin:you-dont-need-lodash-underscore/all-warn`],
   config: baseConfig,
