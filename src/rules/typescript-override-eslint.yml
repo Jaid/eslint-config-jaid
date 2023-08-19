@@ -51,3 +51,4 @@ rules:
   key-spacing: WARN # https://typescript-eslint.io/rules/key-spacing
   keyword-spacing: WARN # https://typescript-eslint.io/rules/keyword-spacing
   indent: [WARN, 2] # https://typescript-eslint.io/rules/indent
+  no-unused-vars: WARN # https://typescript-eslint.io/rules/no-unused-vars

@@ -46,7 +46,6 @@ rules:
   no-unsafe-finally: WARN
   no-unsafe-negation: WARN
   no-unused-labels: WARN
-  no-unused-vars: WARN
   no-useless-call: WARN
   no-useless-computed-key: WARN
   no-useless-concat: WARN
