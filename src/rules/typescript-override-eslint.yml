@@ -43,3 +43,4 @@ rules:
     named: never
     asyncArrow: always
   space-before-blocks: WARN # https://typescript-eslint.io/rules/space-before-blocks
+  space-infix-ops: WARN # https://typescript-eslint.io/rules/space-infix-ops

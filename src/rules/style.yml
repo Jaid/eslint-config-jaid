@@ -64,7 +64,6 @@ rules:
   quote-props: [WARN, as-needed]
   rest-spread-spacing: WARN
   space-in-parens: WARN
-  space-infix-ops: WARN
   spaced-comment: WARN
   switch-colon-spacing: WARN
   template-curly-spacing: WARN
