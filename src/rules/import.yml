@@ -1,4 +1,4 @@
-prefix: import
+prefix: i
 rules:
   newline-after-import: WARN
   first: WARN

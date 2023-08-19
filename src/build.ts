@@ -10,10 +10,11 @@ import {countSizeSync} from 'list-dir-content-size'
 import * as lodash from 'lodash-es'
 import prettyBytes from 'pretty-bytes'
 import sortKeys from 'sort-keys'
+import {PackageJson} from 'type-fest'
 
 import publishimo from './lib/esm/publishimo.js'
 
-const pkg = await fs.readJson(`package.json`)
+const pkg: PackageJson = await fs.readJson(`package.json`)
 const dirName = path.dirname(fileURLToPath(import.meta.url))
 
 const presets = await fs.readdir(path.join(dirName, `presets`))

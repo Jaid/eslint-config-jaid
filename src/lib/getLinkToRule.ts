@@ -2,12 +2,12 @@ type Mapper = Record<string, (id: string) => string>;
 
 export const pluginMap = {
   'import-quotes': () => `https://github.com/xneek/eslint-plugin-import-quotes#readme`,
-  import: `https://github.com/import-js/eslint-plugin-import`,
+  i: `https://github.com/un-es/eslint-plugin-i#readme`,
 }
 
 const map: Mapper = {
   eslint: id => `https://eslint.org/docs/latest/rules/${id}`,
-  import: id => `https://github.com/import-js/eslint-plugin-import#import${id.replaceAll(`-`, ``)}`,
+  i: id => `https://github.com/un-es/eslint-plugin-i#import${id.replaceAll(`-`, ``)}`,
   'you-dont-need-lodash-underscore': id => `https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore#_${id}`,
   n: id => `https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/${id}.md`,
   promise: id => `https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules/${id}.md`,

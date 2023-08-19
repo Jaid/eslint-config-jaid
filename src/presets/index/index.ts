@@ -16,7 +16,7 @@ export default {
     `eslint-plugin-n`,
     `eslint-plugin-promise`,
     `eslint-plugin-unicorn`,
-    `eslint-plugin-import`,
+    `eslint-plugin-i`,
     `eslint-plugin-simple-import-sort`,
     `eslint-plugin-you-dont-need-lodash-underscore`,
     `eslint-plugin-import-quotes`,

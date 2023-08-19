@@ -2,7 +2,7 @@ plugins:
   - 'n'
   - promise
   - unicorn
-  - import
+  - i
   - simple-import-sort
   - import-quotes
   - "@typescript-eslint"
