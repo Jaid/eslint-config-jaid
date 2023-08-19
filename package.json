@@ -42,14 +42,15 @@
     "showdown": "^2.1.0",
     "handlebars": "^4.7.8",
     "tsx": "^3.12.7",
-    "type-fest": "^4.2.0"
+    "type-fest": "^4.2.0",
+    "@atao60/fse-cli": "^0.1.8"
   },
   "scripts": {
     "build": "tsx src/build.ts",
     "release": "npm run build && foreach -g \"dist/build/*\" -x \"npm publish dist/build/#{base}\"",
     "unused-rules": "npm run build && cross-env eslint-find-rules --unused dist/build/react/index.json",
     "test": "NODE_ENV=production jest",
-    "buildPage": "tsx src/scripts/activeHtml.ts && tsx src/scripts/unusedHtml.ts && tsx src/scripts/deprecatedHtml.ts"
+    "buildPage": "fse emptyDir dist/page && tsx src/scripts/activeHtml.ts && tsx src/scripts/unusedHtml.ts && tsx src/scripts/deprecatedHtml.ts && fse copy etc/page dist/page"
   },
   "name": "eslint-config-jaid",
   "description": "Personal ESLint preset. Intentionally ugly to write code that looks like I feel.",
