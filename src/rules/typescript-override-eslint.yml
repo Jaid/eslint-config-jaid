@@ -33,3 +33,13 @@ rules:
   return-await: WARN # https://typescript-eslint.io/rules/no-return-await
   no-use-before-define: WARN # https://typescript-eslint.io/rules/no-use-before-define
   quotes: [WARN, backtick] # https://typescript-eslint.io/rules/quotes
+  object-curly-spacing: WARN # https://typescript-eslint.io/rules/object-curly-spacing
+  prefer-nullish-coalescing: WARN # https://typescript-eslint.io/rules/prefer-nullish-coalescing
+  prefer-regexp-exec: WARN # https://typescript-eslint.io/rules/prefer-regexp-exec
+  require-array-sort-compare: WARN # https://typescript-eslint.io/rules/require-array-sort-compare
+  space-before-function-paren: # https://typescript-eslint.io/rules/space-before-function-paren
+  - WARN
+  - anonymous: always
+    named: never
+    asyncArrow: always
+  space-before-blocks: WARN # https://typescript-eslint.io/rules/space-before-blocks

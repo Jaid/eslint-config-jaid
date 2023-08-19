@@ -57,19 +57,12 @@ rules:
         multiline: true
       ObjectPattern: never
       ImportDeclaration: never
-  object-curly-spacing: WARN
   object-property-newline: WARN
   one-var: [WARN, never]
   operator-linebreak: [WARN, before]
   padding-line-between-statements: OFF
   quote-props: [WARN, as-needed]
   rest-spread-spacing: WARN
-  space-before-blocks: WARN
-  space-before-function-paren:
-    - WARN
-    - anonymous: always
-      named: never
-      asyncArrow: always
   space-in-parens: WARN
   space-infix-ops: WARN
   spaced-comment: WARN
