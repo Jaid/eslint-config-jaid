@@ -7,3 +7,5 @@ rules:
   no-return-wrap: WARN
   param-names: WARN
   no-multiple-resolved: WARN
+  prefer-await-to-then: WARN
+  prefer-await-to-callbacks: WARN
