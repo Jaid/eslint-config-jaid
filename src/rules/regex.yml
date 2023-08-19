@@ -15,7 +15,7 @@ rules:
   no-useless-character-class: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-useless-character-class.html
   no-useless-flag: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-useless-flag.html
   no-useless-lazy: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-useless-lazy.html
-  no-useless-quanitfier: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-useless-quanitfier.html
+  no-useless-quantifier: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-useless-quantifier.html
   no-useless-range: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-useless-range.html
   no-useless-two-nums-quantifier: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-useless-two-nums-quantifier.html
   optimal-quantifier-concatenation: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/optimal-quantifier-concatenation.html
