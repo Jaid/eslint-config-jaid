@@ -4,7 +4,6 @@ rules:
   eqeqeq: [WARN, smart]
   getter-return: WARN
   no-alert: WARN
-  no-buffer-constructor: WARN
   no-caller: WARN
   no-class-assign: WARN
   no-compare-neg-zero: WARN

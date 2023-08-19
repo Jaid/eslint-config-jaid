@@ -3,7 +3,7 @@ rules:
   prefer-query-selector: WARN
   prefer-dom-node-append: WARN
   prefer-dom-node-remove: WARN
-  prefer-dataset: WARN
+  prefer-dom-node-dataset: WARN
   prefer-modern-dom-apis: WARN
   prefer-dom-node-text-content: WARN
   prefer-keyboard-event-key: WARN

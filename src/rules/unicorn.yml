@@ -12,7 +12,6 @@ rules:
   prefer-spread: WARN
   error-message: WARN
   prefer-add-event-listener: WARN
-  prefer-exponentiation-operator: WARN
   prefer-array-flat-map: WARN
   prefer-string-slice: WARN
   consistent-function-scoping: WARN
