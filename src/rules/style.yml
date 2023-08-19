@@ -6,8 +6,6 @@ rules:
   array-element-newline: [WARN, consistent]
   arrow-parens: [WARN, as-needed]
   arrow-spacing: WARN
-  block-spacing: WARN
-  brace-style: WARN
   comma-dangle:
     - WARN
     - arrays: always-multiline
@@ -15,19 +13,14 @@ rules:
       imports: never
       exports: never
       functions: never
-  comma-spacing: WARN
   comma-style: WARN
   computed-property-spacing: WARN
   curly: [WARN, all]
   dot-location: [WARN, property]
   eol-last: WARN
-  func-call-spacing: WARN
   function-paren-newline: [WARN, never]
   implicit-arrow-linebreak: WARN
-  indent: [WARN, 2]
   jsx-quotes: WARN
-  key-spacing: WARN
-  keyword-spacing: WARN
   linebreak-style: [WARN, unix]
   multiline-comment-style: OFF
   no-multi-assign: WARN

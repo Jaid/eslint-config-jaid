@@ -20,3 +20,4 @@ rules:
         delimiter: none
         requireLast: false
   no-meaningless-void-operator: WARN # https://typescript-eslint.io/rules/no-meaningless-void-operator
+  consistent-generic-constructors: WARN # https://typescript-eslint.io/rules/consistent-generic-constructors

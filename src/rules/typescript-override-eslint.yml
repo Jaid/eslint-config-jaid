@@ -44,3 +44,10 @@ rules:
     asyncArrow: always
   space-before-blocks: WARN # https://typescript-eslint.io/rules/space-before-blocks
   space-infix-ops: WARN # https://typescript-eslint.io/rules/space-infix-ops
+  func-call-spacing: WARN # https://typescript-eslint.io/rules/func-call-spacing
+  comma-spacing: WARN # https://typescript-eslint.io/rules/comma-spacing
+  brace-style: WARN # https://typescript-eslint.io/rules/brace-style
+  block-spacing: WARN # https://typescript-eslint.io/rules/block-spacing
+  key-spacing: WARN # https://typescript-eslint.io/rules/key-spacing
+  keyword-spacing: WARN # https://typescript-eslint.io/rules/keyword-spacing
+  indent: [WARN, 2] # https://typescript-eslint.io/rules/indent
