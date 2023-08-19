@@ -22,10 +22,10 @@ jobs:
         uses: jaid/action-npm-install@main
       - id: build
         name: build
-        run: |-
-          PATH=$PATH:$(realpath ./node_modules/.bin)
-          export PATH
-          npm run buildPage
+        run: npm run build
+      - id: buildPage
+        name: buildPage
+        run: npm run buildPage
       - name: check
         id: check
         shell: bash
