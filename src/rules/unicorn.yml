@@ -47,3 +47,10 @@ rules:
   prefer-blob-reading-methods: WARN
   prefer-set-size: WARN
   no-unnecessary-await: WARN
+  no-nested-ternary: WARN
+  no-zero-fractions: WARN
+  prefer-at: WARN
+  prefer-negative-index: WARN
+  prefer-prototype-methods: WARN
+  prefer-set-has: WARN
+  prefer-string-starts-ends-with: WARN
