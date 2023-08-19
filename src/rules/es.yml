@@ -77,3 +77,6 @@ rules:
   no-constructor-return: WARN
   no-setter-return: WARN
   no-constant-binary-expression: WARN
+  no-invalid-this: ERROR
+  prefer-object-has-own: WARN
+  prefer-named-capture-group: WARN

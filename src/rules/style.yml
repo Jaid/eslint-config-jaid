@@ -70,3 +70,10 @@ rules:
   template-tag-spacing: WARN
   yield-star-spacing: WARN
   no-extra-parens: WARN
+  new-cap: WARN
+  new-parens: [WARN, never]
+  padded-blocks: [WARN, never]
+  prefer-exponentiation-operator: WARN
+  space-unary-ops: WARN
+  sort-vars: WARN
+  semi-spacing: WARN
