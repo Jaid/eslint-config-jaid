@@ -49,7 +49,7 @@
     "release": "npm run build && foreach -g \"dist/build/*\" -x \"npm publish dist/build/#{base}\"",
     "unused-rules": "npm run build && cross-env eslint-find-rules --unused dist/build/react/index.json",
     "test": "NODE_ENV=production jest",
-    "buildPage": "src/scripts/activeHtml.ts"
+    "buildPage": "tsx src/scripts/activeHtml.ts && tsx src/scripts/unusedHtml.ts && tsx src/scripts/deprecatedHtml.ts"
   },
   "name": "eslint-config-jaid",
   "description": "Personal ESLint preset. Intentionally ugly to write code that looks like I feel.",
