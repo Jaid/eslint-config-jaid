@@ -12,7 +12,6 @@ import {Rule} from 'src/lib/listRules.ts'
 type Selector = `current` | `deprecated` | `unused`
 
 export default (title: string, rules: Dictionary<Rule[]>) => {
-
   const markdownTemplate = `
 # {{title}}
 {{#each rules}}

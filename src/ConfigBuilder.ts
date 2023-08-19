@@ -17,7 +17,6 @@ import publishimo from './lib/esm/publishimo.js'
 const debug = createDebug(`eslint-config-jaid`)
 
 export default class ConfigBuilder {
-
   /**
    * @typedef {object} Options
    * @prop {string[]} presets

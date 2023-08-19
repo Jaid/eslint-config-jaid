@@ -2,7 +2,7 @@ type Mapper = Record<string, (id: string) => string>;
 
 export const pluginMap = {
   'import-quotes': () => `https://github.com/xneek/eslint-plugin-import-quotes#readme`,
-  'import': `https://github.com/import-js/eslint-plugin-import`,
+  import: `https://github.com/import-js/eslint-plugin-import`,
 }
 
 const map: Mapper = {
