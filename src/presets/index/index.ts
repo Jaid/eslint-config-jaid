@@ -9,7 +9,6 @@ const baseConfig = await readFileYaml.default(path.join(dirName, `config.yml`))
 export default {
   publishimoConfig: {
     name: `eslint-config-jaid`,
-    fetchGithub: true,
   },
   includedDependencies: [
     `@typescript-eslint/parser`,

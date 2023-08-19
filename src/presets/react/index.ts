@@ -3,7 +3,6 @@ import base from '../index/index.ts'
 export default {
   publishimoConfig: {
     name: `${base.publishimoConfig.name}-react`,
-    fetchGithub: base.publishimoConfig.fetchGithub,
     repository: `https://github.com/Jaid/eslint-config-jaid`,
     description: `Personal ESLint preset for React/JSX. Intentionally ugly to write code that looks like I feel.`,
   },

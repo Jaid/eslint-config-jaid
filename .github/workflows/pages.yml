@@ -23,8 +23,6 @@ jobs:
       - id: build
         name: build
         run: npm run build
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - id: buildPage
         name: buildPage
         run: npm run buildPage
