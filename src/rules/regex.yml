@@ -20,7 +20,7 @@ rules:
   no-useless-two-nums-quantifier: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-useless-two-nums-quantifier.html
   optimal-quantifier-concatenation: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/optimal-quantifier-concatenation.html
   prefer-predefined-assertion: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/prefer-predefined-assertion.html
-  prefer-quanitifier: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/prefer-quanitifier.html
+  prefer-quantifier: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/prefer-quantifier.html
   sort-alternatives: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/sort-alternatives.html
   letter-case:
     - WARN
