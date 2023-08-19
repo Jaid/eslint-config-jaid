@@ -1,13 +1,10 @@
 #!/bin/env tsx
-import path from 'node:path'
-
 import eslintFindRules from 'eslint-find-rules'
-import execa from 'execa'
 import * as lodash from 'lodash-es'
 
-type RuleFinderFunction = `getCurrentRules` | `getDeprecatedRules` | `getUnusedRules`
+export type RuleFinderFunction = `getCurrentRules` | `getDeprecatedRules` | `getUnusedRules`
 
-type Rule = {
+export interface Rule {
   id: string
   fullId: string
   plugin?: string

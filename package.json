@@ -40,7 +40,9 @@
     "read-file-yaml": "^2.0.0",
     "yaml": "^2.3.1",
     "showdown": "^2.1.0",
-    "handlebars": "^4.7.8"
+    "handlebars": "^4.7.8",
+    "tsx": "^3.12.7",
+    "type-fest": "^4.2.0"
   },
   "scripts": {
     "build": "tsx src/build.ts",
