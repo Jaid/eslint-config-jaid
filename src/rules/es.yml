@@ -25,7 +25,6 @@ rules:
   no-global-assign: WARN
   no-implicit-coercion: WARN
   no-inner-declarations: WARN
-  no-invalid-regexp: WARN
   no-irregular-whitespace: WARN
   no-iterator: WARN
   no-label-var: WARN
@@ -37,7 +36,6 @@ rules:
   no-obj-calls: WARN
   no-octal: WARN
   no-proto: WARN
-  no-regex-spaces: WARN
   no-self-assign: WARN
   no-self-compare: WARN
   no-sequences: WARN

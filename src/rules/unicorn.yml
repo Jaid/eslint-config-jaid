@@ -32,7 +32,6 @@ rules:
   no-useless-length-check: WARN
   no-useless-spread: WARN
   no-useless-fallback-in-spread: WARN
-  better-regex: WARN
   prefer-module: WARN
   prefer-top-level-await: WARN
   prefer-code-point: WARN

@@ -14,6 +14,7 @@ const map: Mapper = {
   react: id => `https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/${id}.md`,
   '@typescript-eslint': id => `https://typescript-eslint.io/rules/${id}`,
   unicorn: id => `https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/${id}.md`,
+  regexp: id => `https://ota-meshi.github.io/eslint-plugin-regexp/rules/${id}.html`,
 }
 
 export default (ruleId: string): string | null => {

@@ -1,0 +1,32 @@
+prefix: regexp
+rules:
+  no-missing-g-flag: ERROR # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-missing-g-flag.html
+  no-super-linear-backtracking: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-super-linear-backtracking.html
+  strict: ERROR # https://ota-meshi.github.io/eslint-plugin-regexp/rules/strict.html
+  no-useless-assertions: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-useless-assertions.html
+  no-useless-backreference: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-useless-backreference.html
+  control-character-escape: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/control-character-escape.html
+  negation: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/negation.html
+  no-dupe-characters-character-class: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-dupe-characters-character-class.html
+  no-extra-lookaround-assertions: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-extra-lookaround-assertions.html
+  no-invisible-character: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-invisible-character.html
+  no-trivially-nested-assertion: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-trivially-nested-assertion.html
+  no-trivially-nested-quantifier: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-trivially-nested-quantifier.html
+  no-useless-character-class: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-useless-character-class.html
+  no-useless-flag: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-useless-flag.html
+  no-useless-lazy: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-useless-lazy.html
+  no-useless-quanitfier: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-useless-quanitfier.html
+  no-useless-range: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-useless-range.html
+  no-useless-two-nums-quantifier: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-useless-two-nums-quantifier.html
+  optimal-quantifier-concatenation: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/optimal-quantifier-concatenation.html
+  prefer-predefined-assertion: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/prefer-predefined-assertion.html
+  prefer-quanitifier: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/prefer-quanitifier.html
+  sort-alternatives: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/sort-alternatives.html
+  letter-case:
+    - WARN
+    - caseInsensitive: lowercase
+      unicodeEscape: uppercase
+      hexadecimalEscape: uppercase
+      controlEscape: lowercase
+  prefer-d: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/prefer-d.html
+  sort-flags: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/sort-flags.html
