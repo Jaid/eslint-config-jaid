@@ -30,3 +30,4 @@ rules:
       controlEscape: lowercase
   prefer-d: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/prefer-d.html
   sort-flags: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/sort-flags.html
+  sort-character-class-elements: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/sort-character-class-elements.html
