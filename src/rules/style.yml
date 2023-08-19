@@ -63,7 +63,6 @@ rules:
   operator-linebreak: [WARN, before]
   padding-line-between-statements: OFF
   quote-props: [WARN, as-needed]
-  quotes: [WARN, backtick]
   rest-spread-spacing: WARN
   space-before-blocks: WARN
   space-before-function-paren:

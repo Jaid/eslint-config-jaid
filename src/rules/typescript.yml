@@ -5,3 +5,15 @@ rules:
   prefer-includes: WARN # https://typescript-eslint.io/rules/prefer-includes
   prefer-optional-chain: WARN # https://typescript-eslint.io/rules/prefer-optional-chain
   prefer-string-starts-ends-with: WARN # https://typescript-eslint.io/rules/prefer-string-starts-ends-with
+  no-non-null-asserted-nullish-coalescing: ERROR # https://typescript-eslint.io/rules/no-non-null-asserted-nullish-coalescing
+  no-non-null-asserted-optional-chain: ERROR # https://typescript-eslint.io/rules/no-non-null-asserted-optional-chain
+  no-unnecessary-qualifier: WARN # https://typescript-eslint.io/rules/no-unnecessary-qualifier
+  no-unnecessary-type-arguments: WARN # https://typescript-eslint.io/rules/no-unnecessary-type-arguments
+  no-unnecessary-type-assertion: WARN # https://typescript-eslint.io/rules/no-unnecessary-type-assertion
+  no-unnecessary-type-constraint: WARN # https://typescript-eslint.io/rules/no-unnecessary-type-constraint
+  no-unsafe-call: WARN # https://typescript-eslint.io/rules/no-unsafe-call
+  no-unsafe-assignment: WARN # https://typescript-eslint.io/rules/no-unsafe-assignment
+  no-unsafe-argument: WARN # https://typescript-eslint.io/rules/no-unsafe-argument
+  no-unsafe-enum-comparison: WARN # https://typescript-eslint.io/rules/no-unsafe-enum-comparison
+  no-unsafe-member-access: WARN # https://typescript-eslint.io/rules/no-unsafe-member-access
+  no-unsafe-return: WARN # https://typescript-eslint.io/rules/no-unsafe-return

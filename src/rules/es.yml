@@ -77,4 +77,3 @@ rules:
   no-constructor-return: WARN
   no-setter-return: WARN
   no-constant-binary-expression: WARN
-  no-use-before-define: WARN

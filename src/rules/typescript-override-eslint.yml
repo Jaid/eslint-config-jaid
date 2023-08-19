@@ -31,3 +31,5 @@ rules:
   no-throw-literal: WARN # https://typescript-eslint.io/rules/no-throw-literal
   no-useless-constructor: WARN # https://typescript-eslint.io/rules/no-useless-constructor
   return-await: WARN # https://typescript-eslint.io/rules/no-return-await
+  no-use-before-define: WARN # https://typescript-eslint.io/rules/no-use-before-define
+  quotes: [WARN, backtick] # https://typescript-eslint.io/rules/quotes
