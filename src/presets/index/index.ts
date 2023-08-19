@@ -21,6 +21,7 @@ export default {
     `eslint-plugin-you-dont-need-lodash-underscore`,
     `eslint-plugin-import-quotes`,
     `eslint-import-resolver-typescript`,
+    `eslint-plugin-regexp`,
   ],
   rules: [
     `typescript`,
