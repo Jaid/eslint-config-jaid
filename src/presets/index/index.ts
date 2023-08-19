@@ -14,7 +14,7 @@ export default {
   includedDependencies: [
     `@typescript-eslint/parser`,
     `@typescript-eslint/eslint-plugin`,
-    `eslint-plugin-node`,
+    `eslint-plugin-n`,
     `eslint-plugin-promise`,
     `eslint-plugin-unicorn`,
     `eslint-plugin-import`,
@@ -29,7 +29,7 @@ export default {
     `typescript-style`,
     `style`,
     `promise`,
-    `node`,
+    `n`,
     `unicorn`,
     `unicorn-node`,
     `import`,

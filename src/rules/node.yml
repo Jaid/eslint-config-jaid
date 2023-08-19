@@ -1,4 +1,4 @@
-prefix: node
+prefix: 'n'
 rules:
   no-mixed-requires: WARN
   no-new-require: WARN

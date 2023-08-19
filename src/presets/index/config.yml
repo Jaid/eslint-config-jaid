@@ -1,5 +1,5 @@
 plugins:
-  - node
+  - 'n'
   - promise
   - unicorn
   - import
