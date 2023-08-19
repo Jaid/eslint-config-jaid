@@ -2,10 +2,9 @@ prefix: i
 rules:
   newline-after-import: WARN
   first: WARN
-  no-duplicates: WARN
+  no-duplicates: ERROR
   no-mutable-exports: WARN
   no-deprecated: WARN
   no-useless-path-segments: WARN
-  no-self-import: WARN
-  no-absolute-path: WARN
+  no-self-import: ERROR
   no-unresolved: ERROR
