@@ -50,7 +50,6 @@
   "scripts": {
     "build": "tsx src/build.ts",
     "release": "npm run build && foreach -g \"dist/build/*\" -x \"npm publish dist/build/#{base}\"",
-    "test": "NODE_ENV=production jest",
     "buildPage": "fse emptyDir dist/page && tsx src/scripts/activeHtml.ts && tsx src/scripts/unusedHtml.ts && tsx src/scripts/deprecatedHtml.ts && fse copy etc/page dist/page"
   },
   "name": "eslint-config-jaid",
