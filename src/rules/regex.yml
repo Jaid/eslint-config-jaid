@@ -1,7 +1,6 @@
 prefix: regexp
 rules:
   no-missing-g-flag: ERROR # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-missing-g-flag.html
-  no-super-linear-backtracking: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-super-linear-backtracking.html
   strict: ERROR # https://ota-meshi.github.io/eslint-plugin-regexp/rules/strict.html
   no-useless-assertions: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-useless-assertions.html
   no-useless-backreference: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-useless-backreference.html
