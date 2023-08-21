@@ -25,7 +25,6 @@ rules:
   no-global-assign: WARN
   no-implicit-coercion: WARN
   no-inner-declarations: WARN
-  no-irregular-whitespace: WARN
   no-iterator: WARN
   no-label-var: WARN
   no-multi-spaces: WARN
