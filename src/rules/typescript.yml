@@ -19,4 +19,6 @@ rules:
   no-unsafe-return: WARN # https://typescript-eslint.io/rules/no-unsafe-return
   no-redundant-type-constituents: WARN # https://typescript-eslint.io/rules/no-redundant-type-constituents
   no-unsafe-declaration-merging: WARN # https://typescript-eslint.io/rules/no-unsafe-declaration-merging
-  unbound-method: WARN # https://typescript-eslint.io/rules/unbound-method
+  unbound-method: # https://typescript-eslint.io/rules/unbound-method
+    - WARN
+    - ignoreStatic: true
