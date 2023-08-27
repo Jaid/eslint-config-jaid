@@ -4,4 +4,3 @@ rules:
   no-new-require: WARN
   no-path-concat: WARN
   no-sync: WARN
-  file-extension-in-import: ERROR
