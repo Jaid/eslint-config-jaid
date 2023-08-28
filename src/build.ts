@@ -37,7 +37,7 @@ const jobs = presets.map(async preset => {
     let ruleConfigNormalized
     if (!ruleConfig.prefix) {
       // Object.assign(appliedRules, ruleConfig.rules)
-      ruleConfigNormalized = ruleConfig
+      ruleConfigNormalized = ruleConfig.rules
     } else {
       // Object.assign(appliedRules, lodash.mapKeys(ruleConfig.rules, (value, key) => `${ruleConfig.prefix}/${key}`))
       ruleConfigNormalized = lodash.mapKeys(ruleConfig.rules, (value, key) => `${ruleConfig.prefix}/${key}`)
@@ -54,7 +54,7 @@ const jobs = presets.map(async preset => {
   const eslintConfig = sortKeys({
     ...config,
     extends: extend,
-    rules: sortKeys(appliedRules),
+    rules: appliedRules,
   })
   await fs.outputJson(path.join(buildPath, `index.json`), eslintConfig)
   const dependencies = includeKeys(pkg.dependencies, key => includedDependencies.includes(key))
