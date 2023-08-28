@@ -1,0 +1,67 @@
+prefix: jsonc
+overridesSlot: 0
+rules:
+  auto: WARN # https://ota-meshi.github.io/eslint-plugin-jsonc/rules/auto.html
+  valid-json-number: ERROR # https://ota-meshi.github.io/eslint-plugin-jsonc/rules/valid-json-number.html
+  no-plus-sign: WARN # https://ota-meshi.github.io/eslint-plugin-jsonc/rules/no-plus-sign.html
+  sort-keys: # https://ota-meshi.github.io/eslint-plugin-jsonc/rules/sort-keys.html
+    - WARN
+    - - hasProperties:
+          - type
+          - name
+          - version
+        pathPattern: ^$
+        order:
+          - private
+          - version
+          - type
+          - name
+          - description
+          - keywords
+          - author
+          - homepage
+          - bugs
+          - funding
+          - repository
+          - os
+          - cpu
+          - engines
+          - dependencies
+          - peerDependencies
+          - optionalDependencies
+          - bundledDependencies
+          - devDependencies
+          - scripts
+          - license
+          - order:
+              type: asc
+              natural: true
+      - hasProperties:
+          - type
+          - name
+          - version
+        pathPattern: ^(d|devD|peerD|optionalD)ependencies$
+        order:
+          type: asc
+          natural: true
+      - hasProperties:
+          - type
+          - name
+          - version
+        pathPattern: ^scripts$
+        order:
+          type: asc
+          natural: true
+      - hasProperties:
+          - type
+          - name
+          - version
+        pathPattern: ^engines$
+        order:
+          type: asc
+          natural: true
+  sort-array-values: # https://ota-meshi.github.io/eslint-plugin-jsonc/rules/sort-array-values.html
+    - WARN
+    - - pathPattern: ^keywords$
+        order:
+          natural: true

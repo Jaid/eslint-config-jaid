@@ -34,11 +34,22 @@ const jobs = presets.map(async preset => {
       .replaceAll(`WARN`, `1`)
       .replaceAll(`ERROR`, `2`)
     const ruleConfig = jsYaml.load(minifiedYamlString)
+    let ruleConfigNormalized
     if (!ruleConfig.prefix) {
-      Object.assign(appliedRules, ruleConfig.rules)
+      // Object.assign(appliedRules, ruleConfig.rules)
+      ruleConfigNormalized = ruleConfig
     } else {
-      Object.assign(appliedRules, lodash.mapKeys(ruleConfig.rules, (value, key) => `${ruleConfig.prefix}/${key}`))
+      // Object.assign(appliedRules, lodash.mapKeys(ruleConfig.rules, (value, key) => `${ruleConfig.prefix}/${key}`))
+      ruleConfigNormalized = lodash.mapKeys(ruleConfig.rules, (value, key) => `${ruleConfig.prefix}/${key}`)
     }
+    if (ruleConfig.overridesSlot !== undefined) {
+      if (!config.overrides[ruleConfig.overridesSlot].rules) {
+        config.overrides[ruleConfig.overridesSlot].rules = {}
+      }
+      Object.assign(config.overrides[ruleConfig.overridesSlot].rules, ruleConfigNormalized)
+      continue
+    }
+    Object.assign(appliedRules, ruleConfigNormalized)
   }
   const eslintConfig = sortKeys({
     ...config,

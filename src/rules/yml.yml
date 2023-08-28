@@ -1,0 +1,32 @@
+prefix: yml
+overridesSlot: 1
+rules:
+  block-mapping-colon-indicator-newline: WARN # https://ota-meshi.github.io/eslint-plugin-yml/rules/block-mapping-colon-indicator-newline.html
+  block-mapping: # https://ota-meshi.github.io/eslint-plugin-yml/rules/block-mapping.html
+    - WARN
+    - singleline: always
+      multiline: always
+  block-sequence-hyphen-indicator-newline: # https://ota-meshi.github.io/eslint-plugin-yml/rules/block-sequence-hyphen-indicator-newline.html
+    - WARN
+    - never
+    - nestedHyphen: never
+  block-sequence: WARN # https://ota-meshi.github.io/eslint-plugin-yml/rules/block-sequence.html
+  indent: # https://ota-meshi.github.io/eslint-plugin-yml/rules/indent.html
+    - WARN
+    - 2
+    - indentBlockSequences: false
+  no-tab-indent: WARN # https://ota-meshi.github.io/eslint-plugin-yml/rules/no-tab-indent.html
+  no-trailing-zeros: WARN # https://ota-meshi.github.io/eslint-plugin-yml/rules/no-trailing-zeros.html
+  plain-scalar: WARN # https://ota-meshi.github.io/eslint-plugin-yml/rules/plain-scalar.html
+  quotes: # https://ota-meshi.github.io/eslint-plugin-yml/rules/quotes.html
+    - WARN
+    - single
+    - avoidEscape: true
+  flow-sequence-bracket-spacing: WARN # https://ota-meshi.github.io/eslint-plugin-yml/rules/flow-sequence-bracket-spacing.html
+  key-spacing: WARN # https://ota-meshi.github.io/eslint-plugin-yml/rules/key-spacing.html
+  no-multiple-empty-lines: # https://ota-meshi.github.io/eslint-plugin-yml/rules/no-multiple-empty-lines.html
+    - WARN
+    - max: 1
+      maxBOF: 0
+      maxEOF: 1
+  spaced-comment: WARN # https://ota-meshi.github.io/eslint-plugin-yml/rules/spaced-comment.html

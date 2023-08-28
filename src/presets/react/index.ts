@@ -41,5 +41,6 @@ export default {
       browser: true,
       worker: true,
     },
+    overrides: base.config.overrides,
   },
 }

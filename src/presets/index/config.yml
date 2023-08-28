@@ -7,7 +7,8 @@ plugins:
   - import-quotes
   - "@typescript-eslint"
   - regexp
-  - package-json
+  - jsonc
+  - yml
 parser: '@typescript-eslint/parser'
 parserOptions:
   ecmaVersion: latest
@@ -19,7 +20,7 @@ env:
 settings:
   import/parsers:
     '@typescript-eslint/parser':
-      - .ts
+      - '*.ts'
   import/resolver:
     typescript:
       alwaysTryTypes: true
@@ -32,3 +33,13 @@ ignorePatterns:
   - /srcCompiled-*/
   - '*.d.ts'
   - node_modules/
+overrides:
+  - files:
+      - '*.json'
+      - '*.json5'
+      - '*.jsonc'
+    parser: jsonc-eslint-parser
+  - files:
+      - '*.yml'
+      - '*.yaml'
+    parser: yaml-eslint-parser
