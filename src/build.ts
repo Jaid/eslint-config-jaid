@@ -53,10 +53,12 @@ const jobs = presets.map(async preset => {
   }
   const eslintConfig = sortKeys({
     ...config,
-    extends: extend,
-    rules: appliedRules,
+    extends: extend
   })
-  await fs.outputJson(path.join(buildPath, `index.json`), eslintConfig)
+  if (appliedRules.length) {
+    eslintConfig.rules = appliedRules
+  }
+  await fs.outputJson(path.join(buildPath, `index.json`), sortKeys(eslintConfig))
   const dependencies = includeKeys(pkg.dependencies, key => includedDependencies.includes(key))
   const {generatedPkg} = await publishimo({
     ...lodash.pick(pkg, [`license`, `version`, `author`, `repository`, `peerDependencies`]),
