@@ -20,8 +20,8 @@ rules:
   plain-scalar: WARN # https://ota-meshi.github.io/eslint-plugin-yml/rules/plain-scalar.html
   quotes: # https://ota-meshi.github.io/eslint-plugin-yml/rules/quotes.html
     - WARN
-    - single
-    - avoidEscape: true
+    - prefer: single
+      avoidEscape: true
   flow-sequence-bracket-spacing: WARN # https://ota-meshi.github.io/eslint-plugin-yml/rules/flow-sequence-bracket-spacing.html
   key-spacing: WARN # https://ota-meshi.github.io/eslint-plugin-yml/rules/key-spacing.html
   no-multiple-empty-lines: # https://ota-meshi.github.io/eslint-plugin-yml/rules/no-multiple-empty-lines.html
