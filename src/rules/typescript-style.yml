@@ -24,3 +24,10 @@ rules:
         requireLast: false
   no-meaningless-void-operator: WARN # https://typescript-eslint.io/rules/no-meaningless-void-operator
   consistent-generic-constructors: WARN # https://typescript-eslint.io/rules/consistent-generic-constructors
+
+  # Currently useless as long as it doesn’t come with an autofixer: https://github.com/typescript-eslint/typescript-eslint/issues/2296
+  # Current alternative: https://github.com/infctr/eslint-plugin-typescript-sort-keys
+  # member-ordering: # https://typescript-eslint.io/rules/member-ordering
+  #   - WARN
+  #   - optionality-order: required-first
+  #     order: natural-case-insensitive
