@@ -20,7 +20,16 @@ env:
   shared-node-browser: true
 settings:
   import/parsers:
-    '@typescript-eslint/parser': [.ts]
+    '@typescript-eslint/parser':
+      - .ts
   import/resolver:
     typescript:
       alwaysTryTypes: true
+ignorePatterns:
+  - /dist/
+  - /out/
+  - /temp/
+  - /srcCompiled/
+  - /srcCompiled-*/
+  - '*.d.ts'
+  - node_modules/
