@@ -1,3 +1,4 @@
+overridesSlot: 0
 prefix: regexp
 rules:
   no-missing-g-flag: ERROR # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-missing-g-flag.html

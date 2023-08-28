@@ -1,5 +1,6 @@
 # These are rules that also exist in eslint, but where TypeScript provides a more stable variant of
 # https://typescript-eslint.io/rules/#extension-rules
+overridesSlot: 0
 prefix: '@typescript-eslint'
 rules:
   dot-notation: WARN # https://typescript-eslint.io/rules/dot-notation

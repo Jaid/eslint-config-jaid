@@ -1,4 +1,5 @@
 # https://typescript-eslint.io/rules
+overridesSlot: 0
 prefix: '@typescript-eslint'
 rules:
   method-signature-style: WARN # https://typescript-eslint.io/rules/method-signature-style

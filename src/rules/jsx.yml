@@ -1,3 +1,4 @@
+overridesSlot: 0
 rules:
   jsx-boolean-value: [WARN, never]
   jsx-child-element-spacing: WARN

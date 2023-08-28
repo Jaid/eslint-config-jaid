@@ -1,2 +1,3 @@
 # Blocking issue: https://github.com/infctr/eslint-plugin-typescript-sort-keys/pull/64
+overridesSlot: 0
 prefix: typescript-sort-keys

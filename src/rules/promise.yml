@@ -1,3 +1,4 @@
+overridesSlot: 0
 prefix: promise
 rules:
   catch-or-return: WARN

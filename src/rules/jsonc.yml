@@ -1,5 +1,5 @@
 prefix: jsonc
-overridesSlot: 0
+overridesSlot: 1
 rules:
   auto: WARN # https://ota-meshi.github.io/eslint-plugin-jsonc/rules/auto.html
   valid-json-number: ERROR # https://ota-meshi.github.io/eslint-plugin-jsonc/rules/valid-json-number.html

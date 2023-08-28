@@ -1,3 +1,4 @@
+overridesSlot: 0
 prefix: package-json
 rules:
   order-properties: # https://github.com/zetlen/eslint-plugin-package-json/blob/HEAD/docs/rules/order-properties.md
