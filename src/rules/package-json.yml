@@ -1,0 +1,27 @@
+prefix: package-json
+rules:
+  order-properties: # https://github.com/zetlen/eslint-plugin-package-json/blob/HEAD/docs/rules/order-properties.md
+    - WARN
+    -
+      - private
+      - version
+      - type
+      - name
+      - description
+      - keywords
+      - author
+      - homepage
+      - bugs
+      - funding
+      - repository
+      - os
+      - cpu
+      - engines
+      - dependencies
+      - peerDependencies
+      - optionalDependencies
+      - bundledDependencies
+      - devDependencies
+      - scripts
+      - license
+  sort-collections: WARN # https://github.com/zetlen/eslint-plugin-package-json/blob/HEAD/docs/rules/sort-collections.md
