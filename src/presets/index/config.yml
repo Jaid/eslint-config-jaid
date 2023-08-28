@@ -12,9 +12,6 @@ parserOptions:
   ecmaVersion: latest
   sourceType: module
   project: true
-globals:
-  GOOGLE_ANALYTICS_TRACKING_ID: "readonly"
-  __non_webpack_require__: "readonly"
 env:
   node: true
   shared-node-browser: true
