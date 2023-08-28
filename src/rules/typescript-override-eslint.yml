@@ -27,6 +27,8 @@ rules:
           message: Use fs-extra (more stable) # https://www.npmjs.com/package/fs-extra
         - name: execall
           message: Use super-regex # https://www.npmjs.com/package/super-regex
+        - name: js-yaml
+          message: Use yaml # https://www.npmjs.com/package/yaml
   no-shadow: WARN # https://typescript-eslint.io/rules/no-shadow
   no-throw-literal: WARN # https://typescript-eslint.io/rules/no-throw-literal
   no-useless-constructor: WARN # https://typescript-eslint.io/rules/no-useless-constructor
@@ -50,3 +52,4 @@ rules:
   key-spacing: WARN # https://typescript-eslint.io/rules/key-spacing
   keyword-spacing: WARN # https://typescript-eslint.io/rules/keyword-spacing
   indent: [WARN, 2] # https://typescript-eslint.io/rules/indent
+  lines-between-class-members: [WARN, never] # https://typescript-eslint.io/rules/lines-between-class-members
