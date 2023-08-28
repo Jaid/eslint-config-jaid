@@ -1,6 +1,8 @@
 prefix: i
 rules:
-  newline-after-import: WARN
+  newline-after-import:
+    - WARN
+    - considerComments: true
   first: WARN
   no-duplicates: ERROR
   no-mutable-exports: WARN
