@@ -27,3 +27,4 @@ rules:
       closingSlash: never
   jsx-uses-react: WARN
   jsx-uses-vars: WARN
+  jsx-quotes: WARN

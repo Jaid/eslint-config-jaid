@@ -21,7 +21,6 @@ rules:
   eol-last: WARN
   function-paren-newline: [WARN, never]
   implicit-arrow-linebreak: WARN
-  jsx-quotes: WARN
   linebreak-style: [WARN, unix]
   multiline-comment-style: OFF
   no-multi-assign: WARN
