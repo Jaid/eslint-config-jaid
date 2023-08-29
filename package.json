@@ -55,7 +55,7 @@
     "cross-env": "^7.0.3",
     "debug": "^4.3.4",
     "emp": "^2.0.0",
-    "eslint-config-jaid": "^6.1.2",
+    "eslint-config-jaid": "^6.1.4",
     "eslint-find-rules": "^4.1.0",
     "filter-obj": "^5.1.0",
     "foreach-cli": "^1.8.1",
