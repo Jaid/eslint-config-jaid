@@ -1,3 +1,20 @@
 {
-  "extends": "jaid"
+  "extends": "jaid",
+  "overrides": [
+    {
+      "files": [
+        "src/rules/**/*.yml"
+      ],
+      "rules": {
+        "yml/sort-keys": ["warn", [
+          {
+            "pathPattern": "^rules$",
+            "order": {
+              "natural": true
+            }
+          }
+        ]]
+      }
+    }
+  ]
 }
