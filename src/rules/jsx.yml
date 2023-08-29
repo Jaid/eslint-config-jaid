@@ -1,4 +1,5 @@
 overridesSlot: 0
+prefix: react
 rules:
   jsx-boolean-value: [WARN, never]
   jsx-child-element-spacing: WARN
