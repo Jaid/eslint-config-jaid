@@ -17,7 +17,6 @@ rules:
   no-trivially-nested-quantifier: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-trivially-nested-quantifier.html
   no-useless-assertions: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-useless-assertions.html
   no-useless-backreference: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-useless-backreference.html
-  strict: ERROR # https://ota-meshi.github.io/eslint-plugin-regexp/rules/strict.html
   no-useless-character-class: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-useless-character-class.html
   no-useless-flag: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-useless-flag.html
   no-useless-lazy: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-useless-lazy.html
@@ -31,3 +30,4 @@ rules:
   sort-alternatives: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/sort-alternatives.html
   sort-character-class-elements: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/sort-character-class-elements.html
   sort-flags: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/sort-flags.html
+  strict: ERROR # https://ota-meshi.github.io/eslint-plugin-regexp/rules/strict.html
