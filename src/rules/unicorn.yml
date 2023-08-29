@@ -21,34 +21,34 @@ rules:
   no-useless-promise-resolve-reject: WARN
   no-useless-spread: WARN
   no-useless-undefined: WARN
-  number-literal-case: WARN
-  throw-new-error: WARN
-  prefer-add-event-listener: WARN
-  prefer-array-flat-map: WARN
-  prefer-type-error: WARN
-  prefer-spread: WARN
-  prefer-string-slice: WARN
   no-zero-fractions: WARN
+  number-literal-case: WARN
   numeric-separators-style: WARN
+  prefer-add-event-listener: WARN
   prefer-array-find: WARN
   prefer-array-flat: WARN
+  prefer-array-flat-map: WARN
   prefer-array-index-of: WARN
   prefer-at: WARN
   prefer-blob-reading-methods: WARN
-  prefer-date-now: ERROR
-  prefer-number-properties: WARN
-  prefer-string-replace-all: WARN
-  prefer-math-trunc: ERROR
-  prefer-regexp-test: WARN
-  prefer-string-trim-start-end: WARN
+  prefer-spread: WARN
+  throw-new-error: WARN
+  prefer-string-slice: WARN
+  prefer-type-error: WARN
   prefer-code-point: WARN
+  prefer-date-now: ERROR
   prefer-logical-operator-over-ternary: WARN
+  prefer-math-trunc: ERROR
   prefer-modern-math-apis: WARN
   prefer-module: WARN
   prefer-native-coercion-functions: WARN
   prefer-negative-index: WARN
+  prefer-number-properties: WARN
   prefer-prototype-methods: WARN
+  prefer-regexp-test: WARN
   prefer-set-has: WARN
+  prefer-string-replace-all: WARN
+  prefer-string-trim-start-end: WARN
   prefer-set-size: WARN
   prefer-string-starts-ends-with: WARN
   prefer-top-level-await: WARN

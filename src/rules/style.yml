@@ -60,8 +60,8 @@ rules:
   prefer-exponentiation-operator: WARN
   quote-props: [WARN, as-needed]
   rest-spread-spacing: WARN
-  semi-style: WARN
   semi-spacing: WARN
+  semi-style: WARN
   sort-vars: WARN
   space-in-parens: WARN
   space-unary-ops: WARN
