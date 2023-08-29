@@ -21,6 +21,7 @@ settings:
   import/parsers:
     '@typescript-eslint/parser':
     - '*.ts'
+    - '*.tsx'
   import/resolver:
     typescript:
       alwaysTryTypes: true
@@ -37,6 +38,8 @@ overrides:
 - files:
   - '*.ts'
   - '*.js'
+  - '*.tsx'
+  - '*.jsx'
   parser: '@typescript-eslint/parser'
 - files:
   - '*.json'
