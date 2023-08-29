@@ -41,16 +41,16 @@ rules:
   prefer-negative-index: WARN
   prefer-number-properties: WARN
   prefer-prototype-methods: WARN
-  prefer-spread: WARN
-  throw-new-error: WARN
-  prefer-string-slice: WARN
-  prefer-type-error: WARN
   prefer-regexp-test: WARN
   prefer-set-has: WARN
   prefer-set-size: WARN
+  prefer-spread: WARN
   prefer-string-replace-all: WARN
+  prefer-string-slice: WARN
   prefer-string-starts-ends-with: WARN
   prefer-string-trim-start-end: WARN
   prefer-top-level-await: WARN
+  prefer-type-error: WARN
   relative-url-style: WARN
+  throw-new-error: WARN
   text-encoding-identifier-case: WARN
