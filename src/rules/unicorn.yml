@@ -52,5 +52,5 @@ rules:
   prefer-top-level-await: WARN
   prefer-type-error: WARN
   relative-url-style: WARN
-  throw-new-error: WARN
   text-encoding-identifier-case: WARN
+  throw-new-error: WARN
