@@ -54,7 +54,7 @@ const jobs = presets.map(async preset => {
   }
   const eslintConfig = sortKeys({
     ...config,
-    extends: extend
+    extends: extend,
   })
   if (appliedRules.length) {
     eslintConfig.rules = appliedRules

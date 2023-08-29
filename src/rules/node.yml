@@ -1,5 +1,5 @@
 overridesSlot: 0
-prefix: 'n'
+prefix: n
 rules:
   no-mixed-requires: WARN
   no-new-require: WARN

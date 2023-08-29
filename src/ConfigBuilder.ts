@@ -31,7 +31,6 @@ export default class ConfigBuilder {
    * @type {Options}
    */
   options = null
-
   /**
    * @param {Options} options
    */
@@ -41,7 +40,6 @@ export default class ConfigBuilder {
       ...options,
     }
   }
-
   async run() {
     debug(`configBuilder: %O`, this)
     const jobs = this.options.presets.map(async preset => {

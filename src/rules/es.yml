@@ -55,8 +55,8 @@ rules:
   no-void: WARN
   object-shorthand: WARN
   prefer-destructuring:
-    - WARN
-    - array: false
+  - WARN
+  - array: false
   prefer-promise-reject-errors: WARN
   prefer-spread: WARN
   prefer-template: WARN
@@ -69,8 +69,8 @@ rules:
   no-undef: WARN
   no-undef-init: WARN
   no-return-assign:
-    - WARN
-    - always
+  - WARN
+  - always
   no-constructor-return: WARN
   no-setter-return: WARN
   no-constant-binary-expression: WARN

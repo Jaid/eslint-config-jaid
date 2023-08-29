@@ -23,11 +23,11 @@ rules:
   prefer-quantifier: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/prefer-quantifier.html
   sort-alternatives: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/sort-alternatives.html
   letter-case:
-    - WARN
-    - caseInsensitive: lowercase
-      unicodeEscape: uppercase
-      hexadecimalEscape: uppercase
-      controlEscape: lowercase
+  - WARN
+  - caseInsensitive: lowercase
+    unicodeEscape: uppercase
+    hexadecimalEscape: uppercase
+    controlEscape: lowercase
   prefer-d: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/prefer-d.html
   sort-flags: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/sort-flags.html
   sort-character-class-elements: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/sort-character-class-elements.html

@@ -1,7 +1,34 @@
 {
   "version": "6.1.2",
+  "type": "module",
+  "name": "eslint-config-jaid",
+  "description": "Personal ESLint preset. Intentionally ugly to write code that looks like I feel.",
+  "keywords": [
+    "ecmascript",
+    "eslint",
+    "eslint-config",
+    "eslint-configs",
+    "eslint-preset",
+    "eslint-shareable-configs",
+    "eslintconfig",
+    "format",
+    "formatter",
+    "formatting",
+    "jaid",
+    "javascript",
+    "jsx",
+    "lint",
+    "linter",
+    "react",
+    "style",
+    "style-guide"
+  ],
   "author": "Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)",
-  "license": "MIT",
+  "funding": "https://github.com/sponsors/jaid",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaid/eslint-config-jaid"
+  },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^6.5.0",
     "@typescript-eslint/parser": "^6.5.0",
@@ -55,32 +82,5 @@
     "release": "npm run build && foreach -g \"dist/build/*\" -x \"npm publish dist/build/#{base}\"",
     "buildPage": "fse emptyDir dist/page && tsx src/scripts/activeHtml.ts && tsx src/scripts/unusedHtml.ts && tsx src/scripts/deprecatedHtml.ts && fse copy etc/page dist/page"
   },
-  "name": "eslint-config-jaid",
-  "description": "Personal ESLint preset. Intentionally ugly to write code that looks like I feel.",
-  "funding": "https://github.com/sponsors/jaid",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jaid/eslint-config-jaid"
-  },
-  "keywords": [
-    "ecmascript",
-    "eslint",
-    "eslint-config",
-    "eslint-configs",
-    "eslint-preset",
-    "eslint-shareable-configs",
-    "eslintconfig",
-    "format",
-    "formatter",
-    "formatting",
-    "jaid",
-    "javascript",
-    "jsx",
-    "lint",
-    "linter",
-    "react",
-    "style",
-    "style-guide"
-  ],
-  "type": "module"
+  "license": "MIT"
 }

@@ -11,18 +11,18 @@ rules:
   type-annotation-spacing: WARN # https://typescript-eslint.io/rules/type-annotation-spacing
   consistent-indexed-object-style: WARN # https://typescript-eslint.io/rules/consistent-indexed-object-style
   consistent-type-assertions: # https://typescript-eslint.io/rules/consistent-type-assertions
-    - WARN
-    - assertionStyle: angle-bracket
-      objectLiteralTypeAssertions: never
+  - WARN
+  - assertionStyle: angle-bracket
+    objectLiteralTypeAssertions: never
   consistent-type-definitions: [WARN, type] # https://typescript-eslint.io/rules/consistent-type-definitions
   member-delimiter-style: # https://typescript-eslint.io/rules/member-delimiter-style
-    - WARN
-    - singleline:
-        delimiter: comma
-        requireLast: false
-      multiline:
-        delimiter: none
-        requireLast: false
+  - WARN
+  - singleline:
+      delimiter: comma
+      requireLast: false
+    multiline:
+      delimiter: none
+      requireLast: false
   no-meaningless-void-operator: WARN # https://typescript-eslint.io/rules/no-meaningless-void-operator
   consistent-generic-constructors: WARN # https://typescript-eslint.io/rules/consistent-generic-constructors
 

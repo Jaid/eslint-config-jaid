@@ -4,14 +4,14 @@ rules:
   button-has-type: WARN
   default-props-match-prop-types: WARN
   destructuring-assignment:
-    - WARN
-    - never
+  - WARN
+  - never
   jsx-sort-props:
-    - WARN
-    - ignoreCase: true
-      callbacksLast: true
-      shorthandLast: true
-      reservedFirst: true
+  - WARN
+  - ignoreCase: true
+    callbacksLast: true
+    shorthandLast: true
+    reservedFirst: true
   forbid-foreign-prop-types: WARN
   no-access-state-in-setstate: WARN
   no-children-prop: WARN

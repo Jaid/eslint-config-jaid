@@ -2,8 +2,8 @@ overridesSlot: 0
 prefix: i
 rules:
   newline-after-import:
-    - WARN
-    - considerComments: true
+  - WARN
+  - considerComments: true
   first: WARN
   no-duplicates: ERROR
   no-mutable-exports: WARN

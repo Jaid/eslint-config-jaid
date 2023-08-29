@@ -1,19 +1,19 @@
 overridesSlot: 0
 rules:
   array-bracket-newline:
-    - WARN
-    - multiline: true
+  - WARN
+  - multiline: true
   array-bracket-spacing: WARN
   array-element-newline: [WARN, consistent]
   arrow-parens: [WARN, as-needed]
   arrow-spacing: WARN
   comma-dangle:
-    - WARN
-    - arrays: always-multiline
-      objects: always-multiline
-      imports: never
-      exports: never
-      functions: never
+  - WARN
+  - arrays: always-multiline
+    objects: always-multiline
+    imports: never
+    exports: never
+    functions: never
   comma-style: WARN
   computed-property-spacing: WARN
   curly: [WARN, all]
@@ -28,9 +28,9 @@ rules:
   no-nested-ternary: WARN
   no-trailing-spaces: WARN
   no-underscore-dangle:
-    - WARN
-    - allow:
-        - __REDUX_DEVTOOLS_EXTENSION_COMPOSE__ # See https://github.com/zalmoxisus/redux-devtools-extension
+  - WARN
+  - allow:
+    - __REDUX_DEVTOOLS_EXTENSION_COMPOSE__ # See https://github.com/zalmoxisus/redux-devtools-extension
   no-unneeded-ternary: WARN
   no-whitespace-before-property: WARN
   semi-style: WARN
@@ -43,13 +43,13 @@ rules:
   no-lonely-if: WARN
   no-floating-decimal: WARN
   object-curly-newline:
-    - WARN
-    - ObjectExpression:
-        consistent: true
-        minProperties: 2
-        multiline: true
-      ObjectPattern: never
-      ImportDeclaration: never
+  - WARN
+  - ObjectExpression:
+      consistent: true
+      minProperties: 2
+      multiline: true
+    ObjectPattern: never
+    ImportDeclaration: never
   object-property-newline: WARN
   one-var: [WARN, never]
   operator-linebreak: [WARN, before]
