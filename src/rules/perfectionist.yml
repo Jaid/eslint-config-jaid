@@ -22,6 +22,18 @@ rules:
   - WARN
   - type: natural
     ignore-case: true
+  sort-named-exports: # https://eslint-plugin-perfectionist.azat.io/rules/sort-named-exports
+  - WARN
+  - type: natural
+    ignore-case: true
+  sort-named-imports: # https://eslint-plugin-perfectionist.azat.io/rules/sort-named-imports
+  - WARN
+  - type: natural
+    ignore-case: true
+  sort-object-types: # https://eslint-plugin-perfectionist.azat.io/rules/sort-object-types
+  - WARN
+  - type: natural
+    ignore-case: true
   sort-objects: # https://eslint-plugin-perfectionist.azat.io/rules/sort-objects
   - WARN
   - type: natural
@@ -35,18 +47,6 @@ rules:
     - title
     - displayName
   sort-union-types: # https://eslint-plugin-perfectionist.azat.io/rules/sort-union-types
-  - WARN
-  - type: natural
-    ignore-case: true
-  sort-object-types: # https://eslint-plugin-perfectionist.azat.io/rules/sort-object-types
-  - WARN
-  - type: natural
-    ignore-case: true
-  sort-named-imports: # https://eslint-plugin-perfectionist.azat.io/rules/sort-named-imports
-  - WARN
-  - type: natural
-    ignore-case: true
-  sort-named-exports: # https://eslint-plugin-perfectionist.azat.io/rules/sort-named-exports
   - WARN
   - type: natural
     ignore-case: true

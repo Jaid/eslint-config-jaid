@@ -1,11 +1,11 @@
 overridesSlot: 0
 prefix: unicorn
 rules:
-  prefer-query-selector: WARN
+  no-invalid-remove-event-listener: WARN
   prefer-dom-node-append: WARN
-  prefer-dom-node-remove: WARN
   prefer-dom-node-dataset: WARN
-  prefer-modern-dom-apis: WARN
+  prefer-dom-node-remove: WARN
   prefer-dom-node-text-content: WARN
   prefer-keyboard-event-key: WARN
-  no-invalid-remove-event-listener: WARN
+  prefer-modern-dom-apis: WARN
+  prefer-query-selector: WARN

@@ -10,6 +10,8 @@ rules:
   no-compare-neg-zero: WARN
   no-cond-assign: WARN
   no-const-assign: WARN
+  no-constant-binary-expression: WARN
+  no-constructor-return: WARN
   no-delete-var: WARN
   no-dupe-args: WARN
   no-dupe-keys: WARN
@@ -26,6 +28,7 @@ rules:
   no-global-assign: WARN
   no-implicit-coercion: WARN
   no-inner-declarations: WARN
+  no-invalid-this: ERROR
   no-iterator: WARN
   no-label-var: WARN
   no-multi-spaces: WARN
@@ -36,11 +39,17 @@ rules:
   no-obj-calls: WARN
   no-octal: WARN
   no-proto: WARN
+  no-return-assign:
+  - WARN
+  - always
   no-self-assign: WARN
   no-self-compare: WARN
   no-sequences: WARN
+  no-setter-return: WARN
   no-sparse-arrays: WARN
   no-this-before-super: WARN
+  no-undef: WARN
+  no-undef-init: WARN
   no-unexpected-multiline: WARN
   no-unreachable: WARN
   no-unsafe-finally: WARN
@@ -57,6 +66,7 @@ rules:
   prefer-destructuring:
   - WARN
   - array: false
+  prefer-object-has-own: WARN
   prefer-promise-reject-errors: WARN
   prefer-spread: WARN
   prefer-template: WARN
@@ -66,13 +76,3 @@ rules:
   use-isnan: WARN
   valid-typeof: WARN
   yoda: WARN
-  no-undef: WARN
-  no-undef-init: WARN
-  no-return-assign:
-  - WARN
-  - always
-  no-constructor-return: WARN
-  no-setter-return: WARN
-  no-constant-binary-expression: WARN
-  no-invalid-this: ERROR
-  prefer-object-has-own: WARN

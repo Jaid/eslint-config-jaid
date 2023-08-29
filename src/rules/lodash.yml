@@ -1,9 +1,9 @@
 overridesSlot: 0
 prefix: you-dont-need-lodash-underscore
 rules:
-  last: OFF
-  uniq: OFF
-  is-nil: OFF
-  omit: OFF
-  is-string: OFF
   is-function: OFF
+  is-nil: OFF
+  is-string: OFF
+  last: OFF
+  omit: OFF
+  uniq: OFF

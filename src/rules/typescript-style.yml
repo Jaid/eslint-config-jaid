@@ -2,13 +2,10 @@
 overridesSlot: 0
 prefix: '@typescript-eslint'
 rules:
-  method-signature-style: WARN # https://typescript-eslint.io/rules/method-signature-style
   array-type: WARN # https://typescript-eslint.io/rules/array-type
   class-literal-property-style: WARN # https://typescript-eslint.io/rules/class-literal-property-style
-  prefer-as-const: WARN # https://typescript-eslint.io/rules/prefer-as-const
-  prefer-function-type: WARN # https://typescript-eslint.io/rules/prefer-function-type
-  sort-type-constituents: WARN # https://typescript-eslint.io/rules/sort-type-constituents
-  type-annotation-spacing: WARN # https://typescript-eslint.io/rules/type-annotation-spacing
+  consistent-generic-constructors: WARN # https://typescript-eslint.io/rules/consistent-generic-constructors
+
   consistent-indexed-object-style: WARN # https://typescript-eslint.io/rules/consistent-indexed-object-style
   consistent-type-assertions: # https://typescript-eslint.io/rules/consistent-type-assertions
   - WARN
@@ -23,9 +20,12 @@ rules:
     multiline:
       delimiter: none
       requireLast: false
+  method-signature-style: WARN # https://typescript-eslint.io/rules/method-signature-style
   no-meaningless-void-operator: WARN # https://typescript-eslint.io/rules/no-meaningless-void-operator
-  consistent-generic-constructors: WARN # https://typescript-eslint.io/rules/consistent-generic-constructors
-
+  prefer-as-const: WARN # https://typescript-eslint.io/rules/prefer-as-const
+  prefer-function-type: WARN # https://typescript-eslint.io/rules/prefer-function-type
+  sort-type-constituents: WARN # https://typescript-eslint.io/rules/sort-type-constituents
+  type-annotation-spacing: WARN # https://typescript-eslint.io/rules/type-annotation-spacing
   # Currently useless as long as it doesn’t come with an autofixer: https://github.com/typescript-eslint/typescript-eslint/issues/2296
   # Current alternative: https://github.com/infctr/eslint-plugin-typescript-sort-keys
   # member-ordering: # https://typescript-eslint.io/rules/member-ordering

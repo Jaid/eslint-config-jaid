@@ -2,8 +2,12 @@ prefix: jsonc
 overridesSlot: 1
 rules:
   auto: WARN # https://ota-meshi.github.io/eslint-plugin-jsonc/rules/auto.html
-  valid-json-number: ERROR # https://ota-meshi.github.io/eslint-plugin-jsonc/rules/valid-json-number.html
   no-plus-sign: WARN # https://ota-meshi.github.io/eslint-plugin-jsonc/rules/no-plus-sign.html
+  sort-array-values: # https://ota-meshi.github.io/eslint-plugin-jsonc/rules/sort-array-values.html
+  - WARN
+  - pathPattern: ^keywords$
+    order:
+      natural: true
   sort-keys: # https://ota-meshi.github.io/eslint-plugin-jsonc/rules/sort-keys.html
   - WARN
   - hasProperties:
@@ -60,8 +64,4 @@ rules:
     order:
       type: asc
       natural: true
-  sort-array-values: # https://ota-meshi.github.io/eslint-plugin-jsonc/rules/sort-array-values.html
-  - WARN
-  - pathPattern: ^keywords$
-    order:
-      natural: true
+  valid-json-number: ERROR # https://ota-meshi.github.io/eslint-plugin-jsonc/rules/valid-json-number.html

@@ -1,13 +1,13 @@
 overridesSlot: 0
 prefix: i
 rules:
+  first: WARN
   newline-after-import:
   - WARN
   - considerComments: true
-  first: WARN
+  no-deprecated: WARN
   no-duplicates: ERROR
   no-mutable-exports: WARN
-  no-deprecated: WARN
-  no-useless-path-segments: WARN
   no-self-import: ERROR
   no-unresolved: ERROR
+  no-useless-path-segments: WARN

@@ -3,10 +3,10 @@ prefix: promise
 rules:
   catch-or-return: WARN
   no-callback-in-promise: WARN
+  no-multiple-resolved: WARN
   no-promise-in-callback: WARN
   no-return-in-finally: WARN
   no-return-wrap: WARN
   param-names: WARN
-  no-multiple-resolved: WARN
-  prefer-await-to-then: WARN
   prefer-await-to-callbacks: WARN
+  prefer-await-to-then: WARN

@@ -2,53 +2,53 @@ overridesSlot: 0
 prefix: unicorn
 rules:
   catch-error-name: WARN
-  throw-new-error: WARN
-  number-literal-case: WARN
-  escape-case: WARN
-  no-instanceof-array: WARN
-  no-new-buffer: ERROR
-  no-hex-escape: WARN
-  prefer-type-error: WARN
-  new-for-builtins: WARN
-  prefer-spread: WARN
-  error-message: WARN
-  prefer-add-event-listener: WARN
-  prefer-array-flat-map: WARN
-  prefer-string-slice: WARN
   consistent-function-scoping: WARN
+  error-message: WARN
+  escape-case: WARN
   expiring-todo-comments: WARN
-  prefer-string-replace-all: WARN
-  prefer-number-properties: WARN
-  no-useless-undefined: WARN
-  prefer-array-find: WARN
-  numeric-separators-style: WARN
-  prefer-math-trunc: ERROR
-  prefer-date-now: ERROR
-  prefer-string-trim-start-end: WARN
+  new-for-builtins: WARN
+  no-array-for-each: WARN
+  no-await-expression-member: WARN
+  no-hex-escape: WARN
+  no-instanceof-array: WARN
+  number-literal-case: WARN
+  throw-new-error: WARN
+  no-new-buffer: ERROR
+  prefer-add-event-listener: WARN
+  prefer-type-error: WARN
+  prefer-array-flat-map: WARN
+  prefer-spread: WARN
+  prefer-string-slice: WARN
+  no-nested-ternary: WARN
   no-new-array: WARN
+  no-thenable: WARN
+  no-unnecessary-await: WARN
+  no-useless-fallback-in-spread: WARN
+  no-useless-length-check: WARN
+  no-useless-undefined: WARN
+  prefer-number-properties: WARN
+  prefer-string-replace-all: WARN
+  numeric-separators-style: WARN
+  prefer-array-find: WARN
+  prefer-date-now: ERROR
+  prefer-math-trunc: ERROR
+  prefer-string-trim-start-end: WARN
   prefer-array-index-of: WARN
   prefer-regexp-test: WARN
-  no-array-for-each: WARN
-  prefer-array-flat: WARN
-  no-useless-length-check: WARN
+  no-useless-promise-resolve-reject: WARN
   no-useless-spread: WARN
-  no-useless-fallback-in-spread: WARN
+  no-zero-fractions: WARN
+  prefer-array-flat: WARN
+  prefer-blob-reading-methods: WARN
+  prefer-code-point: WARN
   prefer-module: WARN
   prefer-top-level-await: WARN
-  prefer-code-point: WARN
-  no-await-expression-member: WARN
-  relative-url-style: WARN
-  no-useless-promise-resolve-reject: WARN
-  no-thenable: WARN
-  text-encoding-identifier-case: WARN
+  prefer-logical-operator-over-ternary: WARN
   prefer-modern-math-apis: WARN
   prefer-native-coercion-functions: WARN
-  prefer-logical-operator-over-ternary: WARN
-  prefer-blob-reading-methods: WARN
   prefer-set-size: WARN
-  no-unnecessary-await: WARN
-  no-nested-ternary: WARN
-  no-zero-fractions: WARN
+  relative-url-style: WARN
+  text-encoding-identifier-case: WARN
   prefer-at: WARN
   prefer-negative-index: WARN
   prefer-prototype-methods: WARN

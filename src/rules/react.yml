@@ -6,13 +6,22 @@ rules:
   destructuring-assignment:
   - WARN
   - never
+  forbid-foreign-prop-types: WARN
+  jsx-boolean-value: [WARN, never]
+  jsx-child-element-spacing: WARN
+  jsx-curly-brace-presence: WARN
+  jsx-curly-spacing: WARN
+  jsx-equals-spacing: WARN
+  jsx-handler-names: WARN
+  jsx-indent: [WARN, 2]
+  jsx-indent-props: [WARN, 2]
+  jsx-no-leaked-render: WARN
   jsx-sort-props:
   - WARN
   - ignoreCase: true
     callbacksLast: true
     shorthandLast: true
     reservedFirst: true
-  forbid-foreign-prop-types: WARN
   no-access-state-in-setstate: WARN
   no-children-prop: WARN
   no-danger-with-children: WARN
@@ -36,15 +45,6 @@ rules:
   sort-comp: WARN
   style-prop-object: WARN
   void-dom-elements-no-children: WARN
-  jsx-no-leaked-render: WARN
-  jsx-boolean-value: [WARN, never]
-  jsx-child-element-spacing: WARN
-  jsx-curly-brace-presence: WARN
-  jsx-curly-spacing: WARN
-  jsx-equals-spacing: WARN
-  jsx-handler-names: WARN
-  jsx-indent: [WARN, 2]
-  jsx-indent-props: [WARN, 2]
   jsx-key: WARN
   jsx-max-props-per-line:
   - WARN

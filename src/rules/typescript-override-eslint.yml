@@ -3,7 +3,14 @@
 overridesSlot: 0
 prefix: '@typescript-eslint'
 rules:
+  brace-style: WARN # https://typescript-eslint.io/rules/brace-style
+  comma-spacing: WARN # https://typescript-eslint.io/rules/comma-spacing
   dot-notation: WARN # https://typescript-eslint.io/rules/dot-notation
+  func-call-spacing: WARN # https://typescript-eslint.io/rules/func-call-spacing
+  indent: [WARN, 2] # https://typescript-eslint.io/rules/indent
+  key-spacing: WARN # https://typescript-eslint.io/rules/key-spacing
+  keyword-spacing: WARN # https://typescript-eslint.io/rules/keyword-spacing
+  lines-between-class-members: [WARN, never] # https://typescript-eslint.io/rules/lines-between-class-members
   no-array-constructor: WARN # https://typescript-eslint.io/rules/no-array-constructor
   no-dupe-class-members: WARN # https://typescript-eslint.io/rules/no-dupe-class-members
   no-redeclare: WARN # https://typescript-eslint.io/rules/no-redeclare
@@ -32,25 +39,18 @@ rules:
       message: Use yaml # https://www.npmjs.com/package/yaml
   no-shadow: WARN # https://typescript-eslint.io/rules/no-shadow
   no-throw-literal: WARN # https://typescript-eslint.io/rules/no-throw-literal
-  no-useless-constructor: WARN # https://typescript-eslint.io/rules/no-useless-constructor
-  return-await: WARN # https://typescript-eslint.io/rules/no-return-await
   no-use-before-define: WARN # https://typescript-eslint.io/rules/no-use-before-define
-  quotes: [WARN, backtick] # https://typescript-eslint.io/rules/quotes
+  no-useless-constructor: WARN # https://typescript-eslint.io/rules/no-useless-constructor
   object-curly-spacing: WARN # https://typescript-eslint.io/rules/object-curly-spacing
+  quotes: [WARN, backtick] # https://typescript-eslint.io/rules/quotes
+  return-await: WARN # https://typescript-eslint.io/rules/no-return-await
   prefer-nullish-coalescing: WARN # https://typescript-eslint.io/rules/prefer-nullish-coalescing
   prefer-regexp-exec: WARN # https://typescript-eslint.io/rules/prefer-regexp-exec
   require-array-sort-compare: WARN # https://typescript-eslint.io/rules/require-array-sort-compare
+  space-before-blocks: WARN # https://typescript-eslint.io/rules/space-before-blocks
   space-before-function-paren: # https://typescript-eslint.io/rules/space-before-function-paren
   - WARN
   - anonymous: always
     named: never
     asyncArrow: always
-  space-before-blocks: WARN # https://typescript-eslint.io/rules/space-before-blocks
   space-infix-ops: WARN # https://typescript-eslint.io/rules/space-infix-ops
-  func-call-spacing: WARN # https://typescript-eslint.io/rules/func-call-spacing
-  comma-spacing: WARN # https://typescript-eslint.io/rules/comma-spacing
-  brace-style: WARN # https://typescript-eslint.io/rules/brace-style
-  key-spacing: WARN # https://typescript-eslint.io/rules/key-spacing
-  keyword-spacing: WARN # https://typescript-eslint.io/rules/keyword-spacing
-  indent: [WARN, 2] # https://typescript-eslint.io/rules/indent
-  lines-between-class-members: [WARN, never] # https://typescript-eslint.io/rules/lines-between-class-members
