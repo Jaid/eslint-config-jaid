@@ -15,13 +15,32 @@ rules:
   jsx-handler-names: WARN
   jsx-indent: [WARN, 2]
   jsx-indent-props: [WARN, 2]
+  jsx-key: WARN
+  jsx-max-props-per-line:
+  - WARN
+  - maximum: 1
+    when: multiline
+  jsx-no-duplicate-props: WARN
   jsx-no-leaked-render: WARN
+  jsx-no-target-blank: WARN
+  jsx-no-undef:
+  - WARN
+  - allowGlobals: true
+  jsx-pascal-case: WARN
   jsx-sort-props:
   - WARN
   - ignoreCase: true
     callbacksLast: true
     shorthandLast: true
     reservedFirst: true
+  jsx-tag-spacing:
+  - WARN
+  - afterOpening: never
+    beforeClosing: never
+    beforeSelfClosing: never
+    closingSlash: never
+  jsx-uses-react: WARN
+  jsx-uses-vars: WARN
   no-access-state-in-setstate: WARN
   no-children-prop: WARN
   no-danger-with-children: WARN
@@ -45,22 +64,3 @@ rules:
   sort-comp: WARN
   style-prop-object: WARN
   void-dom-elements-no-children: WARN
-  jsx-key: WARN
-  jsx-max-props-per-line:
-  - WARN
-  - maximum: 1
-    when: multiline
-  jsx-no-duplicate-props: WARN
-  jsx-no-target-blank: WARN
-  jsx-no-undef:
-  - WARN
-  - allowGlobals: true
-  jsx-pascal-case: WARN
-  jsx-tag-spacing:
-  - WARN
-  - afterOpening: never
-    beforeClosing: never
-    beforeSelfClosing: never
-    closingSlash: never
-  jsx-uses-react: WARN
-  jsx-uses-vars: WARN

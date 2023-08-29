@@ -13,13 +13,13 @@ rules:
   no-unsafe-argument: WARN # https://typescript-eslint.io/rules/no-unsafe-argument
   no-unsafe-assignment: WARN # https://typescript-eslint.io/rules/no-unsafe-assignment
   no-unsafe-call: WARN # https://typescript-eslint.io/rules/no-unsafe-call
-  prefer-includes: WARN # https://typescript-eslint.io/rules/prefer-includes
-  prefer-optional-chain: WARN # https://typescript-eslint.io/rules/prefer-optional-chain
-  prefer-string-starts-ends-with: WARN # https://typescript-eslint.io/rules/prefer-string-starts-ends-with
   no-unsafe-declaration-merging: WARN # https://typescript-eslint.io/rules/no-unsafe-declaration-merging
   no-unsafe-enum-comparison: WARN # https://typescript-eslint.io/rules/no-unsafe-enum-comparison
   no-unsafe-member-access: WARN # https://typescript-eslint.io/rules/no-unsafe-member-access
   no-unsafe-return: WARN # https://typescript-eslint.io/rules/no-unsafe-return
+  prefer-includes: WARN # https://typescript-eslint.io/rules/prefer-includes
+  prefer-optional-chain: WARN # https://typescript-eslint.io/rules/prefer-optional-chain
+  prefer-string-starts-ends-with: WARN # https://typescript-eslint.io/rules/prefer-string-starts-ends-with
   unbound-method: # https://typescript-eslint.io/rules/unbound-method
   - WARN
   - ignoreStatic: true

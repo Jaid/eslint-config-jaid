@@ -42,11 +42,11 @@ rules:
   no-use-before-define: WARN # https://typescript-eslint.io/rules/no-use-before-define
   no-useless-constructor: WARN # https://typescript-eslint.io/rules/no-useless-constructor
   object-curly-spacing: WARN # https://typescript-eslint.io/rules/object-curly-spacing
-  quotes: [WARN, backtick] # https://typescript-eslint.io/rules/quotes
-  return-await: WARN # https://typescript-eslint.io/rules/no-return-await
   prefer-nullish-coalescing: WARN # https://typescript-eslint.io/rules/prefer-nullish-coalescing
   prefer-regexp-exec: WARN # https://typescript-eslint.io/rules/prefer-regexp-exec
+  quotes: [WARN, backtick] # https://typescript-eslint.io/rules/quotes
   require-array-sort-compare: WARN # https://typescript-eslint.io/rules/require-array-sort-compare
+  return-await: WARN # https://typescript-eslint.io/rules/no-return-await
   space-before-blocks: WARN # https://typescript-eslint.io/rules/space-before-blocks
   space-before-function-paren: # https://typescript-eslint.io/rules/space-before-function-paren
   - WARN

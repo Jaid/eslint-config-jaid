@@ -43,7 +43,6 @@ rules:
   no-unneeded-ternary: WARN
   no-whitespace-before-property: WARN
   no-with: WARN
-  semi-style: WARN
   object-curly-newline:
   - WARN
   - ObjectExpression:
@@ -54,19 +53,20 @@ rules:
     ImportDeclaration: never
   object-property-newline: WARN
   one-var: [WARN, never]
-  prefer-const: WARN
   operator-linebreak: [WARN, before]
   padded-blocks: [WARN, never]
   padding-line-between-statements: OFF
+  prefer-const: WARN
   prefer-exponentiation-operator: WARN
   quote-props: [WARN, as-needed]
   rest-spread-spacing: WARN
+  semi-style: WARN
   semi-spacing: WARN
+  sort-vars: WARN
   space-in-parens: WARN
+  space-unary-ops: WARN
   spaced-comment: WARN
   switch-colon-spacing: WARN
   template-curly-spacing: WARN
   template-tag-spacing: WARN
   yield-star-spacing: WARN
-  sort-vars: WARN
-  space-unary-ops: WARN
