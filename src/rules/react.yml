@@ -37,3 +37,30 @@ rules:
   style-prop-object: WARN
   void-dom-elements-no-children: WARN
   jsx-no-leaked-render: WARN
+  jsx-boolean-value: [WARN, never]
+  jsx-child-element-spacing: WARN
+  jsx-curly-brace-presence: WARN
+  jsx-curly-spacing: WARN
+  jsx-equals-spacing: WARN
+  jsx-handler-names: WARN
+  jsx-indent: [WARN, 2]
+  jsx-indent-props: [WARN, 2]
+  jsx-key: WARN
+  jsx-max-props-per-line:
+  - WARN
+  - maximum: 1
+    when: multiline
+  jsx-no-duplicate-props: WARN
+  jsx-no-target-blank: WARN
+  jsx-no-undef:
+  - WARN
+  - allowGlobals: true
+  jsx-pascal-case: WARN
+  jsx-tag-spacing:
+  - WARN
+  - afterOpening: never
+    beforeClosing: never
+    beforeSelfClosing: never
+    closingSlash: never
+  jsx-uses-react: WARN
+  jsx-uses-vars: WARN
