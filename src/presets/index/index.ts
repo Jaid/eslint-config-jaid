@@ -25,6 +25,7 @@ export default {
     `eslint-plugin-unicorn`,
     `eslint-plugin-yml`,
     `eslint-plugin-you-dont-need-lodash-underscore`,
+    `eslint-plugin-perfectionist`,
   ],
   rules: [
     `typescript`,
@@ -41,6 +42,7 @@ export default {
     `import-quotes`,
     `lodash`,
     `regex`,
+    `perfectionist`,
     `jsonc`,
     `yml`,
   ],

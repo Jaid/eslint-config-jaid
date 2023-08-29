@@ -1,0 +1,15 @@
+overridesSlot: 0
+prefix: perfectionist
+rules:
+  sort-classes: # https://eslint-plugin-perfectionist.azat.io/rules/sort-classes
+  - WARN
+  - ignore-case: true
+    groups:
+    - static-property
+    - static-method
+    - private-property
+    - property
+    - constructor
+    - private-method
+    - method
+    - unknown

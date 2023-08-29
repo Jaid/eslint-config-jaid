@@ -17,6 +17,7 @@ const map: Mapper = {
   regexp: id => `https://ota-meshi.github.io/eslint-plugin-regexp/rules/${id}.html`,
   jsonc: id => `https://ota-meshi.github.io/eslint-plugin-jsonc/rules/${id}.html`,
   yml: id => `https://ota-meshi.github.io/eslint-plugin-yaml/rules/${id}.html`,
+  perfectionist: id => `https://eslint-plugin-perfectionist.azat.io/rules/${id}`,
 }
 
 export default (ruleId: string): string | null => {
