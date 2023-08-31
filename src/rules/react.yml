@@ -58,7 +58,6 @@ rules:
   no-unknown-property: WARN
   no-will-update-set-state: WARN
   prefer-es6-class: WARN
-  react-in-jsx-scope: WARN
   require-render-return: WARN
   self-closing-comp: WARN
   sort-comp: WARN
