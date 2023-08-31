@@ -34,7 +34,6 @@ ignorePatterns:
 - /../../srcCompiled/
 - /../../srcCompiled-*/
 - '*.d.ts'
-- node_modules/
 overrides:
 - files:
   - '*.ts'
