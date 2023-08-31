@@ -28,11 +28,11 @@ settings:
       alwaysTryTypes: true
     node: true
 ignorePatterns:
-- /dist/
-- /out/
-- /temp/
-- /srcCompiled/
-- /srcCompiled-*/
+- ../../dist/
+- ../../out/
+- ../../temp/
+- ../../srcCompiled/
+- ../../srcCompiled-*/
 - '*.d.ts'
 - node_modules/
 overrides:
