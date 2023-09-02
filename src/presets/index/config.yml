@@ -28,9 +28,9 @@ settings:
       alwaysTryTypes: true
     node: true
 ignorePatterns:
-- /../../dist/
-- /../../out/
-- /../../temp/
+- /dist/
+- /out/
+- /temp/
 overrides:
 - files:
   - '*.ts'
