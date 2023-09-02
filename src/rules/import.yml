@@ -5,9 +5,7 @@ rules:
   newline-after-import:
   - WARN
   - considerComments: true
-  no-deprecated: WARN
   no-duplicates: ERROR
   no-mutable-exports: WARN
   no-self-import: ERROR
-  no-unresolved: ERROR
   no-useless-path-segments: WARN
