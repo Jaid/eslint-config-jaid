@@ -22,7 +22,7 @@ const presets = await fs.readdir(path.join(dirName, `presets`))
 const jobs = presets.map(async preset => {
   const importUrl = pathToFileURL(path.resolve(dirName, `presets`, preset, `index.ts`)).toString()
   const {default: importedModule} = await import(importUrl)
-  const {includedDependencies, rules, config, extend, publishimoConfig} = importedModule
+  const {config, extend, includedDependencies, publishimoConfig, rules} = importedModule
   console.dir(rules)
   const buildPath = path.resolve(dirName, `..`, `dist`, `build`, preset)
   await fs.ensureDir(buildPath)

@@ -89,7 +89,7 @@ export default (title: string, rules: Dictionary<Rule[]>) => {
   ${markdownHtml}
 </body>`
   return {
-    markdown,
     html,
+    markdown,
   }
 }

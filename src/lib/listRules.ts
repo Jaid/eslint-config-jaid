@@ -5,8 +5,8 @@ import * as lodash from 'lodash-es'
 export type RuleFinderFunction = `getCurrentRules` | `getDeprecatedRules` | `getUnusedRules`
 
 export type Rule = {
-  id: string
   fullId: string
+  id: string
   plugin?: string
 }
 

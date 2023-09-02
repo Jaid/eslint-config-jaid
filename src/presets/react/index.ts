@@ -1,23 +1,14 @@
 import base from '../index/index.ts'
 
 export default {
-  publishimoConfig: {
-    name: `${base.publishimoConfig.name}-react`,
-    repository: `https://github.com/Jaid/eslint-config-jaid`,
-    description: `Personal ESLint preset for React/JSX. Intentionally ugly to write code that looks like I feel.`,
-  },
-  includedDependencies: [
-    ...base.includedDependencies,
-    `eslint-plugin-react`,
-  ],
-  rules: [
-    ...base.rules,
-    `jsx`,
-    `react`,
-    `unicorn-web`,
-  ],
-  extend: base.extend,
   config: {
+    env: {
+      ...base.config.env,
+      browser: true,
+      worker: true,
+    },
+    globals: base.config.globals,
+    overrides: base.config.overrides,
     parser: base.config.parser,
     parserOptions: {
       ...base.config.parserOptions,
@@ -35,12 +26,21 @@ export default {
         version: `detect`,
       },
     },
-    globals: base.config.globals,
-    env: {
-      ...base.config.env,
-      browser: true,
-      worker: true,
-    },
-    overrides: base.config.overrides,
   },
+  extend: base.extend,
+  includedDependencies: [
+    ...base.includedDependencies,
+    `eslint-plugin-react`,
+  ],
+  publishimoConfig: {
+    name: `${base.publishimoConfig.name}-react`,
+    description: `Personal ESLint preset for React/JSX. Intentionally ugly to write code that looks like I feel.`,
+    repository: `https://github.com/Jaid/eslint-config-jaid`,
+  },
+  rules: [
+    ...base.rules,
+    `jsx`,
+    `react`,
+    `unicorn-web`,
+  ],
 }

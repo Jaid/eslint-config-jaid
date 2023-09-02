@@ -45,7 +45,7 @@ export default class ConfigBuilder {
     const jobs = this.options.presets.map(async preset => {
       const presetSourceFile = path.join(this.options.presetsFolder, preset, `index.ts`)
       const {default: importedModule} = await import(pathToFileURL(presetSourceFile))
-      const {includedDependencies, rules, config, extend, publishimoConfig} = importedModule
+      const {config, extend, includedDependencies, publishimoConfig, rules} = importedModule
       debug(`importedModule: %O`, importedModule)
       const buildPath = path.resolve(this.options.outputFolder, preset)
       await fs.ensureDir(buildPath)

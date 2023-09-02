@@ -25,14 +25,14 @@ const presets = [`index`]
 it(`should run`, async () => {
   const {default: ConfigBuilder} = await import(pathToFileURL(srcFile))
   const configBuilder = new ConfigBuilder({
-    pkg,
     outputFolder,
+    pkg,
+    presets,
     presetsFolder,
     rulesFolder,
-    presets,
     staticFiles: {
-      "readme.md": path.join(dirName, `..`, `readme.md`),
       "license.txt": path.join(dirName, `..`, `license.txt`),
+      "readme.md": path.join(dirName, `..`, `readme.md`),
     },
   })
   await configBuilder.run()

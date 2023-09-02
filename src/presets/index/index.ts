@@ -7,9 +7,8 @@ const dirName = path.dirname(fileURLToPath(import.meta.url))
 const baseConfig = await readFileYaml.default(path.join(dirName, `config.yml`))
 
 export default {
-  publishimoConfig: {
-    name: `eslint-config-jaid`,
-  },
+  config: baseConfig,
+  extend: [`plugin:you-dont-need-lodash-underscore/all-warn`],
   includedDependencies: [
     `@typescript-eslint/parser`,
     `eslint-import-resolver-node`,
@@ -27,6 +26,9 @@ export default {
     `eslint-plugin-you-dont-need-lodash-underscore`,
     `eslint-plugin-perfectionist`,
   ],
+  publishimoConfig: {
+    name: `eslint-config-jaid`,
+  },
   rules: [
     `typescript`,
     `typescript-override-eslint`,
@@ -46,6 +48,4 @@ export default {
     `jsonc`,
     `yml`,
   ],
-  extend: [`plugin:you-dont-need-lodash-underscore/all-warn`],
-  config: baseConfig,
 }
