@@ -4,7 +4,7 @@ import {fileURLToPath} from 'node:url'
 import readFileYaml from 'read-file-yaml'
 
 const dirName = path.dirname(fileURLToPath(import.meta.url))
-const baseConfig = await readFileYaml.default(path.join(dirName, `config.yml`))
+const baseConfig: Record<string, any> = await readFileYaml.default(path.join(dirName, `config.yml`))
 
 export default {
   config: baseConfig,

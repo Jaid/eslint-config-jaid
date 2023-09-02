@@ -1,4 +1,4 @@
-overridesSlot: 0
+overridesSlot: 3
 rules:
   jsx-quotes:
   - WARN
