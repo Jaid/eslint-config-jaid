@@ -9,6 +9,6 @@ rules:
     - [^@jest/globals$] # Jest globals
     - ['^node:'] # Node builtins, see https://nodejs.org/api/esm.html#esm_node_imports
     - ['^@?\w'] # Packages
-    - [^lib/, ^components/] # lib/, components/
+    - [^lib/, ^component/] # lib/, components/
     - [^src/, ^root/] # src/, root/
     - ['^\.'] # Relative
