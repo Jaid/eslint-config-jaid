@@ -31,9 +31,6 @@ ignorePatterns:
 - /../../dist/
 - /../../out/
 - /../../temp/
-- /../../srcCompiled/
-- /../../srcCompiled-*/
-- '*.d.ts'
 overrides:
 - files:
   - '*.ts'
