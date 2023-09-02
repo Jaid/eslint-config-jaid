@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "ESLint rule setup schema",
+  "type": "object",
+  "definitions": {
+    "severity": {
+      "type": "string",
+      "enum": [
+        "OFF",
+        "WARN",
+        "ERROR"
+      ]
+    }
+  },
+  "properties": {
+    "overridesSlot": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "prefix": {
+      "type": "string"
+    },
+    "rules": {
+      "type": "object",
+      "patternProperties": {
+        ".*": {
+          "anyOf": [
+            {
+              "description": "Basic rule activation",
+              "type": "string",
+              "enum": [
+                "OFF",
+                "WARN",
+                "ERROR"
+              ]
+            },
+            {
+              "description": "Rule activation with custom options",
+              "type": "array",
+              "prefixItems": [
+                {
+                  "type": "#/definitions/severity"
+                }
+              ],
+              "minItems": 2
+            }
+          ]
+        }
+      }
+    }
+  },
+  "required": [
+    "rules"
+  ]
+}

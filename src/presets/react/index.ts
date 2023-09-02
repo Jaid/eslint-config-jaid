@@ -1,4 +1,4 @@
-import base from '../index/index.ts'
+import base from '../index/index.js'
 
 export default {
   config: {
