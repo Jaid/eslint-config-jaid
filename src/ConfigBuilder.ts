@@ -4,7 +4,7 @@ import {pathToFileURL} from 'node:url'
 import chalk from 'chalk'
 import createDebug from 'debug'
 import {emp} from 'emp'
-import filterObj from 'filter-obj'
+import {includeKeys} from 'filter-obj'
 import fs from 'fs-extra'
 import jsYaml from 'js-yaml'
 import {countSizeSync} from 'list-dir-content-size'
@@ -66,7 +66,7 @@ export default class ConfigBuilder {
         rules: sortKeys(appliedRules),
       })
       await fs.outputJson(path.join(buildPath, `index.json`), eslintConfig)
-      const dependencies = filterObj(this.options.pkg.dependencies, key => includedDependencies.includes(key))
+      const dependencies = includeKeys(this.options.pkg.dependencies, key => includedDependencies.includes(key))
       const {generatedPkg} = await publishimo({
         ...pick(this.options.pkg, [`license`, `version`, `author`, `repository`, `peerDependencies`]),
         ...publishimoConfig,

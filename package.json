@@ -82,7 +82,8 @@
   "scripts": {
     "build": "tsx src/build.ts",
     "release": "npm run build && foreach -g \"dist/build/*\" -x \"npm publish dist/build/#{base}\"",
-    "buildPage": "fse emptyDir dist/page && tsx src/scripts/activeHtml.ts && tsx src/scripts/unusedHtml.ts && tsx src/scripts/deprecatedHtml.ts && fse copy etc/page dist/page"
+    "buildPage": "fse emptyDir dist/page && tsx src/scripts/activeHtml.ts && tsx src/scripts/unusedHtml.ts && tsx src/scripts/deprecatedHtml.ts && fse copy etc/page dist/page",
+    "test": "node --loader tsx --test test/index.ts"
   },
   "license": "MIT"
 }

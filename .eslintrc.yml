@@ -1,4 +1,6 @@
 extends: jaid
+ignorePatterns:
+- /test/fixture
 overrides:
 - files:
   - src/rules/**/*.yml
