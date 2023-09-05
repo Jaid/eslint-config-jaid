@@ -41,6 +41,7 @@ rules:
     closingSlash: never
   jsx-uses-react: WARN
   jsx-uses-vars: WARN
+  no-access-state-in-setstate: WARN
   no-children-prop: WARN
   no-danger-with-children: WARN
   no-did-mount-set-state: WARN
@@ -60,4 +61,3 @@ rules:
   sort-comp: WARN
   style-prop-object: WARN
   void-dom-elements-no-children: WARN
-  no-access-state-in-setstate: WARN
