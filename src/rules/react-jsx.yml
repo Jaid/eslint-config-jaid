@@ -59,5 +59,8 @@ rules:
   require-render-return: WARN
   self-closing-comp: WARN
   sort-comp: WARN
+  sort-default-props:
+  - WARN
+  - ignoreCase: true
   style-prop-object: WARN
   void-dom-elements-no-children: WARN

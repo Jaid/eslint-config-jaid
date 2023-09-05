@@ -2,6 +2,8 @@
 overridesSlot: 0
 prefix: '@typescript-eslint'
 rules:
+  no-base-to-string: WARN # https://typescript-eslint.io/rules/no-base-to-string
+  no-misused-promises: WARN # https://typescript-eslint.io/rules/no-misused-promises
   no-non-null-asserted-nullish-coalescing: ERROR # https://typescript-eslint.io/rules/no-non-null-asserted-nullish-coalescing
   no-non-null-asserted-optional-chain: ERROR # https://typescript-eslint.io/rules/no-non-null-asserted-optional-chain
   no-redundant-type-constituents: WARN # https://typescript-eslint.io/rules/no-redundant-type-constituents
@@ -20,6 +22,7 @@ rules:
   prefer-includes: WARN # https://typescript-eslint.io/rules/prefer-includes
   prefer-optional-chain: WARN # https://typescript-eslint.io/rules/prefer-optional-chain
   prefer-string-starts-ends-with: WARN # https://typescript-eslint.io/rules/prefer-string-starts-ends-with
+  prefer-ts-expect-error: WARN # https://typescript-eslint.io/rules/prefer-ts-expect-error
   unbound-method: # https://typescript-eslint.io/rules/unbound-method
   - WARN
   - ignoreStatic: true

@@ -31,7 +31,11 @@ rules:
   no-floating-decimal: WARN
   no-lonely-if: WARN
   no-multi-assign: WARN
-  no-multiple-empty-lines: WARN
+  no-multiple-empty-lines:
+  - WARN
+  - max: 1
+    maxEOF: 1
+    maxBOF: 0
   no-nested-ternary: WARN
   no-new-object: WARN
   no-tabs: WARN

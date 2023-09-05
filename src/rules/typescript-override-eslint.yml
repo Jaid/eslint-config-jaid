@@ -42,6 +42,29 @@ rules:
   no-use-before-define: WARN # https://typescript-eslint.io/rules/no-use-before-define
   no-useless-constructor: WARN # https://typescript-eslint.io/rules/no-useless-constructor
   object-curly-spacing: WARN # https://typescript-eslint.io/rules/object-curly-spacing
+  padding-line-between-statements: # https://typescript-eslint.io/rules/padding-line-between-statements
+  - WARN
+  - blankLine: never
+    prev: '*'
+    next: '*'
+  - blankLine: any
+    prev: import
+    next: '*'
+  - blankLine: any
+    prev: '*'
+    next: export
+  - blankLine: always
+    prev: import
+    next: type
+  - blankLine: always
+    prev: type
+    next: '*'
+  - blankLine: always
+    prev: '*'
+    next: type
+  - blankLine: never
+    prev: type
+    next: type
   prefer-nullish-coalescing: WARN # https://typescript-eslint.io/rules/prefer-nullish-coalescing
   prefer-regexp-exec: WARN # https://typescript-eslint.io/rules/prefer-regexp-exec
   quotes: [WARN, backtick] # https://typescript-eslint.io/rules/quotes
