@@ -30,8 +30,8 @@
     "url": "https://github.com/jaid/eslint-config-jaid"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.5.0",
-    "@typescript-eslint/parser": "^6.5.0",
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.6.0",
     "browserslist-config-jaid-node": "3.0.0",
     "eslint": "^8.48.0",
     "eslint-import-resolver-node": "^0.3.9",
@@ -56,7 +56,7 @@
     "cross-env": "^7.0.3",
     "debug": "^4.3.4",
     "emp": "^2.0.0",
-    "eslint-config-jaid": "^7.0.4",
+    "eslint-config-jaid": "^8.1.1",
     "eslint-find-rules": "^4.1.0",
     "filter-obj": "^5.1.0",
     "foreach-cli": "^1.8.1",
@@ -74,7 +74,7 @@
     "read-file-yaml": "^2.0.0",
     "showdown": "^2.1.0",
     "sort-keys": "^5.0.0",
-    "tsconfig-jaid": "^5.0.0",
+    "tsconfig-jaid": "^5.0.1",
     "tsx": "^3.12.8",
     "type-fest": "^4.3.1",
     "yaml": "^2.3.2"
