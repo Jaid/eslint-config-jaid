@@ -4,8 +4,8 @@ prefix: '@typescript-eslint'
 rules:
   no-base-to-string: WARN # https://typescript-eslint.io/rules/no-base-to-string
   no-misused-promises: WARN # https://typescript-eslint.io/rules/no-misused-promises
-  no-non-null-asserted-nullish-coalescing: ERROR # https://typescript-eslint.io/rules/no-non-null-asserted-nullish-coalescing
-  no-non-null-asserted-optional-chain: ERROR # https://typescript-eslint.io/rules/no-non-null-asserted-optional-chain
+  no-non-null-asserted-nullish-coalescing: WARN # https://typescript-eslint.io/rules/no-non-null-asserted-nullish-coalescing
+  no-non-null-asserted-optional-chain: WARN # https://typescript-eslint.io/rules/no-non-null-asserted-optional-chain
   no-redundant-type-constituents: WARN # https://typescript-eslint.io/rules/no-redundant-type-constituents
   no-unnecessary-boolean-literal-compare: WARN # https://typescript-eslint.io/rules/no-unnecessary-boolean-literal-compare
   no-unnecessary-qualifier: WARN # https://typescript-eslint.io/rules/no-unnecessary-qualifier

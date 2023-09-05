@@ -12,7 +12,7 @@ rules:
   no-dupe-characters-character-class: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-dupe-characters-character-class.html
   no-extra-lookaround-assertions: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-extra-lookaround-assertions.html
   no-invisible-character: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-invisible-character.html
-  no-missing-g-flag: ERROR # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-missing-g-flag.html
+  no-missing-g-flag: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-missing-g-flag.html
   no-trivially-nested-assertion: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-trivially-nested-assertion.html
   no-trivially-nested-quantifier: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-trivially-nested-quantifier.html
   no-useless-assertions: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-useless-assertions.html
@@ -30,4 +30,4 @@ rules:
   sort-alternatives: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/sort-alternatives.html
   sort-character-class-elements: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/sort-character-class-elements.html
   sort-flags: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/sort-flags.html
-  strict: ERROR # https://ota-meshi.github.io/eslint-plugin-regexp/rules/strict.html
+  strict: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/strict.html

@@ -13,7 +13,7 @@ rules:
   no-instanceof-array: WARN
   no-nested-ternary: WARN
   no-new-array: WARN
-  no-new-buffer: ERROR
+  no-new-buffer: WARN
   no-thenable: WARN
   no-unnecessary-await: WARN
   no-useless-fallback-in-spread: WARN
@@ -32,9 +32,9 @@ rules:
   prefer-at: WARN
   prefer-blob-reading-methods: WARN
   prefer-code-point: WARN
-  prefer-date-now: ERROR
+  prefer-date-now: WARN
   prefer-logical-operator-over-ternary: WARN
-  prefer-math-trunc: ERROR
+  prefer-math-trunc: WARN
   prefer-modern-math-apis: WARN
   prefer-module: WARN
   prefer-native-coercion-functions: WARN
