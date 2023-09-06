@@ -2,7 +2,7 @@ overridesSlot: 0
 rules:
   array-bracket-newline:
   - WARN
-  - multiline: true
+  - consistent
   array-bracket-spacing: WARN
   array-element-newline: [WARN, consistent]
   arrow-parens: [WARN, as-needed]
