@@ -11,7 +11,7 @@ rules:
   jsx-child-element-spacing: WARN
   jsx-closing-bracket-location:
   - WARN
-  - line-props
+  - line-aligned
   jsx-curly-brace-presence: WARN
   jsx-curly-spacing: WARN
   jsx-equals-spacing: WARN
