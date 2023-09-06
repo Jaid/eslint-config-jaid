@@ -65,6 +65,9 @@ rules:
   - blankLine: never
     prev: type
     next: type
+  - blankLine: any
+    prev: export
+    next: '*'
   prefer-nullish-coalescing: WARN # https://typescript-eslint.io/rules/prefer-nullish-coalescing
   prefer-regexp-exec: WARN # https://typescript-eslint.io/rules/prefer-regexp-exec
   quotes: [WARN, backtick] # https://typescript-eslint.io/rules/quotes
