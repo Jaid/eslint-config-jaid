@@ -9,9 +9,15 @@ rules:
   forbid-foreign-prop-types: WARN
   jsx-boolean-value: [WARN, never]
   jsx-child-element-spacing: WARN
+  jsx-closing-bracket-location:
+  - WARN
+  - line-props
   jsx-curly-brace-presence: WARN
   jsx-curly-spacing: WARN
   jsx-equals-spacing: WARN
+  jsx-first-prop-new-line:
+  - WARN
+  - multiline
   jsx-handler-names: WARN
   jsx-indent: [WARN, 2]
   jsx-indent-props: [WARN, 2]
@@ -26,6 +32,7 @@ rules:
   jsx-no-undef:
   - WARN
   - allowGlobals: true
+  jsx-one-expression-per-line: WARN
   jsx-pascal-case: WARN
   jsx-sort-props:
   - WARN
@@ -56,18 +63,6 @@ rules:
   no-unknown-property: WARN
   no-will-update-set-state: WARN
   prefer-es6-class: WARN
-  react/jsx-closing-bracket-location:
-  - WARN
-  - line-props
-  react/jsx-first-prop-new-line:
-  - WARN
-  - multiline
-  react/jsx-max-props-per-line:
-  - WARN
-  - maximum:
-      multi: 1
-      single: 3
-  react/jsx-one-expression-per-line: WARN
   require-render-return: WARN
   self-closing-comp: WARN
   sort-comp: WARN
