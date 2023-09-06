@@ -56,6 +56,18 @@ rules:
   no-unknown-property: WARN
   no-will-update-set-state: WARN
   prefer-es6-class: WARN
+  react/jsx-closing-bracket-location:
+  - WARN
+  - line-props
+  react/jsx-first-prop-new-line:
+  - WARN
+  - multiline
+  react/jsx-max-props-per-line:
+  - WARN
+  - maximum:
+      multi: 1
+      single: 3
+  react/jsx-one-expression-per-line: WARN
   require-render-return: WARN
   self-closing-comp: WARN
   sort-comp: WARN
