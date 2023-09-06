@@ -13,7 +13,11 @@ rules:
     objectLiteralTypeAssertions: allow
   consistent-type-definitions: [WARN, type] # https://typescript-eslint.io/rules/consistent-type-definitions
   consistent-type-exports: WARN # https://typescript-eslint.io/rules/consistent-type-exports
-  consistent-type-imports: WARN # https://typescript-eslint.io/rules/consistent-type-imports
+  consistent-type-imports: # https://typescript-eslint.io/rules/consistent-type-imports
+  - WARN
+  - prefer: type-imports
+    disallowTypeAnnotations: false
+    fixStyle: separate-type-imports
   member-delimiter-style: # https://typescript-eslint.io/rules/member-delimiter-style
   - WARN
   - singleline:
