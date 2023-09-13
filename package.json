@@ -56,7 +56,7 @@
     "cross-env": "^7.0.3",
     "debug": "^4.3.4",
     "emp": "^2.0.0",
-    "eslint-config-jaid": "^8.8.0",
+    "eslint-config-jaid": "^8.9.0",
     "eslint-find-rules": "^4.1.0",
     "filter-obj": "^5.1.0",
     "foreach-cli": "^1.8.1",
@@ -75,7 +75,7 @@
     "showdown": "^2.1.0",
     "sort-keys": "^5.0.0",
     "tsconfig-jaid": "^5.2.0",
-    "tsx": "^3.12.9",
+    "tsx": "^3.12.10",
     "type-fest": "^4.3.1",
     "yaml": "^2.3.2"
   },
