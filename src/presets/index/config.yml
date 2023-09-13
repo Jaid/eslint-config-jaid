@@ -3,7 +3,6 @@ plugins:
 - promise
 - unicorn
 - i
-- simple-import-sort
 - import-quotes
 - '@typescript-eslint'
 - regexp
