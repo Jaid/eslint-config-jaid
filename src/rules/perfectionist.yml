@@ -45,6 +45,8 @@ rules:
     groups:
     - index
     - id
+    - identifier
+    - uuid
     - name
     - displayName
     - title
@@ -55,10 +57,9 @@ rules:
     - unknown
     custom-groups:
       index: index
-      id:
-      - id
-      - uuid
-      - identifier
+      id: id
+      identifier: identifier
+      uuid: uuid
       name: name
       displayName: displayName
       title: title
