@@ -8,11 +8,15 @@ rules:
     groups:
     - static-property
     - static-method
-    - private-property
+    - static-private-method
+    - index-signature
     - property
+    - private-property
     - constructor
-    - private-method
+    - - get-method
+      - set-method
     - method
+    - private-method
     - unknown
   sort-enums: # https://eslint-plugin-perfectionist.azat.io/rules/sort-enums
   - WARN
@@ -38,15 +42,33 @@ rules:
   - WARN
   - type: natural
     ignore-case: true
-    always-on-top:
-    - id
-    - uuid
-    - identifier
+    groups:
     - index
+    - id
     - name
-    - title
     - displayName
+    - title
+    - top
+    - bottom
+    - left
+    - right
+    - unknown
+    custom-groups:
+      index: index
+      id:
+      - id
+      - uuid
+      - identifier
+      name: name
+      displayName: displayName
+      title: title
+      top: top
+      bottom: bottom
+      left: left
+      right: right
+    partition-by-comment: SECTION **
   sort-union-types: # https://eslint-plugin-perfectionist.azat.io/rules/sort-union-types
   - WARN
   - type: natural
     ignore-case: true
+    nullable-last: true
