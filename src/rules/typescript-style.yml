@@ -28,7 +28,8 @@ rules:
   method-signature-style: WARN # https://typescript-eslint.io/rules/method-signature-style
   no-meaningless-void-operator: WARN # https://typescript-eslint.io/rules/no-meaningless-void-operator
   prefer-as-const: WARN # https://typescript-eslint.io/rules/prefer-as-const
-  sort-type-constituents: WARN # https://typescript-eslint.io/rules/sort-type-constituents
+  # Replaced by: https://eslint-plugin-perfectionist.azat.io/rules/sort-union-types
+  # sort-type-constituents: WARN # https://typescript-eslint.io/rules/sort-type-constituents
   type-annotation-spacing: WARN # https://typescript-eslint.io/rules/type-annotation-spacing
   # Currently useless as long as it doesn’t come with an autofixer: https://github.com/typescript-eslint/typescript-eslint/issues/2296
   # Current alternative: https://github.com/infctr/eslint-plugin-typescript-sort-keys
