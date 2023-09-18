@@ -27,17 +27,17 @@ rules:
   - type: natural
     ignore-case: true
     groups:
-    - side-effect # import 'foo'
     - - parent-type # import type { Options } from '../foo.js'
       - sibling-type # import type { Options } from './foo.js'
       - external-type # import type { Options } from 'foo'
       - internal-type # import type { Options } from 'lib/foo.js'
       - index-type # import type { Options } from './index.d.ts'
+    - side-effect # import 'foo'
     - object # import log = console.log
     - - builtin # import fs from 'fs'
       - node # import fs from 'node:fs'
     - external # import foo from 'foo'
-    - internal # import foo from 'lib/foo.js'
+    - internal # import foo from '~/lib/foo.js'
     - - parent # import { foo } from '../foo.js'
       - siblings # import { foo } from './foo.js'
     - style # import style from './style.css'
