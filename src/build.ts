@@ -24,7 +24,7 @@ const jobs = presets.map(async preset => {
   const {default: importedModule} = await import(importUrl)
   const {config, extend, includedDependencies, publishimoConfig, rules} = importedModule
   console.dir(rules)
-  const buildPath = path.resolve(dirName, `..`, `dist`, `build`, preset)
+  const buildPath = path.resolve(dirName, `..`, `out`, `package`, preset)
   await fs.ensureDir(buildPath)
   await emp(buildPath)
   const appliedRules = {}
