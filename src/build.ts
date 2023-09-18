@@ -1,6 +1,9 @@
+import type {PackageJson} from 'type-fest'
+
 import path from 'node:path'
 import {fileURLToPath, pathToFileURL} from 'node:url'
 
+import publishimo from './lib/esm/publishimo.js'
 import chalk from 'chalk'
 import {emp} from 'emp'
 import {includeKeys} from 'filter-obj'
@@ -10,15 +13,10 @@ import {countSizeSync} from 'list-dir-content-size'
 import * as lodash from 'lodash-es'
 import prettyBytes from 'pretty-bytes'
 import sortKeys from 'sort-keys'
-import {PackageJson} from 'type-fest'
-
-import publishimo from './lib/esm/publishimo.js'
 
 const pkg: PackageJson = await fs.readJson(`package.json`)
 const dirName = path.dirname(fileURLToPath(import.meta.url))
-
 const presets = await fs.readdir(path.join(dirName, `presets`))
-
 const jobs = presets.map(async preset => {
   const importUrl = pathToFileURL(path.resolve(dirName, `presets`, preset, `index.ts`)).toString()
   const {default: importedModule} = await import(importUrl)
@@ -72,5 +70,4 @@ const jobs = presets.map(async preset => {
   await fs.copyFile(path.join(dirName, `..`, `readme.md`), path.join(buildPath, `readme.md`))
   console.log(`${chalk.green(publishimoConfig.name)} ${prettyBytes(countSizeSync(buildPath))}`)
 })
-
 await Promise.all(jobs)

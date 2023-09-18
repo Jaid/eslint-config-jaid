@@ -1,13 +1,13 @@
 #!/bin/env tsx
+import type {Rule} from 'src/lib/listRules.ts'
+
 import path from 'node:path'
 
 import fs from 'fs-extra'
 import Handlebars from 'handlebars'
 import * as lodash from 'lodash-es'
 import showdown from 'showdown'
-
 import getLinkToRule from 'src/lib/getLinkToRule.ts'
-import {Rule} from 'src/lib/listRules.ts'
 
 type Selector = `current` | `deprecated` | `unused`
 
@@ -25,7 +25,6 @@ export default (title: string, rules: Dictionary<Rule[]>) => {
 
 {{/each}}
 `
-
   const handlebars = Handlebars.create()
   handlebars.registerHelper(`rule`, rule => {
     const link = getLinkToRule(rule.fullId)

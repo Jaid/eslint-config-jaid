@@ -1,6 +1,7 @@
 import path from 'node:path'
 import {pathToFileURL} from 'node:url'
 
+import publishimo from './lib/esm/publishimo.js'
 import chalk from 'chalk'
 import createDebug from 'debug'
 import {emp} from 'emp'
@@ -11,8 +12,6 @@ import {countSizeSync} from 'list-dir-content-size'
 import {pick} from 'lodash-es'
 import prettyBytes from 'pretty-bytes'
 import sortKeys from 'sort-keys'
-
-import publishimo from './lib/esm/publishimo.js'
 
 const debug = createDebug(`eslint-config-jaid`)
 

@@ -2,7 +2,6 @@
 import path from 'node:path'
 
 import fs from 'fs-extra'
-
 import listRules from 'src/lib/listRules.ts'
 import makeHtml from 'src/lib/makeHtml.ts'
 

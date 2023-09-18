@@ -1,3 +1,5 @@
+import type {PackageJson} from 'type-fest'
+
 import assert from 'node:assert'
 import path from 'node:path'
 import test, {before} from 'node:test'
@@ -7,13 +9,10 @@ import createDebug from 'debug'
 import {ESLint} from 'eslint'
 import fs from 'fs-extra'
 import * as lodash from 'lodash-es'
-import {PackageJson} from 'type-fest'
 
 const debug = createDebug(`eslint-config-jaid`)
-
 const pkg = <PackageJson> await fs.readJson(`package.json`)
 const dirName = path.dirname(fileURLToPath(import.meta.url))
-
 const srcFolder = path.join(dirName, `..`, `src`)
 const presetsFolder = path.join(srcFolder, `presets`)
 const rulesFolder = path.join(srcFolder, `rules`)
@@ -22,11 +21,8 @@ const distFolder = path.join(dirName, `..`, `dist`)
 const testInputFolder = path.join(dirName, `fixture`)
 const testDistFolder = path.join(distFolder, `test`)
 const outputFolder = path.join(testDistFolder, `output`)
-
 debug(`srcFile: %s`, srcFile)
-
 const presets = [`index`]
-
 before(async () => {
   const {default: ConfigBuilder} = await import(pathToFileURL(srcFile).toString())
   const configBuilder = new ConfigBuilder({
@@ -42,7 +38,6 @@ before(async () => {
   })
   await configBuilder.run()
 })
-
 test(`should run`, async () => {
   const eslint = new ESLint({
     overrideConfigFile: path.join(distFolder, `build`, `index`, `index.json`),
