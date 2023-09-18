@@ -37,6 +37,14 @@ rules:
       message: Use super-regex # https://www.npmjs.com/package/super-regex
     - name: js-yaml
       message: Use yaml # https://www.npmjs.com/package/yaml
+    - name: jest
+      message: Use node:test and node:assert # https://nodejs.org/api/test.html#itname-options-fn
+    - name: '@types/jest'
+      message: Use node:test and node:assert # https://nodejs.org/api/test.html#itname-options-fn
+    - name: jest-extended
+      message: Use node:test and node:assert # https://nodejs.org/api/test.html#itname-options-fn
+    - name: jest-light-runner
+      message: Use node:test and node:assert # https://nodejs.org/api/test.html#itname-options-fn
   no-shadow: WARN # https://typescript-eslint.io/rules/no-shadow
   no-throw-literal: WARN # https://typescript-eslint.io/rules/no-throw-literal
   no-use-before-define: WARN # https://typescript-eslint.io/rules/no-use-before-define

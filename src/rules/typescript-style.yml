@@ -5,7 +5,6 @@ rules:
   array-type: WARN # https://typescript-eslint.io/rules/array-type
   class-literal-property-style: WARN # https://typescript-eslint.io/rules/class-literal-property-style
   consistent-generic-constructors: WARN # https://typescript-eslint.io/rules/consistent-generic-constructors
-
   consistent-indexed-object-style: WARN # https://typescript-eslint.io/rules/consistent-indexed-object-style
   consistent-type-assertions: # https://typescript-eslint.io/rules/consistent-type-assertions
   - WARN
