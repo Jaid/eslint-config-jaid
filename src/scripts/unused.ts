@@ -1,7 +1,7 @@
 #!/bin/env tsx
 import path from 'node:path'
 
-import listRules from 'src/lib/listRules.ts'
+import listRules from 'src/lib/listRules.js'
 
 const rulesFile = path.join(`dist`, `build`, `react`, `index.json`)
 const groupedRules = await listRules(rulesFile, `getUnusedRules`)
