@@ -15,38 +15,37 @@ rules:
   no-dupe-class-members: WARN # https://typescript-eslint.io/rules/no-dupe-class-members
   no-redeclare: WARN # https://typescript-eslint.io/rules/no-redeclare
   no-restricted-imports: # https://typescript-eslint.io/rules/no-restricted-imports
-  - WARN # https://eslint.org/docs/rules/no-restricted-imports
-  - paths:
-    - name: lodash
-      message: Use lodash-es # https://www.npmjs.com/package/lodash-es
-    - name: ensure-array
-      message: Use sure-array # https://www.npmjs.com/package/sure-array
-    - name: '@absolunet/fsp'
-      message: Use fs-extra # https://www.npmjs.com/package/fs-extra
-    - name: '@absolunet/fss'
-      message: Use fs-extra # https://www.npmjs.com/package/fs-extra
-    - name: opn
-      message: Use open # https://www.npmjs.com/package/open
-    - name: pify
-      message: Use util.promisify # https://nodejs.org/dist/latest/docs/api/util.html#util_util_promisify_original
-    - name: fs/promises
-      message: Use fs-extra (more stable) # https://www.npmjs.com/package/fs-extra
-    - name: node:fs/promises
-      message: Use fs-extra (more stable) # https://www.npmjs.com/package/fs-extra
-    - name: execall
-      message: Use super-regex # https://www.npmjs.com/package/super-regex
-    - name: js-yaml
-      message: Use yaml # https://www.npmjs.com/package/yaml
-    - name: jest
-      message: Use node:test and node:assert # https://nodejs.org/api/test.html#itname-options-fn
-    - name: '@types/jest'
-      message: Use node:test and node:assert # https://nodejs.org/api/test.html#itname-options-fn
-    - name: jest-extended
-      message: Use node:test and node:assert # https://nodejs.org/api/test.html#itname-options-fn
-    - name: jest-light-runner
-      message: Use node:test and node:assert # https://nodejs.org/api/test.html#itname-options-fn
-    - name: emp
-      message: Use fs-extra (emptyDir) # https://github.com/jprichardson/node-fs-extra/blob/master/docs/emptyDir.md
+  - WARN
+  - name: lodash
+    message: Use lodash-es # https://www.npmjs.com/package/lodash-es
+  - name: ensure-array
+    message: Use sure-array # https://www.npmjs.com/package/sure-array
+  - name: '@absolunet/fsp'
+    message: Use fs-extra # https://www.npmjs.com/package/fs-extra
+  - name: '@absolunet/fss'
+    message: Use fs-extra # https://www.npmjs.com/package/fs-extra
+  - name: opn
+    message: Use open # https://www.npmjs.com/package/open
+  - name: pify
+    message: Use util.promisify # https://nodejs.org/dist/latest/docs/api/util.html#util_util_promisify_original
+  - name: fs/promises
+    message: Use fs-extra (more stable) # https://www.npmjs.com/package/fs-extra
+  - name: node:fs/promises
+    message: Use fs-extra (more stable) # https://www.npmjs.com/package/fs-extra
+  - name: execall
+    message: Use super-regex # https://www.npmjs.com/package/super-regex
+  - name: js-yaml
+    message: Use yaml # https://www.npmjs.com/package/yaml
+  - name: jest
+    message: Use node:test and node:assert # https://nodejs.org/api/test.html#itname-options-fn
+  - name: '@types/jest'
+    message: Use node:test and node:assert # https://nodejs.org/api/test.html#itname-options-fn
+  - name: jest-extended
+    message: Use node:test and node:assert # https://nodejs.org/api/test.html#itname-options-fn
+  - name: jest-light-runner
+    message: Use node:test and node:assert # https://nodejs.org/api/test.html#itname-options-fn
+  - name: emp
+    message: Use fs-extra (emptyDir) # https://github.com/jprichardson/node-fs-extra/blob/master/docs/emptyDir.md
   no-shadow: WARN # https://typescript-eslint.io/rules/no-shadow
   no-throw-literal: WARN # https://typescript-eslint.io/rules/no-throw-literal
   no-use-before-define: WARN # https://typescript-eslint.io/rules/no-use-before-define
