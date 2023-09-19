@@ -45,6 +45,8 @@ rules:
       message: Use node:test and node:assert # https://nodejs.org/api/test.html#itname-options-fn
     - name: jest-light-runner
       message: Use node:test and node:assert # https://nodejs.org/api/test.html#itname-options-fn
+    - name: emp
+      message: Use fs-extra (emptyDir) # https://github.com/jprichardson/node-fs-extra/blob/master/docs/emptyDir.md
   no-shadow: WARN # https://typescript-eslint.io/rules/no-shadow
   no-throw-literal: WARN # https://typescript-eslint.io/rules/no-throw-literal
   no-use-before-define: WARN # https://typescript-eslint.io/rules/no-use-before-define
