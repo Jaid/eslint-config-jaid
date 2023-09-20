@@ -1,6 +1,7 @@
 overridesSlot: 0
 prefix: you-dont-need-lodash-underscore
 rules:
+  get: OFF
   is-function: OFF
   is-nil: OFF
   is-string: OFF
