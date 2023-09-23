@@ -37,7 +37,7 @@ rules:
     maxEOF: 1
     maxBOF: 0
   no-nested-ternary: WARN
-  no-new-object: WARN
+  no-object-constructor: WARN
   no-tabs: WARN
   no-trailing-spaces: WARN
   no-underscore-dangle:
