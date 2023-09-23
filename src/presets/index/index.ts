@@ -24,6 +24,7 @@ export default {
     `eslint-plugin-yml`,
     `eslint-plugin-you-dont-need-lodash-underscore`,
     `eslint-plugin-perfectionist`,
+    `eslint`,
   ],
   publishimoConfig: {
     name: `eslint-config-jaid`,
