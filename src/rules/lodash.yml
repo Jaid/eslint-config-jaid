@@ -1,10 +1,12 @@
 overridesSlot: 0
 prefix: you-dont-need-lodash-underscore
 rules:
+  capitalize: OFF
   get: OFF
   is-function: OFF
   is-nil: OFF
   is-string: OFF
   last: OFF
   omit: OFF
+  size: OFF
   uniq: OFF
