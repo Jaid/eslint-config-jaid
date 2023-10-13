@@ -1,5 +1,5 @@
 {
-  "version": "8.15.3",
+  "version": "8.16.0",
   "type": "module",
   "name": "eslint-config-jaid",
   "description": "Personal ESLint preset. Intentionally ugly to write code that looks like I feel.",
