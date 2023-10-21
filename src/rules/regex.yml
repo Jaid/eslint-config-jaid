@@ -22,11 +22,15 @@ rules:
   no-useless-lazy: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-useless-lazy.html
   no-useless-quantifier: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-useless-quantifier.html
   no-useless-range: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-useless-range.html
+  no-useless-set-operand: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-useless-set-operand.html
+  no-useless-string-literal: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-useless-string-literal.html
   no-useless-two-nums-quantifier: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-useless-two-nums-quantifier.html
   optimal-quantifier-concatenation: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/optimal-quantifier-concatenation.html
   prefer-d: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/prefer-d.html
   prefer-predefined-assertion: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/prefer-predefined-assertion.html
   prefer-quantifier: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/prefer-quantifier.html
+  prefer-set-operation: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/prefer-set-operation.html
+  simplify-set-operations: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/simplify-set-operations.html
   sort-alternatives: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/sort-alternatives.html
   sort-character-class-elements: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/sort-character-class-elements.html
   sort-flags: WARN # https://ota-meshi.github.io/eslint-plugin-regexp/rules/sort-flags.html
