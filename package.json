@@ -80,7 +80,7 @@
   },
   "scripts": {
     "build": "tsx src/build.ts",
-    "release": "npm run build && find out/package -name package.json -execdir npm publish \\;",
+    "release": "npm run build && find out/package -mindepth 1 -maxdepth 1 -type d -exec sh -c 'cd {} && npm publish' \\;",
     "buildPage": "fse emptyDir dist/page && tsx src/scripts/activeHtml.ts && tsx src/scripts/unusedHtml.ts && tsx src/scripts/deprecatedHtml.ts && fse copy etc/page dist/page",
     "test": "node --import tsx --test test/index.ts"
   },
