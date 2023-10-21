@@ -2,6 +2,7 @@ overridesSlot: 0
 prefix: you-dont-need-lodash-underscore
 rules:
   capitalize: OFF
+  castArray: OFF
   get: OFF
   is-function: OFF
   is-nil: OFF
