@@ -17,9 +17,9 @@ rules:
     pathPattern: ^$
     order:
     - private
+    - name
     - version
     - type
-    - name
     - description
     - keywords
     - author
