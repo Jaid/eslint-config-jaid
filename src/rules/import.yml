@@ -5,6 +5,7 @@ rules:
   newline-after-import:
   - WARN
   - considerComments: true
+    exactCount: true
   no-duplicates: WARN
   no-mutable-exports: WARN
   no-self-import: ERROR
