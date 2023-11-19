@@ -19,6 +19,7 @@ rules:
   no-unsafe-enum-comparison: WARN # https://typescript-eslint.io/rules/no-unsafe-enum-comparison
   no-unsafe-member-access: WARN # https://typescript-eslint.io/rules/no-unsafe-member-access
   no-unsafe-return: WARN # https://typescript-eslint.io/rules/no-unsafe-return
+  no-unsafe-unary-minus: WARN # https://typescript-eslint.io/rules/no-unsafe-unary-minus
   prefer-includes: WARN # https://typescript-eslint.io/rules/prefer-includes
   prefer-optional-chain: WARN # https://typescript-eslint.io/rules/prefer-optional-chain
   prefer-string-starts-ends-with: WARN # https://typescript-eslint.io/rules/prefer-string-starts-ends-with
