@@ -61,38 +61,38 @@ rules:
   - WARN
   - type: natural
     ignore-case: true
-  sort-objects: # https://eslint-plugin-perfectionist.azat.io/rules/sort-objects
-  - WARN
-  - type: natural
-    ignore-case: true
-    groups:
-    - index
-    - id
-    - identifier
-    - uuid
-    - name
-    - displayName
-    - title
-    - top
-    - bottom
-    - left
-    - right
-    - unknown
-    custom-groups:
-      index: index
-      id: id
-      identifier: identifier
-      uuid: uuid
-      name: name
-      displayName: displayName
-      title: title
-      top: top
-      bottom: bottom
-      left: left
-      right: right
-    partition-by-comment: SECTION **
   sort-union-types: # https://eslint-plugin-perfectionist.azat.io/rules/sort-union-types
   - WARN
   - type: natural
     ignore-case: true
     nullable-last: true
+  # sort-objects: # https://eslint-plugin-perfectionist.azat.io/rules/sort-objects
+  # - WARN
+  # - type: natural
+  #   ignore-case: true
+  #   groups:
+  #   - index
+  #   - id
+  #   - identifier
+  #   - uuid
+  #   - name
+  #   - displayName
+  #   - title
+  #   - top
+  #   - bottom
+  #   - left
+  #   - right
+  #   - unknown
+  #   custom-groups:
+  #     index: index
+  #     id: id
+  #     identifier: identifier
+  #     uuid: uuid
+  #     name: name
+  #     displayName: displayName
+  #     title: title
+  #     top: top
+  #     bottom: bottom
+  #     left: left
+  #     right: right
+  #   partition-by-comment: SECTION **
