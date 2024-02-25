@@ -3,11 +3,11 @@ overridesSlot: 1
 rules:
   auto: WARN # https://ota-meshi.github.io/eslint-plugin-jsonc/rules/auto.html
   no-plus-sign: WARN # https://ota-meshi.github.io/eslint-plugin-jsonc/rules/no-plus-sign.html
-  sort-array-values: # https://ota-meshi.github.io/eslint-plugin-jsonc/rules/sort-array-values.html
-  - WARN
-  - pathPattern: ^keywords$
-    order:
-      natural: true
+  # sort-array-values: # https://ota-meshi.github.io/eslint-plugin-jsonc/rules/sort-array-values.html
+  # - WARN
+  # - pathPattern: ^keywords$
+  #   order:
+  #     natural: true
   sort-keys: # https://ota-meshi.github.io/eslint-plugin-jsonc/rules/sort-keys.html
   - WARN
   - hasProperties:
@@ -16,27 +16,29 @@ rules:
     - version
     pathPattern: ^$
     order:
-    - private
-    - name
+  - - private
     - version
     - type
+    - name
     - description
     - keywords
     - author
     - homepage
     - bugs
     - funding
+    - license
     - repository
-    - os
-    - cpu
-    - engines
     - dependencies
     - peerDependencies
+    - peerDependenciesMeta
     - optionalDependencies
     - bundledDependencies
     - devDependencies
     - scripts
-    - license
+    - wireit
+    - os
+    - cpu
+    - engines
     - order:
         type: asc
         natural: true
@@ -44,7 +46,6 @@ rules:
     - type
     - name
     - version
-    # pathPattern: ^(d|devD|peerD|optionalD)ependencies$
     pathPattern: ^dependencies|peerDependencies|optionalDependencies|bundledDependencies|devDependencies|peerDependenciesMeta$
     order:
       type: asc
