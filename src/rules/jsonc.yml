@@ -16,10 +16,10 @@ rules:
     - version
     pathPattern: ^$
     order:
-  - - private
+    - name
     - version
     - type
-    - name
+    - private
     - description
     - keywords
     - author
@@ -28,20 +28,20 @@ rules:
     - funding
     - license
     - repository
+    - scripts
+    - wireit
     - dependencies
     - peerDependencies
     - peerDependenciesMeta
     - optionalDependencies
     - bundledDependencies
     - devDependencies
-    - scripts
-    - wireit
-    - os
-    - cpu
-    - engines
     - order:
         type: asc
         natural: true
+    - os
+    - cpu
+    - engines
   - hasProperties:
     - type
     - name
