@@ -13,15 +13,17 @@ rules:
     - homepage
     - bugs
     - funding
+    - license
     - repository
-    - os
-    - cpu
-    - engines
     - dependencies
     - peerDependencies
+    - peerDependenciesMeta
     - optionalDependencies
     - bundledDependencies
     - devDependencies
     - scripts
-    - license
+    - wireit
+    - os
+    - cpu
+    - engines
   sort-collections: WARN # https://github.com/zetlen/eslint-plugin-package-json/blob/HEAD/docs/rules/sort-collections.md
