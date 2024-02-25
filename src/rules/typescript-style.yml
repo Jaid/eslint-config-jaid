@@ -26,6 +26,7 @@ rules:
       requireLast: false
   method-signature-style: WARN # https://typescript-eslint.io/rules/method-signature-style
   no-meaningless-void-operator: WARN # https://typescript-eslint.io/rules/no-meaningless-void-operator
+  no-useless-template-literals: WARN # https://typescript-eslint.io/rules/no-useless-template-literals
   prefer-as-const: WARN # https://typescript-eslint.io/rules/prefer-as-const
   # Replaced by: https://eslint-plugin-perfectionist.azat.io/rules/sort-union-types
   # sort-type-constituents: WARN # https://typescript-eslint.io/rules/sort-type-constituents
