@@ -44,7 +44,8 @@ rules:
     - type
     - name
     - version
-    pathPattern: ^(d|devD|peerD|optionalD)ependencies$
+    # pathPattern: ^(d|devD|peerD|optionalD)ependencies$
+    pathPattern: ^dependencies|peerDependencies|optionalDependencies|bundledDependencies|devDependencies|peerDependenciesMeta$
     order:
       type: asc
       natural: true
@@ -52,7 +53,7 @@ rules:
     - type
     - name
     - version
-    pathPattern: ^scripts$
+    pathPattern: ^scripts|wireit$
     order:
       type: asc
       natural: true
