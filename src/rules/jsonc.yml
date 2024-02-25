@@ -28,6 +28,9 @@ rules:
     - funding
     - license
     - repository
+    - main
+    - exports
+    - bin
     - scripts
     - wireit
     - dependencies
