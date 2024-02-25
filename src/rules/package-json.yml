@@ -1,29 +1,29 @@
 overridesSlot: 0
 prefix: package-json
-rules:
-  order-properties: # https://github.com/zetlen/eslint-plugin-package-json/blob/HEAD/docs/rules/order-properties.md
-  - WARN
-  - - private
-    - version
-    - type
-    - name
-    - description
-    - keywords
-    - author
-    - homepage
-    - bugs
-    - funding
-    - license
-    - repository
-    - dependencies
-    - peerDependencies
-    - peerDependenciesMeta
-    - optionalDependencies
-    - bundledDependencies
-    - devDependencies
-    - scripts
-    - wireit
-    - os
-    - cpu
-    - engines
-  sort-collections: WARN # https://github.com/zetlen/eslint-plugin-package-json/blob/HEAD/docs/rules/sort-collections.md
+# rules:
+#   order-properties: # https://github.com/zetlen/eslint-plugin-package-json/blob/HEAD/docs/rules/order-properties.md
+#   - WARN
+#   - - private
+#     - version
+#     - type
+#     - name
+#     - description
+#     - keywords
+#     - author
+#     - homepage
+#     - bugs
+#     - funding
+#     - license
+#     - repository
+#     - dependencies
+#     - peerDependencies
+#     - peerDependenciesMeta
+#     - optionalDependencies
+#     - bundledDependencies
+#     - devDependencies
+#     - scripts
+#     - wireit
+#     - os
+#     - cpu
+#     - engines
+#   sort-collections: WARN # https://github.com/zetlen/eslint-plugin-package-json/blob/HEAD/docs/rules/sort-collections.md
