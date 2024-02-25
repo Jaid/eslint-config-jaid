@@ -17,20 +17,34 @@ rules:
     pathPattern: ^$
     order:
     - name
+    - displayName # VSCode extension manifest
     - version
     - type
     - private
     - description
     - keywords
     - author
+    - publisher # VSCode extension manifest
     - homepage
     - bugs
     - funding
+    - sponsor # VSCode extension manifest
     - license
     - repository
     - main
     - exports
     - bin
+    - extensionKind # VSCode extension manifest
+    - capabilities # VSCode extension manifest
+    - activationEvents # VSCode extension manifest
+    - contributes # VSCode extension manifest
+    - preview # VSCode extension manifest
+    - extensionPack # VSCode extension manifest
+    - pricing # VSCode extension manifest
+    - categories # VSCode extension manifest
+    - icon # VSCode extension manifest
+    - galleryBanner # VSCode extension manifest
+    - markdown # VSCode extension manifest
     - scripts
     - wireit
     - dependencies
