@@ -2,7 +2,9 @@
 overridesSlot: 0
 prefix: '@typescript-eslint'
 rules:
-  array-type: WARN # https://typescript-eslint.io/rules/array-type
+  array-type: # https://typescript-eslint.io/rules/array-type
+  - WARN
+  - default: generic
   class-literal-property-style: WARN # https://typescript-eslint.io/rules/class-literal-property-style
   consistent-generic-constructors: WARN # https://typescript-eslint.io/rules/consistent-generic-constructors
   consistent-indexed-object-style: WARN # https://typescript-eslint.io/rules/consistent-indexed-object-style
