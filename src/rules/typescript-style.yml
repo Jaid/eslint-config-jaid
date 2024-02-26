@@ -8,7 +8,7 @@ rules:
   consistent-indexed-object-style: WARN # https://typescript-eslint.io/rules/consistent-indexed-object-style
   consistent-type-assertions: # https://typescript-eslint.io/rules/consistent-type-assertions
   - WARN
-  - assertionStyle: angle-bracket
+  - assertionStyle: as
     objectLiteralTypeAssertions: allow
   consistent-type-exports: WARN # https://typescript-eslint.io/rules/consistent-type-exports
   consistent-type-imports: # https://typescript-eslint.io/rules/consistent-type-imports
