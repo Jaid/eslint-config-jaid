@@ -8,6 +8,9 @@ rules:
   no-non-null-asserted-optional-chain: WARN # https://typescript-eslint.io/rules/no-non-null-asserted-optional-chain
   no-redundant-type-constituents: WARN # https://typescript-eslint.io/rules/no-redundant-type-constituents
   no-unnecessary-boolean-literal-compare: WARN # https://typescript-eslint.io/rules/no-unnecessary-boolean-literal-compare
+  no-unnecessary-condition: # https://typescript-eslint.io/rules/no-unnecessary-condition
+  - WARN
+  - allowConstantLoopConditions: true
   no-unnecessary-qualifier: WARN # https://typescript-eslint.io/rules/no-unnecessary-qualifier
   no-unnecessary-type-arguments: WARN # https://typescript-eslint.io/rules/no-unnecessary-type-arguments
   no-unnecessary-type-assertion: WARN # https://typescript-eslint.io/rules/no-unnecessary-type-assertion
