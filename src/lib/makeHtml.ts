@@ -11,7 +11,7 @@ import getLinkToRule from 'src/lib/getLinkToRule.ts'
 
 type Selector = `current` | `deprecated` | `unused`
 
-export default (title: string, rules: Dictionary<Rule[]>) => {
+export default (title: string, rules: Dictionary<Array<Rule>>) => {
   const markdownTemplate = `
 # {{title}}
 {{#each rules}}

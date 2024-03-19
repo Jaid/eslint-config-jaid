@@ -1,7 +1,7 @@
 {
+  "name": "eslint-config-jaid",
   "version": "8.23.0",
   "type": "module",
-  "name": "eslint-config-jaid",
   "description": "Personal ESLint preset. Intentionally ugly to write code that looks like I feel.",
   "keywords": [
     "ecmascript",
@@ -25,9 +25,16 @@
   ],
   "author": "Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)",
   "funding": "https://github.com/sponsors/jaid",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/jaid/eslint-config-jaid"
+  },
+  "scripts": {
+    "build": "tsx src/build.ts",
+    "release": "npm run build && find out/package -mindepth 1 -maxdepth 1 -type d -exec sh -c 'cd {} && npm publish' \\;",
+    "buildPage": "fse emptyDir dist/page && tsx src/scripts/activeHtml.ts && tsx src/scripts/unusedHtml.ts && tsx src/scripts/deprecatedHtml.ts && fse copy etc/page dist/page",
+    "test": "node --import tsx --test test/index.ts"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^7.3.1",
@@ -77,12 +84,5 @@
     "tsx": "^4.7.1",
     "type-fest": "^4.12.0",
     "yaml": "^2.4.1"
-  },
-  "scripts": {
-    "build": "tsx src/build.ts",
-    "release": "npm run build && find out/package -mindepth 1 -maxdepth 1 -type d -exec sh -c 'cd {} && npm publish' \\;",
-    "buildPage": "fse emptyDir dist/page && tsx src/scripts/activeHtml.ts && tsx src/scripts/unusedHtml.ts && tsx src/scripts/deprecatedHtml.ts && fse copy etc/page dist/page",
-    "test": "node --import tsx --test test/index.ts"
-  },
-  "license": "MIT"
+  }
 }

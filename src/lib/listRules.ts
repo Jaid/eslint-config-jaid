@@ -12,10 +12,10 @@ export type Rule = {
 
 export default async (eslintConfigFile: string, ruleFinderFunction: RuleFinderFunction) => {
   const ruleFinder = await eslintFindRules(eslintConfigFile)
-  const unusedRules: string[] = ruleFinder[ruleFinderFunction]().filter(ruleId => {
+  const unusedRules: Array<string> = ruleFinder[ruleFinderFunction]().filter(ruleId => {
     return ruleId.split(`/`).length <= 2
   })
-  const rules: Rule[] = unusedRules.map(ruleId => {
+  const rules: Array<Rule> = unusedRules.map(ruleId => {
     const parts = ruleId.split(`/`)
     if (parts.length === 1) {
       return {

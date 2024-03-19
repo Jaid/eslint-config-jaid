@@ -3,7 +3,6 @@ import type {PackageJson} from 'type-fest'
 import path from 'node:path'
 import {fileURLToPath, pathToFileURL} from 'node:url'
 
-import publishimo from './lib/esm/publishimo.js'
 import chalk from 'chalk'
 import {emp} from 'emp'
 import {includeKeys} from 'filter-obj'
@@ -13,6 +12,8 @@ import {countSizeSync} from 'list-dir-content-size'
 import * as lodash from 'lodash-es'
 import prettyBytes from 'pretty-bytes'
 import sortKeys from 'sort-keys'
+
+import publishimo from './lib/esm/publishimo.js'
 
 const pkg: PackageJson = await fs.readJson(`package.json`)
 const dirName = path.dirname(fileURLToPath(import.meta.url))

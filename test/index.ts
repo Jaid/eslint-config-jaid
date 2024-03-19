@@ -11,7 +11,7 @@ import fs from 'fs-extra'
 import * as lodash from 'lodash-es'
 
 const debug = createDebug(`eslint-config-jaid`)
-const pkg = <PackageJson> await fs.readJson(`package.json`)
+const pkg = await fs.readJson(`package.json`) as PackageJson
 const dirName = path.dirname(fileURLToPath(import.meta.url))
 const srcFolder = path.join(dirName, `..`, `src`)
 const presetsFolder = path.join(srcFolder, `presets`)
