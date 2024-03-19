@@ -25,6 +25,7 @@ rules:
   prefer-reduce-type-parameter: WARN # https://typescript-eslint.io/rules/prefer-reduce-type-parameter
   prefer-string-starts-ends-with: WARN # https://typescript-eslint.io/rules/prefer-string-starts-ends-with
   prefer-ts-expect-error: WARN # https://typescript-eslint.io/rules/prefer-ts-expect-error
+  restrict-template-expressions: WARN # https://typescript-eslint.io/rules/restrict-template-expressions
   unbound-method: # https://typescript-eslint.io/rules/unbound-method
   - WARN
   - ignoreStatic: true
