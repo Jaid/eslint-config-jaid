@@ -62,16 +62,16 @@ rules:
   - blankLine: any
     prev: '*'
     next: export
-  - blankLine: always
+  - blankLine: any
     prev: import
     next: type
-  - blankLine: always
+  - blankLine: any
     prev: type
     next: '*'
-  - blankLine: always
+  - blankLine: any
     prev: '*'
     next: type
-  - blankLine: never
+  - blankLine: any
     prev: type
     next: type
   - blankLine: any
