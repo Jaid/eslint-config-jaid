@@ -1,9 +1,9 @@
 #!/bin/env tsx
-import path from 'node:path'
+import * as path from 'forward-slash-path'
 
 import fs from 'fs-extra'
-import listRules from 'src/lib/listRules.js'
-import makeHtml from 'src/lib/makeHtml.js'
+import listRules from 'lib/listRules.js'
+import makeHtml from 'lib/makeHtml.js'
 
 const rulesFile = path.join(`dist`, `build`, `react`, `index.json`)
 const groupedRules = await listRules(rulesFile, `getDeprecatedRules`)

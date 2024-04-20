@@ -1,4 +1,4 @@
-import path from 'node:path'
+import * as path from 'forward-slash-path'
 import {fileURLToPath} from 'node:url'
 
 import readFileYaml from 'read-file-yaml'

@@ -1,4 +1,4 @@
-import path from 'node:path'
+import * as path from 'forward-slash-path'
 import {pathToFileURL} from 'node:url'
 
 import chalk from 'chalk'

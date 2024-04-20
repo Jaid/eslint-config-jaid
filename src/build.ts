@@ -1,6 +1,6 @@
 import type {PackageJson} from 'type-fest'
 
-import path from 'node:path'
+import * as path from 'forward-slash-path'
 import {fileURLToPath, pathToFileURL} from 'node:url'
 
 import chalk from 'chalk'

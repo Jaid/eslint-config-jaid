@@ -1,7 +1,7 @@
 import type {PackageJson} from 'type-fest'
 
 import assert from 'node:assert'
-import path from 'node:path'
+import * as path from 'forward-slash-path'
 import test, {before} from 'node:test'
 import {fileURLToPath, pathToFileURL} from 'node:url'
 

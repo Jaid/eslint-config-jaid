@@ -1,13 +1,13 @@
 #!/bin/env tsx
-import type {Rule} from 'src/lib/listRules.ts'
+import type {Rule} from 'lib/listRules.ts'
 
-import path from 'node:path'
+import * as path from 'forward-slash-path'
 
 import fs from 'fs-extra'
 import Handlebars from 'handlebars'
 import * as lodash from 'lodash-es'
 import showdown from 'showdown'
-import getLinkToRule from 'src/lib/getLinkToRule.ts'
+import getLinkToRule from 'lib/getLinkToRule.ts'
 
 type Selector = `current` | `deprecated` | `unused`
 
