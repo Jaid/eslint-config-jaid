@@ -37,6 +37,7 @@
     "test": "node --import tsx --test test/index.ts"
   },
   "dependencies": {
+    "@types/eslint": "^8.56.10",
     "@typescript-eslint/eslint-plugin": "^7.7.0",
     "@typescript-eslint/parser": "^7.7.0",
     "browserslist-config-jaid-node": "3.0.0",
@@ -54,7 +55,8 @@
     "eslint-plugin-unicorn": "^52.0.0",
     "eslint-plugin-yml": "^1.14.0",
     "eslint-plugin-you-dont-need-lodash-underscore": "^6.14.0",
-    "forward-slash-path": "^0.3.0"
+    "forward-slash-path": "^0.3.0",
+    "jsonc-eslint-parser": "^2.4.0"
   },
   "devDependencies": {
     "@atao60/fse-cli": "^0.1.9",
