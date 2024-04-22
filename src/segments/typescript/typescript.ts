@@ -15,9 +15,7 @@ import unicornPlugin from 'eslint-plugin-unicorn'
 
 import ignores from 'src/ignores.js'
 
-type FlatConfig = import(`eslint`).Linter.FlatConfig
-
-const typescriptRules: FlatConfig[`rules`] = {
+const typescriptRules: Linter.FlatConfig[`rules`] = {
   "no-base-to-string": `warn`,
   "no-misused-promises": `warn`,
   "no-non-null-asserted-nullish-coalescing": `warn`,
@@ -159,7 +157,7 @@ const typescriptRules: FlatConfig[`rules`] = {
   "no-useless-template-literals": `warn`,
   "prefer-as-const": `warn`,
 }
-const typescriptStylisticRules: FlatConfig[`rules`] = {
+const typescriptStylisticRules: Linter.FlatConfig[`rules`] = {
   "brace-style": `warn`,
   "comma-spacing": `warn`,
   "func-call-spacing": `warn`,
@@ -246,13 +244,13 @@ const typescriptStylisticRules: FlatConfig[`rules`] = {
   ],
   "type-annotation-spacing": `warn`
 }
-const nodeRules: FlatConfig[`rules`] = {
+const nodeRules: Linter.FlatConfig[`rules`] = {
   "no-mixed-requires": `warn`,
   "no-new-require": `warn`,
   "no-path-concat": `warn`,
   "no-sync": `warn`
 }
-const promiseRules: FlatConfig[`rules`] = {
+const promiseRules: Linter.FlatConfig[`rules`] = {
   "catch-or-return": `warn`,
   "no-callback-in-promise": `warn`,
   "no-multiple-resolved": `warn`,
@@ -263,7 +261,7 @@ const promiseRules: FlatConfig[`rules`] = {
   "prefer-await-to-callbacks": `warn`,
   "prefer-await-to-then": `warn`
 }
-const unicornRules: FlatConfig[`rules`] = {
+const unicornRules: Linter.FlatConfig[`rules`] = {
   "catch-error-name": `warn`,
   "consistent-function-scoping": `warn`,
   "error-message": `warn`,
@@ -318,7 +316,7 @@ const unicornRules: FlatConfig[`rules`] = {
   "text-encoding-identifier-case": `warn`,
   "throw-new-error": `warn`
 }
-const importRules: FlatConfig[`rules`] = {
+const importRules: Linter.FlatConfig[`rules`] = {
   "first": `warn`,
   "newline-after-import": [
     `warn`,
@@ -331,13 +329,13 @@ const importRules: FlatConfig[`rules`] = {
   "no-self-import": `error`,
   "no-useless-path-segments": `warn`
 }
-const importQuotesRules: FlatConfig[`rules`] = {
+const importQuotesRules: Linter.FlatConfig[`rules`] = {
   "import-quotes": [
     `warn`,
     `single`
   ]
 }
-const regexRules: FlatConfig[`rules`] = {
+const regexRules: Linter.FlatConfig[`rules`] = {
   "control-character-escape": `warn`,
   "letter-case": [
     `warn`,
@@ -372,7 +370,7 @@ const regexRules: FlatConfig[`rules`] = {
   "sort-flags": `warn`,
   "strict": `warn`
 }
-const perfectionistRules: FlatConfig[`rules`] = {
+const perfectionistRules: Linter.FlatConfig[`rules`] = {
   "sort-classes": [
     `warn`,
     {
@@ -490,8 +488,8 @@ const perfectionistRules: FlatConfig[`rules`] = {
     }
   ]
 }
-const compileRules = (rulesMap: Record<string, NonNullable<FlatConfig[`rules`]>>) => {
-  const result: FlatConfig[`rules`] = {}
+const compileRules = (rulesMap: Record<string, NonNullable<Linter.FlatConfig[`rules`]>>) => {
+  const result: Linter.FlatConfig[`rules`] = {}
   for (const [pluginName, rules] of Object.entries(rulesMap)) {
     for (const [ruleName, ruleValue] of Object.entries(rules)) {
       result[`${pluginName}/${ruleName}`] = ruleValue
@@ -499,7 +497,7 @@ const compileRules = (rulesMap: Record<string, NonNullable<FlatConfig[`rules`]>>
   }
   return result
 }
-const config: FlatConfig = {
+const config: Linter.FlatConfig = {
   plugins: {
     // @ts-expect-error TS2322
     typescript: typescriptPlugin,

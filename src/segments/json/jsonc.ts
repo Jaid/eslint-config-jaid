@@ -1,12 +1,11 @@
+import type {Linter} from 'eslint'
 import jsonPlugin from 'eslint-plugin-jsonc'
 import parser from 'jsonc-eslint-parser'
 
 import ignores from 'src/ignores.js'
 import jsonConfig from 'src/segments/json/json.js'
 
-type FlatConfig = import(`eslint`).Linter.FlatConfig
-
-const config: FlatConfig = {
+const config: Linter.FlatConfig = {
   plugins: {
     // @ts-expect-error TS2322
     json: jsonPlugin
