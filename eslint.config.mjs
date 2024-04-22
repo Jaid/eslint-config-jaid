@@ -1,4 +1,4 @@
-import config from "./dist/package/default/development/lib.js"
+import config from "./dist/package/eslint-config-jaid/development/lib.js"
 
 export default [
   ...config
