@@ -349,8 +349,8 @@ const stylisticRules: Linter.FlatConfig[`rules`] = {
     `as-needed`
   ],
   "rest-spread-spacing": `warn`,
-  "semi-spacing": `warn`,
-  "semi-style": `warn`,
+  // "semi-spacing": `warn`,
+  // "semi-style": `warn`,
   "space-in-parens": `warn`,
   "space-unary-ops": `warn`,
   "spaced-comment": `warn`,
@@ -368,7 +368,7 @@ const stylisticRules: Linter.FlatConfig[`rules`] = {
   "max-statements-per-line": `warn`,
   "newline-per-chained-call": `warn`,
   "no-confusing-arrow": `warn`,
-  "no-extra-semi": `warn`,
+  // "no-extra-semi": `warn`,
   "no-multi-spaces": `warn`,
   "semi": [
     `warn`,
