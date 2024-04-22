@@ -1,12 +1,12 @@
 import type {PackageJson} from 'type-fest'
 
 import assert from 'node:assert'
-import * as path from 'forward-slash-path'
 import test, {before} from 'node:test'
 import {fileURLToPath, pathToFileURL} from 'node:url'
 
 import createDebug from 'debug'
 import {ESLint} from 'eslint'
+import * as path from 'forward-slash-path'
 import fs from 'fs-extra'
 import * as lodash from 'lodash-es'
 

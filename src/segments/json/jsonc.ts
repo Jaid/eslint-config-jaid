@@ -1,9 +1,10 @@
-import parser from "jsonc-eslint-parser"
-import jsonPlugin from "eslint-plugin-jsonc"
-import ignores from "src/ignores.js"
-import jsonConfig from "src/segments/json/json.js"
+import jsonPlugin from 'eslint-plugin-jsonc'
+import parser from 'jsonc-eslint-parser'
 
-type FlatConfig = import("eslint").Linter.FlatConfig
+import ignores from 'src/ignores.js'
+import jsonConfig from 'src/segments/json/json.js'
+
+type FlatConfig = import(`eslint`).Linter.FlatConfig
 
 const config: FlatConfig = {
   plugins: {
@@ -11,14 +12,14 @@ const config: FlatConfig = {
     json: jsonPlugin
   },
   ignores,
-  files: ["**/*.jsonc"],
+  files: [`**/*.jsonc`],
   languageOptions: {
     parser,
     parserOptions: {
-      jsonSyntax: "JSONC"
+      jsonSyntax: `JSONC`
     }
   },
-  name: "eslint-config-jaid/jsonc",
+  name: `eslint-config-jaid/jsonc`,
   rules: jsonConfig.rules
 }
 

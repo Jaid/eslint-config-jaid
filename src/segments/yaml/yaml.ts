@@ -1,59 +1,61 @@
-import parser from 'yaml-eslint-parser'
-import yamlPlugin from 'eslint-plugin-yml'
 import type {ESLint} from 'eslint'
-import ignores from "src/ignores.js"
 
-type FlatConfig = import('eslint').Linter.FlatConfig
+import yamlPlugin from 'eslint-plugin-yml'
+import parser from 'yaml-eslint-parser'
+
+import ignores from 'src/ignores.js'
+
+type FlatConfig = import(`eslint`).Linter.FlatConfig
 
 const config: FlatConfig = {
   plugins: {
     yaml: yamlPlugin as ESLint.Plugin
   },
   ignores,
-  files: ["*.yml", "*.yaml"],
+  files: [`*.yml`, `*.yaml`],
   languageOptions: {
     parser
   },
-  name: "eslint-config-jaid/yaml",
+  name: `eslint-config-jaid/yaml`,
   rules: {
-    "yaml/block-mapping": "warn",
-    "yaml/block-mapping-colon-indicator-newline": "warn",
-    "yaml/block-sequence": "warn",
+    "yaml/block-mapping": `warn`,
+    "yaml/block-mapping-colon-indicator-newline": `warn`,
+    "yaml/block-sequence": `warn`,
     "yaml/block-sequence-hyphen-indicator-newline": [
-      "warn",
-      "never",
+      `warn`,
+      `never`,
       {
-        nestedHyphen: "never"
+        nestedHyphen: `never`
       }
     ],
-    "yaml/flow-sequence-bracket-spacing": "warn",
+    "yaml/flow-sequence-bracket-spacing": `warn`,
     "yaml/indent": [
-      "warn",
+      `warn`,
       2,
       {
         indentBlockSequences: false
       }
     ],
-    "yaml/key-spacing": "warn",
+    "yaml/key-spacing": `warn`,
     "yaml/no-multiple-empty-lines": [
-      "warn",
+      `warn`,
       {
         max: 1,
         maxBOF: 0,
         maxEOF: 1
       }
     ],
-    "yaml/no-tab-indent": "warn",
-    "yaml/no-trailing-zeros": "warn",
-    "yaml/plain-scalar": "warn",
+    "yaml/no-tab-indent": `warn`,
+    "yaml/no-trailing-zeros": `warn`,
+    "yaml/plain-scalar": `warn`,
     "yaml/quotes": [
-      "warn",
+      `warn`,
       {
-        prefer: "single",
+        prefer: `single`,
         avoidEscape: true
       }
     ],
-    "yaml/spaced-comment": "warn"
+    "yaml/spaced-comment": `warn`
   }
 }
 

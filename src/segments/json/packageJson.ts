@@ -1,9 +1,10 @@
-import parser from "jsonc-eslint-parser"
-import jsonPlugin from "eslint-plugin-jsonc"
-import jsonConfig from "src/segments/json/json.js"
-import ignores from "src/ignores.js"
+import jsonPlugin from 'eslint-plugin-jsonc'
+import parser from 'jsonc-eslint-parser'
 
-type FlatConfig = import("eslint").Linter.FlatConfig
+import ignores from 'src/ignores.js'
+import jsonConfig from 'src/segments/json/json.js'
+
+type FlatConfig = import(`eslint`).Linter.FlatConfig
 
 const config: FlatConfig = {
   plugins: {
@@ -11,75 +12,75 @@ const config: FlatConfig = {
     json: jsonPlugin
   },
   ignores,
-  files: ["**/package.json"],
+  files: [`**/package.json`],
   languageOptions: {
     parser,
     parserOptions: {
-      jsonSyntax: "JSON"
+      jsonSyntax: `JSON`
     }
   },
-  name: "eslint-config-jaid/packageJson",
+  name: `eslint-config-jaid/packageJson`,
   rules: {
     ...jsonConfig.rules,
     "json/sort-keys": [
-      "warn",
+      `warn`,
       {
-        pathPattern: "^$",
+        pathPattern: `^$`,
         order: [
-          "name",
-          "displayName",
-          "version",
-          "type",
-          "private",
-          "description",
-          "keywords",
-          "author",
-          "publisher",
-          "homepage",
-          "bugs",
-          "funding",
-          "sponsor",
-          "license",
-          "repository",
-          "main",
-          "exports",
-          "bin",
-          "extensionKind",
-          "capabilities",
-          "activationEvents",
-          "contributes",
-          "preview",
-          "extensionPack",
-          "pricing",
-          "categories",
-          "icon",
-          "galleryBanner",
-          "markdown",
-          "scripts",
-          "wireit",
-          "dependencies",
-          "peerDependencies",
-          "peerDependenciesMeta",
-          "optionalDependencies",
-          "bundledDependencies",
-          "devDependencies",
-          { order: { type: "asc", natural: true } },
-          "os",
-          "cpu",
-          "engines"
+          `name`,
+          `displayName`,
+          `version`,
+          `type`,
+          `private`,
+          `description`,
+          `keywords`,
+          `author`,
+          `publisher`,
+          `homepage`,
+          `bugs`,
+          `funding`,
+          `sponsor`,
+          `license`,
+          `repository`,
+          `main`,
+          `exports`,
+          `bin`,
+          `extensionKind`,
+          `capabilities`,
+          `activationEvents`,
+          `contributes`,
+          `preview`,
+          `extensionPack`,
+          `pricing`,
+          `categories`,
+          `icon`,
+          `galleryBanner`,
+          `markdown`,
+          `scripts`,
+          `wireit`,
+          `dependencies`,
+          `peerDependencies`,
+          `peerDependenciesMeta`,
+          `optionalDependencies`,
+          `bundledDependencies`,
+          `devDependencies`,
+          {order: {type: `asc`, natural: true}},
+          `os`,
+          `cpu`,
+          `engines`
         ]
       },
       {
-        pathPattern: "^dependencies|peerDependencies|optionalDependencies|bundledDependencies|devDependencies|peerDependenciesMeta$",
-        order: { type: "asc", natural: true }
+        pathPattern: `^dependencies|peerDependencies|optionalDependencies|bundledDependencies|devDependencies|peerDependenciesMeta$`,
+        order: {type: `asc`, natural: true}
       },
       {
-        pathPattern: "^scripts|wireit$",
-        order: { type: "asc", natural: true }
+        pathPattern: `^scripts|wireit$`,
+        order: {type: `asc`, natural: true}
       },
       {
-        pathPattern: "^engines$",
-        order: { type: "asc", natural: true }
+        pathPattern: `^engines$`,
+        order: {type: `asc`, natural: true}
       }
     ],
   }
