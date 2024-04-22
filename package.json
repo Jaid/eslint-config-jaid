@@ -42,6 +42,7 @@
     "tsc": "tsc"
   },
   "dependencies": {
+    "@stylistic/eslint-plugin": "^1.7.2",
     "@stylistic/eslint-plugin-js": "^1.7.2",
     "@stylistic/eslint-plugin-jsx": "^1.7.2",
     "@stylistic/eslint-plugin-ts": "^1.7.2",

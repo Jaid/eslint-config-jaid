@@ -1,8 +1,6 @@
-import type {Linter} from 'eslint'
+import type {ESLint, Linter} from 'eslint'
 
-import {types} from 'util'
-
-import typescriptStylisticPlugin from '@stylistic/eslint-plugin-ts'
+import stylisticPlugin from '@stylistic/eslint-plugin'
 import typescriptPlugin from '@typescript-eslint/eslint-plugin'
 import parser, {type ParserOptions} from '@typescript-eslint/parser'
 import importPlugin from 'eslint-plugin-i'
@@ -15,6 +13,33 @@ import unicornPlugin from 'eslint-plugin-unicorn'
 
 import ignores from 'src/ignores.js'
 
+const eslintRules: Linter.FlatConfig[`rules`] = {
+  "multiline-comment-style": `off`,
+  "new-cap": `warn`,
+  "no-eq-null": `warn`,
+  "no-extend-native": `warn`,
+  "no-lonely-if": `warn`,
+  "no-multi-assign": `warn`,
+  "no-nested-ternary": `warn`,
+  "no-object-constructor": `warn`,
+  "no-underscore-dangle": [
+    `warn`,
+    {
+      allow: [
+        `__REDUX_DEVTOOLS_EXTENSION_COMPOSE__`
+      ]
+    }
+  ],
+  "no-unneeded-ternary": `warn`,
+  "no-with": `warn`,
+  "one-var": [
+    `warn`,
+    `never`
+  ],
+  "prefer-const": `warn`,
+  "prefer-exponentiation-operator": `warn`,
+  "sort-vars": `warn`,
+}
 const typescriptRules: Linter.FlatConfig[`rules`] = {
   "no-base-to-string": `warn`,
   "no-misused-promises": `warn`,
@@ -157,7 +182,7 @@ const typescriptRules: Linter.FlatConfig[`rules`] = {
   "no-useless-template-literals": `warn`,
   "prefer-as-const": `warn`,
 }
-const typescriptStylisticRules: Linter.FlatConfig[`rules`] = {
+const stylisticRules: Linter.FlatConfig[`rules`] = {
   "brace-style": `warn`,
   "comma-spacing": `warn`,
   "func-call-spacing": `warn`,
@@ -242,7 +267,97 @@ const typescriptStylisticRules: Linter.FlatConfig[`rules`] = {
       }
     }
   ],
-  "type-annotation-spacing": `warn`
+  "type-annotation-spacing": `warn`,
+  "array-bracket-newline": [
+    `warn`,
+    `consistent`
+  ],
+  "array-bracket-spacing": `warn`,
+  "array-element-newline": [
+    `warn`,
+    `consistent`
+  ],
+  "arrow-parens": [
+    `warn`,
+    `always`
+  ],
+  "arrow-spacing": `warn`,
+  "comma-dangle": [
+    `warn`,
+    `never`
+  ],
+  "comma-style": `warn`,
+  "computed-property-spacing": `warn`,
+  "curly": [
+    `warn`,
+    `all`
+  ],
+  "dot-location": [
+    `warn`,
+    `property`
+  ],
+  "eol-last": `warn`,
+  "function-paren-newline": [
+    `warn`,
+    `never`
+  ],
+  "implicit-arrow-linebreak": `warn`,
+  "linebreak-style": [
+    `warn`,
+    `unix`
+  ],
+  "new-parens": [
+    `warn`,
+    `never`
+  ],
+  "no-extra-parens": `warn`,
+  "no-floating-decimal": `warn`,
+  "no-multiple-empty-lines": [
+    `warn`,
+    {
+      max: 1,
+      maxEOF: 1,
+      maxBOF: 0
+    }
+  ],
+  "no-tabs": `warn`,
+  "no-trailing-spaces": `warn`,
+  "no-whitespace-before-property": `warn`,
+  "object-curly-newline": [
+    `warn`,
+    {
+      ObjectExpression: {
+        consistent: true,
+        minProperties: 2,
+        multiline: true
+      },
+      ObjectPattern: `never`,
+      ImportDeclaration: `never`
+    }
+  ],
+  "object-property-newline": `warn`,
+  "operator-linebreak": [
+    `warn`,
+    `before`
+  ],
+  "padded-blocks": [
+    `warn`,
+    `never`
+  ],
+  "quote-props": [
+    `warn`,
+    `as-needed`
+  ],
+  "rest-spread-spacing": `warn`,
+  "semi-spacing": `warn`,
+  "semi-style": `warn`,
+  "space-in-parens": `warn`,
+  "space-unary-ops": `warn`,
+  "spaced-comment": `warn`,
+  "switch-colon-spacing": `warn`,
+  "template-curly-spacing": `warn`,
+  "template-tag-spacing": `warn`,
+  "yield-star-spacing": `warn`
 }
 const nodeRules: Linter.FlatConfig[`rules`] = {
   "no-mixed-requires": `warn`,
@@ -492,25 +607,23 @@ const compileRules = (rulesMap: Record<string, NonNullable<Linter.FlatConfig[`ru
   const result: Linter.FlatConfig[`rules`] = {}
   for (const [pluginName, rules] of Object.entries(rulesMap)) {
     for (const [ruleName, ruleValue] of Object.entries(rules)) {
-      result[`${pluginName}/${ruleName}`] = ruleValue
+      const key = pluginName === `eslint` ? ruleName : `${pluginName}/${ruleName}`
+      result[key] = ruleValue
     }
   }
   return result
 }
 const config: Linter.FlatConfig = {
   plugins: {
-    // @ts-expect-error TS2322
-    typescript: typescriptPlugin,
-    // @ts-expect-error TS2322
-    typescriptStylistic: typescriptStylisticPlugin,
+    typescript: typescriptPlugin as unknown as ESLint.Plugin,
+    stylistic: stylisticPlugin as ESLint.Plugin,
     node: nodePlugin,
-    promise: promisePlugin,
-    unicorn: unicornPlugin,
-    import: importPlugin,
-    importQuotes: importQuotesPlugin,
-    // @ts-expect-error TS2322
-    regex: regexPlugin,
-    perfectionist: perfectionistPlugin,
+    promise: promisePlugin as ESLint.Plugin,
+    unicorn: unicornPlugin as ESLint.Plugin,
+    import: importPlugin as ESLint.Plugin,
+    importQuotes: importQuotesPlugin as ESLint.Plugin,
+    regex: regexPlugin as ESLint.Plugin,
+    perfectionist: perfectionistPlugin as ESLint.Plugin
   },
   ignores,
   files: [`**/*.ts`, `**/*.tsx`, `**/*.mts`, `**/*.mtsx`, `**/*.cts`, `**/*.ctsx`],
@@ -524,8 +637,9 @@ const config: Linter.FlatConfig = {
   },
   name: `eslint-config-jaid/typescript`,
   rules: compileRules({
+    eslint: eslintRules,
     typescript: typescriptRules,
-    typescriptStylistic: typescriptStylisticRules,
+    typescriptStylistic: stylisticRules,
     node: nodeRules,
     promise: promiseRules,
     unicorn: unicornRules,
