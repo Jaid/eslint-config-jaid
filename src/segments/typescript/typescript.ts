@@ -539,7 +539,7 @@ const config: FlatConfig = {
   settings: {
     "import/resolver": {
       node: true,
-      typesscript: {
+      typescript: {
         alwaysTryTypes: true
       }
     },
