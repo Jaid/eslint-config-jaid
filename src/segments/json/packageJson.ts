@@ -1,21 +1,29 @@
 import parser from "jsonc-eslint-parser"
+import jsonPlugin from "eslint-plugin-jsonc"
+import jsonConfig from "src/segments/json/json.js"
+import ignores from "src/ignores.js"
 
 type FlatConfig = import("eslint").Linter.FlatConfig
 
 const config: FlatConfig = {
-  ignores: ["/dist/", "/out/", "/temp/", "/cache/", "/node_modules/"],
-  files: ["*.json", "*.json5", "*.jsonc"],
-  languageOptions: {
-    parser
+  plugins: {
+    // @ts-expect-error TS2322
+    json: jsonPlugin
   },
-  name: "eslint-config-jaid/json",
+  ignores,
+  files: ["**/package.json"],
+  languageOptions: {
+    parser,
+    parserOptions: {
+      jsonSyntax: "JSON"
+    }
+  },
+  name: "eslint-config-jaid/packageJson",
   rules: {
-    "jsonc/auto": "warn",
-    "jsonc/no-plus-sign": "warn",
-    "jsonc/sort-keys": [
+    ...jsonConfig.rules,
+    "json/sort-keys": [
       "warn",
       {
-        hasProperties: ["type", "name", "version"],
         pathPattern: "^$",
         order: [
           "name",
@@ -62,22 +70,18 @@ const config: FlatConfig = {
         ]
       },
       {
-        hasProperties: ["type", "name", "version"],
         pathPattern: "^dependencies|peerDependencies|optionalDependencies|bundledDependencies|devDependencies|peerDependenciesMeta$",
         order: { type: "asc", natural: true }
       },
       {
-        hasProperties: ["type", "name", "version"],
         pathPattern: "^scripts|wireit$",
         order: { type: "asc", natural: true }
       },
       {
-        hasProperties: ["type", "name", "version"],
         pathPattern: "^engines$",
         order: { type: "asc", natural: true }
       }
     ],
-    "jsonc/valid-json-number": "error"
   }
 }
 
