@@ -270,7 +270,7 @@ const stylisticRules: Linter.FlatConfig[`rules`] = {
   "type-annotation-spacing": `warn`,
   "array-bracket-newline": [
     `warn`,
-    `consistent`
+    `multiline`
   ],
   "array-bracket-spacing": `warn`,
   "array-element-newline": [
@@ -357,7 +357,23 @@ const stylisticRules: Linter.FlatConfig[`rules`] = {
   "switch-colon-spacing": `warn`,
   "template-curly-spacing": `warn`,
   "template-tag-spacing": `warn`,
-  "yield-star-spacing": `warn`
+  "yield-star-spacing": `warn`,
+  "block-spacing": `warn`,
+  "function-call-argument-newline": [
+    `warn`,
+    `consistent`
+  ],
+  "function-call-spacing": `warn`,
+  "generator-star-spacing": `warn`,
+  "max-statements-per-line": `warn`,
+  "newline-per-chained-call": `warn`,
+  "no-confusing-arrow": `warn`,
+  "no-extra-semi": `warn`,
+  "no-multi-spaces": `warn`,
+  "semi": [
+    `warn`,
+    `never`
+  ],
 }
 const nodeRules: Linter.FlatConfig[`rules`] = {
   "no-mixed-requires": `warn`,
@@ -639,7 +655,6 @@ const config: Linter.FlatConfig = {
   rules: compileRules({
     eslint: eslintRules,
     typescript: typescriptRules,
-    typescriptStylistic: stylisticRules,
     node: nodeRules,
     promise: promiseRules,
     unicorn: unicornRules,
@@ -647,6 +662,7 @@ const config: Linter.FlatConfig = {
     importQuotes: importQuotesRules,
     regex: regexRules,
     perfectionist: perfectionistRules,
+    stylistic: stylisticRules,
   }),
   settings: {
     "import/resolver": {
