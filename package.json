@@ -37,9 +37,14 @@
     "inspectConfig": "npx @eslint/config-inspector --config src/index.ts",
     "printConfig": "eslint --print-config src/index.ts",
     "release": "npm run build:production && fd --unrestricted --full-path 'dist/package/.+/production/package.json' --exec bash -c 'npm publish {//}'",
-    "release-windows": "powershell -Command \"Get-ChildItem -Path 'dist/package/*/production/package.json' | ForEach-Object { npm publish `$_.DirectoryName }\"",
+    "release-windows": "wireit",
     "test": "exit 0",
     "tsc": "tsc"
+  },
+  "wireit": {
+    "release-windows": {
+      "command": "powershell -Command \"Get-ChildItem -Path 'dist/package/*/production/package.json' | ForEach-Object { npm publish $_.DirectoryName }\""
+    }
   },
   "dependencies": {
     "@stylistic/eslint-plugin": "^1.7.2",
@@ -76,7 +81,7 @@
     "debug": "^4.3.4",
     "dts-bundle-generator": "^9.5.1",
     "emp": "^2.0.0",
-    "eslint-config-jaid": "^9.0.0",
+    "eslint-config-jaid": "^9.0.1",
     "eslint-find-rules": "^4.1.0",
     "filter-obj": "^6.0.0",
     "foreach-cli": "^1.8.1",
