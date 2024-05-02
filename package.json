@@ -38,12 +38,25 @@
     "printConfig": "eslint --print-config src/index.ts",
     "release": "npm run build:production && fd --unrestricted --full-path 'dist/package/.+/production/package.json' --exec bash -c 'npm publish {//}'",
     "release-windows": "wireit",
-    "test": "exit 0",
+    "test": "wireit",
     "tsc": "tsc"
   },
   "wireit": {
     "release-windows": {
       "command": "powershell -Command \"Get-ChildItem -Path 'dist/package/*/production/package.json' | ForEach-Object { npm publish $_.DirectoryName }\""
+    },
+    "test": {
+      "env": {
+        "NODE_ENV": "test",
+        "MAIN_MODULE": "src/index.ts"
+      },
+      "files": [
+        "src/**/*",
+        "lib/**/*",
+        "test/**/*",
+        "package.json"
+      ],
+      "command": "node --import tsx test/test.ts"
     }
   },
   "dependencies": {
@@ -92,6 +105,7 @@
     "js-yaml": "^4.1.0",
     "list-dir-content-size": "^0.0.5",
     "lodash-es": "^4.17.21",
+    "more-types": "^0.6.0",
     "open-cli": "^8.0.0",
     "pretty-bytes": "^6.1.1",
     "publishimo": "^5.0.6",

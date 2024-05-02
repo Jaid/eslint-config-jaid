@@ -1,1 +1,0 @@
-{"fullyTracked":false,"platform":"win32","arch":"x64","nodeVersion":"v22.0.0","command":"powershell -Command \"Get-ChildItem -Path 'dist/package/*/production/package.json' | ForEach-Object { npm publish $_.DirectoryName }\"","extraArgs":[],"clean":true,"files":{},"output":[],"dependencies":{},"env":{}}

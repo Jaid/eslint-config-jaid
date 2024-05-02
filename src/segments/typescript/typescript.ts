@@ -631,20 +631,28 @@ const compileRules = (rulesMap: Record<string, NonNullable<Linter.FlatConfig[`ru
   }
   return result
 }
+const globs = [
+  `**/*.ts`,
+  `**/*.tsx`,
+  `**/*.mts`,
+  `**/*.mtsx`,
+  `**/*.cts`,
+  `**/*.ctsx`
+]
 const config: Linter.FlatConfig = {
   plugins: {
     typescript: typescriptPlugin as unknown as ESLint.Plugin,
-    stylistic: stylisticPlugin as ESLint.Plugin,
-    node: nodePlugin,
+    // stylistic: stylisticPlugin as ESLint.Plugin,
+    // node: nodePlugin,
     promise: promisePlugin as ESLint.Plugin,
     unicorn: unicornPlugin as ESLint.Plugin,
     import: importPlugin as ESLint.Plugin,
     importQuotes: importQuotesPlugin as ESLint.Plugin,
-    regex: regexPlugin as ESLint.Plugin,
+    // regex: regexPlugin as ESLint.Plugin,
     perfectionist: perfectionistPlugin as ESLint.Plugin
   },
   ignores,
-  files: [`**/*.ts`, `**/*.tsx`, `**/*.mts`, `**/*.mtsx`, `**/*.cts`, `**/*.ctsx`],
+  files: globs,
   languageOptions: {
     parser,
     parserOptions: {
@@ -674,7 +682,7 @@ const config: Linter.FlatConfig = {
       }
     },
     "import/parsers": {
-      "@typescript-eslint/parser": [`**/*.ts`, `**/*.tsx`, `**/*.mts`, `**/*.mtsx`, `**/*.cts`, `**/*.ctsx`]
+      "@typescript-eslint/parser": globs
     }
   },
 }

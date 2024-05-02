@@ -7,6 +7,13 @@ import packageJsonConfig from 'src/segments/json/packageJson.js'
 import typescriptConfig from 'src/segments/typescript/typescript.js'
 import yamlConfig from 'src/segments/yaml/yaml.js'
 
+export {jsonConfig}
+export {json5Config}
+export {jsoncConfig}
+export {packageJsonConfig}
+export {typescriptConfig}
+export {yamlConfig}
+
 export default [
   jsonConfig,
   jsoncConfig,

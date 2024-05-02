@@ -1,7 +1,5 @@
-import * as path from 'forward-slash-path'
-import fs from 'fs-extra'
-import readFileYaml from 'read-file-yaml'
+import {test} from 'node:test'
 
-const runTest = async (testContext: TestContext) => {
+import {runTest} from '~/test/lib/runTest.js'
 
-}
+test(`basic`, async testContext => runTest(testContext))
