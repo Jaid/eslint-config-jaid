@@ -1,9 +1,11 @@
 import type {ESLint, Linter} from 'eslint'
 
+// BLOCKEDBY https://github.com/un-ts/eslint-plugin-import-x/issues/29
+// import importPlugin from 'eslint-plugin-i'
+
 import stylisticPlugin from '@stylistic/eslint-plugin'
 import typescriptPlugin from '@typescript-eslint/eslint-plugin'
 import parser, {type ParserOptions} from '@typescript-eslint/parser'
-import importPlugin from 'eslint-plugin-i'
 import importQuotesPlugin from 'eslint-plugin-import-quotes'
 import nodePlugin from 'eslint-plugin-n'
 import perfectionistPlugin from 'eslint-plugin-perfectionist'
@@ -646,7 +648,7 @@ const config: Linter.FlatConfig = {
     // node: nodePlugin,
     promise: promisePlugin as ESLint.Plugin,
     unicorn: unicornPlugin as ESLint.Plugin,
-    import: importPlugin as ESLint.Plugin,
+    // import: importPlugin as ESLint.Plugin,
     importQuotes: importQuotesPlugin as ESLint.Plugin,
     // regex: regexPlugin as ESLint.Plugin,
     perfectionist: perfectionistPlugin as ESLint.Plugin
@@ -668,7 +670,7 @@ const config: Linter.FlatConfig = {
     node: nodeRules,
     promise: promiseRules,
     unicorn: unicornRules,
-    import: importRules,
+    // import: importRules,
     importQuotes: importQuotesRules,
     regex: regexRules,
     perfectionist: perfectionistRules,
