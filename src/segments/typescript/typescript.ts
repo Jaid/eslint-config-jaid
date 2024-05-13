@@ -451,7 +451,8 @@ const unicornRules: Linter.FlatConfig[`rules`] = {
   "prefer-type-error": `warn`,
   "relative-url-style": `warn`,
   "text-encoding-identifier-case": `warn`,
-  "throw-new-error": `warn`
+  "throw-new-error": `warn`,
+  "prefer-structured-clone": `warn`,
 }
 const importRules: Linter.FlatConfig[`rules`] = {
   "first": `warn`,
