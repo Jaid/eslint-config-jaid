@@ -294,10 +294,6 @@ const stylisticRules: Linter.FlatConfig[`rules`] = {
   ],
   "comma-style": `warn`,
   "computed-property-spacing": `warn`,
-  "curly": [
-    `warn`,
-    `all`
-  ],
   "dot-location": [
     `warn`,
     `property`
@@ -647,13 +643,13 @@ const globs = [
 const config: Linter.FlatConfig = {
   plugins: {
     typescript: typescriptPlugin as unknown as ESLint.Plugin,
-    // stylistic: stylisticPlugin as ESLint.Plugin,
-    // node: nodePlugin,
+    stylistic: stylisticPlugin as ESLint.Plugin,
+    node: nodePlugin,
     // promise: promisePlugin as ESLint.Plugin,
     unicorn: unicornPlugin as ESLint.Plugin,
     // import: importPlugin as ESLint.Plugin,
     importQuotes: importQuotesPlugin as ESLint.Plugin,
-    // regex: regexPlugin as ESLint.Plugin,
+    regex: regexPlugin as ESLint.Plugin,
     perfectionist: perfectionistPlugin as ESLint.Plugin
   },
   ignores,
