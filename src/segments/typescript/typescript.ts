@@ -3,13 +3,15 @@ import type {ESLint, Linter} from 'eslint'
 // BLOCKEDBY https://github.com/un-ts/eslint-plugin-import-x/issues/29
 // import importPlugin from 'eslint-plugin-i'
 
+// BLOCKEDBY https://github.com/eslint-community/eslint-plugin-promise/issues/449
+// import promisePlugin from 'eslint-plugin-promise'
+
 import stylisticPlugin from '@stylistic/eslint-plugin'
 import typescriptPlugin from '@typescript-eslint/eslint-plugin'
 import parser, {type ParserOptions} from '@typescript-eslint/parser'
 import importQuotesPlugin from 'eslint-plugin-import-quotes'
 import nodePlugin from 'eslint-plugin-n'
 import perfectionistPlugin from 'eslint-plugin-perfectionist'
-import promisePlugin from 'eslint-plugin-promise'
 import regexPlugin from 'eslint-plugin-regexp'
 import unicornPlugin from 'eslint-plugin-unicorn'
 
@@ -646,7 +648,7 @@ const config: Linter.FlatConfig = {
     typescript: typescriptPlugin as unknown as ESLint.Plugin,
     // stylistic: stylisticPlugin as ESLint.Plugin,
     // node: nodePlugin,
-    promise: promisePlugin as ESLint.Plugin,
+    // promise: promisePlugin as ESLint.Plugin,
     unicorn: unicornPlugin as ESLint.Plugin,
     // import: importPlugin as ESLint.Plugin,
     importQuotes: importQuotesPlugin as ESLint.Plugin,
@@ -668,7 +670,7 @@ const config: Linter.FlatConfig = {
     eslint: eslintRules,
     typescript: typescriptRules,
     node: nodeRules,
-    promise: promiseRules,
+    // promise: promiseRules,
     unicorn: unicornRules,
     // import: importRules,
     importQuotes: importQuotesRules,
