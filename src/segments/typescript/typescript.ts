@@ -1,7 +1,7 @@
 import type {ESLint, Linter} from 'eslint'
 
 // BLOCKEDBY https://github.com/un-ts/eslint-plugin-import-x/issues/29
-// import importPlugin from 'eslint-plugin-i'
+// import importPlugin from 'eslint-plugin-import-x'
 
 // BLOCKEDBY https://github.com/eslint-community/eslint-plugin-promise/issues/449
 // import promisePlugin from 'eslint-plugin-promise'

@@ -61,7 +61,6 @@
   },
   "dependencies": {
     "@stylistic/eslint-plugin": "^2.1.0",
-    "@types/eslint": "^8.56.10",
     "@typescript-eslint/eslint-plugin": "^8.0.0-alpha.10",
     "@typescript-eslint/parser": "^8.0.0-alpha.10",
     "browserslist-config-jaid-node": "3.0.0",
@@ -92,6 +91,7 @@
     "eslint-find-rules": "^4.1.0",
     "filter-obj": "^6.0.0",
     "fs-extra": "^11.2.0",
+    "globby": "^14.0.1",
     "handlebars": "^4.7.8",
     "immer": "^10.1.1",
     "js-yaml": "^4.1.0",

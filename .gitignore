@@ -31,3 +31,5 @@ out
 /debug.log
 /.vscode/
 /.idea/
+
+/.wireit/
