@@ -1,6 +1,3 @@
 {
-  "extends": "tsconfig-jaid-node",
-  "exclude": [
-    "eslint.config.mjsaa"
-  ]
+  "extends": "tsconfig-jaid-node"
 }

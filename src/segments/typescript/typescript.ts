@@ -675,17 +675,18 @@ const config: Linter.FlatConfig = {
     perfectionist: perfectionistRules,
     stylistic: stylisticRules,
   }),
-  settings: {
-    "import/resolver": {
-      node: true,
-      typescript: {
-        alwaysTryTypes: true
-      }
-    },
-    "import/parsers": {
-      "@typescript-eslint/parser": globs
-    }
-  },
+  // BLOCKEDBY https://github.com/import-js/eslint-plugin-import/issues/2556
+  // settings: {
+  //   "import-x/resolver": {
+  //     node: true,
+  //     typescript: {
+  //       alwaysTryTypes: true
+  //     }
+  //   },
+  //   "import-x/parsers": {
+  //     "@typescript-eslint/parser": globs
+  //   }
+  // },
 }
 
 export default config
