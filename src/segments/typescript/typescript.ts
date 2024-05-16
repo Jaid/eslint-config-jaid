@@ -29,9 +29,7 @@ const eslintRules: Linter.FlatConfig[`rules`] = {
   "no-underscore-dangle": [
     `warn`,
     {
-      allow: [
-        `__REDUX_DEVTOOLS_EXTENSION_COMPOSE__`
-      ]
+      allow: [`__REDUX_DEVTOOLS_EXTENSION_COMPOSE__`]
     }
   ],
   "no-unneeded-ternary": `warn`,
@@ -42,7 +40,7 @@ const eslintRules: Linter.FlatConfig[`rules`] = {
   ],
   "prefer-const": `warn`,
   "prefer-exponentiation-operator": `warn`,
-  "sort-vars": `warn`,
+  "sort-vars": `warn`
 }
 const typescriptRules: Linter.FlatConfig[`rules`] = {
   "no-base-to-string": `warn`,
@@ -184,13 +182,13 @@ const typescriptRules: Linter.FlatConfig[`rules`] = {
   "method-signature-style": `warn`,
   "no-meaningless-void-operator": `warn`,
   "no-useless-template-literals": `warn`,
-  "prefer-as-const": `warn`,
+  "prefer-as-const": `warn`
 }
 const stylisticRules: Linter.FlatConfig[`rules`] = {
   "brace-style": `warn`,
   "comma-spacing": `warn`,
   "func-call-spacing": `warn`,
-  "indent": [
+  indent: [
     `warn`,
     2
   ],
@@ -244,7 +242,7 @@ const stylisticRules: Linter.FlatConfig[`rules`] = {
       next: `*`
     }
   ],
-  "quotes": [
+  quotes: [
     `warn`,
     `backtick`
   ],
@@ -275,7 +273,7 @@ const stylisticRules: Linter.FlatConfig[`rules`] = {
   "array-bracket-newline": [
     `warn`,
     {
-      multiline: true,
+      multiline: true
     }
   ],
   "array-bracket-spacing": `warn`,
@@ -290,7 +288,16 @@ const stylisticRules: Linter.FlatConfig[`rules`] = {
   "arrow-spacing": `warn`,
   "comma-dangle": [
     `warn`,
-    `never`
+    {
+      arrays: `only-multiline`,
+      objects: `only-multiline`,
+      imports: `only-multiline`,
+      exports: `only-multiline`,
+      functions: `only-multiline`,
+      enums: `only-multiline`,
+      generics: `only-multiline`,
+      tuples: `only-multiline`
+    }
   ],
   "comma-style": `warn`,
   "computed-property-spacing": `warn`,
@@ -372,10 +379,10 @@ const stylisticRules: Linter.FlatConfig[`rules`] = {
   "no-confusing-arrow": `warn`,
   // "no-extra-semi": `warn`,
   "no-multi-spaces": `warn`,
-  "semi": [
+  semi: [
     `warn`,
     `never`
-  ],
+  ]
 }
 const nodeRules: Linter.FlatConfig[`rules`] = {
   "no-mixed-requires": `warn`,
@@ -448,10 +455,10 @@ const unicornRules: Linter.FlatConfig[`rules`] = {
   "relative-url-style": `warn`,
   "text-encoding-identifier-case": `warn`,
   "throw-new-error": `warn`,
-  "prefer-structured-clone": `warn`,
+  "prefer-structured-clone": `warn`
 }
 const importRules: Linter.FlatConfig[`rules`] = {
-  "first": `warn`,
+  first: `warn`,
   "newline-after-import": [
     `warn`,
     {
@@ -480,7 +487,7 @@ const regexRules: Linter.FlatConfig[`rules`] = {
       controlEscape: `lowercase`
     }
   ],
-  "negation": `warn`,
+  negation: `warn`,
   "no-dupe-characters-character-class": `warn`,
   "no-extra-lookaround-assertions": `warn`,
   "no-invisible-character": `warn`,
@@ -502,7 +509,7 @@ const regexRules: Linter.FlatConfig[`rules`] = {
   "sort-alternatives": `warn`,
   "sort-character-class-elements": `warn`,
   "sort-flags": `warn`,
-  "strict": `warn`
+  strict: `warn`
 }
 const perfectionistRules: Linter.FlatConfig[`rules`] = {
   "sort-classes": [
@@ -577,7 +584,7 @@ const perfectionistRules: Linter.FlatConfig[`rules`] = {
             `lib/**`,
             `component/**`,
             `components/**`
-          ],
+          ]
         },
         type: {
           "internalWithShortcut-type": `internalWithShortcut`
@@ -659,7 +666,7 @@ const config: Linter.FlatConfig = {
     parserOptions: {
       project: true,
       ecmaVersion: `latest`,
-      sourceType: `module`,
+      sourceType: `module`
     } as Linter.ParserOptions & ParserOptions
   },
   name: `eslint-config-jaid/typescript`,
@@ -673,8 +680,8 @@ const config: Linter.FlatConfig = {
     importQuotes: importQuotesRules,
     regex: regexRules,
     perfectionist: perfectionistRules,
-    stylistic: stylisticRules,
-  }),
+    stylistic: stylisticRules
+  })
   // BLOCKEDBY https://github.com/import-js/eslint-plugin-import/issues/2556
   // settings: {
   //   "import-x/resolver": {
