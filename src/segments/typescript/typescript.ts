@@ -17,74 +17,76 @@ import unicornPlugin from 'eslint-plugin-unicorn'
 
 import ignores from 'src/ignores.js'
 
+const warn = `warn`
+const error = `error`
 const eslintRules: Linter.FlatConfig[`rules`] = {
   "multiline-comment-style": `off`,
-  "new-cap": `warn`,
-  "no-eq-null": `warn`,
-  "no-extend-native": `warn`,
-  "no-lonely-if": `warn`,
-  "no-multi-assign": `warn`,
-  "no-nested-ternary": `warn`,
-  "no-object-constructor": `warn`,
+  "new-cap": warn,
+  "no-eq-null": warn,
+  "no-extend-native": warn,
+  "no-lonely-if": warn,
+  "no-multi-assign": warn,
+  "no-nested-ternary": warn,
+  "no-object-constructor": warn,
   "no-underscore-dangle": [
-    `warn`,
+    warn,
     {
       allow: [`__REDUX_DEVTOOLS_EXTENSION_COMPOSE__`]
     }
   ],
-  "no-unneeded-ternary": `warn`,
-  "no-with": `warn`,
+  "no-unneeded-ternary": warn,
+  "no-with": warn,
   "one-var": [
-    `warn`,
+    warn,
     `never`
   ],
-  "prefer-const": `warn`,
-  "prefer-exponentiation-operator": `warn`,
-  "sort-vars": `warn`
+  "prefer-const": warn,
+  "prefer-exponentiation-operator": warn,
+  "sort-vars": warn
 }
 const typescriptRules: Linter.FlatConfig[`rules`] = {
-  "no-base-to-string": `warn`,
-  "no-misused-promises": `warn`,
-  "no-non-null-asserted-nullish-coalescing": `warn`,
-  "no-non-null-asserted-optional-chain": `warn`,
-  "no-redundant-type-constituents": `warn`,
-  "no-unnecessary-boolean-literal-compare": `warn`,
+  "no-base-to-string": warn,
+  "no-misused-promises": warn,
+  "no-non-null-asserted-nullish-coalescing": warn,
+  "no-non-null-asserted-optional-chain": warn,
+  "no-redundant-type-constituents": warn,
+  "no-unnecessary-boolean-literal-compare": warn,
   "no-unnecessary-condition": [
-    `warn`,
+    warn,
     {
       allowConstantLoopConditions: true
     }
   ],
-  "no-unnecessary-qualifier": `warn`,
-  "no-unnecessary-type-arguments": `warn`,
-  "no-unnecessary-type-assertion": `warn`,
-  "no-unnecessary-type-constraint": `warn`,
-  "no-unsafe-argument": `warn`,
-  "no-unsafe-assignment": `warn`,
-  "no-unsafe-call": `warn`,
-  "no-unsafe-declaration-merging": `warn`,
-  "no-unsafe-enum-comparison": `warn`,
-  "no-unsafe-member-access": `warn`,
-  "no-unsafe-return": `warn`,
-  "no-unsafe-unary-minus": `warn`,
-  "prefer-includes": `warn`,
-  "prefer-optional-chain": `warn`,
-  "prefer-reduce-type-parameter": `warn`,
-  "prefer-string-starts-ends-with": `warn`,
-  "prefer-ts-expect-error": `warn`,
-  "restrict-template-expressions": `warn`,
+  "no-unnecessary-qualifier": warn,
+  "no-unnecessary-type-arguments": warn,
+  "no-unnecessary-type-assertion": warn,
+  "no-unnecessary-type-constraint": warn,
+  "no-unsafe-argument": warn,
+  "no-unsafe-assignment": warn,
+  "no-unsafe-call": warn,
+  "no-unsafe-declaration-merging": warn,
+  "no-unsafe-enum-comparison": warn,
+  "no-unsafe-member-access": warn,
+  "no-unsafe-return": warn,
+  "no-unsafe-unary-minus": warn,
+  "prefer-includes": warn,
+  "prefer-optional-chain": warn,
+  "prefer-reduce-type-parameter": warn,
+  "prefer-string-starts-ends-with": warn,
+  "prefer-ts-expect-error": warn,
+  "restrict-template-expressions": warn,
   "unbound-method": [
-    `warn`,
+    warn,
     {
       ignoreStatic: true
     }
   ],
-  "dot-notation": `warn`,
-  "no-array-constructor": `warn`,
-  "no-dupe-class-members": `warn`,
-  "no-redeclare": `warn`,
+  "dot-notation": warn,
+  "no-array-constructor": warn,
+  "no-dupe-class-members": warn,
+  "no-redeclare": warn,
   "no-restricted-imports": [
-    `warn`,
+    warn,
     {
       name: `lodash`,
       message: `Use lodash-es`
@@ -146,61 +148,61 @@ const typescriptRules: Linter.FlatConfig[`rules`] = {
       message: `Use fs-extra (emptyDir)`
     }
   ],
-  "no-shadow": `warn`,
-  "only-throw-error": `warn`,
-  "no-use-before-define": `warn`,
-  "no-useless-constructor": `warn`,
-  "prefer-nullish-coalescing": `warn`,
-  "prefer-regexp-exec": `warn`,
-  "require-array-sort-compare": `warn`,
-  "return-await": `warn`,
+  "no-shadow": warn,
+  "only-throw-error": warn,
+  "no-use-before-define": warn,
+  "no-useless-constructor": warn,
+  "prefer-nullish-coalescing": warn,
+  "prefer-regexp-exec": warn,
+  "require-array-sort-compare": warn,
+  "return-await": warn,
   "array-type": [
-    `warn`,
+    warn,
     {
       default: `generic`
     }
   ],
-  "class-literal-property-style": `warn`,
-  "consistent-generic-constructors": `warn`,
-  "consistent-indexed-object-style": `warn`,
+  "class-literal-property-style": warn,
+  "consistent-generic-constructors": warn,
+  "consistent-indexed-object-style": warn,
   "consistent-type-assertions": [
-    `warn`,
+    warn,
     {
       assertionStyle: `as`,
       objectLiteralTypeAssertions: `allow`
     }
   ],
-  "consistent-type-exports": `warn`,
+  "consistent-type-exports": warn,
   "consistent-type-imports": [
-    `warn`,
+    warn,
     {
       prefer: `type-imports`,
       disallowTypeAnnotations: false,
       fixStyle: `separate-type-imports`
     }
   ],
-  "method-signature-style": `warn`,
-  "no-meaningless-void-operator": `warn`,
-  "no-useless-template-literals": `warn`,
-  "prefer-as-const": `warn`
+  "method-signature-style": warn,
+  "no-meaningless-void-operator": warn,
+  "no-useless-template-literals": warn,
+  "prefer-as-const": warn
 }
 const stylisticRules: Linter.FlatConfig[`rules`] = {
-  "brace-style": `warn`,
-  "comma-spacing": `warn`,
-  "func-call-spacing": `warn`,
+  "brace-style": warn,
+  "comma-spacing": warn,
+  "func-call-spacing": warn,
   indent: [
-    `warn`,
+    warn,
     2
   ],
-  "key-spacing": `warn`,
-  "keyword-spacing": `warn`,
+  "key-spacing": warn,
+  "keyword-spacing": warn,
   "lines-between-class-members": [
-    `warn`,
+    warn,
     `never`
   ],
-  "object-curly-spacing": `warn`,
+  "object-curly-spacing": warn,
   "padding-line-between-statements": [
-    `warn`,
+    warn,
     {
       blankLine: `never`,
       prev: `*`,
@@ -243,21 +245,21 @@ const stylisticRules: Linter.FlatConfig[`rules`] = {
     }
   ],
   quotes: [
-    `warn`,
+    warn,
     `backtick`
   ],
-  "space-before-blocks": `warn`,
+  "space-before-blocks": warn,
   "space-before-function-paren": [
-    `warn`,
+    warn,
     {
       anonymous: `always`,
       named: `never`,
       asyncArrow: `always`
     }
   ],
-  "space-infix-ops": `warn`,
+  "space-infix-ops": warn,
   "member-delimiter-style": [
-    `warn`,
+    warn,
     {
       singleline: {
         delimiter: `comma`,
@@ -269,25 +271,25 @@ const stylisticRules: Linter.FlatConfig[`rules`] = {
       }
     }
   ],
-  "type-annotation-spacing": `warn`,
+  "type-annotation-spacing": warn,
   "array-bracket-newline": [
-    `warn`,
+    warn,
     {
       multiline: true
     }
   ],
-  "array-bracket-spacing": `warn`,
+  "array-bracket-spacing": warn,
   "array-element-newline": [
-    `warn`,
+    warn,
     `consistent`
   ],
   "arrow-parens": [
-    `warn`,
+    warn,
     `always`
   ],
-  "arrow-spacing": `warn`,
+  "arrow-spacing": warn,
   "comma-dangle": [
-    `warn`,
+    warn,
     {
       arrays: `only-multiline`,
       objects: `only-multiline`,
@@ -299,41 +301,41 @@ const stylisticRules: Linter.FlatConfig[`rules`] = {
       tuples: `only-multiline`
     }
   ],
-  "comma-style": `warn`,
-  "computed-property-spacing": `warn`,
+  "comma-style": warn,
+  "computed-property-spacing": warn,
   "dot-location": [
-    `warn`,
+    warn,
     `property`
   ],
-  "eol-last": `warn`,
+  "eol-last": warn,
   "function-paren-newline": [
-    `warn`,
+    warn,
     `never`
   ],
-  "implicit-arrow-linebreak": `warn`,
+  "implicit-arrow-linebreak": warn,
   "linebreak-style": [
-    `warn`,
+    warn,
     `unix`
   ],
   "new-parens": [
-    `warn`,
+    warn,
     `never`
   ],
-  "no-extra-parens": `warn`,
-  "no-floating-decimal": `warn`,
+  "no-extra-parens": warn,
+  "no-floating-decimal": warn,
   "no-multiple-empty-lines": [
-    `warn`,
+    warn,
     {
       max: 1,
       maxEOF: 1,
       maxBOF: 0
     }
   ],
-  "no-tabs": `warn`,
-  "no-trailing-spaces": `warn`,
-  "no-whitespace-before-property": `warn`,
+  "no-tabs": warn,
+  "no-trailing-spaces": warn,
+  "no-whitespace-before-property": warn,
   "object-curly-newline": [
-    `warn`,
+    warn,
     {
       ObjectExpression: {
         consistent: true,
@@ -344,142 +346,142 @@ const stylisticRules: Linter.FlatConfig[`rules`] = {
       ImportDeclaration: `never`
     }
   ],
-  "object-property-newline": `warn`,
+  "object-property-newline": warn,
   "operator-linebreak": [
-    `warn`,
+    warn,
     `before`
   ],
   "padded-blocks": [
-    `warn`,
+    warn,
     `never`
   ],
   "quote-props": [
-    `warn`,
+    warn,
     `as-needed`
   ],
-  "rest-spread-spacing": `warn`,
-  // "semi-spacing": `warn`,
-  // "semi-style": `warn`,
-  "space-in-parens": `warn`,
-  "space-unary-ops": `warn`,
-  "spaced-comment": `warn`,
-  "switch-colon-spacing": `warn`,
-  "template-curly-spacing": `warn`,
-  "template-tag-spacing": `warn`,
-  "yield-star-spacing": `warn`,
-  "block-spacing": `warn`,
+  "rest-spread-spacing": warn,
+  // "semi-spacing": warn,
+  // "semi-style": warn,
+  "space-in-parens": warn,
+  "space-unary-ops": warn,
+  "spaced-comment": warn,
+  "switch-colon-spacing": warn,
+  "template-curly-spacing": warn,
+  "template-tag-spacing": warn,
+  "yield-star-spacing": warn,
+  "block-spacing": warn,
   "function-call-argument-newline": [
-    `warn`,
+    warn,
     `consistent`
   ],
-  "function-call-spacing": `warn`,
-  "generator-star-spacing": `warn`,
-  "max-statements-per-line": `warn`,
-  "newline-per-chained-call": `warn`,
-  "no-confusing-arrow": `warn`,
-  // "no-extra-semi": `warn`,
-  "no-multi-spaces": `warn`,
+  "function-call-spacing": warn,
+  "generator-star-spacing": warn,
+  "max-statements-per-line": warn,
+  "newline-per-chained-call": warn,
+  "no-confusing-arrow": warn,
+  // "no-extra-semi": warn,
+  "no-multi-spaces": warn,
   semi: [
-    `warn`,
+    warn,
     `never`
   ]
 }
 const nodeRules: Linter.FlatConfig[`rules`] = {
-  "no-mixed-requires": `warn`,
-  "no-new-require": `warn`,
-  "no-path-concat": `warn`,
-  "no-sync": `warn`
+  "no-mixed-requires": warn,
+  "no-new-require": warn,
+  "no-path-concat": warn,
+  "no-sync": warn
 }
 const promiseRules: Linter.FlatConfig[`rules`] = {
-  "catch-or-return": `warn`,
-  "no-callback-in-promise": `warn`,
-  "no-multiple-resolved": `warn`,
-  "no-promise-in-callback": `warn`,
-  "no-return-in-finally": `warn`,
-  "no-return-wrap": `warn`,
-  "param-names": `warn`,
-  "prefer-await-to-callbacks": `warn`,
-  "prefer-await-to-then": `warn`
+  "catch-or-return": warn,
+  "no-callback-in-promise": warn,
+  "no-multiple-resolved": warn,
+  "no-promise-in-callback": warn,
+  "no-return-in-finally": warn,
+  "no-return-wrap": warn,
+  "param-names": warn,
+  "prefer-await-to-callbacks": warn,
+  "prefer-await-to-then": warn
 }
 const unicornRules: Linter.FlatConfig[`rules`] = {
-  "catch-error-name": `warn`,
-  "consistent-function-scoping": `warn`,
-  "error-message": `warn`,
-  "escape-case": `warn`,
-  "expiring-todo-comments": `warn`,
-  "new-for-builtins": `warn`,
-  "no-array-for-each": `warn`,
-  "no-await-expression-member": `warn`,
-  "no-hex-escape": `warn`,
-  "no-instanceof-array": `warn`,
-  "no-nested-ternary": `warn`,
-  "no-new-array": `warn`,
-  "no-new-buffer": `warn`,
-  "no-thenable": `warn`,
-  "no-unnecessary-await": `warn`,
-  "no-useless-fallback-in-spread": `warn`,
-  "no-useless-length-check": `warn`,
-  "no-useless-promise-resolve-reject": `warn`,
-  "no-useless-spread": `warn`,
-  "no-useless-undefined": `warn`,
-  "no-zero-fractions": `warn`,
-  "number-literal-case": `warn`,
-  "numeric-separators-style": `warn`,
-  "prefer-add-event-listener": `warn`,
-  "prefer-array-find": `warn`,
-  "prefer-array-flat": `warn`,
-  "prefer-array-flat-map": `warn`,
-  "prefer-array-index-of": `warn`,
-  "prefer-at": `warn`,
-  "prefer-blob-reading-methods": `warn`,
-  "prefer-code-point": `warn`,
-  "prefer-date-now": `warn`,
-  "prefer-logical-operator-over-ternary": `warn`,
-  "prefer-math-trunc": `warn`,
-  "prefer-modern-math-apis": `warn`,
-  "prefer-module": `warn`,
-  "prefer-native-coercion-functions": `warn`,
-  "prefer-negative-index": `warn`,
-  "prefer-number-properties": `warn`,
-  "prefer-prototype-methods": `warn`,
-  "prefer-regexp-test": `warn`,
-  "prefer-set-has": `warn`,
-  "prefer-set-size": `warn`,
-  "prefer-spread": `warn`,
-  "prefer-string-replace-all": `warn`,
-  "prefer-string-slice": `warn`,
-  "prefer-string-starts-ends-with": `warn`,
-  "prefer-string-trim-start-end": `warn`,
-  "prefer-top-level-await": `warn`,
-  "prefer-type-error": `warn`,
-  "relative-url-style": `warn`,
-  "text-encoding-identifier-case": `warn`,
-  "throw-new-error": `warn`,
-  "prefer-structured-clone": `warn`
+  "catch-error-name": warn,
+  "consistent-function-scoping": warn,
+  "error-message": warn,
+  "escape-case": warn,
+  "expiring-todo-comments": warn,
+  "new-for-builtins": warn,
+  "no-array-for-each": warn,
+  "no-await-expression-member": warn,
+  "no-hex-escape": warn,
+  "no-instanceof-array": warn,
+  "no-nested-ternary": warn,
+  "no-new-array": warn,
+  "no-new-buffer": warn,
+  "no-thenable": warn,
+  "no-unnecessary-await": warn,
+  "no-useless-fallback-in-spread": warn,
+  "no-useless-length-check": warn,
+  "no-useless-promise-resolve-reject": warn,
+  "no-useless-spread": warn,
+  "no-useless-undefined": warn,
+  "no-zero-fractions": warn,
+  "number-literal-case": warn,
+  "numeric-separators-style": warn,
+  "prefer-add-event-listener": warn,
+  "prefer-array-find": warn,
+  "prefer-array-flat": warn,
+  "prefer-array-flat-map": warn,
+  "prefer-array-index-of": warn,
+  "prefer-at": warn,
+  "prefer-blob-reading-methods": warn,
+  "prefer-code-point": warn,
+  "prefer-date-now": warn,
+  "prefer-logical-operator-over-ternary": warn,
+  "prefer-math-trunc": warn,
+  "prefer-modern-math-apis": warn,
+  "prefer-module": warn,
+  "prefer-native-coercion-functions": warn,
+  "prefer-negative-index": warn,
+  "prefer-number-properties": warn,
+  "prefer-prototype-methods": warn,
+  "prefer-regexp-test": warn,
+  "prefer-set-has": warn,
+  "prefer-set-size": warn,
+  "prefer-spread": warn,
+  "prefer-string-replace-all": warn,
+  "prefer-string-slice": warn,
+  "prefer-string-starts-ends-with": warn,
+  "prefer-string-trim-start-end": warn,
+  "prefer-top-level-await": warn,
+  "prefer-type-error": warn,
+  "relative-url-style": warn,
+  "text-encoding-identifier-case": warn,
+  "throw-new-error": warn,
+  "prefer-structured-clone": warn
 }
 const importRules: Linter.FlatConfig[`rules`] = {
-  first: `warn`,
+  first: warn,
   "newline-after-import": [
-    `warn`,
+    warn,
     {
       considerComments: true
     }
   ],
-  "no-duplicates": `warn`,
-  "no-mutable-exports": `warn`,
-  "no-self-import": `error`,
-  "no-useless-path-segments": `warn`
+  "no-duplicates": warn,
+  "no-mutable-exports": warn,
+  "no-self-import": error,
+  "no-useless-path-segments": warn
 }
 const importQuotesRules: Linter.FlatConfig[`rules`] = {
   "import-quotes": [
-    `warn`,
+    warn,
     `single`
   ]
 }
 const regexRules: Linter.FlatConfig[`rules`] = {
-  "control-character-escape": `warn`,
+  "control-character-escape": warn,
   "letter-case": [
-    `warn`,
+    warn,
     {
       caseInsensitive: `lowercase`,
       unicodeEscape: `uppercase`,
@@ -487,33 +489,33 @@ const regexRules: Linter.FlatConfig[`rules`] = {
       controlEscape: `lowercase`
     }
   ],
-  negation: `warn`,
-  "no-dupe-characters-character-class": `warn`,
-  "no-extra-lookaround-assertions": `warn`,
-  "no-invisible-character": `warn`,
-  "no-missing-g-flag": `warn`,
-  "no-trivially-nested-assertion": `warn`,
-  "no-trivially-nested-quantifier": `warn`,
-  "no-useless-assertions": `warn`,
-  "no-useless-backreference": `warn`,
-  "no-useless-character-class": `warn`,
-  "no-useless-flag": `warn`,
-  "no-useless-lazy": `warn`,
-  "no-useless-quantifier": `warn`,
-  "no-useless-range": `warn`,
-  "no-useless-two-nums-quantifier": `warn`,
-  "optimal-quantifier-concatenation": `warn`,
-  "prefer-d": `warn`,
-  "prefer-predefined-assertion": `warn`,
-  "prefer-quantifier": `warn`,
-  "sort-alternatives": `warn`,
-  "sort-character-class-elements": `warn`,
-  "sort-flags": `warn`,
-  strict: `warn`
+  negation: warn,
+  "no-dupe-characters-character-class": warn,
+  "no-extra-lookaround-assertions": warn,
+  "no-invisible-character": warn,
+  "no-missing-g-flag": warn,
+  "no-trivially-nested-assertion": warn,
+  "no-trivially-nested-quantifier": warn,
+  "no-useless-assertions": warn,
+  "no-useless-backreference": warn,
+  "no-useless-character-class": warn,
+  "no-useless-flag": warn,
+  "no-useless-lazy": warn,
+  "no-useless-quantifier": warn,
+  "no-useless-range": warn,
+  "no-useless-two-nums-quantifier": warn,
+  "optimal-quantifier-concatenation": warn,
+  "prefer-d": warn,
+  "prefer-predefined-assertion": warn,
+  "prefer-quantifier": warn,
+  "sort-alternatives": warn,
+  "sort-character-class-elements": warn,
+  "sort-flags": warn,
+  strict: warn
 }
 const perfectionistRules: Linter.FlatConfig[`rules`] = {
   "sort-classes": [
-    `warn`,
+    warn,
     {
       type: `natural`,
       "ignore-case": true,
@@ -536,14 +538,14 @@ const perfectionistRules: Linter.FlatConfig[`rules`] = {
     }
   ],
   "sort-enums": [
-    `warn`,
+    warn,
     {
       type: `natural`,
       "ignore-case": true
     }
   ],
   "sort-imports": [
-    `warn`,
+    warn,
     {
       type: `natural`,
       "ignore-case": true,
@@ -593,35 +595,35 @@ const perfectionistRules: Linter.FlatConfig[`rules`] = {
     }
   ],
   "sort-interfaces": [
-    `warn`,
+    warn,
     {
       type: `natural`,
       "ignore-case": true
     }
   ],
   "sort-named-exports": [
-    `warn`,
+    warn,
     {
       type: `natural`,
       "ignore-case": true
     }
   ],
   "sort-named-imports": [
-    `warn`,
+    warn,
     {
       type: `natural`,
       "ignore-case": true
     }
   ],
   "sort-object-types": [
-    `warn`,
+    warn,
     {
       type: `natural`,
       "ignore-case": true
     }
   ],
   "sort-union-types": [
-    `warn`,
+    warn,
     {
       type: `natural`,
       "ignore-case": true,
