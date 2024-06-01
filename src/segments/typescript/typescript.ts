@@ -285,7 +285,7 @@ const stylisticRules: Linter.FlatConfig[`rules`] = {
   ],
   "arrow-parens": [
     warn,
-    `always`
+    `as-needed`
   ],
   "arrow-spacing": warn,
   "comma-dangle": [
