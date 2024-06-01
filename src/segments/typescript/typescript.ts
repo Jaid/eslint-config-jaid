@@ -46,7 +46,7 @@ const eslintRules: Linter.FlatConfig[`rules`] = {
 }
 const typescriptRules: Linter.FlatConfig[`rules`] = {
   "no-base-to-string": warn,
-  // "no-misused-promises": warn,
+  "no-misused-promises": warn,
   "no-non-null-asserted-nullish-coalescing": warn,
   "no-non-null-asserted-optional-chain": warn,
   "no-redundant-type-constituents": warn,
