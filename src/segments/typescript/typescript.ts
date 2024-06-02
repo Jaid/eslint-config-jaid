@@ -6,6 +6,8 @@ import type {ESLint, Linter} from 'eslint'
 // BLOCKEDBY https://github.com/eslint-community/eslint-plugin-promise/issues/449
 // import promisePlugin from 'eslint-plugin-promise'
 
+// BLOCKEDBY https://www.npmjs.com/package/@typescript-eslint/eslint-plugin?activeTab=versions - We currently use the v8 alpha version which introduce a crippling level amount of performance issues, but it’s still usable stability-wise
+
 import stylisticPlugin from '@stylistic/eslint-plugin'
 import typescriptPlugin from '@typescript-eslint/eslint-plugin'
 import parser, {type ParserOptions} from '@typescript-eslint/parser'
