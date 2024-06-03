@@ -61,8 +61,8 @@
   },
   "dependencies": {
     "@stylistic/eslint-plugin": "^2.1.0",
-    "@typescript-eslint/eslint-plugin": "8.0.0-alpha.24",
-    "@typescript-eslint/parser": "8.0.0-alpha.24",
+    "@typescript-eslint/eslint-plugin": "8.0.0-alpha.26",
+    "@typescript-eslint/parser": "8.0.0-alpha.26",
     "browserslist-config-jaid-node": "3.0.0",
     "eslint": "^9.4.0",
     "eslint-plugin-import-quotes": "^0.0.1",
@@ -79,7 +79,7 @@
   },
   "devDependencies": {
     "@atao60/fse-cli": "^0.1.9",
-    "@eslint/config-inspector": "^0.4.8",
+    "@eslint/config-inspector": "^0.4.10",
     "@types/node": "^20.13.0",
     "chalk": "^5.3.0",
     "debug": "^4.3.5",
@@ -102,7 +102,7 @@
     "showdown": "^2.1.0",
     "sort-keys": "^5.0.0",
     "tsconfig-jaid-node": "^8.1.0",
-    "tsx": "^4.11.0",
+    "tsx": "^4.11.2",
     "type-fest": "^4.18.3",
     "typescript": "^5.4.5",
     "wireit": "^0.14.4",
