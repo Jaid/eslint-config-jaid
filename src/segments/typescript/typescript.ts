@@ -185,7 +185,7 @@ const typescriptRules: Linter.FlatConfig[`rules`] = {
   ],
   "method-signature-style": warn,
   "no-meaningless-void-operator": warn,
-  "no-useless-template-literals": warn,
+  "no-unnecessary-template-expression": warn,
   "prefer-as-const": warn
 }
 const stylisticRules: Linter.FlatConfig[`rules`] = {
