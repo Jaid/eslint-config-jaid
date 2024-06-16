@@ -154,7 +154,6 @@ const typescriptRules: Linter.FlatConfig[`rules`] = {
   "only-throw-error": warn,
   "no-use-before-define": warn,
   "no-useless-constructor": warn,
-  "prefer-nullish-coalescing": warn,
   "prefer-regexp-exec": warn,
   "require-array-sort-compare": warn,
   "return-await": warn,
