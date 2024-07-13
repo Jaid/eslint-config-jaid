@@ -3,8 +3,7 @@ import type {ESLint, Linter} from 'eslint'
 // BLOCKEDBY https://github.com/un-ts/eslint-plugin-import-x/issues/29
 // import importPlugin from 'eslint-plugin-import-x'
 
-// BLOCKEDBY https://github.com/eslint-community/eslint-plugin-promise/issues/449
-// import promisePlugin from 'eslint-plugin-promise'
+import promisePlugin from 'eslint-plugin-promise'
 
 // BLOCKEDBY https://github.com/typescript-eslint/typescript-eslint/milestone/9 - We currently use the v8 alpha version which introduce a crippling level amount of performance issues, but it’s still usable stability-wise
 
@@ -655,7 +654,7 @@ const config: Linter.FlatConfig = {
     typescript: typescriptPlugin as unknown as ESLint.Plugin,
     stylistic: stylisticPlugin as ESLint.Plugin,
     node: nodePlugin,
-    // promise: promisePlugin as ESLint.Plugin,
+    promise: promisePlugin as ESLint.Plugin,
     unicorn: unicornPlugin as ESLint.Plugin,
     // import: importPlugin as ESLint.Plugin,
     importQuotes: importQuotesPlugin as ESLint.Plugin,
@@ -675,7 +674,7 @@ const config: Linter.FlatConfig = {
     eslint: eslintRules,
     typescript: typescriptRules,
     node: nodeRules,
-    // promise: promiseRules,
+    promise: promiseRules,
     unicorn: unicornRules,
     // import: importRules,
     importQuotes: importQuotesRules,
