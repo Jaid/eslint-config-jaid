@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-jaid",
-  "version": "10.5.1",
+  "version": "11.0.0",
   "type": "module",
   "description": "Personal ESLint preset. Intentionally ugly to write code that looks like I feel.",
   "keywords": [
@@ -56,7 +56,7 @@
         "test/**/*",
         "package.json"
       ],
-      "command": "node --import tsx test/test.ts"
+      "command": "tsx test/test.ts"
     }
   },
   "dependencies": {
