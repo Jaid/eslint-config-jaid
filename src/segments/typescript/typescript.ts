@@ -666,7 +666,10 @@ const config: Linter.FlatConfig = {
   languageOptions: {
     parser,
     parserOptions: {
-      projectService: true
+      projectService: {
+        maximumDefaultProjectFileMatchCount_THIS_WILL_SLOW_DOWN_LINTING: Infinity,
+        defaultProject: `./tsconfig.json`
+      }
     } as Linter.ParserOptions & ParserOptions
   },
   name: `eslint-config-jaid/typescript`,
