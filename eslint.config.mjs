@@ -1,5 +1,3 @@
-import config from "./dist/package/eslint-config-jaid/development/lib.js"
+import {makeEslintConfig} from 'eslint-config-jaid'
 
-export default [
-  ...config
-]
+export default makeEslintConfig()

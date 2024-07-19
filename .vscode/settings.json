@@ -1,0 +1,14 @@
+{
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "/dist/build/*/index.json"
+      ],
+      "url": "https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/eslintrc.json"
+    }
+  ],
+  "yaml.schemas": {
+    "https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/eslintrc.json": "/src/presets/*/config.yml",
+    "etc/jsonSchema/rule.schema.json": "/src/rules/*.yml"
+  }
+}
