@@ -308,9 +308,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/config-inspector@npm:^0.5.1":
-  version: 0.5.1
-  resolution: "@eslint/config-inspector@npm:0.5.1"
+"@eslint/config-inspector@npm:^0.5.2":
+  version: 0.5.2
+  resolution: "@eslint/config-inspector@npm:0.5.2"
   dependencies:
     "@eslint/config-array": "npm:^0.17.0"
     "@voxpelli/config-array-find-files": "npm:^0.1.2"
@@ -327,13 +327,13 @@ __metadata:
     mrmime: "npm:^2.0.0"
     open: "npm:^10.1.0"
     picocolors: "npm:^1.0.1"
-    ws: "npm:^8.17.1"
+    ws: "npm:^8.18.0"
   peerDependencies:
     eslint: ^8.50.0 || ^9.0.0
   bin:
     config-inspector: bin.mjs
     eslint-config-inspector: bin.mjs
-  checksum: 10/c03683b1cb4a3180a5156a6260785c235725f1f0dc0f31bb5f74026f2470af59d3b41005dcd69472b74c0b079af73e1f6b8991fb23e55507ea180745b897633c
+  checksum: 10/2337d6d06ecd064ca48e2dbe5fa303311f768d67680588303e89183c155c695b552876ad5a064ac2dcd889be22f5a74c5b469af703c5fce216e26de7fb08f616
   languageName: node
   linkType: hard
 
@@ -1077,12 +1077,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^20.14.10":
-  version: 20.14.10
-  resolution: "@types/node@npm:20.14.10"
+"@types/node@npm:^20.14.11":
+  version: 20.14.11
+  resolution: "@types/node@npm:20.14.11"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10/672892cf94d0d95cf052f11271990686a0fd204cd1e5fe7a4ef240e5315e06711765dc47b9ec98627d3adac18b8c92bb7e2d8db21d18faa20bc3e3203a143e79
+  checksum: 10/344e1ce1ed16c86ed1c4209ab4d1de67db83dd6b694a6fabe295c47144dde2c58dabddae9f39a0a2bdd246e95f8d141ccfe848e464884b48b8918df4f7788025
   languageName: node
   linkType: hard
 
@@ -2586,9 +2586,9 @@ __metadata:
   resolution: "eslint-config-jaid@workspace:."
   dependencies:
     "@atao60/fse-cli": "npm:^0.1.9"
-    "@eslint/config-inspector": "npm:^0.5.1"
+    "@eslint/config-inspector": "npm:^0.5.2"
     "@stylistic/eslint-plugin": "npm:^2.6.0-beta.0"
-    "@types/node": "npm:^20.14.10"
+    "@types/node": "npm:^20.14.11"
     "@typescript-eslint/eslint-plugin": "npm:8.0.0-alpha.41"
     "@typescript-eslint/parser": "npm:8.0.0-alpha.41"
     browserslist-config-jaid-node: "npm:3.0.0"
@@ -2627,7 +2627,7 @@ __metadata:
     sort-keys: "npm:^5.0.0"
     tsconfig-jaid-node: "npm:^8.1.0"
     tsx: "npm:^4.16.2"
-    type-fest: "npm:^4.21.0"
+    type-fest: "npm:^4.22.1"
     typescript: "npm:^5.5.3"
     wireit: "npm:^0.14.5"
     yaml-eslint-parser: "npm:^1.2.3"
@@ -6728,10 +6728,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"type-fest@npm:^4.21.0":
-  version: 4.21.0
-  resolution: "type-fest@npm:4.21.0"
-  checksum: 10/a4dc074b25239fff4062495c58554dcec15845622d753092d2bf24fc3b1c49f85805ed74f151976d666056ff122b3a5a988e85226575b7fbbc8e92d2db210137
+"type-fest@npm:^4.22.1":
+  version: 4.22.1
+  resolution: "type-fest@npm:4.22.1"
+  checksum: 10/f0cef35c98c34577d94dd36b4baa6544cd6977bdee47d95fad1d970ca3b61c1bb0ab8aac66bab6e1e387b1f2821727675743282f1a8680da54adc1a5625f3d66
   languageName: node
   linkType: hard
 
@@ -7060,7 +7060,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ws@npm:^8.17.1":
+"ws@npm:^8.18.0":
   version: 8.18.0
   resolution: "ws@npm:8.18.0"
   peerDependencies:
