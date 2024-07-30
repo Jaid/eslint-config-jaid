@@ -275,7 +275,8 @@ const stylisticRules: Linter.FlatConfig[`rules`] = {
   "array-bracket-newline": [
     warn,
     {
-      multiline: true
+      multiline: false,
+      minItems: 2
     }
   ],
   "array-bracket-spacing": warn,
