@@ -369,7 +369,6 @@ const stylisticRules: Linter.FlatConfig[`rules`] = {
   "template-curly-spacing": warn,
   "template-tag-spacing": warn,
   "yield-star-spacing": warn,
-  "block-spacing": warn,
   "function-call-argument-newline": [
     warn,
     `consistent`
