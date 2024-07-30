@@ -1,0 +1,37 @@
+rules:
+  eslint:
+    - no-unnecessary-type-arguments
+    - no-unused-vars
+    - prefer-template
+    - quote-props
+    - quotes
+    - quotes
+    - semi
+    - sort-type-constituents
+    - space-in-parens
+    - space-infix-ops
+    - type-annotation-spacing
+  import:
+    - newline-after-import
+  importQuotes:
+    - import-quotes
+  jsonc:
+    - sort-keys
+  perfectionist:
+    - sort-classes
+    - sort-imports
+    - sort-object-types
+    - sort-objects
+    - sort-union-types
+  simpleImportSort:
+    - imports
+  unicorn:
+    - prefer-node-protocol
+aliases:
+  - from: eslint
+    to: typescript
+rawEntries:
+  - ts(2589)
+  - ts(6133)
+allFrom:
+  - stylistic
