@@ -60,9 +60,9 @@
     }
   },
   "dependencies": {
-    "@stylistic/eslint-plugin": "^2.6.0-beta.0",
-    "@typescript-eslint/eslint-plugin": "8.0.0-alpha.45",
-    "@typescript-eslint/parser": "8.0.0-alpha.45",
+    "@stylistic/eslint-plugin": "^2.6.0-beta.1",
+    "@typescript-eslint/eslint-plugin": "8.0.0-alpha.58",
+    "@typescript-eslint/parser": "8.0.0-alpha.58",
     "browserslist-config-jaid-node": "3.0.0",
     "eslint": "^9.8.0",
     "eslint-plugin-import-quotes": "^0.0.1",
