@@ -519,7 +519,6 @@ const perfectionistRules: Linter.FlatConfig[`rules`] = {
     warn,
     {
       type: `natural`,
-      "ignore-case": true,
       groups: [
         `static-property`,
         `static-method`,
@@ -542,23 +541,19 @@ const perfectionistRules: Linter.FlatConfig[`rules`] = {
     warn,
     {
       type: `natural`,
-      "ignore-case": true
     }
   ],
-  "sort-imports": [
+  'sort-imports': [
     warn,
     {
       type: `natural`,
-      "ignore-case": true,
       groups: [
         [
           `parent-type`,
           `sibling-type`,
           `external-type`,
-          [
-            `internal-type`,
-            `internalWithShortcut-type`
-          ],
+          `internal-type`,
+          `internal-with-shortcut-type`,
           `index-type`
         ],
         `side-effect`,
@@ -570,7 +565,7 @@ const perfectionistRules: Linter.FlatConfig[`rules`] = {
         `external`,
         [
           `internal`,
-          `internalWithShortcut`
+          `internal-with-shortcut`
         ],
         [
           `parent`,
@@ -579,10 +574,10 @@ const perfectionistRules: Linter.FlatConfig[`rules`] = {
         `style`,
         `unknown`
       ],
-      "custom-groups": {
+      customGroups: {
         value: {
           node: `node:*`,
-          internalWithShortcut: [
+          'internal-with-shortcut': [
             `src/**`,
             `lib/**`,
             `component/**`,
@@ -590,7 +585,7 @@ const perfectionistRules: Linter.FlatConfig[`rules`] = {
           ]
         },
         type: {
-          "internalWithShortcut-type": `internalWithShortcut`
+          'internal-with-shortcut-type': `internal-with-shortcut`
         }
       }
     }
@@ -599,36 +594,36 @@ const perfectionistRules: Linter.FlatConfig[`rules`] = {
     warn,
     {
       type: `natural`,
-      "ignore-case": true
     }
   ],
   "sort-named-exports": [
     warn,
     {
       type: `natural`,
-      "ignore-case": true
     }
   ],
   "sort-named-imports": [
     warn,
     {
       type: `natural`,
-      "ignore-case": true
     }
   ],
   "sort-object-types": [
     warn,
     {
       type: `natural`,
-      "ignore-case": true
     }
   ],
   "sort-union-types": [
     warn,
     {
       type: `natural`,
-      "ignore-case": true,
-      "nullable-last": true
+      groups: [
+        `unknown`,
+        `literal`,
+        `keyword`,
+        `nullish`
+      ]
     }
   ]
 }
