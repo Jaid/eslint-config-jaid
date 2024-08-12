@@ -1,4 +1,0 @@
-overridesSlot: 0
-prefix: import-quotes
-rules:
-  import-quotes: [WARN, single]

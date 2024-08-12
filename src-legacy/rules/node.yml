@@ -1,7 +1,0 @@
-overridesSlot: 0
-prefix: n
-rules:
-  no-mixed-requires: WARN
-  no-new-require: WARN
-  no-path-concat: WARN
-  no-sync: WARN

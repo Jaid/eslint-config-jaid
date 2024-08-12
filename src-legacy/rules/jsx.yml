@@ -1,5 +1,0 @@
-overridesSlot: 3
-rules:
-  jsx-quotes:
-  - WARN
-  - prefer-single

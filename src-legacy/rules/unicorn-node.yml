@@ -1,4 +1,0 @@
-overridesSlot: 0
-prefix: unicorn
-rules:
-  prefer-node-protocol: WARN
