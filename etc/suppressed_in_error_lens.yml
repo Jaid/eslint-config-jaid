@@ -11,6 +11,7 @@ rules:
     - space-in-parens
     - space-infix-ops
     - type-annotation-spacing
+    - no-unnecessary-template-expression
   import:
     - newline-after-import
   importQuotes:
