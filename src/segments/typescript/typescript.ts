@@ -276,7 +276,6 @@ const stylisticRules: Linter.FlatConfig[`rules`] = {
     warn,
     {
       multiline: false,
-      minItems: 2
     }
   ],
   "array-bracket-spacing": warn,
@@ -629,8 +628,12 @@ const perfectionistRules: Linter.FlatConfig[`rules`] = {
 }
 const compileRules = (rulesMap: Record<string, NonNullable<Linter.FlatConfig[`rules`]>>) => {
   const result: Linter.FlatConfig[`rules`] = {}
-  for (const [pluginName, rules] of Object.entries(rulesMap)) {
-    for (const [ruleName, ruleValue] of Object.entries(rules)) {
+  for (const [
+    pluginName, rules
+  ] of Object.entries(rulesMap)) {
+    for (const [
+      ruleName, ruleValue
+    ] of Object.entries(rules)) {
       const key = pluginName === `eslint` ? ruleName : `${pluginName}/${ruleName}`
       result[key] = ruleValue
     }
