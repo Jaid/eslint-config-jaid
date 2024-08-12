@@ -658,6 +658,7 @@ const config: Linter.FlatConfig = {
     // import: importPlugin as ESLint.Plugin,
     importQuotes: importQuotesPlugin as ESLint.Plugin,
     regex: regexPlugin as ESLint.Plugin,
+    // @ts-expect-error
     perfectionist: perfectionistPlugin as ESLint.Plugin
   },
   ignores,

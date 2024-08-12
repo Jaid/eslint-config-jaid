@@ -26,7 +26,7 @@ for (const [pluginId, rules] of Object.entries(suppressionConfig.rules)) {
 }
 const config = makeEslintConfig()
 for (const rulesRecord of config) {
-  for (const [ruleId, ruleConfig] of Object.entries(rulesRecord.rules)) {
+  for (const [ruleId, ruleConfig] of Object.entries(rulesRecord.rules ?? {})) {
     if (ruleConfig === `off`) {
       continue
     }

@@ -2,7 +2,7 @@ import type {Dict, TestContext} from 'more-types'
 import type * as Main from 'src/index.js'
 import type {AsyncReturnType} from 'type-fest'
 
-import {loadESLint} from 'eslint'
+import {ESLint} from 'eslint'
 import * as path from 'forward-slash-path'
 import {globby} from 'globby'
 import {type IterableElement} from 'type-fest'
@@ -15,11 +15,7 @@ const main = await getMainModule<typeof Main>(`eslint-config-jaid`)
 export const runTest = async (testContext: TestContext) => {
   const fixtureFolder = path.join(fixturesFolder, testContext.name)
   const srcFolder = path.join(fixtureFolder, `src`)
-  const Eslint = await loadESLint({
-    useFlatConfig: true,
-    cwd: fixtureFolder,
-  }) as typeof import('eslint').ESLint // eslint-disable-line stylistic/quotes
-  const eslint = new Eslint({
+  const eslint = new ESLint({
     baseConfig: [main.typescriptConfig],
     cwd: fixtureFolder,
   })
