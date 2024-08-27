@@ -12,6 +12,7 @@ rules:
     - space-infix-ops
     - type-annotation-spacing
     - no-unnecessary-template-expression
+    - dot-notation
   import:
     - newline-after-import
   importQuotes:
