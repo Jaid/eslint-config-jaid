@@ -140,7 +140,6 @@ const typescriptRules: Linter.FlatConfig[`rules`] = {
       message: `Use fs-extra (emptyDir)`
     }],
   "no-shadow": warn,
-  "always-throw-error": warn,
   "no-use-before-define": warn,
   "no-useless-constructor": warn,
   "prefer-regexp-exec": warn,
