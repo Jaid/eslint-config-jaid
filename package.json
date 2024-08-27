@@ -86,7 +86,7 @@
     "debug": "^4.3.6",
     "dts-bundle-generator": "^9.5.1",
     "emp": "^2.0.0",
-    "eslint-config-jaid": "^11.3.0",
+    "eslint-config-jaid": "^11.4.0",
     "filter-obj": "^6.1.0",
     "fs-extra": "^11.2.0",
     "globby": "^14.0.2",
