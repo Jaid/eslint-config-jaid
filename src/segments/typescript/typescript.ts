@@ -138,6 +138,11 @@ const typescriptRules: Linter.FlatConfig[`rules`] = {
     {
       name: `emp`,
       message: `Use fs-extra (emptyDir)`
+    },
+    {
+      name: `rollup`,
+      importNames: [`MaybeArray`],
+      message: `Use Arrayable from type-fest`
     }],
   "no-shadow": warn,
   "only-throw-error": warn,
