@@ -29,6 +29,11 @@ rules:
     - imports
   unicorn:
     - prefer-node-protocol
+    - escape-case
+    - prefer-string-slice
+  regex:
+    - sort-character-class-elements
+    - sort-flags
 aliases:
   - from: eslint
     to: typescript
