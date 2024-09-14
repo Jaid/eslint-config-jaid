@@ -553,7 +553,8 @@ const config: Linter.FlatConfig = {
     node: nodePlugin,
     promise: promisePlugin as ESLint.Plugin,
     unicorn: unicornPlugin as ESLint.Plugin,
-    // import: importPlugin as ESLint.Plugin,
+    // @ts-expect-error
+    import: importPlugin as ESLint.Plugin,
     importQuotes: importQuotesPlugin as ESLint.Plugin,
     regex: regexPlugin as ESLint.Plugin,
     // @ts-expect-error
