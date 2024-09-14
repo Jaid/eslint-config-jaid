@@ -489,7 +489,7 @@ const perfectionistRules: Linter.Config[`rules`] = {
       [`internal`,
         `internal-with-shortcut`],
       [`parent`,
-        `siblings`],
+        `sibling`],
       `style`,
       `unknown`],
       customGroups: {
