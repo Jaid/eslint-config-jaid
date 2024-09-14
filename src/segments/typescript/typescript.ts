@@ -17,7 +17,7 @@ import ignores from 'src/ignores.js'
 
 const warn = `warn`
 const error = `error`
-const eslintRules: Linter.FlatConfig[`rules`] = {
+const eslintRules: Linter.Config[`rules`] = {
   "multiline-comment-style": `off`,
   "new-cap": warn,
   "no-eq-null": warn,
@@ -38,7 +38,7 @@ const eslintRules: Linter.FlatConfig[`rules`] = {
   "prefer-exponentiation-operator": warn,
   "sort-vars": warn
 }
-const typescriptRules: Linter.FlatConfig[`rules`] = {
+const typescriptRules: Linter.Config[`rules`] = {
   "no-base-to-string": warn,
   "no-misused-promises": warn,
   "no-non-null-asserted-nullish-coalescing": warn,
@@ -172,7 +172,7 @@ const typescriptRules: Linter.FlatConfig[`rules`] = {
   "no-unnecessary-template-expression": warn,
   "prefer-as-const": warn
 }
-const stylisticRules: Linter.FlatConfig[`rules`] = {
+const stylisticRules: Linter.Config[`rules`] = {
   "brace-style": warn,
   "comma-spacing": warn,
   "func-call-spacing": warn,
@@ -329,13 +329,13 @@ const stylisticRules: Linter.FlatConfig[`rules`] = {
   semi: [warn,
     `never`]
 }
-const nodeRules: Linter.FlatConfig[`rules`] = {
+const nodeRules: Linter.Config[`rules`] = {
   "no-mixed-requires": warn,
   "no-new-require": warn,
   "no-path-concat": warn,
   "no-sync": warn
 }
-const promiseRules: Linter.FlatConfig[`rules`] = {
+const promiseRules: Linter.Config[`rules`] = {
   "catch-or-return": warn,
   "no-callback-in-promise": warn,
   "no-multiple-resolved": warn,
@@ -346,7 +346,7 @@ const promiseRules: Linter.FlatConfig[`rules`] = {
   "prefer-await-to-callbacks": warn,
   "prefer-await-to-then": warn
 }
-const unicornRules: Linter.FlatConfig[`rules`] = {
+const unicornRules: Linter.Config[`rules`] = {
   "catch-error-name": warn,
   "consistent-function-scoping": warn,
   "error-message": warn,
@@ -403,7 +403,7 @@ const unicornRules: Linter.FlatConfig[`rules`] = {
   "prefer-structured-clone": warn,
   "no-length-as-slice-end": warn,
 }
-const importRules: Linter.FlatConfig[`rules`] = {
+const importRules: Linter.Config[`rules`] = {
   first: warn,
   "newline-after-import": [warn,
     {
@@ -414,11 +414,11 @@ const importRules: Linter.FlatConfig[`rules`] = {
   "no-self-import": error,
   "no-useless-path-segments": warn
 }
-const importQuotesRules: Linter.FlatConfig[`rules`] = {
+const importQuotesRules: Linter.Config[`rules`] = {
   "import-quotes": [warn,
     `single`]
 }
-const regexRules: Linter.FlatConfig[`rules`] = {
+const regexRules: Linter.Config[`rules`] = {
   "control-character-escape": warn,
   "letter-case": [warn,
     {
@@ -451,7 +451,7 @@ const regexRules: Linter.FlatConfig[`rules`] = {
   "sort-flags": warn,
   strict: warn
 }
-const perfectionistRules: Linter.FlatConfig[`rules`] = {
+const perfectionistRules: Linter.Config[`rules`] = {
   "sort-classes": [warn,
     {
       type: `natural`,
@@ -530,8 +530,8 @@ const perfectionistRules: Linter.FlatConfig[`rules`] = {
         `nullish`]
     }]
 }
-const compileRules = (rulesMap: Record<string, NonNullable<Linter.FlatConfig[`rules`]>>) => {
-  const result: Linter.FlatConfig[`rules`] = {}
+const compileRules = (rulesMap: Record<string, NonNullable<Linter.Config[`rules`]>>) => {
+  const result: Linter.Config[`rules`] = {}
   for (const [pluginName, rules] of Object.entries(rulesMap)) {
     for (const [ruleName, ruleValue] of Object.entries(rules)) {
       const key = pluginName === `eslint` ? ruleName : `${pluginName}/${ruleName}`
@@ -546,7 +546,7 @@ const globs = [`**/*.ts`,
   `**/*.mtsx`,
   `**/*.cts`,
   `**/*.ctsx`]
-const config: Linter.FlatConfig = {
+const config: Linter.Config = {
   plugins: {
     typescript: typescriptPlugin as unknown as ESLint.Plugin,
     stylistic: stylisticPlugin as ESLint.Plugin,
