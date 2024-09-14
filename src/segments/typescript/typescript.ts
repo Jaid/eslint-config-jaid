@@ -1,11 +1,8 @@
 import type {ESLint, Linter} from 'eslint'
 
-// BLOCKEDBY https://github.com/un-ts/eslint-plugin-import-x/issues/29
-// import importPlugin from 'eslint-plugin-import-x'
+import importPlugin from 'eslint-plugin-import-x'
 
 import promisePlugin from 'eslint-plugin-promise'
-
-// BLOCKEDBY https://github.com/typescript-eslint/typescript-eslint/milestone/9 - We currently use the v8 alpha version which introduce a crippling level amount of performance issues, but it’s still usable stability-wise
 
 import stylisticPlugin from '@stylistic/eslint-plugin'
 import typescriptPlugin from '@typescript-eslint/eslint-plugin'
@@ -580,24 +577,23 @@ const config: Linter.FlatConfig = {
     node: nodeRules,
     promise: promiseRules,
     unicorn: unicornRules,
-    // import: importRules,
+    import: importRules,
     importQuotes: importQuotesRules,
     regex: regexRules,
     perfectionist: perfectionistRules,
     stylistic: stylisticRules
-  })
-  // BLOCKEDBY https://github.com/import-js/eslint-plugin-import/issues/2556
-  // settings: {
-  //   "import-x/resolver": {
-  //     node: true,
-  //     typescript: {
-  //       alwaysTryTypes: true
-  //     }
-  //   },
-  //   "import-x/parsers": {
-  //     "@typescript-eslint/parser": globs
-  //   }
-  // },
+  }),
+  settings: {
+    "import-x/resolver": {
+      node: true,
+      typescript: {
+        alwaysTryTypes: true
+      }
+    },
+    "import-x/parsers": {
+      "@typescript-eslint/parser": globs
+    }
+  },
 }
 
 export default config
