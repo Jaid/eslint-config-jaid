@@ -2724,7 +2724,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-jaid@npm:^11.6.0, eslint-config-jaid@workspace:.":
+"eslint-config-jaid@npm:^12.0.0, eslint-config-jaid@workspace:.":
   version: 0.0.0-use.local
   resolution: "eslint-config-jaid@workspace:."
   dependencies:
@@ -2740,7 +2740,7 @@ __metadata:
     dts-bundle-generator: "npm:^9.5.1"
     emp: "npm:^2.0.0"
     eslint: "npm:^9.10.0"
-    eslint-config-jaid: "npm:^11.6.0"
+    eslint-config-jaid: "npm:^12.0.0"
     eslint-plugin-import-quotes: "npm:^0.0.1"
     eslint-plugin-import-x: "npm:^4.2.1"
     eslint-plugin-jsonc: "npm:^2.16.0"
