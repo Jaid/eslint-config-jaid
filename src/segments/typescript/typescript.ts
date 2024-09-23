@@ -18,7 +18,11 @@ import ignores from 'src/ignores.js'
 const warn = `warn`
 const error = `error`
 const eslintRules: Linter.Config[`rules`] = {
-  "multiline-comment-style": `off`,
+  "prefer-template": warn,
+  "operator-assignment": warn,
+  "object-shorthand": warn,
+  "no-useless-rename": warn,
+  "no-else-return": warn,
   "new-cap": warn,
   "no-eq-null": warn,
   "no-extend-native": warn,
@@ -39,6 +43,19 @@ const eslintRules: Linter.Config[`rules`] = {
   "sort-vars": warn
 }
 const typescriptRules: Linter.Config[`rules`] = {
+  "prefer-function-type": warn,
+  "no-wrapper-object-types": warn,
+  "prefer-destructuring": warn,
+  "no-extra-non-null-assertion": warn,
+  "no-duplicate-type-constituents": warn,
+  "ban-ts-comment": [warn,
+    {
+      "ts-expect-error": { descriptionFormat: '^ TS\d+' },
+      "ts-ignore": true,
+      "ts-nocheck": false,
+      "ts-check": false
+    }
+  ],
   "no-base-to-string": warn,
   "no-misused-promises": warn,
   "no-non-null-asserted-nullish-coalescing": warn,
@@ -65,7 +82,6 @@ const typescriptRules: Linter.Config[`rules`] = {
   "prefer-optional-chain": warn,
   "prefer-reduce-type-parameter": warn,
   "prefer-string-starts-ends-with": warn,
-  "prefer-ts-expect-error": warn,
   "restrict-template-expressions": warn,
   "unbound-method": [warn,
     {
@@ -173,6 +189,15 @@ const typescriptRules: Linter.Config[`rules`] = {
   "prefer-as-const": warn
 }
 const stylisticRules: Linter.Config[`rules`] = {
+  "type-named-tuple-spacing": warn,
+  "type-generic-spacing": warn,
+  "nonblock-statement-body-position": [warn,
+    `below`],
+  "multiline-ternary": [warn,
+    "ignoreJSX"],
+  "block-spacing": warn,
+  "multiline-comment-style": [warn,
+    "separate-lines"],
   "brace-style": warn,
   "comma-spacing": warn,
   "func-call-spacing": warn,
@@ -308,8 +333,6 @@ const stylisticRules: Linter.Config[`rules`] = {
   "quote-props": [warn,
     `as-needed`],
   "rest-spread-spacing": warn,
-  // "semi-spacing": warn,
-  // "semi-style": warn,
   "space-in-parens": warn,
   "space-unary-ops": warn,
   "spaced-comment": warn,
@@ -318,13 +341,12 @@ const stylisticRules: Linter.Config[`rules`] = {
   "template-tag-spacing": warn,
   "yield-star-spacing": warn,
   "function-call-argument-newline": [warn,
-    `consistent`],
+    `never`],
   "function-call-spacing": warn,
   "generator-star-spacing": warn,
   "max-statements-per-line": warn,
   "newline-per-chained-call": warn,
   "no-confusing-arrow": warn,
-  // "no-extra-semi": warn,
   "no-multi-spaces": warn,
   semi: [warn,
     `never`]
@@ -347,6 +369,19 @@ const promiseRules: Linter.Config[`rules`] = {
   "prefer-await-to-then": warn
 }
 const unicornRules: Linter.Config[`rules`] = {
+  "no-for-loop": warn,
+  "no-console-spaces": warn,
+  "prefer-array-some": warn,
+  "prefer-includes": warn,
+  "prefer-modern-dom-apis": warn,
+  "prefer-object-from-entries": warn,
+  "prefer-query-selector": warn,
+  "prevent-abbreviations": [warn,
+    {
+
+    }],
+  "switch-case-braces": warn,
+  "template-indent": warn,
   "catch-error-name": warn,
   "consistent-function-scoping": warn,
   "error-message": warn,
@@ -419,6 +454,8 @@ const importQuotesRules: Linter.Config[`rules`] = {
     `single`]
 }
 const regexRules: Linter.Config[`rules`] = {
+  "no-useless-escape": warn,
+  "no-useless-string-literal": warn,
   "control-character-escape": warn,
   "letter-case": [warn,
     {
