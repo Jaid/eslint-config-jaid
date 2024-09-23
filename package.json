@@ -34,7 +34,7 @@
     "build": "node node_modules/rollup/dist/bin/rollup --config",
     "build:production": "NODE_ENV=production npm run build",
     "buildPage": "fse emptyDir dist/page && tsx src/scripts/activeHtml.ts && tsx src/scripts/unusedHtml.ts && tsx src/scripts/deprecatedHtml.ts && fse copy etc/page dist/page",
-    "inspectConfig": "npx @eslint/config-inspector --config src/index.ts",
+    "inspectConfig": "wireit",
     "printConfig": "eslint --print-config src/index.ts",
     "release": "npm run build:production && fd --unrestricted --full-path 'dist/package/.+/production/package.json' --exec bash -c 'npm publish {//}'",
     "release:windows": "wireit",
@@ -42,6 +42,9 @@
     "tsc": "tsc"
   },
   "wireit": {
+    "inspectConfig": {
+      "command": "tsx node_modules/@eslint/config-inspector/bin.mjs --config src/index.ts"
+    },
     "release:windows": {
       "command": "powershell -Command \"Get-ChildItem -Path 'dist/package/*/production/package.json' | ForEach-Object { npm publish $_.DirectoryName }\""
     },
