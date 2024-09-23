@@ -194,7 +194,7 @@ const stylisticRules: Linter.Config[`rules`] = {
   "nonblock-statement-body-position": [warn,
     `below`],
   "multiline-ternary": [warn,
-    "ignoreJSX"],
+    "never"],
   "block-spacing": warn,
   "multiline-comment-style": [warn,
     "separate-lines"],
