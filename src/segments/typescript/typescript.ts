@@ -50,7 +50,7 @@ const typescriptRules: Linter.Config[`rules`] = {
   "no-duplicate-type-constituents": warn,
   "ban-ts-comment": [warn,
     {
-      "ts-expect-error": { descriptionFormat: '^ TS\d+' },
+      "ts-expect-error": { descriptionFormat: '^ +(ts\\(\\d+\\)|TS\\d+)( .+$|$)' },
       "ts-ignore": true,
       "ts-nocheck": false,
       "ts-check": false
