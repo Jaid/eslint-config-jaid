@@ -442,7 +442,23 @@ const unicornRules: Linter.Config[`rules`] = {
   "prevent-abbreviations": [
     warn,
     {
-
+      replacements: {
+        args: false,
+        dir: {
+          directory: false,
+          direction: false,
+          folder: true,
+        },
+        i: {
+          index: false,
+        },
+        opt: {
+          option: true,
+        },
+        props: {
+          properties: false,
+        },
+      },
     },
   ],
   "switch-case-braces": warn,
