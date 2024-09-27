@@ -11,7 +11,7 @@ const allSegments = [
   json5Config,
   packageJsonConfig,
   yamlConfig,
-  typescriptConfig
+  typescriptConfig,
 ]
 
 export {jsonConfig}

@@ -1,15 +1,13 @@
 import type {ESLint, Linter} from 'eslint'
 
-import importPlugin from 'eslint-plugin-import-x'
-
-import promisePlugin from 'eslint-plugin-promise'
-
 import stylisticPlugin from '@stylistic/eslint-plugin'
 import typescriptPlugin from '@typescript-eslint/eslint-plugin'
 import parser, {type ParserOptions} from '@typescript-eslint/parser'
 import importQuotesPlugin from 'eslint-plugin-import-quotes'
+import importPlugin from 'eslint-plugin-import-x'
 import nodePlugin from 'eslint-plugin-n'
 import perfectionistPlugin from 'eslint-plugin-perfectionist'
+import promisePlugin from 'eslint-plugin-promise'
 import regexPlugin from 'eslint-plugin-regexp'
 import unicornPlugin from 'eslint-plugin-unicorn'
 
@@ -30,17 +28,21 @@ const eslintRules: Linter.Config[`rules`] = {
   "no-multi-assign": warn,
   "no-nested-ternary": warn,
   "no-object-constructor": warn,
-  "no-underscore-dangle": [warn,
+  "no-underscore-dangle": [
+    warn,
     {
-      allow: [`__REDUX_DEVTOOLS_EXTENSION_COMPOSE__`]
-    }],
+      allow: [`__REDUX_DEVTOOLS_EXTENSION_COMPOSE__`],
+    },
+  ],
   "no-unneeded-ternary": warn,
   "no-with": warn,
-  "one-var": [warn,
-    `never`],
+  "one-var": [
+    warn,
+    `never`,
+  ],
   "prefer-const": warn,
   "prefer-exponentiation-operator": warn,
-  "sort-vars": warn
+  "sort-vars": warn,
 }
 const typescriptRules: Linter.Config[`rules`] = {
   "prefer-function-type": warn,
@@ -48,13 +50,14 @@ const typescriptRules: Linter.Config[`rules`] = {
   "prefer-destructuring": warn,
   "no-extra-non-null-assertion": warn,
   "no-duplicate-type-constituents": warn,
-  "ban-ts-comment": [warn,
+  "ban-ts-comment": [
+    warn,
     {
-      "ts-expect-error": { descriptionFormat: '^ +(ts\\(\\d+\\)|TS\\d+)( .+$|$)' },
+      "ts-expect-error": {descriptionFormat: `^ +(ts\\(\\d+\\)|TS\\d+)( .+$|$)`},
       "ts-ignore": true,
       "ts-nocheck": false,
-      "ts-check": false
-    }
+      "ts-check": false,
+    },
   ],
   "no-base-to-string": warn,
   "no-misused-promises": warn,
@@ -62,10 +65,12 @@ const typescriptRules: Linter.Config[`rules`] = {
   "no-non-null-asserted-optional-chain": warn,
   "no-redundant-type-constituents": warn,
   "no-unnecessary-boolean-literal-compare": warn,
-  "no-unnecessary-condition": [warn,
+  "no-unnecessary-condition": [
+    warn,
     {
-      allowConstantLoopConditions: true
-    }],
+      allowConstantLoopConditions: true,
+    },
+  ],
   "no-unnecessary-qualifier": warn,
   "no-unnecessary-type-arguments": warn,
   "no-unnecessary-type-assertion": warn,
@@ -83,80 +88,84 @@ const typescriptRules: Linter.Config[`rules`] = {
   "prefer-reduce-type-parameter": warn,
   "prefer-string-starts-ends-with": warn,
   "restrict-template-expressions": warn,
-  "unbound-method": [warn,
+  "unbound-method": [
+    warn,
     {
-      ignoreStatic: true
-    }],
+      ignoreStatic: true,
+    },
+  ],
   "dot-notation": warn,
   "no-array-constructor": warn,
   "no-dupe-class-members": warn,
   "no-redeclare": warn,
-  "no-restricted-imports": [warn,
+  "no-restricted-imports": [
+    warn,
     {
       name: `lodash`,
-      message: `Use lodash-es`
+      message: `Use lodash-es`,
     },
     {
       name: `ensure-array`,
-      message: `Use sure-array`
+      message: `Use sure-array`,
     },
     {
       name: `@absolunet/fsp`,
-      message: `Use fs-extra`
+      message: `Use fs-extra`,
     },
     {
       name: `@absolunet/fss`,
-      message: `Use fs-extra`
+      message: `Use fs-extra`,
     },
     {
       name: `opn`,
-      message: `Use open`
+      message: `Use open`,
     },
     {
       name: `pify`,
-      message: `Use util.promisify`
+      message: `Use util.promisify`,
     },
     {
       name: `fs/promises`,
-      message: `Use fs-extra (more stable)`
+      message: `Use fs-extra (more stable)`,
     },
     {
       name: `node:fs/promises`,
-      message: `Use fs-extra (more stable)`
+      message: `Use fs-extra (more stable)`,
     },
     {
       name: `execall`,
-      message: `Use super-regex`
+      message: `Use super-regex`,
     },
     {
       name: `js-yaml`,
-      message: `Use yaml`
+      message: `Use yaml`,
     },
     {
       name: `jest`,
-      message: `Use node:test and node:assert`
+      message: `Use node:test and node:assert`,
     },
     {
       name: `@types/jest`,
-      message: `Use node:test and node:assert`
+      message: `Use node:test and node:assert`,
     },
     {
       name: `jest-extended`,
-      message: `Use node:test and node:assert`
+      message: `Use node:test and node:assert`,
     },
     {
       name: `jest-light-runner`,
-      message: `Use node:test and node:assert`
+      message: `Use node:test and node:assert`,
     },
     {
       name: `emp`,
-      message: `Use fs-extra (emptyDir)`
+      message: `Use fs-extra (emptyDir)`,
     },
     {
       name: `rollup`,
       importNames: [`MaybeArray`],
-      message: `Use Arrayable from type-fest`
-    }],
+      message: `Use Arrayable from type-fest`,
+    },
+  ],
   "no-shadow": warn,
   "only-throw-error": warn,
   "no-use-before-define": warn,
@@ -164,124 +173,155 @@ const typescriptRules: Linter.Config[`rules`] = {
   "prefer-regexp-exec": warn,
   "require-array-sort-compare": warn,
   "return-await": warn,
-  "array-type": [warn,
+  "array-type": [
+    warn,
     {
-      default: `generic`
-    }],
+      default: `generic`,
+    },
+  ],
   "class-literal-property-style": warn,
   "consistent-generic-constructors": warn,
   "consistent-indexed-object-style": warn,
-  "consistent-type-assertions": [warn,
+  "consistent-type-assertions": [
+    warn,
     {
       assertionStyle: `as`,
-      objectLiteralTypeAssertions: `allow`
-    }],
+      objectLiteralTypeAssertions: `allow`,
+    },
+  ],
   "consistent-type-exports": warn,
-  "consistent-type-imports": [warn,
+  "consistent-type-imports": [
+    warn,
     {
       prefer: `type-imports`,
       disallowTypeAnnotations: false,
-      fixStyle: `separate-type-imports`
-    }],
+      fixStyle: `separate-type-imports`,
+    },
+  ],
   "method-signature-style": warn,
   "no-meaningless-void-operator": warn,
   "no-unnecessary-template-expression": warn,
-  "prefer-as-const": warn
+  "prefer-as-const": warn,
 }
 const stylisticRules: Linter.Config[`rules`] = {
   "type-named-tuple-spacing": warn,
   "type-generic-spacing": warn,
-  "nonblock-statement-body-position": [warn,
-    `below`],
-  "multiline-ternary": [warn,
-    "never"],
+  "nonblock-statement-body-position": [
+    warn,
+    `below`,
+  ],
+  "multiline-ternary": [
+    warn,
+    `never`,
+  ],
   "block-spacing": warn,
-  "multiline-comment-style": [warn,
-    "separate-lines"],
+  "multiline-comment-style": [
+    warn,
+    `separate-lines`,
+  ],
   "brace-style": warn,
   "comma-spacing": warn,
   "func-call-spacing": warn,
-  indent: [warn,
-    2],
+  indent: [
+    warn,
+    2,
+  ],
   "key-spacing": warn,
   "keyword-spacing": warn,
-  "lines-between-class-members": [warn,
-    `never`],
+  "lines-between-class-members": [
+    warn,
+    `never`,
+  ],
   "object-curly-spacing": warn,
-  "padding-line-between-statements": [warn,
+  "padding-line-between-statements": [
+    warn,
     {
       blankLine: `never`,
       prev: `*`,
-      next: `*`
+      next: `*`,
     },
     {
       blankLine: `any`,
       prev: `import`,
-      next: `*`
+      next: `*`,
     },
     {
       blankLine: `any`,
       prev: `*`,
-      next: `export`
+      next: `export`,
     },
     {
       blankLine: `any`,
       prev: `import`,
-      next: `type`
+      next: `type`,
     },
     {
       blankLine: `any`,
       prev: `type`,
-      next: `*`
+      next: `*`,
     },
     {
       blankLine: `any`,
       prev: `*`,
-      next: `type`
+      next: `type`,
     },
     {
       blankLine: `any`,
       prev: `type`,
-      next: `type`
+      next: `type`,
     },
     {
       blankLine: `any`,
       prev: `export`,
-      next: `*`
-    }],
-  quotes: [warn,
-    `backtick`],
+      next: `*`,
+    },
+  ],
+  quotes: [
+    warn,
+    `backtick`,
+  ],
   "space-before-blocks": warn,
-  "space-before-function-paren": [warn,
+  "space-before-function-paren": [
+    warn,
     {
       anonymous: `always`,
       named: `never`,
-      asyncArrow: `always`
-    }],
+      asyncArrow: `always`,
+    },
+  ],
   "space-infix-ops": warn,
-  "member-delimiter-style": [warn,
+  "member-delimiter-style": [
+    warn,
     {
       singleline: {
         delimiter: `comma`,
-        requireLast: false
+        requireLast: false,
       },
       multiline: {
         delimiter: `none`,
-        requireLast: false
-      }
-    }],
+        requireLast: false,
+      },
+    },
+  ],
   "type-annotation-spacing": warn,
-  "array-bracket-newline": [warn,
+  "array-bracket-newline": [
+    warn,
     {
       multiline: true,
-    }],
+    },
+  ],
   "array-bracket-spacing": warn,
-  "array-element-newline": [warn,
-    `consistent`],
-  "arrow-parens": [warn,
-    `as-needed`],
+  "array-element-newline": [
+    warn,
+    `consistent`,
+  ],
+  "arrow-parens": [
+    warn,
+    `as-needed`,
+  ],
   "arrow-spacing": warn,
-  "comma-dangle": [warn,
+  "comma-dangle": [
+    warn,
     {
       arrays: `always-multiline`,
       objects: `always-multiline`,
@@ -290,48 +330,67 @@ const stylisticRules: Linter.Config[`rules`] = {
       functions: `always-multiline`,
       enums: `always-multiline`,
       generics: `always-multiline`,
-      tuples: `always-multiline`
-    }],
+      tuples: `always-multiline`,
+    },
+  ],
   "comma-style": warn,
   "computed-property-spacing": warn,
-  "dot-location": [warn,
-    `property`],
+  "dot-location": [
+    warn,
+    `property`,
+  ],
   "eol-last": warn,
-  "function-paren-newline": [warn,
-    `never`],
+  "function-paren-newline": [
+    warn,
+    `never`,
+  ],
   "implicit-arrow-linebreak": warn,
-  "linebreak-style": [warn,
-    `unix`],
-  "new-parens": [warn,
-    `never`],
+  "linebreak-style": [
+    warn,
+    `unix`,
+  ],
+  "new-parens": [
+    warn,
+    `never`,
+  ],
   "no-extra-parens": warn,
   "no-floating-decimal": warn,
-  "no-multiple-empty-lines": [warn,
+  "no-multiple-empty-lines": [
+    warn,
     {
       max: 1,
       maxEOF: 1,
-      maxBOF: 0
-    }],
+      maxBOF: 0,
+    },
+  ],
   "no-tabs": warn,
   "no-trailing-spaces": warn,
   "no-whitespace-before-property": warn,
-  "object-curly-newline": [warn,
+  "object-curly-newline": [
+    warn,
     {
       ObjectExpression: {
         consistent: true,
         minProperties: 2,
-        multiline: true
+        multiline: true,
       },
       ObjectPattern: `never`,
-      ImportDeclaration: `never`
-    }],
+      ImportDeclaration: `never`,
+    },
+  ],
   "object-property-newline": warn,
-  "operator-linebreak": [warn,
-    `before`],
-  "padded-blocks": [warn,
-    `never`],
-  "quote-props": [warn,
-    `as-needed`],
+  "operator-linebreak": [
+    warn,
+    `before`,
+  ],
+  "padded-blocks": [
+    warn,
+    `never`,
+  ],
+  "quote-props": [
+    warn,
+    `as-needed`,
+  ],
   "rest-spread-spacing": warn,
   "space-in-parens": warn,
   "space-unary-ops": warn,
@@ -340,22 +399,26 @@ const stylisticRules: Linter.Config[`rules`] = {
   "template-curly-spacing": warn,
   "template-tag-spacing": warn,
   "yield-star-spacing": warn,
-  "function-call-argument-newline": [warn,
-    `never`],
+  "function-call-argument-newline": [
+    warn,
+    `never`,
+  ],
   "function-call-spacing": warn,
   "generator-star-spacing": warn,
   "max-statements-per-line": warn,
   "newline-per-chained-call": warn,
   "no-confusing-arrow": warn,
   "no-multi-spaces": warn,
-  semi: [warn,
-    `never`]
+  semi: [
+    warn,
+    `never`,
+  ],
 }
 const nodeRules: Linter.Config[`rules`] = {
   "no-mixed-requires": warn,
   "no-new-require": warn,
   "no-path-concat": warn,
-  "no-sync": warn
+  "no-sync": warn,
 }
 const promiseRules: Linter.Config[`rules`] = {
   "catch-or-return": warn,
@@ -366,7 +429,7 @@ const promiseRules: Linter.Config[`rules`] = {
   "no-return-wrap": warn,
   "param-names": warn,
   "prefer-await-to-callbacks": warn,
-  "prefer-await-to-then": warn
+  "prefer-await-to-then": warn,
 }
 const unicornRules: Linter.Config[`rules`] = {
   "no-for-loop": warn,
@@ -376,10 +439,12 @@ const unicornRules: Linter.Config[`rules`] = {
   "prefer-modern-dom-apis": warn,
   "prefer-object-from-entries": warn,
   "prefer-query-selector": warn,
-  "prevent-abbreviations": [warn,
+  "prevent-abbreviations": [
+    warn,
     {
 
-    }],
+    },
+  ],
   "switch-case-braces": warn,
   "template-indent": warn,
   "catch-error-name": warn,
@@ -440,30 +505,36 @@ const unicornRules: Linter.Config[`rules`] = {
 }
 const importRules: Linter.Config[`rules`] = {
   first: warn,
-  "newline-after-import": [warn,
+  "newline-after-import": [
+    warn,
     {
-      considerComments: true
-    }],
+      considerComments: true,
+    },
+  ],
   "no-duplicates": warn,
   "no-mutable-exports": warn,
   "no-self-import": error,
-  "no-useless-path-segments": warn
+  "no-useless-path-segments": warn,
 }
 const importQuotesRules: Linter.Config[`rules`] = {
-  "import-quotes": [warn,
-    `single`]
+  "import-quotes": [
+    warn,
+    `single`,
+  ],
 }
 const regexRules: Linter.Config[`rules`] = {
   "no-useless-escape": warn,
   "no-useless-string-literal": warn,
   "control-character-escape": warn,
-  "letter-case": [warn,
+  "letter-case": [
+    warn,
     {
       caseInsensitive: `lowercase`,
       unicodeEscape: `uppercase`,
       hexadecimalEscape: `uppercase`,
-      controlEscape: `lowercase`
-    }],
+      controlEscape: `lowercase`,
+    },
+  ],
   negation: warn,
   "no-dupe-characters-character-class": warn,
   "no-extra-lookaround-assertions": warn,
@@ -486,86 +557,120 @@ const regexRules: Linter.Config[`rules`] = {
   "sort-alternatives": warn,
   "sort-character-class-elements": warn,
   "sort-flags": warn,
-  strict: warn
+  strict: warn,
 }
 const perfectionistRules: Linter.Config[`rules`] = {
-  "sort-classes": [warn,
+  "sort-classes": [
+    warn,
     {
       type: `natural`,
-      groups: [`static-property`,
+      groups: [
+        `static-property`,
         `static-method`,
         `static-private-method`,
         `index-signature`,
         `property`,
         `private-property`,
         `constructor`,
-        [`get-method`,
-          `set-method`],
+        [
+          `get-method`,
+          `set-method`,
+        ],
         `method`,
         `private-method`,
-        `unknown`]
-    }],
-  "sort-enums": [warn,
+        `unknown`,
+      ],
+    },
+  ],
+  "sort-enums": [
+    warn,
     {
       type: `natural`,
-    }],
-  'sort-imports': [warn,
+    },
+  ],
+  'sort-imports': [
+    warn,
     {
       type: `natural`,
-      groups: [[`parent-type`,
-        `sibling-type`,
-        `external-type`,
-        `internal-type`,
-        `internal-with-shortcut-type`,
-        `index-type`],
-      `side-effect`,
-      `object`,
-      [`builtin`,
-        `node`],
-      `external`,
-      [`internal`,
-        `internal-with-shortcut`],
-      [`parent`,
-        `sibling`],
-      `style`,
-      `unknown`],
+      groups: [
+        [
+          `parent-type`,
+          `sibling-type`,
+          `external-type`,
+          `internal-type`,
+          `internal-with-shortcut-type`,
+          `index-type`,
+        ],
+        `side-effect`,
+        `object`,
+        [
+          `builtin`,
+          `node`,
+        ],
+        `external`,
+        [
+          `internal`,
+          `internal-with-shortcut`,
+        ],
+        [
+          `parent`,
+          `sibling`,
+        ],
+        `style`,
+        `unknown`,
+      ],
       customGroups: {
         value: {
           node: `node:*`,
-          'internal-with-shortcut': [`src/**`,
+          'internal-with-shortcut': [
+            `src/**`,
             `lib/**`,
             `component/**`,
-            `components/**`]
+            `components/**`,
+          ],
         },
         type: {
-          'internal-with-shortcut-type': `internal-with-shortcut`
-        }
-      }
-    }],
-  "sort-interfaces": [warn,
+          'internal-with-shortcut-type': `internal-with-shortcut`,
+        },
+      },
+    },
+  ],
+  "sort-interfaces": [
+    warn,
     {
       type: `natural`,
-    }],
-  "sort-named-exports": [warn,
+    },
+  ],
+  "sort-named-exports": [
+    warn,
     {
       type: `natural`,
-    }],
-  "sort-named-imports": [warn,
+    },
+  ],
+  "sort-named-imports": [
+    warn,
     {
       type: `natural`,
-    }],
-  "sort-object-types": [warn,
+    },
+  ],
+  "sort-object-types": [
+    warn,
     {
       type: `natural`,
-    }],
-  "sort-union-types": [warn,
+    },
+  ],
+  "sort-union-types": [
+    warn,
     {
       type: `natural`,
-      groups: [`unknown`,
+      groups: [
+        `unknown`,
         `literal`,
         `keyword`,
-        `nullish`]
-    }]
+        `nullish`,
+      ],
+    },
+  ],
 }
 const compileRules = (rulesMap: Record<string, NonNullable<Linter.Config[`rules`]>>) => {
   const result: Linter.Config[`rules`] = {}
@@ -577,12 +682,14 @@ const compileRules = (rulesMap: Record<string, NonNullable<Linter.Config[`rules`
   }
   return result
 }
-const globs = [`**/*.ts`,
+const globs = [
+  `**/*.ts`,
   `**/*.tsx`,
   `**/*.mts`,
   `**/*.mtsx`,
   `**/*.cts`,
-  `**/*.ctsx`]
+  `**/*.ctsx`,
+]
 const config: Linter.Config = {
   plugins: {
     typescript: typescriptPlugin as unknown as ESLint.Plugin,
@@ -595,7 +702,7 @@ const config: Linter.Config = {
     importQuotes: importQuotesPlugin as ESLint.Plugin,
     regex: regexPlugin as ESLint.Plugin,
     // @ts-expect-error
-    perfectionist: perfectionistPlugin as ESLint.Plugin
+    perfectionist: perfectionistPlugin as ESLint.Plugin,
   },
   ignores,
   files: globs,
@@ -604,9 +711,9 @@ const config: Linter.Config = {
     parserOptions: {
       projectService: {
         maximumDefaultProjectFileMatchCount_THIS_WILL_SLOW_DOWN_LINTING: Infinity,
-        defaultProject: `./tsconfig.json`
-      }
-    } as Linter.ParserOptions & ParserOptions
+        defaultProject: `./tsconfig.json`,
+      },
+    } as Linter.ParserOptions & ParserOptions,
   },
   name: `eslint-config-jaid/typescript`,
   rules: compileRules({
@@ -619,18 +726,18 @@ const config: Linter.Config = {
     importQuotes: importQuotesRules,
     regex: regexRules,
     perfectionist: perfectionistRules,
-    stylistic: stylisticRules
+    stylistic: stylisticRules,
   }),
   settings: {
     "import-x/resolver": {
       node: true,
       typescript: {
-        alwaysTryTypes: true
-      }
+        alwaysTryTypes: true,
+      },
     },
     "import-x/parsers": {
-      "@typescript-eslint/parser": globs
-    }
+      "@typescript-eslint/parser": globs,
+    },
   },
 }
 

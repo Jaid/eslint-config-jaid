@@ -1,4 +1,5 @@
 import type {Linter} from 'eslint'
+
 import jsonPlugin from 'eslint-plugin-jsonc'
 import parser from 'jsonc-eslint-parser'
 
@@ -8,15 +9,15 @@ import jsonConfig from 'src/segments/json/json.js'
 const config: Linter.FlatConfig = {
   plugins: {
     // @ts-expect-error TS2322
-    json: jsonPlugin
+    json: jsonPlugin,
   },
   ignores,
   files: [`**/package.json`],
   languageOptions: {
     parser,
     parserOptions: {
-      jsonSyntax: `JSON`
-    }
+      jsonSyntax: `JSON`,
+    },
   },
   name: `eslint-config-jaid/packageJson`,
   rules: {
@@ -63,26 +64,40 @@ const config: Linter.FlatConfig = {
           `optionalDependencies`,
           `bundledDependencies`,
           `devDependencies`,
-          {order: {type: `asc`, natural: true}},
+          {
+            order: {
+              type: `asc`,
+              natural: true,
+            },
+          },
           `os`,
           `cpu`,
-          `engines`
-        ]
+          `engines`,
+        ],
       },
       {
         pathPattern: `^dependencies|peerDependencies|optionalDependencies|bundledDependencies|devDependencies|peerDependenciesMeta$`,
-        order: {type: `asc`, natural: true}
+        order: {
+          type: `asc`,
+          natural: true,
+        },
       },
       {
         pathPattern: `^scripts|wireit$`,
-        order: {type: `asc`, natural: true}
+        order: {
+          type: `asc`,
+          natural: true,
+        },
       },
       {
         pathPattern: `^engines$`,
-        order: {type: `asc`, natural: true}
-      }
+        order: {
+          type: `asc`,
+          natural: true,
+        },
+      },
     ],
-  }
+  },
 }
 
 export default config

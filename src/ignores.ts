@@ -3,13 +3,13 @@ const ignores = [
   `/out/`,
   `/temp/`,
   `/cache/`,
-  `/node_modules/`
+  `/node_modules/`,
 ]
 
 export const extendIgnores = (...additionalIgnores: Array<string>) => {
   return [
     ...ignores,
-    ...additionalIgnores
+    ...additionalIgnores,
   ]
 }
 

@@ -8,12 +8,12 @@ import ignores from 'src/ignores.js'
 const config: Linter.FlatConfig = {
   plugins: {
     // @ts-expect-error TS2322
-    yaml: yamlPlugin
+    yaml: yamlPlugin,
   },
   ignores,
   files: [`*.yml`, `*.yaml`],
   languageOptions: {
-    parser
+    parser,
   },
   name: `eslint-config-jaid/yaml`,
   rules: {
@@ -24,16 +24,16 @@ const config: Linter.FlatConfig = {
       `warn`,
       `never`,
       {
-        nestedHyphen: `never`
-      }
+        nestedHyphen: `never`,
+      },
     ],
     "yaml/flow-sequence-bracket-spacing": `warn`,
     "yaml/indent": [
       `warn`,
       2,
       {
-        indentBlockSequences: false
-      }
+        indentBlockSequences: false,
+      },
     ],
     "yaml/key-spacing": `warn`,
     "yaml/no-multiple-empty-lines": [
@@ -41,8 +41,8 @@ const config: Linter.FlatConfig = {
       {
         max: 1,
         maxBOF: 0,
-        maxEOF: 1
-      }
+        maxEOF: 1,
+      },
     ],
     "yaml/no-tab-indent": `warn`,
     "yaml/no-trailing-zeros": `warn`,
@@ -51,11 +51,11 @@ const config: Linter.FlatConfig = {
       `warn`,
       {
         prefer: `single`,
-        avoidEscape: true
-      }
+        avoidEscape: true,
+      },
     ],
-    "yaml/spaced-comment": `warn`
-  }
+    "yaml/spaced-comment": `warn`,
+  },
 }
 
 export default config
