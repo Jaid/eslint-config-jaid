@@ -278,7 +278,7 @@ const stylisticRules: Linter.Config[`rules`] = {
   ],
   quotes: [
     warn,
-    `backtick`,
+    `single`,
   ],
   "space-before-blocks": warn,
   "space-before-function-paren": [
