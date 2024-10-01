@@ -3,6 +3,7 @@ import type {ESLint, Linter} from 'eslint'
 import stylisticPlugin from '@stylistic/eslint-plugin'
 import typescriptPlugin from '@typescript-eslint/eslint-plugin'
 import parser, {type ParserOptions} from '@typescript-eslint/parser'
+import * as tsResolver from 'eslint-import-resolver-typescript'
 import importQuotesPlugin from 'eslint-plugin-import-quotes'
 import importPlugin from 'eslint-plugin-import-x'
 import nodePlugin from 'eslint-plugin-n'
@@ -746,10 +747,8 @@ const config: Linter.Config = {
   }),
   settings: {
     "import-x/resolver": {
-      node: true,
-      typescript: {
-        alwaysTryTypes: true,
-      },
+      name: `tsResolver`,
+      resolver: tsResolver,
     },
     "import-x/parsers": {
       "@typescript-eslint/parser": globs,
