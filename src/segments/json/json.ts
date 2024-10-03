@@ -10,19 +10,19 @@ const config: Linter.FlatConfig = {
     // @ts-expect-error TS2322
     json: jsonPlugin,
   },
-  ignores: extendIgnores(`package-lock.json`, `package.json`),
-  files: [`**/*.json`],
+  ignores: extendIgnores('package-lock.json', 'package.json'),
+  files: ['**/*.json'],
   languageOptions: {
     parser,
     parserOptions: {
-      jsonSyntax: `JSON`,
+      jsonSyntax: 'JSON',
     },
   },
-  name: `eslint-config-jaid/json`,
+  name: 'eslint-config-jaid/json',
   rules: {
-    "json/auto": `warn`,
-    "json/no-plus-sign": `warn`,
-    "json/valid-json-number": `error`,
+    'json/auto': 'warn',
+    'json/no-plus-sign': 'warn',
+    'json/valid-json-number': 'error',
   },
 }
 

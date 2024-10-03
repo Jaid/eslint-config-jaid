@@ -12,11 +12,11 @@ const config: Linter.FlatConfig = {
     json: jsonPlugin,
   },
   ignores,
-  files: [`**/*.json5`],
+  files: ['**/*.json5'],
   languageOptions: {
     parser,
   },
-  name: `eslint-config-jaid/json5`,
+  name: 'eslint-config-jaid/json5',
   rules: jsoncConfig.rules,
 }
 

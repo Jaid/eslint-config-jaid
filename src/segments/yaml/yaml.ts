@@ -11,50 +11,50 @@ const config: Linter.FlatConfig = {
     yaml: yamlPlugin,
   },
   ignores,
-  files: [`*.yml`, `*.yaml`],
+  files: ['*.yml', '*.yaml'],
   languageOptions: {
     parser,
   },
-  name: `eslint-config-jaid/yaml`,
+  name: 'eslint-config-jaid/yaml',
   rules: {
-    "yaml/block-mapping": `warn`,
-    "yaml/block-mapping-colon-indicator-newline": `warn`,
-    "yaml/block-sequence": `warn`,
-    "yaml/block-sequence-hyphen-indicator-newline": [
-      `warn`,
-      `never`,
+    'yaml/block-mapping': 'warn',
+    'yaml/block-mapping-colon-indicator-newline': 'warn',
+    'yaml/block-sequence': 'warn',
+    'yaml/block-sequence-hyphen-indicator-newline': [
+      'warn',
+      'never',
       {
-        nestedHyphen: `never`,
+        nestedHyphen: 'never',
       },
     ],
-    "yaml/flow-sequence-bracket-spacing": `warn`,
-    "yaml/indent": [
-      `warn`,
+    'yaml/flow-sequence-bracket-spacing': 'warn',
+    'yaml/indent': [
+      'warn',
       2,
       {
         indentBlockSequences: false,
       },
     ],
-    "yaml/key-spacing": `warn`,
-    "yaml/no-multiple-empty-lines": [
-      `warn`,
+    'yaml/key-spacing': 'warn',
+    'yaml/no-multiple-empty-lines': [
+      'warn',
       {
         max: 1,
         maxBOF: 0,
         maxEOF: 1,
       },
     ],
-    "yaml/no-tab-indent": `warn`,
-    "yaml/no-trailing-zeros": `warn`,
-    "yaml/plain-scalar": `warn`,
-    "yaml/quotes": [
-      `warn`,
+    'yaml/no-tab-indent': 'warn',
+    'yaml/no-trailing-zeros': 'warn',
+    'yaml/plain-scalar': 'warn',
+    'yaml/quotes': [
+      'warn',
       {
-        prefer: `single`,
+        prefer: 'single',
         avoidEscape: true,
       },
     ],
-    "yaml/spaced-comment": `warn`,
+    'yaml/spaced-comment': 'warn',
   },
 }
 
