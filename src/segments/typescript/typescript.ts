@@ -519,6 +519,9 @@ const unicornRules: Linter.Config['rules'] = {
   'throw-new-error': warn,
   'prefer-structured-clone': warn,
   'no-length-as-slice-end': warn,
+  'prefer-global-this': warn,
+  'prefer-math-min-max': warn,
+  'consistent-existence-index-check': warn,
 }
 const importRules: Linter.Config['rules'] = {
   first: warn,
