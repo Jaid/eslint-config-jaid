@@ -205,6 +205,7 @@ const typescriptRules: Linter.Config['rules'] = {
   'prefer-as-const': warn,
 }
 const stylisticRules: Linter.Config['rules'] = {
+  'curly-newline': warn,
   'type-named-tuple-spacing': warn,
   'type-generic-spacing': warn,
   'nonblock-statement-body-position': [
