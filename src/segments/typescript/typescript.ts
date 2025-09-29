@@ -216,7 +216,7 @@ const stylisticRules: Linter.Config['rules'] = {
     warn,
     'never',
   ],
-  'block-spacing': [warn, 'never'], // BLOCKEDBY Temporarily changed from 'always' to never due to https://github.com/eslint-stylistic/eslint-stylistic/issues/415
+  'block-spacing': warn,
   'multiline-comment-style': [
     warn,
     'separate-lines',
