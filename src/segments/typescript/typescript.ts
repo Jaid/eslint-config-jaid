@@ -654,12 +654,12 @@ const perfectionistRules: Linter.Config['rules'] = {
       ],
       customGroups: {
         value: {
-          node: 'node:*',
+          node: '^(bun|node):.+',
           'internal-with-shortcut': [
-            'src/**',
-            'lib/**',
-            'component/**',
-            'components/**',
+            '^src/.+',
+            '^lib/.+',
+            '^component/.+',
+            '^components/.+',
           ],
         },
         type: {
@@ -692,6 +692,18 @@ const perfectionistRules: Linter.Config['rules'] = {
       type: 'natural',
     },
   ],
+  'sort-decorators': [
+    warn,
+    {
+      type: 'natural',
+    },
+  ],
+  'sort-heritage-clauses': [
+    warn,
+    {
+      type: 'natural',
+    },
+  ],
   'sort-union-types': [
     warn,
     {
@@ -702,6 +714,56 @@ const perfectionistRules: Linter.Config['rules'] = {
         'keyword',
         'nullish',
       ],
+    },
+  ],
+  'sort-objects': [
+    warn,
+    {
+      groups: ['r', 'g', 'b'],
+      customGroups: {
+        r: '^r$',
+        g: '^g$',
+        b: '^b$',
+      },
+      useConfigurationIf: {
+        allNamesMatchPattern: '^r|g|b$',
+      },
+    },
+    {
+      groups: ['x', 'y', 'z'],
+      customGroups: {
+        x: '^x$',
+        y: '^y$',
+        z: '^z$',
+      },
+      useConfigurationIf: {
+        allNamesMatchPattern: '^x|y|z$',
+      },
+    },
+    {
+      groups: ['width', 'height'],
+      customGroups: {
+        width: '^width$',
+        height: '^height$',
+      },
+      useConfigurationIf: {
+        allNamesMatchPattern: '^width|height$',
+      },
+    },
+    {
+      groups: ['id', 'name', 'title', 'description'],
+      customGroups: {
+        id: '^id$',
+        name: '^name$',
+        title: '^title$',
+        description: '^description$',
+      },
+      useConfigurationIf: {
+        allNamesMatchPattern: '^id|name|title|description$',
+      },
+    },
+    {
+      type: 'unsorted',
     },
   ],
 }
