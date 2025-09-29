@@ -1,6 +1,6 @@
 import type {Dict, TestContext} from 'more-types'
 import type * as Main from 'src/index.js'
-import type {AsyncReturnType, type IterableElement} from 'type-fest'
+import type {AsyncReturnType, IterableElement} from 'type-fest'
 
 import {ESLint} from 'eslint'
 import * as path from 'forward-slash-path'
