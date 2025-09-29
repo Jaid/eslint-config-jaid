@@ -14,6 +14,15 @@ import unicornPlugin from 'eslint-plugin-unicorn'
 
 import ignores from 'src/ignores.js'
 
+const objectKeySeries = (...keys: string[]) => ({
+  type: 'natural',
+  groups: keys,
+  customGroups: Object.fromEntries(keys.map((key) => [key, `^${key}$`])),
+  useConfigurationIf: {
+    allNamesMatchPattern: `^(${keys.join('|')})$`,
+  },
+})
+
 const warn = 'warn'
 const error = 'error'
 const eslintRules: Linter.Config['rules'] = {
@@ -717,50 +726,15 @@ const perfectionistRules: Linter.Config['rules'] = {
   ],
   'sort-objects': [
     warn,
-    {
-      groups: ['r', 'g', 'b'],
-      customGroups: {
-        r: '^r$',
-        g: '^g$',
-        b: '^b$',
-      },
-      useConfigurationIf: {
-        allNamesMatchPattern: '^r|g|b$',
-      },
-    },
-    {
-      groups: ['x', 'y', 'z'],
-      customGroups: {
-        x: '^x$',
-        y: '^y$',
-        z: '^z$',
-      },
-      useConfigurationIf: {
-        allNamesMatchPattern: '^x|y|z$',
-      },
-    },
-    {
-      groups: ['width', 'height'],
-      customGroups: {
-        width: '^width$',
-        height: '^height$',
-      },
-      useConfigurationIf: {
-        allNamesMatchPattern: '^width|height$',
-      },
-    },
-    {
-      groups: ['id', 'name', 'title', 'description'],
-      customGroups: {
-        id: '^id$',
-        name: '^name$',
-        title: '^title$',
-        description: '^description$',
-      },
-      useConfigurationIf: {
-        allNamesMatchPattern: '^id|name|title|description$',
-      },
-    },
+    objectKeySeries("r", "g", "b"),
+    objectKeySeries("x", "y", "z"),
+    objectKeySeries("width", "height"),
+    objectKeySeries("id", "key", "uuid", "type", "name", "title", "value", "description"),
+    objectKeySeries("createdAt", "updatedAt", "deletedAt"),
+    objectKeySeries("before", "after"),
+    objectKeySeries("from", "to"),
+    objectKeySeries("min", "max"),
+    objectKeySeries("key", "value"),
     {
       type: 'unsorted',
     },
