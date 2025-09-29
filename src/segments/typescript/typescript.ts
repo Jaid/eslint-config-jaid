@@ -223,7 +223,7 @@ const stylisticRules: Linter.Config['rules'] = {
   ],
   'brace-style': warn,
   'comma-spacing': warn,
-  'func-call-spacing': warn,
+  'function-call-spacing': warn,
   indent: [
     warn,
     2,
