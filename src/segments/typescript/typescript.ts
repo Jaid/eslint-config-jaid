@@ -405,7 +405,6 @@ const stylisticRules: Linter.Config['rules'] = {
     warn,
     'never',
   ],
-  'function-call-spacing': warn,
   'generator-star-spacing': warn,
   'max-statements-per-line': warn,
   'newline-per-chained-call': warn,
