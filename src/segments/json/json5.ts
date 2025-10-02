@@ -6,7 +6,7 @@ import parser from 'jsonc-eslint-parser'
 import ignores from 'src/ignores.js'
 import jsoncConfig from 'src/segments/json/jsonc.js'
 
-const config: Linter.FlatConfig = {
+const config: Linter.Config = {
   plugins: {
     // @ts-expect-error TS2322
     json: jsonPlugin,

@@ -1,11 +1,11 @@
-import type {ESLint, Linter} from 'eslint'
+import type {Linter} from 'eslint'
 
 import yamlPlugin from 'eslint-plugin-yml'
 import parser from 'yaml-eslint-parser'
 
 import ignores from 'src/ignores.js'
 
-const config: Linter.FlatConfig = {
+const config: Linter.Config = {
   plugins: {
     // @ts-expect-error TS2322
     yaml: yamlPlugin,
