@@ -3,9 +3,9 @@ import type {ESLint, Linter} from 'eslint'
 import stylisticPlugin from '@stylistic/eslint-plugin'
 import typescriptPlugin from '@typescript-eslint/eslint-plugin'
 import parser, {type ParserOptions} from '@typescript-eslint/parser'
-import * as tsResolver from 'eslint-import-resolver-typescript'
+import {createTypeScriptImportResolver} from 'eslint-import-resolver-typescript'
 import importQuotesPlugin from 'eslint-plugin-import-quotes'
-import importPlugin from 'eslint-plugin-import-x'
+import importPlugin, {createNodeResolver} from 'eslint-plugin-import-x'
 import nodePlugin from 'eslint-plugin-n'
 import perfectionistPlugin from 'eslint-plugin-perfectionist'
 import promisePlugin from 'eslint-plugin-promise'
@@ -803,13 +803,10 @@ const config: Linter.Config = {
     stylistic: stylisticRules,
   }),
   settings: {
-    'import-x/resolver': {
-      name: 'tsResolver',
-      resolver: tsResolver,
-    },
-    'import-x/parsers': {
-      '@typescript-eslint/parser': globs,
-    },
+    'import-x/resolver-next': [
+      createTypeScriptImportResolver(),
+      createNodeResolver(),
+    ],
   },
 }
 
