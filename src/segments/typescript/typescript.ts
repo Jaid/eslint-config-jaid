@@ -150,19 +150,23 @@ const typescriptRules: Linter.Config['rules'] = {
     },
     {
       name: 'jest',
-      message: 'Use node:test and node:assert',
+      message: 'Use bun:test',
     },
     {
       name: '@types/jest',
-      message: 'Use node:test and node:assert',
+      message: 'Use bun:test',
     },
     {
       name: 'jest-extended',
-      message: 'Use node:test and node:assert',
+      message: 'Use bun:test',
     },
     {
       name: 'jest-light-runner',
-      message: 'Use node:test and node:assert',
+      message: 'Use bun:test',
+    },
+    {
+      name: 'node:test',
+      message: 'Use bun:test',
     },
     {
       name: 'emp',
