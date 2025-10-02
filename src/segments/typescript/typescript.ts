@@ -56,7 +56,6 @@ const eslintRules: Linter.Config['rules'] = {
 const typescriptRules: Linter.Config['rules'] = {
   'prefer-function-type': warn,
   'no-wrapper-object-types': warn,
-  'prefer-destructuring': warn,
   'no-extra-non-null-assertion': warn,
   'no-duplicate-type-constituents': warn,
   'ban-ts-comment': [
