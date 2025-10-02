@@ -241,10 +241,10 @@ const stylisticRules: Linter.Config['rules'] = {
   ],
   'key-spacing': warn,
   'keyword-spacing': warn,
-  'lines-between-class-members': [
-    warn,
-    'never',
-  ],
+  // 'lines-between-class-members': [
+  //   warn,
+  //   'never',
+  // ],
   'object-curly-spacing': warn,
   'padding-line-between-statements': [
     warn,
