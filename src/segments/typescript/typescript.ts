@@ -666,6 +666,9 @@ const perfectionistRules: Linter.Config['rules'] = {
         'unknown',
       ],
       customGroups: {
+        type: {
+          'internal-with-shortcut-type': 'internal-with-shortcut',
+        },
         value: {
           node: '^(bun|node):.+',
           'internal-with-shortcut': [
@@ -674,9 +677,6 @@ const perfectionistRules: Linter.Config['rules'] = {
             '^component/.+',
             '^components/.+',
           ],
-        },
-        type: {
-          'internal-with-shortcut-type': 'internal-with-shortcut',
         },
       },
     },

@@ -1,5 +1,5 @@
-import jsonConfig from 'src/segments/json/json.js'
 import json5Config from 'src/segments/json/json5.js'
+import jsonConfig from 'src/segments/json/json.js'
 import jsoncConfig from 'src/segments/json/jsonc.js'
 import packageJsonConfig from 'src/segments/json/packageJson.js'
 import typescriptConfig from 'src/segments/typescript/typescript.js'
