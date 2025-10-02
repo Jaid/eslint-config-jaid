@@ -470,6 +470,9 @@ const unicornRules: Linter.Config['rules'] = {
         props: {
           properties: false,
         },
+        pkg: {
+          packageJson: true,
+        },
       },
     },
   ],
