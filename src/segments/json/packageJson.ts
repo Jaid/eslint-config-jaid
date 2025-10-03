@@ -96,6 +96,41 @@ const config: Linter.Config = {
           natural: true,
         },
       },
+      {
+        pathPattern: '^contributes\.commands\\[\\d+\\]$',
+        order: [
+          'command',
+          'title',
+          'shortTitle',
+          {
+            order: {
+              type: 'asc',
+              natural: true,
+            },
+          },
+        ],
+      },
+      {
+        pathPattern: '^contributes\.configuration\.properties',
+        order: [
+          'title',
+          'type',
+          'default',
+          'minimum',
+          'maximum',
+          'enum',
+          'enumItemLabels',
+          'enumDescriptions',
+          'description',
+          'markdownDescription',
+          {
+            order: {
+              type: 'asc',
+              natural: true,
+            },
+          },
+        ],
+      },
     ],
   },
 }
