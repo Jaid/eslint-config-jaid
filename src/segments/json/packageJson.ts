@@ -115,6 +115,7 @@ const config: Linter.Config = {
         order: [
           'title',
           'type',
+          'items',
           'default',
           'minimum',
           'maximum',
