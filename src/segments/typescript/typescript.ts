@@ -738,8 +738,7 @@ const perfectionistRules: Linter.Config['rules'] = {
     objectKeySeries('createdAt', 'updatedAt', 'deletedAt'),
     objectKeySeries('before', 'after'),
     objectKeySeries('from', 'to'),
-    objectKeySeries('min', 'max'),
-    objectKeySeries('key', 'value'),
+    objectKeySeries('min', 'minimum', 'max', 'maximum'),
     objectKeySeries('in', 'input', 'out', 'output'),
     objectKeySeries('top', 'bottom', 'left', 'right'),
     {
