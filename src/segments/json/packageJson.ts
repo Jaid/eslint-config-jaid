@@ -111,7 +111,7 @@ const config: Linter.Config = {
         ],
       },
       {
-        pathPattern: '^contributes\.configuration\.properties',
+        pathPattern: '^contributes\.configuration\.properties\\["[\\w\\.-]+"\\]$',
         order: [
           'title',
           'type',
