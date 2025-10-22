@@ -177,6 +177,10 @@ const typescriptRules: Linter.Config['rules'] = {
       importNames: ['MaybeArray'],
       message: 'Use Arrayable from type-fest',
     },
+    {
+      name: 'ts-xor',
+      message: 'Use Xor from type-fest',
+    },
   ],
   'no-shadow': warn,
   'only-throw-error': warn,
