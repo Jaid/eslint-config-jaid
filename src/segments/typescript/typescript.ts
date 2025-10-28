@@ -555,6 +555,8 @@ const unicornRules: Linter.Config['rules'] = {
   'prefer-classlist-toggle': warn,
   'require-module-attributes': warn,
   'no-array-sort': warn,
+  'no-useless-collection-argument': warn,
+  'prefer-response-static-json': warn,
 }
 const importRules: Linter.Config['rules'] = {
   first: warn,
