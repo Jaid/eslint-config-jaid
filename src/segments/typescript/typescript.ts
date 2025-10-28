@@ -296,6 +296,9 @@ const stylisticRules: Linter.Config['rules'] = {
   quotes: [
     warn,
     'single',
+    {
+      avoidEscape: true,
+    },
   ],
   'space-before-blocks': warn,
   'space-before-function-paren': [
