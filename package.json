@@ -32,13 +32,14 @@
   },
   "scripts": {
     "build": "bun x rollup --config",
-    "build:production": "NODE_ENV=production npm run build",
+    "build:production": "NODE_ENV=production bun run build",
     "buildPage": "fse emptyDir dist/page && bun src/scripts/activeHtml.ts && bun src/scripts/unusedHtml.ts && bun src/scripts/deprecatedHtml.ts && fse copy etc/page dist/page",
     "inspectConfig": "bun x @eslint/config-inspector --config src/index.ts",
-    "printConfig": "eslint --print-config src/index.ts",
+    "inspectStatic": "bun run inspectConfig build",
+    "printConfig": "bun x --print-config src/index.ts",
     "release": "fd --unrestricted --full-path 'dist[\\\\/]package[\\\\/][\\w-]+[\\\\/]production[\\\\/]package.json' --exec bun publish --cwd {//}",
     "test": "bun test ./test",
-    "tsc": "tsc"
+    "tsc": "bun x tsc"
   },
   "dependencies": {
     "@stylistic/eslint-plugin": "^5.5.0",
