@@ -1,24 +1,12 @@
 import type {Linter} from 'eslint'
-
-import * as lodash from 'lodash-es'
+import type {Arrayable} from 'type-fest'
 
 export type Ruleset<RulesGeneric = unknown> = {
-  errors?: Dict<Array<unknown>>
+  error?: Dict<Arrayable<unknown>>
   id: string
-  warns?: Dict<Array<unknown>>
+  warn?: Dict<Arrayable<unknown>>
 }
 
-export const unpackRuleset = <RulesGeneric = unknown>(ruleset: Ruleset<RulesGeneric>): Linter.Config<RulesGeneric>['rules'] => {
-  const resolveRuleId = (internalId: string) => {
-    if (internalId.includes('/')) {
-      const [pluginName, ruleName] = internalId.split('/')
-      const kebabName = lodash.kebabCase(ruleName)
-      return `${pluginName}/${kebabName}`
-    }
-    const kebabName = lodash.kebabCase(internalId)
-    if (ruleset.id === 'eslint') {
-      return kebabName
-    }
-    return `${ruleset.id}/${kebabName}`
-  }
+export const unpackRuleset = <RulesGeneric = unknown>(configSet: Ruleset<RulesGeneric>): Linter.Config<RulesGeneric>['rules'] => {
+
 }

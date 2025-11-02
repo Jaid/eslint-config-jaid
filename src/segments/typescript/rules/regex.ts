@@ -43,7 +43,7 @@ import type {Ruleset} from 'lib/unpackRuleset.ts'
 export const regexRules = (): Ruleset => {
   return {
     id: 'regex',
-    warns: {
+    warn: {
       noUselessEscape: [],
       noUselessStringLiteral: [],
       controlCharacterEscape: [],
@@ -69,14 +69,12 @@ export const regexRules = (): Ruleset => {
       sortCharacterClassElements: [],
       sortFlags: [],
       strict: [],
-      letterCase: [
-        {
-          caseInsensitive: 'lowercase',
-          unicodeEscape: 'uppercase',
-          hexadecimalEscape: 'uppercase',
-          controlEscape: 'lowercase',
-        },
-      ],
+      letterCase: {
+        caseInsensitive: 'lowercase',
+        unicodeEscape: 'uppercase',
+        hexadecimalEscape: 'uppercase',
+        controlEscape: 'lowercase',
+      },
     },
   }
 }
