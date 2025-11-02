@@ -5,6 +5,8 @@ import parser from 'jsonc-eslint-parser'
 
 import {extendIgnores} from 'src/ignores.js'
 
+import {jsonRules} from './rules/json.js'
+
 const config: Linter.Config = {
   plugins: {
     // @ts-expect-error TS2322
@@ -19,11 +21,7 @@ const config: Linter.Config = {
     },
   },
   name: 'eslint-config-jaid/json',
-  rules: {
-    'json/auto': 'warn',
-    'json/no-plus-sign': 'warn',
-    'json/valid-json-number': 'error',
-  },
+  rules: jsonRules(),
 }
 
 export default config

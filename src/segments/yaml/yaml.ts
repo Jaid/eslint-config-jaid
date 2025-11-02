@@ -5,6 +5,8 @@ import parser from 'yaml-eslint-parser'
 
 import ignores from 'src/ignores.js'
 
+import {yamlRules} from './rules/yaml.js'
+
 const config: Linter.Config = {
   plugins: {
     // @ts-expect-error TS2322
@@ -16,46 +18,7 @@ const config: Linter.Config = {
     parser,
   },
   name: 'eslint-config-jaid/yaml',
-  rules: {
-    'yaml/block-mapping': 'warn',
-    'yaml/block-mapping-colon-indicator-newline': 'warn',
-    'yaml/block-sequence': 'warn',
-    'yaml/block-sequence-hyphen-indicator-newline': [
-      'warn',
-      'never',
-      {
-        nestedHyphen: 'never',
-      },
-    ],
-    'yaml/flow-sequence-bracket-spacing': 'warn',
-    'yaml/indent': [
-      'warn',
-      2,
-      {
-        indentBlockSequences: false,
-      },
-    ],
-    'yaml/key-spacing': 'warn',
-    'yaml/no-multiple-empty-lines': [
-      'warn',
-      {
-        max: 1,
-        maxBOF: 0,
-        maxEOF: 1,
-      },
-    ],
-    'yaml/no-tab-indent': 'warn',
-    'yaml/no-trailing-zeros': 'warn',
-    'yaml/plain-scalar': 'warn',
-    'yaml/quotes': [
-      'warn',
-      {
-        prefer: 'single',
-        avoidEscape: true,
-      },
-    ],
-    'yaml/spaced-comment': 'warn',
-  },
+  rules: yamlRules(),
 }
 
 export default config
