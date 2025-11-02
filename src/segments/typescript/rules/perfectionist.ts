@@ -120,5 +120,45 @@ export const perfectionistRules = (): Ruleset => ({
         type: 'unsorted',
       },
     ],
+    sortModules: {
+      customGroups: [
+        {
+          groupName: 'typescript',
+          anyOf: [
+            {
+              selector: 'interface',
+            },
+            {
+              selector: 'type',
+            },
+            {
+              selector: 'enum',
+            },
+          ],
+          type: 'unsorted',
+        },
+        {
+          groupName: 'functionImplementations',
+          anyOf: [
+            {
+              selector: 'function',
+            },
+          ],
+          type: 'unsorted',
+        },
+        {
+          groupName: 'classImplementations',
+          anyOf: [
+            {
+              selector: 'class',
+            },
+          ],
+          type: 'unsorted',
+        },
+      ],
+    },
+    sortExports: {
+      type: 'natural',
+    },
   },
 })

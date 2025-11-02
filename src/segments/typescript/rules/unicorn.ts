@@ -1,5 +1,16 @@
 import type {Ruleset} from 'lib/unpackRuleset.ts'
 
+const strictImportStyle = (style: 'default' | 'named' | 'namespace' | 'unassigned') => {
+  return Object.assign({
+    default: false,
+    namespace: false,
+    named: false,
+    unassigned: false,
+  }, {
+    [style]: true,
+  })
+}
+
 export const unicornRules = (): Ruleset => ({
   id: 'unicorn',
   warn: {
@@ -106,5 +117,28 @@ export const unicornRules = (): Ruleset => ({
     noArraySort: [],
     noUselessCollectionArgument: [],
     preferResponseStaticJson: [],
+    importStyle: {
+      extendDefaultStyles: false,
+      styles: {
+        'fs-extra': strictImportStyle('default'),
+        'lodash-es': strictImportStyle('namespace'),
+      },
+    },
+    customErrorDefinition: [],
+    // no-typeof-undefined
+    noTypeofUndefined: [],
+    // prefer-bigint-literals
+    preferBigintLiterals: [],
+    // prefer-string-raw
+    preferStringRaw: [],
+    // string-content
+    stringContent: {
+      patterns: {
+        ' -> ': '→',
+        '\\.\\.\\.': '…',
+        "'": '’',
+        '°C': '℃',
+      },
+    },
   },
 })

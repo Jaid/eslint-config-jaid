@@ -24,5 +24,38 @@ export const eslintRules = (): Ruleset => ({
     preferConst: [],
     preferExponentiationOperator: [],
     sortVars: [],
+    arrowBodyStyle: [
+      'as-needed',
+      {
+        requireReturnForObjectLiteral: true,
+      },
+    ],
+    curly: 'all',
+    getterReturn: {
+      allowImplicit: true,
+    },
+    logicalAssignmentOperators: 'always',
+    noArrayConstructor: [],
+    noClassAssign: [],
+    noCompareNegZero: [],
+    noDuplicateImports: {
+      allowSeparateTypeImports: true,
+    },
+    noExtraBind: [],
+    noLossOfPrecision: [],
+    noUselessComputedKey: [],
+    noUselessReturn: [],
+    preferNumericLiterals: [],
+    preferObjectHasOwn: [],
+    preferObjectSpread: [],
+    useIsnan: [],
+  },
+  error: {
+    noDupeArgs: [],
+    noDupeClassMembers: [],
+    noDupeElseIf: [],
+    noDuplicateCase: [],
+    noVar: [],
+    validTypeof: [],
   },
 })

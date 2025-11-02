@@ -10,6 +10,10 @@ export const importRules = (): Ruleset => ({
     noDuplicates: [],
     noMutableExports: [],
     noUselessPathSegments: [],
+    extensions: {
+      fix: true, // We currently have to manually enable fixing, this will be default in v5: https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/extensions.md
+    },
+    consistentTypeSpecifierStyle: [],
   },
   error: {
     noSelfImport: [],

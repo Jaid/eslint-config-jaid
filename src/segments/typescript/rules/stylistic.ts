@@ -3,7 +3,7 @@ import type {Ruleset} from 'lib/unpackRuleset.ts'
 export const stylisticRules = (): Ruleset => ({
   id: 'stylistic',
   warn: {
-    curlyNewline: [],
+    curlyNewline: [], // TODO: Migrate to list-style: https://eslint.style/rules/list-style
     typeNamedTupleSpacing: [],
     typeGenericSpacing: [],
     nonblockStatementBodyPosition: 'below',
