@@ -1,18 +1,17 @@
-import type {Linter} from 'eslint'
+import type {Ruleset} from 'lib/unpackRuleset.ts'
 
-const warn = 'warn'
-const error = 'error'
-
-export const importRules = (): Linter.Config['rules'] => ({
-  first: warn,
-  'newline-after-import': [
-    warn,
-    {
+export const importRules = (): Ruleset => ({
+  id: 'import',
+  warn: {
+    first: [],
+    newlineAfterImport: {
       considerComments: true,
     },
-  ],
-  'no-duplicates': warn,
-  'no-mutable-exports': warn,
-  'no-self-import': error,
-  'no-useless-path-segments': warn,
+    noDuplicates: [],
+    noMutableExports: [],
+    noUselessPathSegments: [],
+  },
+  error: {
+    noSelfImport: [],
+  },
 })

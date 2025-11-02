@@ -1,10 +1,11 @@
-import type {Linter} from 'eslint'
+import type {Ruleset} from 'lib/unpackRuleset.ts'
 
-const warn = 'warn'
-
-export const nodeRules = (): Linter.Config['rules'] => ({
-  'no-mixed-requires': warn,
-  'no-new-require': warn,
-  'no-path-concat': warn,
-  'no-sync': warn,
+export const nodeRules = (): Ruleset => ({
+  id: 'node',
+  warn: {
+    noMixedRequires: [],
+    noNewRequire: [],
+    noPathConcat: [],
+    noSync: [],
+  },
 })

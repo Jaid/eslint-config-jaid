@@ -1,10 +1,12 @@
-import type {Linter} from 'eslint'
+import type {Ruleset} from 'lib/unpackRuleset.ts'
 
-const warn = 'warn'
-const error = 'error'
-
-export const jsonRules = (): Linter.Config['rules'] => ({
-  'json/auto': warn,
-  'json/no-plus-sign': warn,
-  'json/valid-json-number': error,
+export const jsonRules = (): Ruleset => ({
+  id: 'json',
+  warn: {
+    auto: [],
+    noPlusSign: [],
+  },
+  error: {
+    validJsonNumber: [],
+  },
 })

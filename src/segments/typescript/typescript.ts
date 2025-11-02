@@ -12,6 +12,7 @@ import promisePlugin from 'eslint-plugin-promise'
 import regexPlugin from 'eslint-plugin-regexp'
 import unicornPlugin from 'eslint-plugin-unicorn'
 
+import {unpackConfigSet} from 'lib/unpackRuleset.ts'
 import ignores from 'src/ignores.js'
 
 import {eslintRules} from './rules/eslint.js'
@@ -25,18 +26,6 @@ import {stylisticRules} from './rules/stylistic.js'
 import {typescriptRules} from './rules/typescript.js'
 import {unicornRules} from './rules/unicorn.js'
 
-const compileRules = (rulesMap: Record<string, Linter.Config['rules']>) => {
-  const result: Linter.Config['rules'] = {}
-  for (const [pluginName, rules] of Object.entries(rulesMap)) {
-    if (!rules)
-      continue
-    for (const [ruleName, ruleValue] of Object.entries(rules)) {
-      const key = pluginName === 'eslint' ? ruleName : `${pluginName}/${ruleName}`
-      result[key] = ruleValue
-    }
-  }
-  return result
-}
 const config: Linter.Config = {
   plugins: {
     typescript: typescriptPlugin as unknown as ESLint.Plugin,
@@ -69,7 +58,7 @@ const config: Linter.Config = {
     } as Linter.ParserOptions & ParserOptions,
   },
   name: 'eslint-config-jaid/typescript',
-  rules: compileRules({
+  rules: unpackConfigSet({
     eslint: eslintRules(),
     typescript: typescriptRules(),
     stylistic: stylisticRules(),

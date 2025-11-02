@@ -1,10 +1,8 @@
-import type {Linter} from 'eslint'
+import type {Ruleset} from 'lib/unpackRuleset.ts'
 
-const warn = 'warn'
-
-export const importQuotesRules = (): Linter.Config['rules'] => ({
-  'import-quotes': [
-    warn,
-    'single',
-  ],
+export const importQuotesRules = (): Ruleset => ({
+  id: 'importQuotes',
+  warn: {
+    importQuotes: 'single',
+  },
 })

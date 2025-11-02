@@ -1,6 +1,5 @@
-import type {Linter} from 'eslint'
+import type {Ruleset} from 'lib/unpackRuleset.ts'
 
-const warn = 'warn'
 const objectKeySeries = (...keys: Array<string>) => ({
   type: 'natural',
   groups: keys,
@@ -10,10 +9,10 @@ const objectKeySeries = (...keys: Array<string>) => ({
   },
 })
 
-export const perfectionistRules = (): Linter.Config['rules'] => ({
-  'sort-classes': [
-    warn,
-    {
+export const perfectionistRules = (): Ruleset => ({
+  id: 'perfectionist',
+  warn: {
+    sortClasses: {
       type: 'natural',
       groups: [
         'static-property',
@@ -32,16 +31,10 @@ export const perfectionistRules = (): Linter.Config['rules'] => ({
         'unknown',
       ],
     },
-  ],
-  'sort-enums': [
-    warn,
-    {
+    sortEnums: {
       type: 'natural',
     },
-  ],
-  'sort-imports': [
-    warn,
-    {
+    sortImports: {
       type: 'natural',
       groups: [
         [
@@ -85,46 +78,25 @@ export const perfectionistRules = (): Linter.Config['rules'] => ({
         },
       },
     },
-  ],
-  'sort-interfaces': [
-    warn,
-    {
+    sortInterfaces: {
       type: 'natural',
     },
-  ],
-  'sort-named-exports': [
-    warn,
-    {
+    sortNamedExports: {
       type: 'natural',
     },
-  ],
-  'sort-named-imports': [
-    warn,
-    {
+    sortNamedImports: {
       type: 'natural',
     },
-  ],
-  'sort-object-types': [
-    warn,
-    {
+    sortObjectTypes: {
       type: 'natural',
     },
-  ],
-  'sort-decorators': [
-    warn,
-    {
+    sortDecorators: {
       type: 'natural',
     },
-  ],
-  'sort-heritage-clauses': [
-    warn,
-    {
+    sortHeritageClauses: {
       type: 'natural',
     },
-  ],
-  'sort-union-types': [
-    warn,
-    {
+    sortUnionTypes: {
       type: 'natural',
       groups: [
         'unknown',
@@ -133,21 +105,20 @@ export const perfectionistRules = (): Linter.Config['rules'] => ({
         'nullish',
       ],
     },
-  ],
-  'sort-objects': [
-    warn,
-    objectKeySeries('r', 'g', 'b'),
-    objectKeySeries('x', 'y', 'z'),
-    objectKeySeries('width', 'height'),
-    objectKeySeries('id', 'identifier', 'key', 'uuid', 'type', 'name', 'title', 'value', 'description'),
-    objectKeySeries('createdAt', 'updatedAt', 'deletedAt'),
-    objectKeySeries('before', 'after'),
-    objectKeySeries('from', 'to'),
-    objectKeySeries('min', 'minimum', 'max', 'maximum'),
-    objectKeySeries('in', 'input', 'out', 'output'),
-    objectKeySeries('top', 'bottom', 'left', 'right'),
-    {
-      type: 'unsorted',
-    },
-  ],
+    sortObjects: [
+      objectKeySeries('r', 'g', 'b'),
+      objectKeySeries('x', 'y', 'z'),
+      objectKeySeries('width', 'height'),
+      objectKeySeries('id', 'identifier', 'key', 'uuid', 'type', 'name', 'title', 'value', 'description'),
+      objectKeySeries('createdAt', 'updatedAt', 'deletedAt'),
+      objectKeySeries('before', 'after'),
+      objectKeySeries('from', 'to'),
+      objectKeySeries('min', 'minimum', 'max', 'maximum'),
+      objectKeySeries('in', 'input', 'out', 'output'),
+      objectKeySeries('top', 'bottom', 'left', 'right'),
+      {
+        type: 'unsorted',
+      },
+    ],
+  },
 })

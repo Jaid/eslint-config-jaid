@@ -1,15 +1,16 @@
-import type {Linter} from 'eslint'
+import type {Ruleset} from 'lib/unpackRuleset.ts'
 
-const warn = 'warn'
-
-export const promiseRules = (): Linter.Config['rules'] => ({
-  'catch-or-return': warn,
-  'no-callback-in-promise': warn,
-  'no-multiple-resolved': warn,
-  'no-promise-in-callback': warn,
-  'no-return-in-finally': warn,
-  'no-return-wrap': warn,
-  'param-names': warn,
-  'prefer-await-to-callbacks': warn,
-  'prefer-await-to-then': warn,
+export const promiseRules = (): Ruleset => ({
+  id: 'promise',
+  warn: {
+    catchOrReturn: [],
+    noCallbackInPromise: [],
+    noMultipleResolved: [],
+    noPromiseInCallback: [],
+    noReturnInFinally: [],
+    noReturnWrap: [],
+    paramNames: [],
+    preferAwaitToCallbacks: [],
+    preferAwaitToThen: [],
+  },
 })
