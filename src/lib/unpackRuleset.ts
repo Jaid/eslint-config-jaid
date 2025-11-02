@@ -23,7 +23,9 @@ export const unpackRuleset = (ruleset: Ruleset): Linter.Config['rules'] => {
     return `${ruleset.id}/${kebabName}`
   }
   const result: Linter.Config['rules'] = {}
-  for (const [severity, rules] of [['warn', ruleset.warn], ['error', ruleset.error]] as const) {
+  const severities = ['warn', 'error'] as const
+  for (const severity of severities) {
+    const rules = ruleset[severity]
     if (!rules) {
       continue
     }
