@@ -167,4 +167,14 @@ export const typescriptRules = (): Linter.Config['rules'] => ({
   'no-meaningless-void-operator': warn,
   'no-unnecessary-template-expression': warn,
   'prefer-as-const': warn,
+  'no-deprecated': warn,
+  'no-duplicate-enum-values': warn,
+  'no-array-delete': warn,
+  'no-floating-promises': [
+    warn,
+    {
+      ignoreVoid: false,
+    },
+  ],
+  'no-import-type-side-effects': warn,
 })
