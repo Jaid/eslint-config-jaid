@@ -60,6 +60,7 @@
     "eslint-plugin-you-dont-need-lodash-underscore": "^6.14.0",
     "forward-slash-path": "^0.3.0",
     "jsonc-eslint-parser": "^2.4.1",
+    "lodash-es": "^4.17.21",
     "yaml-eslint-parser": "^1.3.0"
   },
   "devDependencies": {
@@ -78,7 +79,6 @@
     "immer": "^10.2.0",
     "js-yaml": "^4.1.0",
     "list-dir-content-size": "^0.0.5",
-    "lodash-es": "^4.17.21",
     "more-types": "^0.6.0",
     "pretty-bytes": "^7.1.0",
     "publishimo": "^5.0.6",
