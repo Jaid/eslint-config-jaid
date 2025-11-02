@@ -1,3 +1,6 @@
+import * as lodash from 'lodash-es'
+
+import ignores from 'src/ignores.ts'
 import json5Config from 'src/segments/json/json5.js'
 import jsonConfig from 'src/segments/json/json.js'
 import jsoncConfig from 'src/segments/json/jsonc.js'
@@ -25,7 +28,18 @@ export {typescriptConfig}
 export {yamlConfig}
 
 export const makeEslintConfig = () => {
-  return [...allSegments]
+  return [
+    {
+      ignores,
+    },
+    ...Object.entries(allSegments).map(entry => {
+      const [id, segment] = entry
+      if (segment.ignores) {
+        segment.ignores = lodash.difference(segment.ignores, ignores)
+      }
+      return segment
+    }),
+  ]
 }
 
-export default allSegments
+export default makeEslintConfig()
