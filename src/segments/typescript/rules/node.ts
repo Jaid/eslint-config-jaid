@@ -1,11 +1,12 @@
-import type {Ruleset} from 'lib/unpackRuleset.ts'
+import type {Ruleset} from 'lib/unpackRuleset'
 
-export const nodeRules = (): Ruleset => ({
-  id: 'node',
-  warn: {
-    noMixedRequires: [],
-    noNewRequire: [],
-    noPathConcat: [],
-    noSync: [],
-  },
-})
+export const nodeRules = (): Ruleset => {
+  return {
+    id: 'node',
+    warn: {
+      noMixedRequires: [],
+      noNewRequire: [],
+      noPathConcat: [],
+    },
+  }
+}
