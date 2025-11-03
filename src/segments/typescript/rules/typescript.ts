@@ -1,4 +1,4 @@
-import type {Ruleset} from 'lib/unpackRuleset'
+import type {Ruleset} from 'lib/unpackRuleset.ts'
 
 export const typescriptRules = (): Ruleset => {
   return {
