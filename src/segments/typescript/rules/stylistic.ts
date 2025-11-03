@@ -13,7 +13,12 @@ export const stylisticRules = (): Ruleset => ({
     braceStyle: [],
     commaSpacing: [],
     functionCallSpacing: [],
-    indent: 2,
+    indent: [
+      2,
+      {
+        ignoreComments: true,
+      },
+    ],
     keySpacing: [],
     keywordSpacing: [],
     objectCurlySpacing: [],
