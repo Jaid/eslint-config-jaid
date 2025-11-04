@@ -24,12 +24,7 @@ export const eslintRules = (): Ruleset => ({
     preferConst: [],
     preferExponentiationOperator: [],
     sortVars: [],
-    arrowBodyStyle: [
-      'as-needed',
-      {
-        requireReturnForObjectLiteral: true,
-      },
-    ],
+    arrowBodyStyle: 'always',
     curly: 'all',
     getterReturn: {
       allowImplicit: true,
