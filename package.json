@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-jaid",
-  "version": "21.1.1",
+  "version": "21.2.0",
   "type": "module",
   "description": "Personal ESLint preset. Intentionally ugly to write code that looks like I feel.",
   "keywords": [
