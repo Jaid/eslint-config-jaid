@@ -46,7 +46,6 @@ export const typescriptRules = (): Ruleset => {
       dotNotation: [],
       noArrayConstructor: [],
       noDupeClassMembers: [],
-      noRedeclare: [],
       noRestrictedImports: [
         {
           name: 'lodash',
