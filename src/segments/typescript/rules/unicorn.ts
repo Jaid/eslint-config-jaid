@@ -131,13 +131,9 @@ export const unicornRules = (): Ruleset => {
         },
       },
       customErrorDefinition: [],
-    // no-typeof-undefined
       noTypeofUndefined: [],
-    // prefer-bigint-literals
       preferBigintLiterals: [],
-    // prefer-string-raw
       preferStringRaw: [],
-    // string-content
       stringContent: {
         patterns: {
           '→': '→',
