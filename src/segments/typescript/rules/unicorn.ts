@@ -36,6 +36,9 @@ export const unicornRules = (): Ruleset => {
           opt: {
             option: true,
           },
+          opts: {
+            options: true,
+          },
           props: {
             properties: false,
           },
