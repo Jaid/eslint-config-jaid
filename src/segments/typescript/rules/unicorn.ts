@@ -142,7 +142,7 @@ export const unicornRules = (): Ruleset => {
         patterns: {
           '->': '→',
           '\\.\\.\\.': '…',
-          '\'': '’',
+          '\'s ': '’s ',
           '°C': '℃',
         },
       },
