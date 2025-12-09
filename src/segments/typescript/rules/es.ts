@@ -4,7 +4,7 @@ export const esRules = (): Ruleset => {
   return {
     id: 'es',
     warn: {
-
+      noDestructuring: [],
     },
   }
 }
