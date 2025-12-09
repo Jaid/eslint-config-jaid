@@ -5,7 +5,6 @@ import stylisticPlugin from '@stylistic/eslint-plugin'
 import typescriptPlugin from '@typescript-eslint/eslint-plugin'
 import parser from '@typescript-eslint/parser'
 import {createTypeScriptImportResolver} from 'eslint-import-resolver-typescript'
-import esPlugin from 'eslint-plugin-es-x'
 import importQuotesPlugin from 'eslint-plugin-import-quotes'
 import importPlugin, {createNodeResolver} from 'eslint-plugin-import-x'
 import nodePlugin from 'eslint-plugin-n'
@@ -17,7 +16,6 @@ import unicornPlugin from 'eslint-plugin-unicorn'
 import {unpackConfigSet} from 'lib/unpackRuleset.ts'
 import ignores from 'src/ignores.ts'
 
-import {esRules} from './rules/es.ts'
 import {eslintRules} from './rules/eslint.ts'
 import {importRules} from './rules/import.ts'
 import {importQuotesRules} from './rules/importQuotes.ts'
@@ -35,7 +33,6 @@ const config: Linter.Config = {
     stylistic: stylisticPlugin as ESLint.Plugin,
     node: nodePlugin,
     promise: promisePlugin as ESLint.Plugin,
-    es: esPlugin as ESLint.Plugin,
     unicorn: unicornPlugin as ESLint.Plugin,
     // @ts-expect-error ts(2352)
     import: importPlugin as ESLint.Plugin,
@@ -66,7 +63,6 @@ const config: Linter.Config = {
     stylistic: stylisticRules(),
     node: nodeRules(),
     promise: promiseRules(),
-    es: esRules(),
     unicorn: unicornRules(),
     import: importRules(),
     importQuotes: importQuotesRules(),
