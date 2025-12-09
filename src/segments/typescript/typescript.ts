@@ -1,8 +1,9 @@
+import type {ParserOptions} from '@typescript-eslint/parser'
 import type {ESLint, Linter} from 'eslint'
 
 import stylisticPlugin from '@stylistic/eslint-plugin'
 import typescriptPlugin from '@typescript-eslint/eslint-plugin'
-import parser, {type ParserOptions} from '@typescript-eslint/parser'
+import parser from '@typescript-eslint/parser'
 import {createTypeScriptImportResolver} from 'eslint-import-resolver-typescript'
 import importQuotesPlugin from 'eslint-plugin-import-quotes'
 import importPlugin, {createNodeResolver} from 'eslint-plugin-import-x'
@@ -13,18 +14,18 @@ import regexPlugin from 'eslint-plugin-regexp'
 import unicornPlugin from 'eslint-plugin-unicorn'
 
 import {unpackConfigSet} from 'lib/unpackRuleset.ts'
-import ignores from 'src/ignores.js'
+import ignores from 'src/ignores.ts'
 
-import {eslintRules} from './rules/eslint.js'
-import {importRules} from './rules/import.js'
-import {importQuotesRules} from './rules/importQuotes.js'
-import {nodeRules} from './rules/node.js'
-import {perfectionistRules} from './rules/perfectionist.js'
-import {promiseRules} from './rules/promise.js'
-import {regexRules} from './rules/regex.js'
-import {stylisticRules} from './rules/stylistic.js'
-import {typescriptRules} from './rules/typescript.js'
-import {unicornRules} from './rules/unicorn.js'
+import {eslintRules} from './rules/eslint.ts'
+import {importRules} from './rules/import.ts'
+import {importQuotesRules} from './rules/importQuotes.ts'
+import {nodeRules} from './rules/node.ts'
+import {perfectionistRules} from './rules/perfectionist.ts'
+import {promiseRules} from './rules/promise.ts'
+import {regexRules} from './rules/regex.ts'
+import {stylisticRules} from './rules/stylistic.ts'
+import {typescriptRules} from './rules/typescript.ts'
+import {unicornRules} from './rules/unicorn.ts'
 
 const config: Linter.Config = {
   plugins: {
@@ -53,7 +54,7 @@ const config: Linter.Config = {
     parserOptions: {
       projectService: {
         maximumDefaultProjectFileMatchCount_THIS_WILL_SLOW_DOWN_LINTING: Infinity,
-        defaultProject: './tsconfig.json',
+        defaultProject: './tsconfig.tson',
       },
     } as Linter.ParserOptions & ParserOptions,
   },
