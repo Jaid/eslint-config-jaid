@@ -49,8 +49,6 @@ const config: Linter.Config = {
     '**/*.tsx',
     '**/*.mts',
     '**/*.mtsx',
-    '**/*.cts',
-    '**/*.ctsx',
   ],
   languageOptions: {
     parser,
