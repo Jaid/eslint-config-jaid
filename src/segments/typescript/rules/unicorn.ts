@@ -1,4 +1,3 @@
-/* eslint-disable unicorn/string-content */
 import type {Ruleset} from 'lib/unpackRuleset.ts'
 
 const strictImportStyle = (style: 'default' | 'named' | 'namespace' | 'unassigned') => {
@@ -138,14 +137,6 @@ export const unicornRules = (): Ruleset => {
       noTypeofUndefined: [],
       preferBigintLiterals: [],
       preferStringRaw: [],
-      stringContent: {
-        patterns: {
-          '->': '→',
-          '\\.\\.\\.': '…',
-          '\'s ': '’s ',
-          '°C': '℃',
-        },
-      },
     },
   }
 }
