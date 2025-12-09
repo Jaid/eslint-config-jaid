@@ -55,7 +55,7 @@ const config: Linter.Config = {
     parserOptions: {
       projectService: {
         maximumDefaultProjectFileMatchCount_THIS_WILL_SLOW_DOWN_LINTING: Infinity,
-        defaultProject: './tsconfig.tson',
+        defaultProject: './tsconfig.json',
       },
     } as Linter.ParserOptions & ParserOptions,
   },
