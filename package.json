@@ -73,7 +73,7 @@
     "emp": "^2.0.0",
     "eslint-config-jaid": "^22.1.0",
     "filter-obj": "^6.1.0",
-    "fs-extra": "^11.3.2",
+    "fs-extra": "^11.3.3",
     "globby": "^16.0.0",
     "handlebars": "^4.7.8",
     "immer": "^11.0.1",
