@@ -4,7 +4,10 @@ const objectKeySeries = (...keys: Array<string>) => {
   return {
     type: 'natural',
     groups: keys,
-    customGroups: Object.fromEntries(keys.map(key => [key, `^${key}$`])),
+    customGroups: keys.map(key => ({
+      groupName: key,
+      elementNamePattern: `^${key}$`,
+    })),
     useConfigurationIf: {
       allNamesMatchPattern: `^(${keys.join('|')})$`,
     },
