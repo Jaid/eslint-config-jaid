@@ -49,7 +49,7 @@ export const typescriptRules = (): Ruleset => {
       noRestrictedImports: [
         {
           name: 'lodash',
-          message: 'Use lodash-es',
+          message: 'Use es-toolkit',
         },
         {
           name: 'ensure-array',
@@ -123,6 +123,34 @@ export const typescriptRules = (): Ruleset => {
         {
           name: 'delay',
           message: 'Use Bun.sleep() or Bun.sleepSync()',
+        },
+        {
+          name: 'lodash-es',
+          message: 'Use es-toolkit',
+        },
+        {
+          name: 'winston',
+          message: 'Use pino',
+        },
+        {
+          name: 'got',
+          message: 'Use ky',
+        },
+        {
+          name: 'wrap-ansi',
+          message: 'Use Bun.wrapAnsi()',
+        },
+        {
+          name: 'strip-ansi',
+          message: 'Use Bun.stripAnsi()',
+        },
+        {
+          name: 'uuid',
+          message: 'Use nanoid or crypto.randomUUID() or Bun.randomUUIDv7()',
+        },
+        {
+          name: 'string-width',
+          message: 'Use Bun.stringWidth()',
         },
       ],
       noShadow: [],
