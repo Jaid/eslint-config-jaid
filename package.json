@@ -70,7 +70,7 @@
     "debug": "^4.4.3",
     "dts-bundle-generator": "^9.5.1",
     "emp": "^2.0.0",
-    "eslint-config-jaid": "^22.1.0",
+    "eslint-config-jaid": "^23.0.0",
     "filter-obj": "^6.1.0",
     "fs-extra": "^11.3.3",
     "globby": "^16.1.1",
