@@ -5,7 +5,6 @@ import stylisticPlugin from '@stylistic/eslint-plugin'
 import typescriptPlugin from '@typescript-eslint/eslint-plugin'
 import parser from '@typescript-eslint/parser'
 import {createTypeScriptImportResolver} from 'eslint-import-resolver-typescript'
-import importQuotesPlugin from 'eslint-plugin-import-quotes'
 import importPlugin, {createNodeResolver} from 'eslint-plugin-import-x'
 import nodePlugin from 'eslint-plugin-n'
 import perfectionistPlugin from 'eslint-plugin-perfectionist'
@@ -18,7 +17,6 @@ import ignores from 'src/ignores.ts'
 
 import {eslintRules} from './rules/eslint.ts'
 import {importRules} from './rules/import.ts'
-import {importQuotesRules} from './rules/importQuotes.ts'
 import {nodeRules} from './rules/node.ts'
 import {perfectionistRules} from './rules/perfectionist.ts'
 import {promiseRules} from './rules/promise.ts'
@@ -36,7 +34,6 @@ const config: Linter.Config = {
     unicorn: unicornPlugin as ESLint.Plugin,
     // @ts-expect-error ts(2352)
     import: importPlugin as ESLint.Plugin,
-    importQuotes: importQuotesPlugin as ESLint.Plugin,
     regex: regexPlugin as ESLint.Plugin,
     perfectionist: perfectionistPlugin as ESLint.Plugin,
   },
@@ -65,7 +62,6 @@ const config: Linter.Config = {
     promise: promiseRules(),
     unicorn: unicornRules(),
     import: importRules(),
-    importQuotes: importQuotesRules(),
     regex: regexRules(),
     perfectionist: perfectionistRules(),
   }),

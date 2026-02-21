@@ -44,15 +44,14 @@ export const perfectionistRules = (): Ruleset => {
         type: 'natural',
         groups: [
           [
-            'parent-type',
-            'sibling-type',
-            'external-type',
-            'internal-type',
+            'type-parent',
+            'type-sibling',
+            'type-external',
+            'type-internal',
             'internal-with-shortcut-type',
-            'index-type',
+            'type-index',
           ],
           'side-effect',
-          'object',
           [
             'builtin',
             'node',
@@ -69,20 +68,31 @@ export const perfectionistRules = (): Ruleset => {
           'style',
           'unknown',
         ],
-        customGroups: {
-          type: {
-            'internal-with-shortcut-type': 'internal-with-shortcut',
+        customGroups: [
+          {
+            groupName: 'internal-with-shortcut-type',
+            elementNamePattern: [
+              '^src/.+',
+              '^lib/.+',
+              '^component/.+',
+              '^components/.+',
+            ],
+            modifiers: ['type'],
           },
-          value: {
-            node: '^(bun|node):.+',
-            'internal-with-shortcut': [
+          {
+            groupName: 'internal-with-shortcut',
+            elementNamePattern: [
               '^src/.+',
               '^lib/.+',
               '^component/.+',
               '^components/.+',
             ],
           },
-        },
+          {
+            groupName: 'node',
+            elementNamePattern: '^(bun|node):.+',
+          },
+        ],
       },
       sortInterfaces: {
         type: 'natural',

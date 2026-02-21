@@ -48,7 +48,6 @@
     "browserslist-config-jaid-node": "3.0.0",
     "eslint": "^10.0.1",
     "eslint-import-resolver-typescript": "^4.4.4",
-    "eslint-plugin-import-quotes": "^0.0.1",
     "eslint-plugin-import-x": "^4.16.1",
     "eslint-plugin-jsonc": "^3.0.0",
     "eslint-plugin-n": "^17.24.0",
