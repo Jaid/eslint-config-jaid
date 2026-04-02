@@ -4,9 +4,9 @@ import type {Arrayable} from 'type-fest'
 import * as lodash from 'lodash-es'
 
 export type Ruleset<RulesGeneric = unknown> = {
-  error?: Dict<Arrayable<RulesGeneric>>
+  error?: Record<string, Arrayable<RulesGeneric>>
   id: string
-  warn?: Dict<Arrayable<RulesGeneric>>
+  warn?: Record<string, Arrayable<RulesGeneric>>
 }
 
 export const unpackRuleset = (ruleset: Ruleset): Linter.Config['rules'] => {

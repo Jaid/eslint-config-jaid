@@ -1,4 +1,4 @@
-import type {Ruleset} from 'lib/unpackRuleset.ts'
+import type {Ruleset} from '../../../lib/unpackRuleset.ts'
 
 const strictImportStyle = (style: 'default' | 'named' | 'namespace' | 'unassigned') => {
   return {

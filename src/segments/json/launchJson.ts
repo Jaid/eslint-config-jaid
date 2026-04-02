@@ -3,8 +3,8 @@ import type {Linter} from 'eslint'
 import jsonPlugin from 'eslint-plugin-jsonc'
 import * as parser from 'jsonc-eslint-parser'
 
-import ignores from 'src/ignores.js'
-import jsonConfig from 'src/segments/json/json.js'
+import ignores from '../../ignores.ts'
+import jsonConfig from './json.ts'
 
 const config: Linter.Config = {
   plugins: {
@@ -31,7 +31,7 @@ const config: Linter.Config = {
         ],
       },
       {
-        pathPattern: '^configurations\\[\\d+\\]$',
+        pathPattern: String.raw`^configurations\[\d+\]$`,
         order: [
           'name',
           'request',

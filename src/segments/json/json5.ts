@@ -3,8 +3,8 @@ import type {Linter} from 'eslint'
 import jsonPlugin from 'eslint-plugin-jsonc'
 import * as parser from 'jsonc-eslint-parser'
 
-import ignores from 'src/ignores.js'
-import jsoncConfig from 'src/segments/json/jsonc.js'
+import ignores from '../../ignores.ts'
+import jsoncConfig from './jsonc.ts'
 
 const config: Linter.Config = {
   plugins: {

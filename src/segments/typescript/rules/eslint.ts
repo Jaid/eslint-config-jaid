@@ -1,4 +1,4 @@
-import type {Ruleset} from 'lib/unpackRuleset.ts'
+import type {Ruleset} from '../../../lib/unpackRuleset.ts'
 
 export const eslintRules = (): Ruleset => {
   return {

@@ -1,4 +1,4 @@
-import type {Ruleset} from 'lib/unpackRuleset.ts'
+import type {Ruleset} from '../../../lib/unpackRuleset.ts'
 
 const objectKeySeries = (...keys: Array<string>) => {
   return {

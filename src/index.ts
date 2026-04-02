@@ -1,13 +1,13 @@
 import * as lodash from 'lodash-es'
 
-import ignores from 'src/ignores.ts'
-import json5Config from 'src/segments/json/json5.ts'
-import jsonConfig from 'src/segments/json/json.ts'
-import jsoncConfig from 'src/segments/json/jsonc.ts'
-import launchJsonConfig from 'src/segments/json/launchJson.ts'
-import packageJsonConfig from 'src/segments/json/packageJson.ts'
-import typescriptConfig from 'src/segments/typescript/typescript.ts'
-import yamlConfig from 'src/segments/yaml/yaml.ts'
+import ignores from './ignores.ts'
+import json5Config from './segments/json/json5.ts'
+import jsonConfig from './segments/json/json.ts'
+import jsoncConfig from './segments/json/jsonc.ts'
+import launchJsonConfig from './segments/json/launchJson.ts'
+import packageJsonConfig from './segments/json/packageJson.ts'
+import typescriptConfig from './segments/typescript/typescript.ts'
+import yamlConfig from './segments/yaml/yaml.ts'
 
 const allSegments = [
   jsonConfig,

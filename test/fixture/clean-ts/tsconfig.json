@@ -2,6 +2,13 @@
   "compilerOptions": {
     "allowJs": false,
     "composite": true,
-    "strictNullChecks": true
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "noEmit": true,
+    "strictNullChecks": true,
+    "target": "esnext",
+    "types": [
+      "node"
+    ]
   }
 }

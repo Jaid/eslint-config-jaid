@@ -12,9 +12,8 @@ import promisePlugin from 'eslint-plugin-promise'
 import regexPlugin from 'eslint-plugin-regexp'
 import unicornPlugin from 'eslint-plugin-unicorn'
 
-import {unpackConfigSet} from 'lib/unpackRuleset.ts'
-import ignores from 'src/ignores.ts'
-
+import ignores from '../../ignores.ts'
+import {unpackConfigSet} from '../../lib/unpackRuleset.ts'
 import {eslintRules} from './rules/eslint.ts'
 import {importRules} from './rules/import.ts'
 import {nodeRules} from './rules/node.ts'
@@ -30,9 +29,8 @@ const config: Linter.Config = {
     typescript: typescriptPlugin as unknown as ESLint.Plugin,
     stylistic: stylisticPlugin as ESLint.Plugin,
     node: nodePlugin,
-    promise: promisePlugin as ESLint.Plugin,
+    promise: promisePlugin,
     unicorn: unicornPlugin as ESLint.Plugin,
-    // @ts-expect-error ts(2352)
     import: importPlugin as ESLint.Plugin,
     regex: regexPlugin as ESLint.Plugin,
     perfectionist: perfectionistPlugin as ESLint.Plugin,
