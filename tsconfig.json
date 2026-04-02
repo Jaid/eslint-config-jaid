@@ -1,7 +1,6 @@
 {
   "extends": "./node_modules/tsconfig-jaid-bun/base.json",
   "compilerOptions": {
-    "ignoreDeprecations": "6.0",
     "rewriteRelativeImportExtensions": true
   }
 }
