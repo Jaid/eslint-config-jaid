@@ -137,6 +137,9 @@ export const unicornRules = (): Ruleset => {
       noTypeofUndefined: [],
       preferBigintLiterals: [],
       preferStringRaw: [],
+      consistentTemplateLiteralEscape: [],
+      noUselessIteratorToArray: [],
+      switchCaseBreakPosition: [],
     },
   }
 }
