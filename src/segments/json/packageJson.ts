@@ -55,6 +55,7 @@ const config: Linter.Config = {
           'icon',
           'galleryBanner',
           'markdown',
+          'imports',
           'scripts',
           'wireit',
           'dependencies',
