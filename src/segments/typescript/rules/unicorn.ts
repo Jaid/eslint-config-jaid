@@ -22,33 +22,10 @@ export const unicornRules = (): Ruleset => {
       preferObjectFromEntries: [],
       preferQuerySelector: [],
       preventAbbreviations: {
+        extendDefaultReplacements: false,
         replacements: {
-          args: false,
-          dir: {
-            directory: false,
-            direction: false,
-            folder: true,
-          },
           i: {
             index: false,
-          },
-          opt: {
-            option: true,
-          },
-          opts: {
-            options: true,
-          },
-          props: {
-            properties: false,
-          },
-          pkg: {
-            packageJson: true,
-          },
-          dep: {
-            dependency: true,
-          },
-          deps: {
-            dependencies: true,
           },
         },
       },
