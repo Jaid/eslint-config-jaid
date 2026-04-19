@@ -1,3 +1,5 @@
+/// <reference path="../../ambient.d.ts" />
+
 import type {ParserOptions} from '@typescript-eslint/parser'
 import type {ESLint, Linter} from 'eslint'
 
