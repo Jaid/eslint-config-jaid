@@ -31,7 +31,7 @@
     "url": "https://github.com/jaid/eslint-config-jaid"
   },
   "scripts": {
-    "build": "bun x rollup --config",
+    "build": "bun x rolldown --config",
     "build:production": "NODE_ENV=production bun run build",
     "buildPage": "fse emptyDir dist/page && bun src/scripts/activeHtml.ts && bun src/scripts/unusedHtml.ts && bun src/scripts/deprecatedHtml.ts && fse copy etc/page dist/page",
     "inspectConfig": "bun --bun x @eslint/config-inspector --config src/index.ts",
@@ -83,7 +83,7 @@
     "pretty-bytes": "^7.1.0",
     "publishimo": "^5.0.6",
     "read-file-yaml": "^2.0.0",
-    "rollup": "^4.60.2",
+    "rolldown": "^1.0.0-rc.16",
     "rollup-config-factory": "^0.4.2",
     "showdown": "^2.1.0",
     "sort-keys": "^6.0.0",
