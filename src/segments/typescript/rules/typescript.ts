@@ -1,5 +1,12 @@
 import type {Ruleset} from '../../../lib/unpackRuleset.ts'
 
+const makeImportMigration = (from: string, to: string) => {
+  return {
+    name: from,
+    message: `Use ${to}`,
+  }
+}
+
 export const typescriptRules = (): Ruleset => {
   return {
     id: 'typescript',
@@ -47,111 +54,32 @@ export const typescriptRules = (): Ruleset => {
       noArrayConstructor: [],
       noDupeClassMembers: [],
       noRestrictedImports: [
-        {
-          name: 'lodash',
-          message: 'Use es-toolkit',
-        },
-        {
-          name: 'ensure-array',
-          message: 'Use sure-array',
-        },
-        {
-          name: '@absolunet/fsp',
-          message: 'Use fs-extra',
-        },
-        {
-          name: '@absolunet/fss',
-          message: 'Use fs-extra',
-        },
-        {
-          name: 'opn',
-          message: 'Use open',
-        },
-        {
-          name: 'pify',
-          message: 'Use util.promisify',
-        },
-        {
-          name: 'fs/promises',
-          message: 'Use fs-extra (more stable)',
-        },
-        {
-          name: 'node:fs/promises',
-          message: 'Use fs-extra (more stable)',
-        },
-        {
-          name: 'execall',
-          message: 'Use super-regex',
-        },
-        {
-          name: 'js-yaml',
-          message: 'Use yaml',
-        },
-        {
-          name: 'jest',
-          message: 'Use bun:test',
-        },
-        {
-          name: '@types/jest',
-          message: 'Use bun:test',
-        },
-        {
-          name: 'jest-extended',
-          message: 'Use bun:test',
-        },
-        {
-          name: 'jest-light-runner',
-          message: 'Use bun:test',
-        },
-        {
-          name: 'node:test',
-          message: 'Use bun:test',
-        },
-        {
-          name: 'emp',
-          message: 'Use fs-extra (emptyDir)',
-        },
-        {
-          name: 'rollup',
-          importNames: ['MaybeArray'],
-          message: 'Use Arrayable from type-fest',
-        },
-        {
-          name: 'ts-xor',
-          message: 'Use Xor from type-fest',
-        },
-        {
-          name: 'delay',
-          message: 'Use Bun.sleep() or Bun.sleepSync()',
-        },
-        {
-          name: 'lodash-es',
-          message: 'Use es-toolkit',
-        },
-        {
-          name: 'winston',
-          message: 'Use pino',
-        },
-        {
-          name: 'got',
-          message: 'Use ky',
-        },
-        {
-          name: 'wrap-ansi',
-          message: 'Use Bun.wrapAnsi()',
-        },
-        {
-          name: 'strip-ansi',
-          message: 'Use Bun.stripAnsi()',
-        },
-        {
-          name: 'uuid',
-          message: 'Use nanoid or crypto.randomUUID() or Bun.randomUUIDv7()',
-        },
-        {
-          name: 'string-width',
-          message: 'Use Bun.stringWidth()',
-        },
+        makeImportMigration('lodash', 'es-toolkit'),
+        makeImportMigration('ensure-array', 'sure-array'),
+        makeImportMigration('@absolunet/fsp', 'fs-extra'),
+        makeImportMigration('@absolunet/fss', 'fs-extra'),
+        makeImportMigration('opn', 'open'),
+        makeImportMigration('pify', 'util.promisify'),
+        makeImportMigration('fs/promises', 'fs-extra'),
+        makeImportMigration('node:fs/promises', 'fs-extra'),
+        makeImportMigration('execall', 'super-regex'),
+        makeImportMigration('js-yaml', 'yaml'),
+        makeImportMigration('jest', 'bun:test'),
+        makeImportMigration('@types/jest', 'bun:test'),
+        makeImportMigration('jest-extended', 'bun:test'),
+        makeImportMigration('jest-light-runner', 'bun:test'),
+        makeImportMigration('node:test', 'bun:test'),
+        makeImportMigration('emp', 'fs-extra (emptyDir)'),
+        makeImportMigration('rollup', 'Arrayable from type-fest'),
+        makeImportMigration('ts-xor', 'Xor from type-fest'),
+        makeImportMigration('delay', 'Bun.sleep() or Bun.sleepSync()'),
+        makeImportMigration('lodash-es', 'es-toolkit'),
+        makeImportMigration('winston', 'pino'),
+        makeImportMigration('got', 'ky'),
+        makeImportMigration('wrap-ansi', 'Bun.wrapAnsi()'),
+        makeImportMigration('strip-ansi', 'Bun.stripAnsi()'),
+        makeImportMigration('uuid', 'nanoid or crypto.randomUUID() or Bun.randomUUIDv7()'),
+        makeImportMigration('string-width', 'Bun.stringWidth()'),
       ],
       noShadow: [],
       onlyThrowError: [],
