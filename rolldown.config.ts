@@ -1,12 +1,14 @@
 import type {Plugin} from 'rolldown'
 import type {PackageJson} from 'type-fest'
 
+import {fileURLToPath} from 'node:url'
+
 import * as path from 'forward-slash-path'
 import fs from 'fs-extra'
 import {defineConfig} from 'rolldown'
 import {dts} from 'rolldown-plugin-dts'
 
-const rootFolder = import.meta.dir
+const rootFolder = fileURLToPath(new URL('.', import.meta.url))
 const sourceFile = path.join(rootFolder, 'src/index.ts')
 const packageJson = await fs.readJson(path.join(rootFolder, 'package.json')) as PackageJson
 const mode = process.env.NODE_ENV === 'production' ? 'production' : 'development'
