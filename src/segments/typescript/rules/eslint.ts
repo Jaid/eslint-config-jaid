@@ -1,5 +1,12 @@
 import type {Ruleset} from '../../../lib/unpackRuleset.ts'
 
+const makeImportMigration = (from: string, to: string) => {
+  return {
+    name: from,
+    message: `Use ${to}`,
+  }
+}
+
 export const eslintRules = (): Ruleset => {
   return {
     id: 'eslint',
@@ -36,6 +43,37 @@ export const eslintRules = (): Ruleset => {
       noDuplicateImports: {
         allowSeparateTypeImports: true,
       },
+      noRestrictedImports: [
+        makeImportMigration('lodash', 'es-toolkit'),
+        makeImportMigration('ensure-array', 'sure-array'),
+        makeImportMigration('@absolunet/fsp', 'fs-extra'),
+        makeImportMigration('@absolunet/fss', 'fs-extra'),
+        makeImportMigration('opn', 'open'),
+        makeImportMigration('pify', 'util.promisify'),
+        makeImportMigration('fs/promises', 'fs-extra'),
+        makeImportMigration('node:fs/promises', 'fs-extra'),
+        makeImportMigration('execall', 'super-regex'),
+        makeImportMigration('js-yaml', 'yaml'),
+        makeImportMigration('jest', 'bun:test'),
+        makeImportMigration('@types/jest', 'bun:test'),
+        makeImportMigration('jest-extended', 'bun:test'),
+        makeImportMigration('jest-light-runner', 'bun:test'),
+        makeImportMigration('node:test', 'bun:test'),
+        makeImportMigration('emp', 'fs-extra (emptyDir)'),
+        makeImportMigration('rollup', 'Arrayable from type-fest'),
+        makeImportMigration('ts-xor', 'Xor from type-fest'),
+        makeImportMigration('delay', 'Bun.sleep() or Bun.sleepSync()'),
+        makeImportMigration('lodash-es', 'es-toolkit'),
+        makeImportMigration('winston', 'pino'),
+        makeImportMigration('got', 'ky'),
+        makeImportMigration('wrap-ansi', 'Bun.wrapAnsi()'),
+        makeImportMigration('strip-ansi', 'Bun.stripAnsi()'),
+        makeImportMigration('uuid', 'nanoid or crypto.randomUUID() or Bun.randomUUIDv7()'),
+        makeImportMigration('string-width', 'Bun.stringWidth()'),
+        makeImportMigration('babel', '@swc/core'),
+        makeImportMigration('webpack', '@rspack/core or vite'),
+        makeImportMigration('rollup', 'rolldown'),
+      ],
       noExtraBind: [],
       noLossOfPrecision: [],
       noUselessComputedKey: [],
