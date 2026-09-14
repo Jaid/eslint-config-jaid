@@ -16,6 +16,11 @@ const isProduction = mode === 'production'
 const outputFolder = path.join(rootFolder, 'dist', packageJson.name ?? path.basename(rootFolder), mode)
 const outputScript = 'lib.js'
 const outputTypes = 'lib.d.ts'
+const runtimeDependencyNames = [...new Set([
+  ...Object.keys(packageJson.dependencies ?? {}),
+  ...Object.keys(packageJson.optionalDependencies ?? {}),
+  ...Object.keys(packageJson.peerDependencies ?? {}),
+])]
 
 await fs.emptyDir(outputFolder)
 
@@ -40,6 +45,7 @@ const packagePlugin = (): Plugin => {
       if (isProduction) {
         outputPackageJson.types = `./${outputTypes}`
       } else {
+        delete outputPackageJson.types
         outputPackageJson.private = true
       }
       await fs.outputJson(path.join(outputFolder, 'package.json'), outputPackageJson)
@@ -50,7 +56,12 @@ const packagePlugin = (): Plugin => {
 export default defineConfig({
   input: sourceFile,
   platform: 'node',
-  external: /^[^./](?!:[/\\])/u,
+  external: id => runtimeDependencyNames.some(dependencyName => id === dependencyName || id.startsWith(`${dependencyName}/`)),
+  transform: {
+    define: isProduction ? {
+      'process.env.NODE_ENV': "'production'",
+    } : {},
+  },
   output: {
     dir: outputFolder,
     entryFileNames: chunk => chunk.name.endsWith('.d') ? outputTypes : outputScript,
