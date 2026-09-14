@@ -13,6 +13,10 @@ jobs:
       uses: oven-sh/setup-bun@v2.2.0
     - name: install
       run: bun install --frozen-lockfile
+    - name: typecheck
+      run: bun run tsc
+    - name: typecheckFixture
+      run: bun x tsc -p test/fixture/clean-ts/tsconfig.json --pretty false
     - name: test
       run: bun run test
     - name: build
