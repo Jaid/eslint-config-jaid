@@ -1,6 +1,7 @@
 import {expect, test} from 'bun:test'
 
 import jsonConfig from '../src/segments/json/json.ts'
+import reactConfig from '../src/segments/react/react.ts'
 import typescriptConfig from '../src/segments/typescript/typescript.ts'
 import yamlConfig from '../src/segments/yaml/yaml.ts'
 import {lintFixture} from './lib/lintFixture.ts'
@@ -42,6 +43,31 @@ test('TypeScript wrapper object types trigger typescript/no-wrapper-object-types
 test('unsorted imports trigger perfectionist/sort-imports', async () => {
   const result = await lintFixture('violations-ts', typescriptConfig, {pattern: 'src/unsorted-imports.ts'})
   expect(result.ruleIds).toContain('perfectionist/sort-imports')
+}, timeout)
+test('clean React source produces no issues', async () => {
+  const result = await lintFixture('react', reactConfig, {pattern: 'src/clean.tsx'})
+  expect(result.errorCount).toBe(0)
+  expect(result.warningCount).toBe(0)
+}, timeout)
+test('React list items without keys trigger react/jsx-key', async () => {
+  const result = await lintFixture('react', reactConfig, {pattern: 'src/missing-key.tsx'})
+  expect(result.ruleIds).toContain('react/jsx-key')
+}, timeout)
+test('conditional hooks trigger react-hooks/rules-of-hooks', async () => {
+  const result = await lintFixture('react', reactConfig, {pattern: 'src/conditional-hook.tsx'})
+  expect(result.ruleIds).toContain('react-hooks/rules-of-hooks')
+}, timeout)
+test('unknown DOM properties trigger react/no-unknown-property', async () => {
+  const result = await lintFixture('react', reactConfig, {pattern: 'src/unknown-property.tsx'})
+  expect(result.ruleIds).toContain('react/no-unknown-property')
+}, timeout)
+test('double-quoted JSX attributes trigger stylistic/jsx-quotes', async () => {
+  const result = await lintFixture('react', reactConfig, {pattern: 'src/double-quotes.tsx'})
+  expect(result.ruleIds).toContain('stylistic/jsx-quotes')
+}, timeout)
+test('non-self-closing empty components trigger react/self-closing-comp', async () => {
+  const result = await lintFixture('react', reactConfig, {pattern: 'src/non-self-closing.tsx'})
+  expect(result.ruleIds).toContain('react/self-closing-comp')
 }, timeout)
 test('clean JSON source produces no issues', async () => {
   const result = await lintFixture('clean-json', jsonConfig, {pattern: 'data.json'})
