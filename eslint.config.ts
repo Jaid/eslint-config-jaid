@@ -1,3 +1,6 @@
-import {makeEslintConfig} from 'eslint-config-jaid'
+import type {Linter} from 'eslint'
 
-export default makeEslintConfig()
+import {makeEslintConfig} from './src/index.ts'
+
+const config: Linter.Config[] = makeEslintConfig()
+export default config

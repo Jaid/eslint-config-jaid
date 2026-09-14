@@ -1,7 +1,7 @@
 import type {Linter} from 'eslint'
 import type {Arrayable} from 'type-fest'
 
-import * as lodash from 'lodash-es'
+import {kebabCase} from 'es-toolkit'
 
 export type Ruleset<RulesGeneric = unknown> = {
   error?: Record<string, Arrayable<RulesGeneric>>
@@ -13,10 +13,10 @@ export const unpackRuleset = (ruleset: Ruleset): Linter.Config['rules'] => {
   const resolveRuleId = (internalId: string) => {
     if (internalId.includes('/')) {
       const [pluginName, ruleName] = internalId.split('/')
-      const kebabName = lodash.kebabCase(ruleName)
+      const kebabName = kebabCase(ruleName)
       return `${pluginName}/${kebabName}`
     }
-    const kebabName = lodash.kebabCase(internalId)
+    const kebabName = kebabCase(internalId)
     if (ruleset.id === 'eslint') {
       return kebabName
     }

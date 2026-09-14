@@ -13,5 +13,17 @@ jobs:
       uses: oven-sh/setup-bun@v2.2.0
     - name: install
       run: bun install --frozen-lockfile
+    - name: typecheck
+      run: bun run tsc
+    - name: typecheckFixture
+      run: bun x tsc -p test/fixture/clean-ts/tsconfig.json --pretty false
     - name: test
       run: bun run test
+    - name: build
+      run: bun run build:production
+    - name: smokeBuild
+      run: |
+        test -f dist/package/eslint-config-jaid/production/lib.js
+        test -f dist/package/eslint-config-jaid/production/lib.d.ts
+        test -f dist/package/eslint-config-jaid/production/package.json
+        bun -e "const pkg = await import('./dist/package/eslint-config-jaid/production/lib.js'); if (!Array.isArray(pkg.makeEslintConfig())) process.exit(1)"

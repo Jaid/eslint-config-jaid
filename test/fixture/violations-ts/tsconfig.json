@@ -5,9 +5,11 @@
     "module": "nodenext",
     "moduleResolution": "nodenext",
     "noEmit": true,
+    "skipLibCheck": true,
     "strictNullChecks": true,
     "target": "esnext",
     "types": [
+      "bun",
       "node"
     ]
   }

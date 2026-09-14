@@ -1,4 +1,4 @@
-import * as lodash from 'lodash-es'
+import type {Linter} from 'eslint'
 
 import ignores from './ignores.ts'
 import json5Config from './segments/json/json5.ts'
@@ -18,6 +18,7 @@ const allSegments = [
   yamlConfig,
   typescriptConfig,
 ]
+const ignoredPaths = new Set(ignores)
 
 export {jsonConfig}
 export {json5Config}
@@ -27,19 +28,19 @@ export {launchJsonConfig}
 export {typescriptConfig}
 export {yamlConfig}
 
-export const makeEslintConfig = () => {
+export const makeEslintConfig = (): Linter.Config[] => {
   return [
     {
       ignores,
     },
-    ...Object.entries(allSegments).map(entry => {
-      const [id, segment] = entry
+    ...allSegments.map(segment => {
       if (segment.ignores) {
-        segment.ignores = lodash.difference(segment.ignores, ignores)
+        segment.ignores = segment.ignores.filter(ignore => !ignoredPaths.has(ignore))
       }
       return segment
     }),
   ]
 }
 
-export default makeEslintConfig()
+const config: Linter.Config[] = makeEslintConfig()
+export default config
