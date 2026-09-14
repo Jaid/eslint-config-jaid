@@ -28,12 +28,10 @@ const packagePlugin = (): Plugin => {
       if (isProduction) {
         entryExport.types = `./${outputTypes}`
       }
-      const outputPackageJson: PackageJson = {
-        ...packageJson,
-        type: 'module',
-        exports: {
-          '.': entryExport,
-        },
+      const outputPackageJson = structuredClone(packageJson)
+      outputPackageJson.type = 'module'
+      outputPackageJson.exports = {
+        '.': entryExport,
       }
       delete outputPackageJson.devDependencies
       delete outputPackageJson.scripts
