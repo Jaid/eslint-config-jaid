@@ -6,6 +6,7 @@ import jsonConfig from './segments/json/json.ts'
 import jsoncConfig from './segments/json/jsonc.ts'
 import launchJsonConfig from './segments/json/launchJson.ts'
 import packageJsonConfig from './segments/json/packageJson.ts'
+import reactConfig from './segments/react/react.ts'
 import typescriptConfig from './segments/typescript/typescript.ts'
 import yamlConfig from './segments/yaml/yaml.ts'
 
@@ -16,6 +17,7 @@ const allSegments = [
   packageJsonConfig,
   launchJsonConfig,
   yamlConfig,
+  reactConfig,
   typescriptConfig,
 ]
 const ignoredPaths = new Set(ignores)
@@ -25,6 +27,7 @@ export {json5Config}
 export {jsoncConfig}
 export {packageJsonConfig}
 export {launchJsonConfig}
+export {reactConfig}
 export {typescriptConfig}
 export {yamlConfig}
 

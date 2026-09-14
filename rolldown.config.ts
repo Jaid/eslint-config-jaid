@@ -1,19 +1,26 @@
 import type {Plugin} from 'rolldown'
 import type {PackageJson} from 'type-fest'
 
+import {fileURLToPath} from 'node:url'
+
 import * as path from 'forward-slash-path'
 import fs from 'fs-extra'
 import {defineConfig} from 'rolldown'
 import {dts} from 'rolldown-plugin-dts'
 
-const rootFolder = import.meta.dir
-const sourceFile = path.join(rootFolder, 'src/index.ts')
+const rootFolder = fileURLToPath(new URL('.', import.meta.url))
+const sourceFile = path.join(rootFolder, 'src/main.ts')
 const packageJson = await fs.readJson(path.join(rootFolder, 'package.json')) as PackageJson
 const mode = process.env.NODE_ENV === 'production' ? 'production' : 'development'
 const isProduction = mode === 'production'
-const outputFolder = path.join(rootFolder, 'dist/package', packageJson.name ?? 'eslint-config-jaid', mode)
+const outputFolder = path.join(rootFolder, 'dist', packageJson.name ?? path.basename(rootFolder), mode)
 const outputScript = 'lib.js'
 const outputTypes = 'lib.d.ts'
+const runtimeDependencyNames = [...new Set([
+  ...Object.keys(packageJson.dependencies ?? {}),
+  ...Object.keys(packageJson.optionalDependencies ?? {}),
+  ...Object.keys(packageJson.peerDependencies ?? {}),
+])]
 
 await fs.emptyDir(outputFolder)
 
@@ -38,9 +45,10 @@ const packagePlugin = (): Plugin => {
       if (isProduction) {
         outputPackageJson.types = `./${outputTypes}`
       } else {
+        delete outputPackageJson.types
         outputPackageJson.private = true
       }
-      await fs.outputJson(path.join(outputFolder, 'package.json'), outputPackageJson, {spaces: 2})
+      await fs.outputJson(path.join(outputFolder, 'package.json'), outputPackageJson)
     },
   }
 }
@@ -48,12 +56,17 @@ const packagePlugin = (): Plugin => {
 export default defineConfig({
   input: sourceFile,
   platform: 'node',
-  external: /^[^./](?!:[/\\])/u,
+  external: id => runtimeDependencyNames.some(dependencyName => id === dependencyName || id.startsWith(`${dependencyName}/`)),
+  transform: {
+    define: isProduction ? {
+      'process.env.NODE_ENV': "'production'",
+    } : {},
+  },
   output: {
     dir: outputFolder,
     entryFileNames: chunk => chunk.name.endsWith('.d') ? outputTypes : outputScript,
     format: 'esm',
-    sourcemap: 'hidden',
+    minify: isProduction,
   },
   plugins: [
     ...(isProduction ? [dts({generator: 'tsc'})] : []),

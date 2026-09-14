@@ -21,6 +21,6 @@ jobs:
     - name: build
       run: bun run build:production
     - name: publish
-      run: bun publish --cwd dist/package/eslint-config-jaid/production
+      run: bun publish --cwd dist/eslint-config-jaid/production
       env:
         NPM_CONFIG_TOKEN: ${{ secrets.npmToken }}

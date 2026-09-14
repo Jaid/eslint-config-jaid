@@ -3,7 +3,7 @@ import type {Dict} from 'more-types'
 import fs from 'fs-extra'
 import {parse} from 'yaml'
 
-import {makeEslintConfig} from '../src/index.ts'
+import {makeEslintConfig} from '../src/main.ts'
 
 type SuppressionConfig = {
   aliases: Array<{from: string, to: string}>
