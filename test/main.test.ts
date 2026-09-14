@@ -7,6 +7,33 @@ import yamlConfig from '../src/segments/yaml/yaml.ts'
 import {lintFixture} from './lib/lintFixture.ts'
 
 const timeout = 60_000
+const modernUnicornRuleIds = [
+  'unicorn/prefer-dispose',
+  'unicorn/no-array-concat-in-loop',
+  'unicorn/no-array-fill-with-reference-type',
+  'unicorn/no-unsafe-promise-all-settled-values',
+  'unicorn/no-loop-iterable-mutation',
+  'unicorn/no-uncalled-method',
+  'unicorn/prefer-regexp-escape',
+  'unicorn/prefer-iterator-helpers',
+  'unicorn/prefer-promise-with-resolvers',
+  'unicorn/prefer-array-from-async',
+  'unicorn/prefer-error-is-error',
+  'unicorn/prefer-abort-signal-timeout',
+  'unicorn/prefer-abort-signal-any',
+  'unicorn/no-multiple-promise-resolver-calls',
+  'unicorn/no-duplicate-logical-operands',
+  'unicorn/no-duplicate-if-branches',
+  'unicorn/prefer-object-iterable-methods',
+  'unicorn/consistent-optional-chaining',
+  'unicorn/prefer-set-methods',
+] as const
+
+test('modern Unicorn rules are enabled', () => {
+  for (const ruleId of modernUnicornRuleIds) {
+    expect(typescriptConfig.rules?.[ruleId]).toEqual(['warn'])
+  }
+})
 test('clean TypeScript source produces no issues', async () => {
   const result = await lintFixture('clean-ts', typescriptConfig)
   const issues = result.results.flatMap(fileResult => fileResult.messages.map(message => ({
