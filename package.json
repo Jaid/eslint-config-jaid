@@ -31,13 +31,13 @@
     "url": "git+https://github.com/Jaid/eslint-config-jaid.git"
   },
   "scripts": {
-    "build": "build_lib --input-file-name index.ts --output-folder dist/package",
+    "build": "build_lib",
     "build:development": "NODE_ENV=development bun x rolldown --config",
     "build:production": "NODE_ENV=production bun x rolldown --config",
     "buildPage": "fse emptyDir dist/page && bun src/scripts/activeHtml.ts && bun src/scripts/unusedHtml.ts && bun src/scripts/deprecatedHtml.ts && fse copy etc/page dist/page",
-    "inspectConfig": "bun --bun x @eslint/config-inspector --config src/index.ts",
+    "inspectConfig": "bun --bun x @eslint/config-inspector --config src/main.ts",
     "inspectStatic": "bun run inspectConfig build",
-    "printConfig": "bun x eslint --print-config src/index.ts",
+    "printConfig": "bun x eslint --print-config src/main.ts",
     "test": "bun test --max-concurrency 1 ./test",
     "tsc": "bun x tsc"
   },
