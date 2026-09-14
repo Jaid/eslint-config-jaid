@@ -17,7 +17,6 @@ export const eslintReactRules = (): Ruleset => {
       noDirectMutationState: [],
       noMissingKey: [],
       noNestedComponentDefinitions: [],
-      noStringRefs: [],
     },
   }
 }
