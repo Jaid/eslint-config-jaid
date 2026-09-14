@@ -51,7 +51,7 @@ export default defineConfig({
   external: /^[^./](?!:[/\\])/u,
   output: {
     dir: outputFolder,
-    entryFileNames: outputScript,
+    entryFileNames: chunk => chunk.name.endsWith('.d') ? outputTypes : outputScript,
     format: 'esm',
     sourcemap: 'hidden',
   },
