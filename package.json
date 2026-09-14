@@ -69,6 +69,7 @@
     "@types/bun": "1.4.2",
     "@types/fs-extra": "11.0.4",
     "@types/node": "26.5.1",
+    "@types/react": "19.3.0",
     "chalk": "6.0.0",
     "debug": "4.4.3",
     "filter-obj": "6.1.0",
