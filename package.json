@@ -65,8 +65,6 @@
   "devDependencies": {
     "@atao60/fse-cli": "^0.1.9",
     "@eslint/config-inspector": "^3.4.1",
-    "@types/node": "^26.5.1",
-    "bun-types": "^1.4.2",
     "chalk": "^6.0.0",
     "debug": "^4.4.3",
     "dts-bundle-generator": "^9.5.1",
@@ -84,13 +82,10 @@
     "publishimo": "^5.0.6",
     "read-file-yaml": "^2.0.0",
     "rolldown": "^1.2.8",
-    "rollup-config-factory": "^0.4.2",
     "showdown": "^2.1.0",
     "sort-keys": "^6.0.1",
     "tsconfig-jaid-bun": "^16.0.0",
-    "tsx": "^4.23.13",
     "type-fest": "^5.9.0",
-    "typescript": "^7.0.2",
-    "wireit": "^0.14.13"
+    "typescript": "^7.0.2"
   }
 }
