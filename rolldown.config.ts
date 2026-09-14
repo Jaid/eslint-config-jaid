@@ -3,7 +3,6 @@ import type {PackageJson} from 'type-fest'
 
 import * as path from 'forward-slash-path'
 import fs from 'fs-extra'
-import publishimo from 'publishimo'
 import {defineConfig} from 'rolldown'
 import {dts} from 'rolldown-plugin-dts'
 
@@ -22,16 +21,6 @@ const packagePlugin = (): Plugin => {
   return {
     name: 'eslint-config-jaid-package',
     async writeBundle() {
-      const publishimoResult = await publishimo({
-        fetchGithub: false,
-        pkg: packageJson,
-        includeFields: [
-          'dependencies',
-          'peerDependencies',
-          'peerDependenciesMeta',
-          'optionalDependencies',
-        ],
-      })
       const entryExport: Record<string, string> = {
         import: `./${outputScript}`,
         default: `./${outputScript}`,
@@ -40,11 +29,22 @@ const packagePlugin = (): Plugin => {
         entryExport.types = `./${outputTypes}`
       }
       const outputPackageJson: PackageJson = {
-        ...publishimoResult.generatedPkg,
+        name: packageJson.name,
+        version: packageJson.version,
+        description: packageJson.description,
+        keywords: packageJson.keywords,
+        author: packageJson.author,
+        funding: packageJson.funding,
+        license: packageJson.license,
+        repository: packageJson.repository,
         type: 'module',
         exports: {
           '.': entryExport,
         },
+        dependencies: packageJson.dependencies,
+        peerDependencies: packageJson.peerDependencies,
+        peerDependenciesMeta: packageJson.peerDependenciesMeta,
+        optionalDependencies: packageJson.optionalDependencies,
       }
       if (isProduction) {
         outputPackageJson.types = `./${outputTypes}`
