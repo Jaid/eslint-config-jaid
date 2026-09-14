@@ -9,11 +9,11 @@ import {defineConfig} from 'rolldown'
 import {dts} from 'rolldown-plugin-dts'
 
 const rootFolder = fileURLToPath(new URL('.', import.meta.url))
-const sourceFile = path.join(rootFolder, 'src/index.ts')
+const sourceFile = path.join(rootFolder, 'src/main.ts')
 const packageJson = await fs.readJson(path.join(rootFolder, 'package.json')) as PackageJson
 const mode = process.env.NODE_ENV === 'production' ? 'production' : 'development'
 const isProduction = mode === 'production'
-const outputFolder = path.join(rootFolder, 'dist/package', packageJson.name ?? 'eslint-config-jaid', mode)
+const outputFolder = path.join(rootFolder, 'dist', packageJson.name ?? path.basename(rootFolder), mode)
 const outputScript = 'lib.js'
 const outputTypes = 'lib.d.ts'
 
