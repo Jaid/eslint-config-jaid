@@ -31,8 +31,9 @@
     "url": "git+https://github.com/Jaid/eslint-config-jaid.git"
   },
   "scripts": {
-    "build": "bun x rolldown --config",
-    "build:production": "NODE_ENV=production bun run build",
+    "build": "build_lib --input-file-name index.ts --output-folder dist/package",
+    "build:development": "NODE_ENV=development bun x rolldown --config",
+    "build:production": "NODE_ENV=production bun x rolldown --config",
     "buildPage": "fse emptyDir dist/page && bun src/scripts/activeHtml.ts && bun src/scripts/unusedHtml.ts && bun src/scripts/deprecatedHtml.ts && fse copy etc/page dist/page",
     "inspectConfig": "bun --bun x @eslint/config-inspector --config src/index.ts",
     "inspectStatic": "bun run inspectConfig build",
