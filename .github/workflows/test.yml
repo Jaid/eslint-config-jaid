@@ -23,7 +23,7 @@ jobs:
       run: bun run build:production
     - name: smokeBuild
       run: |
-        test -f dist/package/eslint-config-jaid/production/lib.js
-        test -f dist/package/eslint-config-jaid/production/lib.d.ts
-        test -f dist/package/eslint-config-jaid/production/package.json
-        bun -e "const pkg = await import('./dist/package/eslint-config-jaid/production/lib.js'); if (!Array.isArray(pkg.makeEslintConfig())) process.exit(1)"
+        test -f dist/eslint-config-jaid/production/lib.js
+        test -f dist/eslint-config-jaid/production/lib.d.ts
+        test -f dist/eslint-config-jaid/production/package.json
+        bun -e "const pkg = await import('./dist/eslint-config-jaid/production/lib.js'); if (!Array.isArray(pkg.makeEslintConfig())) process.exit(1)"
