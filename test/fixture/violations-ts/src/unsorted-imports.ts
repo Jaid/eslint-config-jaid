@@ -1,5 +1,5 @@
 import * as path from 'forward-slash-path'
-import * as nodeOs from 'node:fs'
+import fs from 'fs-extra'
 
 const result = nodePath.join('a', 'b')
 export {result}
