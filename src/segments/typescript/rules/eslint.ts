@@ -60,7 +60,6 @@ export const eslintRules = (): Ruleset => {
         makeImportMigration('jest-light-runner', 'bun:test'),
         makeImportMigration('node:test', 'bun:test'),
         makeImportMigration('emp', 'fs-extra (emptyDir)'),
-        makeImportMigration('rollup', 'Arrayable from type-fest'),
         makeImportMigration('ts-xor', 'Xor from type-fest'),
         makeImportMigration('delay', 'Bun.sleep() or Bun.sleepSync()'),
         makeImportMigration('lodash-es', 'es-toolkit'),
