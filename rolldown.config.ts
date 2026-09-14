@@ -21,13 +21,13 @@ const packagePlugin = (): Plugin => {
   return {
     name: 'eslint-config-jaid-package',
     async writeBundle() {
-      const entryExport: Record<string, string> = {
-        import: `./${outputScript}`,
-        default: `./${outputScript}`,
-      }
+      const entryExport: Record<string, string> = {}
       if (isProduction) {
         entryExport.types = `./${outputTypes}`
       }
+      entryExport.import = `./${outputScript}`
+      entryExport.default = `./${outputScript}`
+
       const outputPackageJson = structuredClone(packageJson)
       outputPackageJson.type = 'module'
       outputPackageJson.exports = {
