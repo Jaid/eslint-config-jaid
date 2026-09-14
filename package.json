@@ -28,7 +28,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jaid/eslint-config-jaid"
+    "url": "git+https://github.com/Jaid/eslint-config-jaid.git"
   },
   "scripts": {
     "build": "bun x rolldown --config",
