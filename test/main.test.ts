@@ -49,25 +49,25 @@ test('clean React source produces no issues', async () => {
   expect(result.errorCount).toBe(0)
   expect(result.warningCount).toBe(0)
 }, timeout)
-test('React list items without keys trigger react/jsx-key', async () => {
+test('React list items without keys trigger @eslint-react/no-missing-key', async () => {
   const result = await lintFixture('react', reactConfig, {pattern: 'src/missing-key.tsx'})
-  expect(result.ruleIds).toContain('react/jsx-key')
+  expect(result.ruleIds).toContain('@eslint-react/no-missing-key')
 }, timeout)
 test('conditional hooks trigger react-hooks/rules-of-hooks', async () => {
   const result = await lintFixture('react', reactConfig, {pattern: 'src/conditional-hook.tsx'})
   expect(result.ruleIds).toContain('react-hooks/rules-of-hooks')
 }, timeout)
-test('unknown DOM properties trigger react/no-unknown-property', async () => {
+test('unknown DOM properties trigger @eslint-react/dom-no-unknown-property', async () => {
   const result = await lintFixture('react', reactConfig, {pattern: 'src/unknown-property.tsx'})
-  expect(result.ruleIds).toContain('react/no-unknown-property')
+  expect(result.ruleIds).toContain('@eslint-react/dom-no-unknown-property')
 }, timeout)
 test('double-quoted JSX attributes trigger stylistic/jsx-quotes', async () => {
   const result = await lintFixture('react', reactConfig, {pattern: 'src/double-quotes.tsx'})
   expect(result.ruleIds).toContain('stylistic/jsx-quotes')
 }, timeout)
-test('non-self-closing empty components trigger react/self-closing-comp', async () => {
+test('non-self-closing empty components trigger stylistic/jsx-self-closing-comp', async () => {
   const result = await lintFixture('react', reactConfig, {pattern: 'src/non-self-closing.tsx'})
-  expect(result.ruleIds).toContain('react/self-closing-comp')
+  expect(result.ruleIds).toContain('stylistic/jsx-self-closing-comp')
 }, timeout)
 test('clean JSON source produces no issues', async () => {
   const result = await lintFixture('clean-json', jsonConfig, {pattern: 'data.json'})
