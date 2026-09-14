@@ -107,7 +107,6 @@ export const unicornRules = (): Ruleset => {
         extendDefaultStyles: false,
         styles: {
           'fs-extra': strictImportStyle('default'),
-          'lodash-es': strictImportStyle('namespace'),
           zod: strictImportStyle('default'),
         },
       },
