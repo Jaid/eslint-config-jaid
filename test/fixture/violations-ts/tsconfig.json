@@ -8,7 +8,7 @@
     "strictNullChecks": true,
     "target": "esnext",
     "types": [
-      "node"
+      "bun"
     ]
   }
 }
