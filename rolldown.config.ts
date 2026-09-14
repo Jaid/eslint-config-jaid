@@ -6,7 +6,7 @@ import fs from 'fs-extra'
 import {defineConfig} from 'rolldown'
 import {dts} from 'rolldown-plugin-dts'
 
-const rootFolder = import.meta.dirname
+const rootFolder = import.meta.dir
 const sourceFile = path.join(rootFolder, 'src/index.ts')
 const packageJson = await fs.readJson(path.join(rootFolder, 'package.json')) as PackageJson
 const mode = process.env.NODE_ENV === 'production' ? 'production' : 'development'
