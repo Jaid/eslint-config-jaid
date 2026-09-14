@@ -37,8 +37,7 @@
     "inspectConfig": "bun --bun x @eslint/config-inspector --config src/index.ts",
     "inspectStatic": "bun run inspectConfig build",
     "printConfig": "bun x eslint --print-config src/index.ts",
-    "release": "fd --unrestricted --full-path 'dist[\\\\/]package[\\\\/][\\w-]+[\\\\/]production[\\\\/]package.json' --exec bun publish --cwd {//}",
-    "test": "bun test ./test",
+    "test": "bun test --max-concurrency 1 ./test",
     "tsc": "bun x tsc"
   },
   "dependencies": {
