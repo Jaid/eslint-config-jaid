@@ -69,7 +69,6 @@
     "debug": "4.4.3",
     "dts-bundle-generator": "9.5.1",
     "emp": "2.0.0",
-    "eslint-config-jaid": "26.0.0",
     "filter-obj": "6.1.0",
     "fs-extra": "11.4.0",
     "globby": "16.2.4",
