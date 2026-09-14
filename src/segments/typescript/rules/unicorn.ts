@@ -21,7 +21,7 @@ export const unicornRules = (): Ruleset => {
       preferModernDomApis: [],
       preferObjectFromEntries: [],
       preferQuerySelector: [],
-      preventAbbreviations: {
+      nameReplacements: {
         extendDefaultReplacements: false,
         replacements: {
           i: {
@@ -37,9 +37,9 @@ export const unicornRules = (): Ruleset => {
       escapeCase: [],
       expiringTodoComments: [],
       newForBuiltins: [],
-      noArrayForEach: [],
+      noForEach: [],
       noAwaitExpressionMember: [],
-      noHexEscape: [],
+      preferUnicodeCodePointEscapes: [],
       noNestedTernary: [],
       noNewArray: [],
       noNewBuffer: [],
