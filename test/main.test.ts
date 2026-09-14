@@ -8,6 +8,7 @@ import {lintFixture} from './lib/lintFixture.ts'
 const timeout = 60_000
 test('clean TypeScript source produces no issues', async () => {
   const result = await lintFixture('clean-ts', typescriptConfig)
+  expect(result.ruleIds).toEqual([])
   expect(result.errorCount).toBe(0)
   expect(result.warningCount).toBe(0)
 }, timeout)
