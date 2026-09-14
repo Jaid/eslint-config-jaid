@@ -29,23 +29,14 @@ const packagePlugin = (): Plugin => {
         entryExport.types = `./${outputTypes}`
       }
       const outputPackageJson: PackageJson = {
-        name: packageJson.name,
-        version: packageJson.version,
-        description: packageJson.description,
-        keywords: packageJson.keywords,
-        author: packageJson.author,
-        funding: packageJson.funding,
-        license: packageJson.license,
-        repository: packageJson.repository,
+        ...packageJson,
         type: 'module',
         exports: {
           '.': entryExport,
         },
-        dependencies: packageJson.dependencies,
-        peerDependencies: packageJson.peerDependencies,
-        peerDependenciesMeta: packageJson.peerDependenciesMeta,
-        optionalDependencies: packageJson.optionalDependencies,
       }
+      delete outputPackageJson.devDependencies
+      delete outputPackageJson.scripts
       if (isProduction) {
         outputPackageJson.types = `./${outputTypes}`
       } else {
