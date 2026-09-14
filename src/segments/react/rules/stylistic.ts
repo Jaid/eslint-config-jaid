@@ -9,7 +9,6 @@ export const reactStylisticRules = (): Ruleset => {
       jsxCurlySpacing: [],
       jsxEqualsSpacing: [],
       jsxFirstPropNewLine: 'multiline',
-      jsxIndent: 2,
       jsxIndentProps: 2,
       jsxPascalCase: [],
       jsxQuotes: 'prefer-single',
