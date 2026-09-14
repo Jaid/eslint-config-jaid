@@ -42,7 +42,7 @@ const packagePlugin = (): Plugin => {
       } else {
         outputPackageJson.private = true
       }
-      await fs.outputJson(path.join(outputFolder, 'package.json'), outputPackageJson, {spaces: 2})
+      await fs.outputJson(path.join(outputFolder, 'package.json'), outputPackageJson)
     },
   }
 }
@@ -55,7 +55,7 @@ export default defineConfig({
     dir: outputFolder,
     entryFileNames: chunk => chunk.name.endsWith('.d') ? outputTypes : outputScript,
     format: 'esm',
-    sourcemap: 'hidden',
+    minify: isProduction,
   },
   plugins: [
     ...(isProduction ? [dts({generator: 'tsc'})] : []),
