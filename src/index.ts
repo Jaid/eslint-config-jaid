@@ -1,3 +1,5 @@
+import type {Linter} from 'eslint'
+
 import ignores from './ignores.ts'
 import json5Config from './segments/json/json5.ts'
 import jsonConfig from './segments/json/json.ts'
@@ -26,7 +28,7 @@ export {launchJsonConfig}
 export {typescriptConfig}
 export {yamlConfig}
 
-export const makeEslintConfig = () => {
+export const makeEslintConfig = (): Linter.Config[] => {
   return [
     {
       ignores,
@@ -40,4 +42,5 @@ export const makeEslintConfig = () => {
   ]
 }
 
-export default makeEslintConfig()
+const config: Linter.Config[] = makeEslintConfig()
+export default config
