@@ -29,7 +29,7 @@ const config: Linter.Config = {
   },
   name: 'eslint-config-jaid/react',
   plugins: {
-    '@eslint-react': eslintReactPlugin as ESLint.Plugin,
+    react: eslintReactPlugin as ESLint.Plugin,
     'react-hooks': reactHooksPlugin as unknown as ESLint.Plugin,
     stylistic: stylisticPlugin as ESLint.Plugin,
   },

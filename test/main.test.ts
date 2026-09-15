@@ -28,6 +28,13 @@ const modernUnicornRuleIds = [
   'unicorn/consistent-optional-chaining',
   'unicorn/prefer-set-methods',
 ] as const
+const eslintReactRuleIds = [
+  'react/no-context-provider',
+  'react/no-duplicate-key',
+  'react/no-use-context',
+  'react/use-memo',
+  'react/use-state',
+] as const
 
 test('modern Unicorn rules are enabled', () => {
   for (const ruleId of modernUnicornRuleIds) {
@@ -71,22 +78,27 @@ test('unsorted imports trigger perfectionist/sort-imports', async () => {
   const result = await lintFixture('violations-ts', typescriptConfig, {pattern: 'src/unsorted-imports.ts'})
   expect(result.ruleIds).toContain('perfectionist/sort-imports')
 }, timeout)
+test('selected react rules are enabled', () => {
+  for (const ruleId of eslintReactRuleIds) {
+    expect(reactConfig.rules?.[ruleId]).toEqual(['warn'])
+  }
+})
 test('clean React source produces no issues', async () => {
   const result = await lintFixture('react', reactConfig, {pattern: 'src/clean.tsx'})
   expect(result.errorCount).toBe(0)
   expect(result.warningCount).toBe(0)
 }, timeout)
-test('React list items without keys trigger @eslint-react/no-missing-key', async () => {
+test('React list items without keys trigger react/no-missing-key', async () => {
   const result = await lintFixture('react', reactConfig, {pattern: 'src/missing-key.tsx'})
-  expect(result.ruleIds).toContain('@eslint-react/no-missing-key')
+  expect(result.ruleIds).toContain('react/no-missing-key')
 }, timeout)
 test('conditional hooks trigger react-hooks/rules-of-hooks', async () => {
   const result = await lintFixture('react', reactConfig, {pattern: 'src/conditional-hook.tsx'})
   expect(result.ruleIds).toContain('react-hooks/rules-of-hooks')
 }, timeout)
-test('unknown DOM properties trigger @eslint-react/dom-no-unknown-property', async () => {
+test('unknown DOM properties trigger react/dom-no-unknown-property', async () => {
   const result = await lintFixture('react', reactConfig, {pattern: 'src/unknown-property.tsx'})
-  expect(result.ruleIds).toContain('@eslint-react/dom-no-unknown-property')
+  expect(result.ruleIds).toContain('react/dom-no-unknown-property')
 }, timeout)
 test('double-quoted JSX attributes trigger stylistic/jsx-quotes', async () => {
   const result = await lintFixture('react', reactConfig, {pattern: 'src/double-quotes.tsx'})

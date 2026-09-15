@@ -2,7 +2,7 @@ import type {Ruleset} from '../../../lib/unpackRuleset.ts'
 
 export const eslintReactRules = (): Ruleset => {
   return {
-    id: '@eslint-react',
+    id: 'react',
     warn: {
       domNoDangerouslySetInnerhtmlWithChildren: [],
       domNoFindDomNode: [],
@@ -12,11 +12,16 @@ export const eslintReactRules = (): Ruleset => {
       domNoUnknownProperty: [],
       domNoUnsafeTargetBlank: [],
       domNoVoidElementsWithChildren: [],
-      jsxNoCommentTextnodes: [],
       jsxNoChildrenProp: [],
+      jsxNoCommentTextnodes: [],
+      noContextProvider: [],
       noDirectMutationState: [],
+      noDuplicateKey: [],
       noMissingKey: [],
       noNestedComponentDefinitions: [],
+      noUseContext: [],
+      useMemo: [],
+      useState: [],
     },
   }
 }
