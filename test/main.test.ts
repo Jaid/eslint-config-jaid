@@ -35,10 +35,57 @@ const eslintReactRuleIds = [
   'react/use-memo',
   'react/use-state',
 ] as const
+const additionalReactRuleIds = [
+  'stylistic/jsx-shorthand-boolean',
+  'stylistic/jsx-shorthand-fragment',
+  'react/no-forward-ref',
+  'react/dom-no-use-form-state',
+  'react/web-api-no-leaked-event-listener',
+  'react/web-api-no-leaked-fetch',
+  'react/jsx-no-useless-fragment',
+  'react/jsx-no-key-after-spread',
+  'react/no-unstable-default-props',
+  'react-hooks/static-components',
+  'react-hooks/immutability',
+  'react-hooks/purity',
+  'react-hooks/refs',
+  'react-hooks/set-state-in-render',
+  'react-hooks/set-state-in-effect',
+] as const
+const additionalTypescriptRuleIds = [
+  'perfectionist/sort-jsx-props',
+  'import/no-commonjs',
+  'unicorn/prefer-group-by',
+  'unicorn/prefer-promise-try',
+  'unicorn/prefer-get-or-insert-computed',
+  'unicorn/prefer-iterator-to-array',
+  'unicorn/prefer-uint8array-base64',
+  'typescript/no-useless-default-assignment',
+  'typescript/no-unnecessary-type-conversion',
+  'typescript/no-unnecessary-type-parameters',
+  'typescript/await-thenable',
+  'typescript/no-misused-spread',
+  'regex/no-unused-capturing-group',
+  'perfectionist/sort-array-includes',
+  'perfectionist/sort-import-attributes',
+  'perfectionist/sort-export-attributes',
+  'unicorn/prefer-includes-over-repeated-comparisons',
+  'unicorn/no-boolean-sort-comparator',
+] as const
 
 test('modern Unicorn rules are enabled', () => {
   for (const ruleId of modernUnicornRuleIds) {
     expect(typescriptConfig.rules?.[ruleId]).toEqual(['warn'])
+  }
+})
+test('additional TypeScript rules are enabled', () => {
+  for (const ruleId of additionalTypescriptRuleIds) {
+    expect(typescriptConfig.rules?.[ruleId]).toEqual(['warn'])
+  }
+})
+test('additional React rules are enabled', () => {
+  for (const ruleId of additionalReactRuleIds) {
+    expect(reactConfig.rules?.[ruleId]).toEqual(['warn'])
   }
 })
 test('clean TypeScript source produces no issues', async () => {

@@ -5,7 +5,13 @@ export const reactHooksRules = (): Ruleset => {
     id: 'react-hooks',
     warn: {
       exhaustiveDeps: [],
+      immutability: [],
+      purity: [],
+      refs: [],
       rulesOfHooks: [],
+      setStateInEffect: [],
+      setStateInRender: [],
+      staticComponents: [],
     },
   }
 }

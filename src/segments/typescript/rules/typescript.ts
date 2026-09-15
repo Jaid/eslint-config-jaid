@@ -80,6 +80,11 @@ export const typescriptRules = (): Ruleset => {
         ignoreVoid: false,
       },
       noImportTypeSideEffects: [],
+      awaitThenable: [],
+      noMisusedSpread: [],
+      noUnnecessaryTypeConversion: [],
+      noUnnecessaryTypeParameters: [],
+      noUselessDefaultAssignment: [],
     },
   }
 }

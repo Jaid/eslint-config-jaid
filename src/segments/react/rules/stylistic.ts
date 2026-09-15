@@ -13,6 +13,8 @@ export const reactStylisticRules = (): Ruleset => {
       jsxPascalCase: [],
       jsxQuotes: 'prefer-single',
       jsxSelfClosingComp: [],
+      jsxShorthandBoolean: [],
+      jsxShorthandFragment: [],
       jsxTagSpacing: {
         afterOpening: 'never',
         beforeClosing: 'never',

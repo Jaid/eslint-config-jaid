@@ -37,9 +37,13 @@ export const perfectionistRules = (): Ruleset => {
           'unknown',
         ],
       },
+      sortArrayIncludes: [],
       sortEnums: {
         type: 'natural',
       },
+      sortExportAttributes: [],
+      sortImportAttributes: [],
+      sortJsxProps: [],
       sortImports: {
         type: 'natural',
         groups: [

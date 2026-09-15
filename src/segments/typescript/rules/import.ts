@@ -7,6 +7,7 @@ export const importRules = (): Ruleset => ({
     newlineAfterImport: {
       considerComments: true,
     },
+    noCommonjs: [],
     noDuplicates: [],
     noMutableExports: [],
     noUselessPathSegments: [],

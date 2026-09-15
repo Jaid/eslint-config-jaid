@@ -13,6 +13,7 @@ export const regexRules = (): Ruleset => {
       noMissingGFlag: [],
       noTriviallyNestedAssertion: [],
       noTriviallyNestedQuantifier: [],
+      noUnusedCapturingGroup: [],
       noUselessAssertions: [],
       noUselessBackreference: [],
       noUselessCharacterClass: [],

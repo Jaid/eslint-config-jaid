@@ -3,6 +3,13 @@ import type {Arrayable} from 'type-fest'
 
 import {kebabCase} from 'es-toolkit'
 
+const normalizeRuleName = (ruleName: string) => {
+  if (ruleName.includes('-')) {
+    return ruleName
+  }
+  return kebabCase(ruleName)
+}
+
 export type Ruleset<RulesGeneric = unknown> = {
   error?: Record<string, Arrayable<RulesGeneric>>
   id: string
@@ -13,10 +20,10 @@ export const unpackRuleset = (ruleset: Ruleset): Linter.Config['rules'] => {
   const resolveRuleId = (internalId: string) => {
     if (internalId.includes('/')) {
       const [pluginName, ruleName] = internalId.split('/')
-      const kebabName = kebabCase(ruleName)
+      const kebabName = normalizeRuleName(ruleName)
       return `${pluginName}/${kebabName}`
     }
-    const kebabName = kebabCase(internalId)
+    const kebabName = normalizeRuleName(internalId)
     if (ruleset.id === 'eslint') {
       return kebabName
     }

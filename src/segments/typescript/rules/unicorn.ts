@@ -136,6 +136,14 @@ export const unicornRules = (): Ruleset => {
       preferObjectIterableMethods: [],
       consistentOptionalChaining: [],
       preferSetMethods: [],
+      noBooleanSortComparator: [],
+      preferGetOrInsertComputed: [],
+      preferGroupBy: [],
+      preferIncludesOverRepeatedComparisons: [],
+      // preferIteratorConcat: [], // WAITFOR a better TypeScript Go – We need TypeScript 7’s `Iterator.concat()` for this rule to work, but we cannot yet advance from 6 to 7 because of its poor API
+      preferIteratorToArray: [],
+      preferPromiseTry: [],
+      'prefer-uint8array-base64': [],
     },
   }
 }
