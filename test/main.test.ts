@@ -1,5 +1,6 @@
 import {expect, test} from 'bun:test'
 
+import {makeEslintConfig} from '../src/main.ts'
 import jsonConfig from '../src/segments/json/json.ts'
 import reactConfig from '../src/segments/react/react.ts'
 import typescriptConfig from '../src/segments/typescript/typescript.ts'
@@ -72,6 +73,39 @@ const additionalTypescriptRuleIds = [
   'unicorn/prefer-includes-over-repeated-comparisons',
   'unicorn/no-boolean-sort-comparator',
 ] as const
+test('makeEslintConfig excludes a rule by full id only', () => {
+  const config = makeEslintConfig({
+    excludeRules: ['stylistic/quotes'],
+  })
+  const typescript = config.find(segment => segment.name === 'eslint-config-jaid/typescript')
+  const json = config.find(segment => segment.name === 'eslint-config-jaid/json')
+  expect(typescript?.rules?.['stylistic/quotes']).toBeUndefined()
+  expect(json?.rules?.['json/quotes']).toBeDefined()
+})
+test('makeEslintConfig excludes matching rule names across plugins', () => {
+  const config = makeEslintConfig({
+    excludeRules: ['quotes'],
+  })
+  for (const segment of config) {
+    for (const ruleId of Object.keys(segment.rules ?? {})) {
+      expect(ruleId.split('/').at(-1)).not.toBe('quotes')
+    }
+  }
+})
+test('makeEslintConfig excludes complete segments', () => {
+  const config = makeEslintConfig({
+    excludeSegments: ['json', 'react'],
+  })
+  const names = config.map(segment => segment.name)
+  expect(names).not.toContain('eslint-config-jaid/json')
+  expect(names).not.toContain('eslint-config-jaid/jsonc')
+  expect(names).not.toContain('eslint-config-jaid/json5')
+  expect(names).not.toContain('eslint-config-jaid/packageJson')
+  expect(names).not.toContain('eslint-config-jaid/launchJson')
+  expect(names).not.toContain('eslint-config-jaid/react')
+  expect(names).toContain('eslint-config-jaid/yaml')
+  expect(names).toContain('eslint-config-jaid/typescript')
+})
 test('modern Unicorn rules are enabled', () => {
   for (const ruleId of modernUnicornRuleIds) {
     expect(typescriptConfig.rules?.[ruleId]).toEqual(['warn'])

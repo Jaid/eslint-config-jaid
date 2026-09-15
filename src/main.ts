@@ -10,16 +10,39 @@ import reactConfig from './segments/react/react.ts'
 import typescriptConfig from './segments/typescript/typescript.ts'
 import yamlConfig from './segments/yaml/yaml.ts'
 
-const allSegments = [
-  jsonConfig,
-  jsoncConfig,
-  json5Config,
-  packageJsonConfig,
-  launchJsonConfig,
-  yamlConfig,
-  reactConfig,
-  typescriptConfig,
-]
+export type EslintConfigSegment = 'json' | 'react' | 'typescript' | 'yaml'
+export type MakeEslintConfigOptions = {
+  excludeRules?: Array<string>
+  excludeSegments?: Array<EslintConfigSegment>
+}
+
+const segmentGroups = [
+  {
+    id: 'json',
+    configs: [
+      jsonConfig,
+      jsoncConfig,
+      json5Config,
+      packageJsonConfig,
+      launchJsonConfig,
+    ],
+  },
+  {
+    id: 'yaml',
+    configs: [yamlConfig],
+  },
+  {
+    id: 'react',
+    configs: [reactConfig],
+  },
+  {
+    id: 'typescript',
+    configs: [typescriptConfig],
+  },
+] as const satisfies ReadonlyArray<{
+  configs: ReadonlyArray<Linter.Config>
+  id: EslintConfigSegment
+}>
 const ignoredPaths = new Set(ignores)
 
 export {jsonConfig}
@@ -31,17 +54,38 @@ export {reactConfig}
 export {typescriptConfig}
 export {yamlConfig}
 
-export const makeEslintConfig = (): Array<Linter.Config> => {
+const getRuleName = (ruleId: string) => {
+  return ruleId.slice(ruleId.lastIndexOf('/') + 1)
+}
+
+export const makeEslintConfig = (options: MakeEslintConfigOptions = {}): Array<Linter.Config> => {
+  const excludedSegments = new Set(options.excludeSegments)
+  const excludedRuleIds = new Set(options.excludeRules?.filter(ruleId => ruleId.includes('/')))
+  const excludedRuleNames = new Set(options.excludeRules?.filter(ruleId => !ruleId.includes('/')))
+  const segments = segmentGroups.flatMap(group => {
+    if (excludedSegments.has(group.id)) {
+      return []
+    }
+    return group.configs.map(segment => {
+      const result: Linter.Config = {
+        ...segment,
+      }
+      if (segment.ignores) {
+        result.ignores = segment.ignores.filter(ignore => !ignoredPaths.has(ignore))
+      }
+      if (segment.rules) {
+        result.rules = Object.fromEntries(Object.entries(segment.rules).filter(([ruleId]) => {
+          return !excludedRuleIds.has(ruleId) && !excludedRuleNames.has(getRuleName(ruleId))
+        }))
+      }
+      return result
+    })
+  })
   return [
     {
       ignores,
     },
-    ...allSegments.map(segment => {
-      if (segment.ignores) {
-        segment.ignores = segment.ignores.filter(ignore => !ignoredPaths.has(ignore))
-      }
-      return segment
-    }),
+    ...segments,
   ]
 }
 
