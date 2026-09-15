@@ -4,7 +4,7 @@ export const stylisticRules = (): Ruleset => {
   return {
     id: 'stylistic',
     warn: {
-      curlyNewline: [], // TODO: Migrate to list-style: https://eslint.style/rules/list-style
+      curlyNewline: [],
       typeNamedTupleSpacing: [],
       typeGenericSpacing: [],
       nonblockStatementBodyPosition: 'below',
@@ -22,7 +22,31 @@ export const stylisticRules = (): Ruleset => {
       ],
       keySpacing: [],
       keywordSpacing: [],
-      objectCurlySpacing: [],
+      listStyle: {
+        empty: 'never',
+        overrides: {
+          '{}': {
+            singleLine: {
+              spacing: 'never',
+            },
+          },
+          ObjectExpression: {
+            singleLine: {
+              maxItems: 1,
+            },
+          },
+          TSInterfaceBody: {
+            singleLine: {
+              maxItems: 1,
+            },
+          },
+          TSTypeLiteral: {
+            singleLine: {
+              maxItems: 1,
+            },
+          },
+        },
+      },
       paddingLineBetweenStatements: [
         {
           blankLine: 'never',
@@ -89,11 +113,6 @@ export const stylisticRules = (): Ruleset => {
         },
       },
       typeAnnotationSpacing: [],
-      arrayBracketNewline: {
-        multiline: true,
-      },
-      arrayBracketSpacing: [],
-      arrayElementNewline: 'consistent',
       arrowParens: 'as-needed',
       arrowSpacing: [],
       commaDangle: {
@@ -110,7 +129,6 @@ export const stylisticRules = (): Ruleset => {
       computedPropertySpacing: [],
       dotLocation: 'property',
       eolLast: [],
-      functionParenNewline: 'never',
       implicitArrowLinebreak: [],
       linebreakStyle: 'unix',
       newParens: 'never',
@@ -124,16 +142,6 @@ export const stylisticRules = (): Ruleset => {
       noTabs: [],
       noTrailingSpaces: [],
       noWhitespaceBeforeProperty: [],
-      objectCurlyNewline: {
-        ObjectExpression: {
-          consistent: true,
-          minProperties: 2,
-          multiline: true,
-        },
-        ObjectPattern: 'never',
-        ImportDeclaration: 'never',
-      },
-      objectPropertyNewline: [],
       operatorLinebreak: 'before',
       paddedBlocks: 'never',
       quoteProps: 'as-needed',
@@ -145,7 +153,6 @@ export const stylisticRules = (): Ruleset => {
       templateCurlySpacing: [],
       templateTagSpacing: [],
       yieldStarSpacing: [],
-      functionCallArgumentNewline: 'never',
       generatorStarSpacing: [],
       maxStatementsPerLine: [],
       noConfusingArrow: [],
