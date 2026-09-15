@@ -29,13 +29,13 @@ import {unicornRules} from './rules/unicorn.ts'
 const config: Linter.Config = {
   plugins: {
     typescript: typescriptPlugin as unknown as ESLint.Plugin,
-    stylistic: stylisticPlugin as ESLint.Plugin,
+    stylistic: stylisticPlugin,
     node: nodePlugin,
     promise: promisePlugin,
-    unicorn: unicornPlugin as ESLint.Plugin,
-    import: importPlugin as ESLint.Plugin,
-    regex: regexPlugin as ESLint.Plugin,
-    perfectionist: perfectionistPlugin as ESLint.Plugin,
+    unicorn: unicornPlugin,
+    import: importPlugin,
+    regex: regexPlugin,
+    perfectionist: perfectionistPlugin,
   },
   ignores,
   files: [
@@ -51,7 +51,7 @@ const config: Linter.Config = {
         maximumDefaultProjectFileMatchCount_THIS_WILL_SLOW_DOWN_LINTING: Infinity,
         defaultProject: './tsconfig.json',
       },
-    } as Linter.ParserOptions & ParserOptions,
+    },
   },
   name: 'eslint-config-jaid/typescript',
   rules: unpackConfigSet({

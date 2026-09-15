@@ -11,14 +11,14 @@ type Options = {
 
 type LintResult = {
   errorCount: number
-  ruleIds: string[]
+  results: Array<ESLint.LintResult>
+  ruleIds: Array<string>
   warningCount: number
-  results: ESLint.LintResult[]
 }
 
 export const lintFixture = async (
   fixtureName: string,
-  config: Linter.Config | Linter.Config[],
+  config: Array<Linter.Config> | Linter.Config,
   options: Options = {},
 ): Promise<LintResult> => {
   const fixtureFolder = path.join(fixturesFolder, fixtureName)

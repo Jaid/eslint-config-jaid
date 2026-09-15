@@ -72,7 +72,6 @@ const additionalTypescriptRuleIds = [
   'unicorn/prefer-includes-over-repeated-comparisons',
   'unicorn/no-boolean-sort-comparator',
 ] as const
-
 test('modern Unicorn rules are enabled', () => {
   for (const ruleId of modernUnicornRuleIds) {
     expect(typescriptConfig.rules?.[ruleId]).toEqual(['warn'])

@@ -29,9 +29,9 @@ const config: Linter.Config = {
   },
   name: 'eslint-config-jaid/react',
   plugins: {
-    react: eslintReactPlugin as ESLint.Plugin,
+    react: eslintReactPlugin,
     'react-hooks': reactHooksPlugin as unknown as ESLint.Plugin,
-    stylistic: stylisticPlugin as ESLint.Plugin,
+    stylistic: stylisticPlugin,
   },
   rules: unpackConfigSet({
     eslintReact: eslintReactRules(),

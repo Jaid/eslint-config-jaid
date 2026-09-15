@@ -8,7 +8,7 @@ import fs from 'fs-extra'
 import {defineConfig} from 'rolldown'
 import {dts} from 'rolldown-plugin-dts'
 
-const rootFolder = fileURLToPath(new URL('.', import.meta.url))
+const rootFolder = import.meta.dirname
 const sourceFile = path.join(rootFolder, 'src/main.ts')
 const packageJson = await fs.readJson(path.join(rootFolder, 'package.json')) as PackageJson
 const mode = process.env.NODE_ENV === 'production' ? 'production' : 'development'
@@ -21,9 +21,7 @@ const runtimeDependencyNames = [...new Set([
   ...Object.keys(packageJson.optionalDependencies ?? {}),
   ...Object.keys(packageJson.peerDependencies ?? {}),
 ])]
-
 await fs.emptyDir(outputFolder)
-
 const packagePlugin = (): Plugin => {
   return {
     name: 'eslint-config-jaid-package',
@@ -34,7 +32,6 @@ const packagePlugin = (): Plugin => {
       }
       entryExport.import = `./${outputScript}`
       entryExport.default = `./${outputScript}`
-
       const outputPackageJson = structuredClone(packageJson)
       outputPackageJson.type = 'module'
       outputPackageJson.exports = {
@@ -64,12 +61,12 @@ export default defineConfig({
   },
   output: {
     dir: outputFolder,
-    entryFileNames: chunk => chunk.name.endsWith('.d') ? outputTypes : outputScript,
+    entryFileNames: chunk => (chunk.name.endsWith('.d') ? outputTypes : outputScript),
     format: 'esm',
     minify: isProduction,
   },
   plugins: [
-    ...(isProduction ? [dts({generator: 'tsc'})] : []),
+    ...isProduction ? [dts({generator: 'tsc'})] : [],
     packagePlugin(),
   ],
 })

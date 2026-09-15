@@ -31,7 +31,7 @@ export {reactConfig}
 export {typescriptConfig}
 export {yamlConfig}
 
-export const makeEslintConfig = (): Linter.Config[] => {
+export const makeEslintConfig = (): Array<Linter.Config> => {
   return [
     {
       ignores,
@@ -45,5 +45,5 @@ export const makeEslintConfig = (): Linter.Config[] => {
   ]
 }
 
-const config: Linter.Config[] = makeEslintConfig()
+const config: Array<Linter.Config> = makeEslintConfig()
 export default config
