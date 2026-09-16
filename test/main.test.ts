@@ -37,25 +37,37 @@ const eslintReactRuleIds = [
   'react/use-state',
 ] as const
 const zodRuleIds = [
-  'zod/no-optional-and-default-together',
   'zod/array-style',
+  'zod/no-any-schema',
+  'zod/no-coerce-boolean',
+  'zod/no-conflicting-checks',
   'zod/no-empty-custom-schema',
+  'zod/no-native-enum',
   'zod/no-number-schema-with-finite',
   'zod/no-number-schema-with-int',
   'zod/no-number-schema-with-is-finite',
   'zod/no-number-schema-with-is-int',
   'zod/no-number-schema-with-safe',
   'zod/no-number-schema-with-step',
+  'zod/no-optional-and-default-together',
   'zod/no-promise-schema',
   'zod/no-schema-with-is-nullable',
   'zod/no-schema-with-is-optional',
-  'zod/no-string-schema-with-uuid',
+  'zod/no-throw-in-refine',
+  'zod/no-transform-in-record-key',
+  'zod/no-unnecessary-readonly',
   'zod/prefer-enum-over-literal-union',
   'zod/prefer-loose-object',
+  'zod/prefer-map-set-size-over-min-max',
   'zod/prefer-meta-last',
+  'zod/prefer-nullish',
   'zod/prefer-strict-object',
+  'zod/prefer-string-length-over-min-max',
   'zod/prefer-top-level-string-formats',
   'zod/prefer-trim-before-string-length-checks',
+  'zod/prefer-validate',
+  'zod/require-brand-type-parameter',
+  'zod/require-error-message',
 ] as const
 const additionalReactRuleIds = [
   'stylistic/jsx-shorthand-boolean',
@@ -141,6 +153,7 @@ test('Zod rules are enabled', () => {
   for (const ruleId of zodRuleIds) {
     expect(typescriptConfig.rules?.[ruleId]).toEqual(['warn'])
   }
+  expect(typescriptConfig.rules?.['zod/no-string-schema-with-uuid']).toBeUndefined()
 })
 test('additional React rules are enabled', () => {
   for (const ruleId of additionalReactRuleIds) {
