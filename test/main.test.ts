@@ -105,6 +105,29 @@ const additionalTypescriptRuleIds = [
   'perfectionist/sort-export-attributes',
   'unicorn/prefer-includes-over-repeated-comparisons',
   'unicorn/no-boolean-sort-comparator',
+  'unicorn/prefer-uint8array-hex',
+  'unicorn/prefer-iterator-to-array-at-end',
+  'unicorn/no-duplicate-loops',
+  'unicorn/prefer-array-iterable-methods',
+  'unicorn/prefer-direct-iteration',
+  'unicorn/prefer-array-last-methods',
+  'unicorn/prefer-export-from',
+  'unicorn/no-declarations-before-early-exit',
+  'unicorn/prefer-continue',
+  'unicorn/no-unnecessary-array-flat-map',
+  'unicorn/no-unnecessary-splice',
+  'unicorn/prefer-array-from-map',
+  'unicorn/prefer-iterable-in-constructor',
+  'unicorn/no-useless-set-construction',
+  'unicorn/no-unused-iterator-helper',
+  'unicorn/no-unused-builtin-method-return',
+  'unicorn/prefer-hoisting-branch-code',
+  'unicorn/no-useless-coercion',
+  'unicorn/no-useless-boolean-cast',
+  'unicorn/no-useless-logical-operand',
+  'unicorn/no-mismatched-map-key',
+  'unicorn/no-unsafe-string-replacement',
+  'unicorn/no-unreadable-new-expression',
 ] as const
 test('makeEslintConfig excludes a rule by full id only', () => {
   const config = makeEslintConfig({
@@ -148,6 +171,7 @@ test('additional TypeScript rules are enabled', () => {
   for (const ruleId of additionalTypescriptRuleIds) {
     expect(typescriptConfig.rules?.[ruleId]).toEqual(['warn'])
   }
+  expect(typescriptConfig.rules?.['unicorn/consistent-conditional-object-spread']).toEqual(['warn', 'ternary'])
 })
 test('Zod rules are enabled', () => {
   for (const ruleId of zodRuleIds) {
