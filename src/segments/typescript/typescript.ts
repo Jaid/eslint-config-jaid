@@ -13,6 +13,7 @@ import perfectionistPlugin from 'eslint-plugin-perfectionist'
 import promisePlugin from 'eslint-plugin-promise'
 import regexPlugin from 'eslint-plugin-regexp'
 import unicornPlugin from 'eslint-plugin-unicorn'
+import zodPlugin from 'eslint-plugin-zod'
 
 import ignores from '../../ignores.ts'
 import {unpackConfigSet} from '../../lib/unpackRuleset.ts'
@@ -25,6 +26,7 @@ import {regexRules} from './rules/regex.ts'
 import {stylisticRules} from './rules/stylistic.ts'
 import {typescriptRules} from './rules/typescript.ts'
 import {unicornRules} from './rules/unicorn.ts'
+import {zodRules} from './rules/zod.ts'
 
 const config: Linter.Config = {
   plugins: {
@@ -36,6 +38,7 @@ const config: Linter.Config = {
     import: importPlugin,
     regex: regexPlugin,
     perfectionist: perfectionistPlugin,
+    zod: zodPlugin,
   },
   ignores,
   files: [
@@ -64,6 +67,7 @@ const config: Linter.Config = {
     import: importRules(),
     regex: regexRules(),
     perfectionist: perfectionistRules(),
+    zod: zodRules(),
   }),
   settings: {
     'import-x/resolver-next': [

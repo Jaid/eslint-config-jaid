@@ -36,6 +36,27 @@ const eslintReactRuleIds = [
   'react/use-memo',
   'react/use-state',
 ] as const
+const zodRuleIds = [
+  'zod/no-optional-and-default-together',
+  'zod/array-style',
+  'zod/no-empty-custom-schema',
+  'zod/no-number-schema-with-finite',
+  'zod/no-number-schema-with-int',
+  'zod/no-number-schema-with-is-finite',
+  'zod/no-number-schema-with-is-int',
+  'zod/no-number-schema-with-safe',
+  'zod/no-number-schema-with-step',
+  'zod/no-promise-schema',
+  'zod/no-schema-with-is-nullable',
+  'zod/no-schema-with-is-optional',
+  'zod/no-string-schema-with-uuid',
+  'zod/prefer-enum-over-literal-union',
+  'zod/prefer-loose-object',
+  'zod/prefer-meta-last',
+  'zod/prefer-strict-object',
+  'zod/prefer-top-level-string-formats',
+  'zod/prefer-trim-before-string-length-checks',
+] as const
 const additionalReactRuleIds = [
   'stylistic/jsx-shorthand-boolean',
   'stylistic/jsx-shorthand-fragment',
@@ -113,6 +134,11 @@ test('modern Unicorn rules are enabled', () => {
 })
 test('additional TypeScript rules are enabled', () => {
   for (const ruleId of additionalTypescriptRuleIds) {
+    expect(typescriptConfig.rules?.[ruleId]).toEqual(['warn'])
+  }
+})
+test('Zod rules are enabled', () => {
+  for (const ruleId of zodRuleIds) {
     expect(typescriptConfig.rules?.[ruleId]).toEqual(['warn'])
   }
 })
