@@ -6,7 +6,7 @@ export const stylisticRules = (): Ruleset => {
     warn: {
       curlyNewline: [],
       typeNamedTupleSpacing: [],
-      typeGenericSpacing: [],
+      // typeGenericSpacing: [], // BLOCKEDBY currently not working: `const set = new Set<string>\nconsole.dir(set)` gets merged into one line
       nonblockStatementBodyPosition: 'below',
       multilineTernary: 'never',
       blockSpacing: [],
