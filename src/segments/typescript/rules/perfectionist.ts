@@ -14,6 +14,68 @@ const objectKeySeries = (...keys: Array<string>) => {
   }
 }
 
+type JsxPropSortingOptions = {
+  priority?: Array<string>
+  tagMatchesPattern?: string
+}
+
+const makeJsxPropSorting = ({priority = [], tagMatchesPattern}: JsxPropSortingOptions = {}) => {
+  const leading = ['key', 'id', 'className']
+  const excludedFromNormal = [
+    ...leading,
+    ...priority,
+    'ref',
+    'children',
+  ]
+  return {
+    type: 'natural',
+    groups: [
+      ...leading,
+      ...priority,
+      'normal',
+      'ref',
+      'event',
+      'children',
+    ],
+    customGroups: [
+      ...leading.map(name => ({
+        groupName: name,
+        elementNamePattern: `^${name}$`,
+      })),
+      ...priority.map(name => ({
+        groupName: name,
+        elementNamePattern: `^${name}$`,
+      })),
+      {
+        groupName: 'normal',
+        elementNamePattern: `^(?!(?:${excludedFromNormal.join('|')}|on[A-Z].*)$)`,
+      },
+      {
+        groupName: 'ref',
+        elementNamePattern: '^ref$',
+      },
+      {
+        groupName: 'event',
+        elementNamePattern: '^on[A-Z]',
+      },
+      {
+        groupName: 'children',
+        elementNamePattern: '^children$',
+      },
+    ],
+    ...tagMatchesPattern ? {
+      useConfigurationIf: {
+        tagMatchesPattern,
+      },
+    } : {},
+  }
+}
+const jsxPropSorting = makeJsxPropSorting()
+const branchJsxPropSorting = makeJsxPropSorting({
+  priority: ['if', 'some', 'all', 'not', 'none', 'then', 'else'],
+  tagMatchesPattern: '^Branch$',
+})
+
 export const perfectionistRules = (): Ruleset => {
   return {
     id: 'perfectionist',
@@ -43,7 +105,10 @@ export const perfectionistRules = (): Ruleset => {
       },
       sortExportAttributes: [],
       sortImportAttributes: [],
-      sortJsxProps: [],
+      sortJsxProps: [
+        branchJsxPropSorting,
+        jsxPropSorting,
+      ],
       sortImports: {
         type: 'natural',
         groups: [

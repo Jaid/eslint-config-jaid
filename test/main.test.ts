@@ -102,7 +102,6 @@ const additionalReactRuleIds = [
   'react-hooks/set-state-in-effect',
 ] as const
 const additionalTypescriptRuleIds = [
-  'perfectionist/sort-jsx-props',
   'import/no-commonjs',
   'unicorn/prefer-group-by',
   'unicorn/prefer-promise-try',
@@ -203,6 +202,108 @@ test('additional TypeScript rules are enabled', () => {
     expect(typescriptConfig.rules?.[ruleId]).toEqual(['warn'])
   }
   expect(typescriptConfig.rules?.['unicorn/consistent-conditional-object-spread']).toEqual(['warn', 'ternary'])
+  expect(typescriptConfig.rules?.['perfectionist/sort-jsx-props']).toEqual([
+    'warn',
+    {
+      type: 'natural',
+      groups: ['key', 'id', 'className', 'if', 'some', 'all', 'not', 'none', 'then', 'else', 'normal', 'ref', 'event', 'children'],
+      customGroups: [
+        {
+          groupName: 'key',
+          elementNamePattern: '^key$',
+        },
+        {
+          groupName: 'id',
+          elementNamePattern: '^id$',
+        },
+        {
+          groupName: 'className',
+          elementNamePattern: '^className$',
+        },
+        {
+          groupName: 'if',
+          elementNamePattern: '^if$',
+        },
+        {
+          groupName: 'some',
+          elementNamePattern: '^some$',
+        },
+        {
+          groupName: 'all',
+          elementNamePattern: '^all$',
+        },
+        {
+          groupName: 'not',
+          elementNamePattern: '^not$',
+        },
+        {
+          groupName: 'none',
+          elementNamePattern: '^none$',
+        },
+        {
+          groupName: 'then',
+          elementNamePattern: '^then$',
+        },
+        {
+          groupName: 'else',
+          elementNamePattern: '^else$',
+        },
+        {
+          groupName: 'normal',
+          elementNamePattern: '^(?!(?:key|id|className|if|some|all|not|none|then|else|ref|children|on[A-Z].*)$)',
+        },
+        {
+          groupName: 'ref',
+          elementNamePattern: '^ref$',
+        },
+        {
+          groupName: 'event',
+          elementNamePattern: '^on[A-Z]',
+        },
+        {
+          groupName: 'children',
+          elementNamePattern: '^children$',
+        },
+      ],
+      useConfigurationIf: {
+        tagMatchesPattern: '^Branch$',
+      },
+    },
+    {
+      type: 'natural',
+      groups: ['key', 'id', 'className', 'normal', 'ref', 'event', 'children'],
+      customGroups: [
+        {
+          groupName: 'key',
+          elementNamePattern: '^key$',
+        },
+        {
+          groupName: 'id',
+          elementNamePattern: '^id$',
+        },
+        {
+          groupName: 'className',
+          elementNamePattern: '^className$',
+        },
+        {
+          groupName: 'normal',
+          elementNamePattern: '^(?!(?:key|id|className|ref|children|on[A-Z].*)$)',
+        },
+        {
+          groupName: 'ref',
+          elementNamePattern: '^ref$',
+        },
+        {
+          groupName: 'event',
+          elementNamePattern: '^on[A-Z]',
+        },
+        {
+          groupName: 'children',
+          elementNamePattern: '^children$',
+        },
+      ],
+    },
+  ])
 })
 test('Zod rules are enabled', () => {
   for (const ruleId of zodRuleIds) {
