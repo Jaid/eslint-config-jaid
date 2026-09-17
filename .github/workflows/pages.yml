@@ -25,7 +25,7 @@ jobs:
         run: npm run build
       - id: buildPage
         name: buildPage
-        run: npm run buildPage
+        run: npm run build-page
       - name: check
         id: check
         shell: bash

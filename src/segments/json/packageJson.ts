@@ -1,14 +1,18 @@
 import type {Linter} from 'eslint'
 
 import jsonPlugin from 'eslint-plugin-jsonc'
+import packageJsonPlugin from 'eslint-plugin-package-json'
 import * as parser from 'jsonc-eslint-parser'
 
 import ignores from '../../ignores.ts'
+import {unpackRuleset} from '../../lib/unpackRuleset.ts'
 import jsonConfig from './json.ts'
+import {packageJsonRules} from './rules/packageJson.ts'
 
 const config: Linter.Config = {
   plugins: {
     json: jsonPlugin,
+    'package-json': packageJsonPlugin,
   },
   ignores,
   files: ['**/package.json'],
@@ -21,6 +25,7 @@ const config: Linter.Config = {
   name: 'eslint-config-jaid/packageJson',
   rules: {
     ...jsonConfig.rules,
+    ...unpackRuleset(packageJsonRules()),
     'json/sort-keys': [
       'warn',
       {

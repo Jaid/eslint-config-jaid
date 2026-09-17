@@ -1,7 +1,10 @@
 import {expect, test} from 'bun:test'
 
+import packageJsonPlugin from 'eslint-plugin-package-json'
+
 import {makeEslintConfig} from '../src/main.ts'
 import jsonConfig from '../src/segments/json/json.ts'
+import packageJsonConfig from '../src/segments/json/packageJson.ts'
 import reactConfig from '../src/segments/react/react.ts'
 import typescriptConfig from '../src/segments/typescript/typescript.ts'
 import yamlConfig from '../src/segments/yaml/yaml.ts'
@@ -68,6 +71,18 @@ const zodRuleIds = [
   'zod/prefer-validate',
   'zod/require-brand-type-parameter',
   'zod/require-error-message',
+] as const
+const packageJsonRuleIds = [
+  'package-json/bin-name-casing',
+  'package-json/repository-shorthand',
+  'package-json/prefer-rolling-workspace-spec',
+  'package-json/scripts-name-casing',
+  'package-json/specify-peers-locally',
+  'package-json/unique-dependencies',
+  'package-json/require-name',
+  'package-json/require-type',
+  'package-json/require-version',
+  'package-json/require-description',
 ] as const
 const additionalReactRuleIds = [
   'stylistic/jsx-shorthand-boolean',
@@ -161,6 +176,22 @@ test('makeEslintConfig excludes complete segments', () => {
   expect(names).not.toContain('eslint-config-jaid/react')
   expect(names).toContain('eslint-config-jaid/yaml')
   expect(names).toContain('eslint-config-jaid/typescript')
+})
+test('package.json rules are enabled', () => {
+  for (const ruleId of packageJsonRuleIds) {
+    expect(packageJsonConfig.rules?.[ruleId]).toEqual(['warn'])
+  }
+  const validRuleNames = Object.keys(packageJsonPlugin.rules).filter(name => name.startsWith('valid-'))
+  for (const validRuleName of validRuleNames) {
+    expect(packageJsonConfig.rules?.[`package-json/${validRuleName}`]).toEqual(['warn'])
+  }
+  expect(packageJsonConfig.rules?.['package-json/restrict-dependency-ranges']).toEqual([
+    'warn',
+    {
+      forDependencyTypes: ['dependencies', 'devDependencies', 'optionalDependencies'],
+      rangeType: 'pin',
+    },
+  ])
 })
 test('modern Unicorn rules are enabled', () => {
   for (const ruleId of modernUnicornRuleIds) {
