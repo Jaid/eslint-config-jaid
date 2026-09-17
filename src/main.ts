@@ -44,16 +44,6 @@ const segmentGroups = [
   id: EslintConfigSegment
 }>
 const ignoredPaths = new Set(ignores)
-
-export {jsonConfig}
-export {json5Config}
-export {jsoncConfig}
-export {packageJsonConfig}
-export {launchJsonConfig}
-export {reactConfig}
-export {typescriptConfig}
-export {yamlConfig}
-
 const getRuleName = (ruleId: string) => {
   return ruleId.slice(ruleId.lastIndexOf('/') + 1)
 }
@@ -91,3 +81,12 @@ export const makeEslintConfig = (options: MakeEslintConfigOptions = {}): Array<L
 
 const config: Array<Linter.Config> = makeEslintConfig()
 export default config
+
+export {default as json5Config} from './segments/json/json5.ts'
+export {default as jsonConfig} from './segments/json/json.ts'
+export {default as jsoncConfig} from './segments/json/jsonc.ts'
+export {default as launchJsonConfig} from './segments/json/launchJson.ts'
+export {default as packageJsonConfig} from './segments/json/packageJson.ts'
+export {default as reactConfig} from './segments/react/react.ts'
+export {default as typescriptConfig} from './segments/typescript/typescript.ts'
+export {default as yamlConfig} from './segments/yaml/yaml.ts'
