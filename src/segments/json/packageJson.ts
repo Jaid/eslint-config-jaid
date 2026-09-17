@@ -63,6 +63,8 @@ const config: Linter.Config = {
           'imports',
           'scripts',
           'wireit',
+          'overrides',
+          'patchedDependencies',
           'dependencies',
           'peerDependencies',
           'peerDependenciesMeta',
@@ -81,7 +83,7 @@ const config: Linter.Config = {
         ],
       },
       {
-        pathPattern: '^dependencies|peerDependencies|optionalDependencies|bundledDependencies|devDependencies|peerDependenciesMeta$',
+        pathPattern: '^overrides|patchedDependencies|dependencies|peerDependencies|optionalDependencies|bundledDependencies|devDependencies|peerDependenciesMeta$',
         order: {
           type: 'asc',
           natural: true,
