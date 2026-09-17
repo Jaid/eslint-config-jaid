@@ -69,10 +69,6 @@
   "devDependencies": {
     "@atao60/fse-cli": "0.1.9",
     "@eslint/config-inspector": "3.5.0",
-    "@types/bun": "1.4.2",
-    "@types/fs-extra": "11.0.4",
-    "@types/node": "26.6.1",
-    "@types/react": "19.3.0",
     "chalk": "6.0.0",
     "debug": "4.4.3",
     "filter-obj": "6.1.0",
@@ -90,6 +86,10 @@
     "tsconfig-jaid-bun": "16.0.0",
     "type-fest": "5.10.0",
     "typescript": "npm:typescript-classic@6.0.4",
-    "yaml": "2.9.1"
+    "yaml": "2.9.1",
+    "@types/bun": "1.4.2",
+    "@types/fs-extra": "11.0.4",
+    "@types/node": "26.6.1",
+    "@types/react": "19.3.0"
   }
 }
