@@ -80,14 +80,55 @@ const config: Linter.Config = {
           'os',
           'cpu',
           'engines',
+          'config',
         ],
       },
       {
         pathPattern: '^overrides|patchedDependencies|dependencies|peerDependencies|optionalDependencies|bundledDependencies|devDependencies|peerDependenciesMeta$',
-        order: {
-          type: 'asc',
-          natural: true,
-        },
+        order: [
+          {
+            keyPattern: '^(?!@types/)',
+            order: {
+              type: 'asc',
+              natural: true,
+            },
+          },
+          {
+            order: {
+              type: 'asc',
+              natural: true,
+            },
+          },
+        ],
+      },
+      {
+        pathPattern: '^repository$',
+        order: [
+          'type',
+          'url',
+          'directory',
+          {
+            order: {
+              type: 'asc',
+              natural: true,
+            },
+          },
+        ],
+      },
+      {
+        pathPattern: '^imports$',
+        order: [
+          {
+            keyPattern: String.raw`^(?!(?:#src/\*|#/\*|#root/\*)$)`,
+            order: {
+              type: 'asc',
+              natural: true,
+            },
+          },
+          '#src/*',
+          '#/*',
+          '#root/*',
+        ],
       },
       {
         pathPattern: '^scripts|wireit$',
