@@ -74,6 +74,9 @@ const config: Linter.Config = {
       createTypeScriptImportResolver(),
       createNodeResolver(),
     ],
+    perfectionist: {
+      type: 'natural',
+    },
   },
 }
 

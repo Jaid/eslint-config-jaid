@@ -202,6 +202,7 @@ test('additional TypeScript rules are enabled', () => {
     expect(typescriptConfig.rules?.[ruleId]).toEqual(['warn'])
   }
   expect(typescriptConfig.rules?.['unicorn/consistent-conditional-object-spread']).toEqual(['warn', 'ternary'])
+  expect(typescriptConfig.settings?.perfectionist).toEqual({type: 'natural'})
   expect(typescriptConfig.rules?.['perfectionist/sort-jsx-props']).toEqual([
     'warn',
     {

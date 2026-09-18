@@ -87,7 +87,14 @@ const config: Linter.Config = {
         pathPattern: '^overrides|patchedDependencies|dependencies|peerDependencies|optionalDependencies|bundledDependencies|devDependencies|peerDependenciesMeta$',
         order: [
           {
-            keyPattern: '^(?!@types/)',
+            keyPattern: '^(?!@)',
+            order: {
+              type: 'asc',
+              natural: true,
+            },
+          },
+          {
+            keyPattern: '^@(?!types/)',
             order: {
               type: 'asc',
               natural: true,
