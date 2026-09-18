@@ -6,11 +6,12 @@ import jsonConfig from './segments/json/json.ts'
 import jsoncConfig from './segments/json/jsonc.ts'
 import launchJsonConfig from './segments/json/launchJson.ts'
 import packageJsonConfig from './segments/json/packageJson.ts'
+import markdownConfig from './segments/markdown/markdown.ts'
 import reactConfig from './segments/react/react.ts'
 import typescriptConfig from './segments/typescript/typescript.ts'
 import yamlConfig from './segments/yaml/yaml.ts'
 
-export type EslintConfigSegment = 'json' | 'react' | 'typescript' | 'yaml'
+export type EslintConfigSegment = 'json' | 'markdown' | 'react' | 'typescript' | 'yaml'
 export type MakeEslintConfigOptions = {
   excludeRules?: Array<string>
   excludeSegments?: Array<EslintConfigSegment>
@@ -26,6 +27,10 @@ const segmentGroups = [
       packageJsonConfig,
       launchJsonConfig,
     ],
+  },
+  {
+    id: 'markdown',
+    configs: [markdownConfig],
   },
   {
     id: 'yaml',
@@ -87,6 +92,7 @@ export {default as jsonConfig} from './segments/json/json.ts'
 export {default as jsoncConfig} from './segments/json/jsonc.ts'
 export {default as launchJsonConfig} from './segments/json/launchJson.ts'
 export {default as packageJsonConfig} from './segments/json/packageJson.ts'
+export {default as markdownConfig} from './segments/markdown/markdown.ts'
 export {default as reactConfig} from './segments/react/react.ts'
 export {default as typescriptConfig} from './segments/typescript/typescript.ts'
 export {default as yamlConfig} from './segments/yaml/yaml.ts'

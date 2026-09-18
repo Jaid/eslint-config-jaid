@@ -5,6 +5,7 @@ import packageJsonPlugin from 'eslint-plugin-package-json'
 import {makeEslintConfig} from '../src/main.ts'
 import jsonConfig from '../src/segments/json/json.ts'
 import packageJsonConfig from '../src/segments/json/packageJson.ts'
+import markdownConfig from '../src/segments/markdown/markdown.ts'
 import reactConfig from '../src/segments/react/react.ts'
 import typescriptConfig from '../src/segments/typescript/typescript.ts'
 import yamlConfig from '../src/segments/yaml/yaml.ts'
@@ -189,6 +190,18 @@ test('package.json rules are enabled', () => {
     {
       forDependencyTypes: ['dependencies', 'devDependencies', 'optionalDependencies'],
       rangeType: 'pin',
+    },
+  ])
+})
+test('Markdown rules are enabled', () => {
+  expect(markdownConfig.language).toBe('markdown/gfm')
+  expect(markdownConfig.rules?.['markdown/heading-increment']).toEqual(['warn'])
+  expect(markdownConfig.rules?.['markdown/no-empty-images']).toEqual(['warn'])
+  expect(markdownConfig.rules?.['markdown/no-empty-links']).toEqual(['warn'])
+  expect(markdownConfig.rules?.['markdown/no-duplicate-headings']).toEqual([
+    'warn',
+    {
+      checkSiblingsOnly: true,
     },
   ])
 })
