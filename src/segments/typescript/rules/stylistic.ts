@@ -132,9 +132,12 @@ export const stylisticRules = (): Ruleset => {
       implicitArrowLinebreak: [],
       linebreakStyle: 'unix',
       newParens: 'never',
-      noExtraParens: {
-        ignoredNodes: ['ArrowFunctionExpression[body.type=ConditionalExpression]'],
-      },
+      noExtraParens: [
+        'all',
+        {
+          ignoredNodes: ['ArrowFunctionExpression[body.type=ConditionalExpression]'],
+        },
+      ],
       noFloatingDecimal: [],
       noMultipleEmptyLines: {
         max: 1,
