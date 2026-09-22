@@ -14,6 +14,7 @@ const config: Linter.Config = {
   },
   rules: {
     'markdown/heading-increment': ['warn'],
+    'markdown/no-duplicate-definitions': ['warn'],
     'markdown/no-duplicate-headings': ['warn', {
       checkSiblingsOnly: true,
     }],

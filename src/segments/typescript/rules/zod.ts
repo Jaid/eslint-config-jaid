@@ -7,6 +7,7 @@ export const zodRules = (): Ruleset => ({
     noAnySchema: [],
     noCoerceBoolean: [],
     noConflictingChecks: [],
+    noDuplicateSchemaMethods: [],
     noEmptyCustomSchema: [],
     noNativeEnum: [],
     noNumberSchemaWithFinite: [],

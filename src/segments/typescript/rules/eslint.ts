@@ -74,6 +74,7 @@ export const eslintRules = (): Ruleset => {
         makeImportMigration('rollup', 'rolldown'),
       ],
       noExtraBind: [],
+      noExtraBooleanCast: [],
       noLossOfPrecision: [],
       noUselessComputedKey: [],
       noUselessReturn: [],

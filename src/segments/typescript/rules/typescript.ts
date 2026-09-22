@@ -85,6 +85,7 @@ export const typescriptRules = (): Ruleset => {
       noUnnecessaryTypeConversion: [],
       noUnnecessaryTypeParameters: [],
       noUselessDefaultAssignment: [],
+      noUselessEmptyExport: [],
     },
   }
 }
