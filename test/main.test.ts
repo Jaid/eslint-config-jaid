@@ -210,6 +210,11 @@ test('modern Unicorn rules are enabled', () => {
     expect(typescriptConfig.rules?.[ruleId]).toEqual(['warn'])
   }
 })
+test('nested ternary rules do not have competing autofixes', () => {
+  expect(typescriptConfig.rules?.['no-nested-ternary']).toEqual(['warn'])
+  expect(typescriptConfig.rules?.['unicorn/no-nested-ternary']).toBeUndefined()
+  expect(typescriptConfig.rules?.['stylistic/no-extra-parens']).toBeDefined()
+})
 test('additional TypeScript rules are enabled', () => {
   for (const ruleId of additionalTypescriptRuleIds) {
     expect(typescriptConfig.rules?.[ruleId]).toEqual(['warn'])
