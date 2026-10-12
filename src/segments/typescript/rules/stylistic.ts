@@ -136,6 +136,7 @@ export const stylisticRules = (): Ruleset => {
         'all',
         {
           ignoredNodes: ['ArrowFunctionExpression[body.type=ConditionalExpression]'],
+          nestedConditionalExpressions: false,
         },
       ],
       noFloatingDecimal: [],

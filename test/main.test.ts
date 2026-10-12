@@ -1,5 +1,6 @@
 import {expect, test} from 'bun:test'
 
+import {ESLint} from 'eslint'
 import packageJsonPlugin from 'eslint-plugin-package-json'
 
 import {makeEslintConfig} from '../src/main.ts'
@@ -219,10 +220,57 @@ test('modern Unicorn rules are enabled', () => {
     expect(typescriptConfig.rules?.[ruleId]).toEqual(['warn'])
   }
 })
-test('nested ternary rules do not have competing autofixes', () => {
-  expect(typescriptConfig.rules?.['no-nested-ternary']).toEqual(['warn'])
-  expect(typescriptConfig.rules?.['unicorn/no-nested-ternary']).toBeUndefined()
-  expect(typescriptConfig.rules?.['stylistic/no-extra-parens']).toBeDefined()
+test('nested ternary rules preserve readable parentheses', () => {
+  expect(typescriptConfig.rules?.['no-nested-ternary']).toBeUndefined()
+  expect(typescriptConfig.rules?.['unicorn/no-nested-ternary']).toEqual(['warn'])
+  expect(typescriptConfig.rules?.['stylistic/no-extra-parens']).toEqual([
+    'warn',
+    'all',
+    {
+      ignoredNodes: ['ArrowFunctionExpression[body.type=ConditionalExpression]'],
+      nestedConditionalExpressions: false,
+    },
+  ])
+})
+test('nested ternary autofixes are stable across runs', async () => {
+  const eslint = new ESLint({
+    fix: true,
+    overrideConfig: [typescriptConfig],
+    overrideConfigFile: true,
+  })
+  const filePath = 'test/fixture/clean-ts/src/index.ts'
+  const source = `function pick(first: boolean, second: boolean) {
+  return first ? 'first' : second ? 'second' : 'fallback'
+}
+`
+  const expected = source.replace(" : second ? 'second' : 'fallback'", " : (second ? 'second' : 'fallback')")
+  const [first] = await eslint.lintText(source, {filePath})
+  expect(first.output).toBe(expected)
+  expect(first.messages).toEqual([])
+  const [second] = await eslint.lintText(expected, {filePath})
+  expect(second.output).toBeUndefined()
+  expect(second.messages).toEqual([])
+}, timeout)
+test('hoisted functions are permitted but forward variable references are not', async () => {
+  expect(typescriptConfig.rules?.['typescript/no-use-before-define']).toEqual(['warn', {functions: false}])
+  const eslint = new ESLint({
+    overrideConfig: [typescriptConfig],
+    overrideConfigFile: true,
+  })
+  const [result] = await eslint.lintText(`const value = later
+const later = 1
+const output = getValue()
+function getValue() {
+  return later
+}
+`, {filePath: 'test/fixture/clean-ts/src/index.ts'})
+  expect(result.messages.filter(message => message.ruleId === 'typescript/no-use-before-define').map(message => message.message)).toEqual([
+    "'later' was used before it was defined.",
+  ])
+}, timeout)
+test('overbroad Promise preferences are disabled', () => {
+  expect(typescriptConfig.rules?.['promise/prefer-await-to-callbacks']).toBeUndefined()
+  expect(typescriptConfig.rules?.['promise/prefer-await-to-then']).toBeUndefined()
 })
 test('additional TypeScript rules are enabled', () => {
   for (const ruleId of additionalTypescriptRuleIds) {

@@ -10,7 +10,5 @@ export const promiseRules = (): Ruleset => ({
     noReturnInFinally: [],
     noReturnWrap: [],
     paramNames: [],
-    preferAwaitToCallbacks: [],
-    preferAwaitToThen: [],
   },
 })

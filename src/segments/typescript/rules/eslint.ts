@@ -21,7 +21,6 @@ export const eslintRules = (): Ruleset => {
       noExtendNative: [],
       noLonelyIf: [],
       noMultiAssign: [],
-      noNestedTernary: [],
       noObjectConstructor: [],
       noUnderscoreDangle: {
         allow: ['__REDUX_DEVTOOLS_EXTENSION_COMPOSE__'],

@@ -39,6 +39,7 @@ export const unicornRules = (): Ruleset => {
       newForBuiltins: [],
       noForEach: [],
       noAwaitExpressionMember: [],
+      noNestedTernary: [],
       preferUnicodeCodePointEscapes: [],
       noNewArray: [],
       noNewBuffer: [],

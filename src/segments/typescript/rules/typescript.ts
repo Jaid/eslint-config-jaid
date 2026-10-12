@@ -49,7 +49,9 @@ export const typescriptRules = (): Ruleset => {
       noDupeClassMembers: [],
       noShadow: [],
       onlyThrowError: [],
-      noUseBeforeDefine: [],
+      noUseBeforeDefine: {
+        functions: false,
+      },
       noUselessConstructor: [],
       preferRegexpExec: [],
       requireArraySortCompare: [],
