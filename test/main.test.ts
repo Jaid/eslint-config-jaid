@@ -32,6 +32,14 @@ const modernUnicornRuleIds = [
   'unicorn/prefer-object-iterable-methods',
   'unicorn/consistent-optional-chaining',
   'unicorn/prefer-set-methods',
+  'unicorn/no-unsafe-json-serialization',
+  'unicorn/no-incomplete-accessor-override',
+  'unicorn/prefer-promise-static-methods',
+  'unicorn/no-invalid-property-descriptor',
+  'unicorn/no-invalid-dom-token',
+  'unicorn/no-prevent-default-in-passive-listener',
+  'unicorn/no-invalid-temporal-arithmetic',
+  'unicorn/require-text-decoder-streaming',
 ] as const
 const eslintReactRuleIds = [
   'react/no-context-provider',
@@ -112,6 +120,7 @@ const additionalTypescriptRuleIds = [
   'typescript/no-useless-default-assignment',
   'typescript/no-unnecessary-type-conversion',
   'typescript/no-unnecessary-type-parameters',
+  'typescript/no-unsafe-enum-assignment',
   'typescript/await-thenable',
   'typescript/no-misused-spread',
   'regex/no-unused-capturing-group',

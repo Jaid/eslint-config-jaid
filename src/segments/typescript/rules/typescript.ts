@@ -32,6 +32,7 @@ export const typescriptRules = (): Ruleset => {
       noUnsafeCall: [],
       noUnsafeDeclarationMerging: [],
       noUnsafeEnumComparison: [],
+      noUnsafeEnumAssignment: [],
       noUnsafeMemberAccess: [],
       noUnsafeReturn: [],
       noUnsafeUnaryMinus: [],

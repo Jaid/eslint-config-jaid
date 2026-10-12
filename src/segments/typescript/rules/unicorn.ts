@@ -179,6 +179,14 @@ export const unicornRules = (): Ruleset => {
       noMismatchedMapKey: [],
       noUnsafeStringReplacement: [],
       noUnreadableNewExpression: [],
+      noUnsafeJsonSerialization: [],
+      noIncompleteAccessorOverride: [],
+      preferPromiseStaticMethods: [],
+      noInvalidPropertyDescriptor: [],
+      noInvalidDomToken: [],
+      noPreventDefaultInPassiveListener: [],
+      noInvalidTemporalArithmetic: [],
+      requireTextDecoderStreaming: [],
     },
   }
 }
