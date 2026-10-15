@@ -51,6 +51,7 @@ export const typescriptRules = (): Ruleset => {
       onlyThrowError: [],
       noUseBeforeDefine: {
         functions: false,
+        classes: false,
       },
       noUselessConstructor: [],
       preferRegexpExec: [],
