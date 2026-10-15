@@ -153,6 +153,7 @@ const additionalTypescriptRuleIds = [
   'unicorn/no-mismatched-map-key',
   'unicorn/no-unsafe-string-replacement',
   'unicorn/no-unreadable-new-expression',
+  'unicorn/no-unnecessary-default-arguments',
 ] as const
 test('makeEslintConfig excludes a rule by full id only', () => {
   const config = makeEslintConfig({
@@ -279,6 +280,16 @@ test('constructor and Promise executor naming rules are relaxed', () => {
     },
   ])
 })
+test('arguments matching their parameter defaults trigger unicorn/no-unnecessary-default-arguments', async () => {
+  const eslint = new ESLint({
+    overrideConfig: [typescriptConfig],
+    overrideConfigFile: true,
+  })
+  const [result] = await eslint.lintText(`const retry = (attempts = 3) => attempts
+export const output = retry(3)
+`, {filePath: 'test/fixture/clean-ts/src/index.ts'})
+  expect(result.messages.map(message => message.ruleId)).toContain('unicorn/no-unnecessary-default-arguments')
+}, timeout)
 test('overbroad Promise preferences are disabled', () => {
   expect(typescriptConfig.rules?.['promise/prefer-await-to-callbacks']).toBeUndefined()
   expect(typescriptConfig.rules?.['promise/prefer-await-to-then']).toBeUndefined()

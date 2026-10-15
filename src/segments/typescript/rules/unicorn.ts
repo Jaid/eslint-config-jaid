@@ -188,6 +188,7 @@ export const unicornRules = (): Ruleset => {
       noPreventDefaultInPassiveListener: [],
       noInvalidTemporalArithmetic: [],
       requireTextDecoderStreaming: [],
+      noUnnecessaryDefaultArguments: [],
     },
   }
 }
