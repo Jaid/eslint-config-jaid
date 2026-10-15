@@ -122,7 +122,6 @@ const additionalTypescriptRuleIds = [
   'typescript/no-unnecessary-type-conversion',
   'typescript/no-unnecessary-type-parameters',
   'typescript/no-unsafe-enum-assignment',
-  'typescript/await-thenable',
   'typescript/no-misused-spread',
   'regex/no-unused-capturing-group',
   'perfectionist/sort-array-includes',
@@ -298,6 +297,7 @@ test('additional TypeScript rules are enabled', () => {
   for (const ruleId of additionalTypescriptRuleIds) {
     expect(typescriptConfig.rules?.[ruleId]).toEqual(['warn'])
   }
+  expect(typescriptConfig.rules?.['typescript/await-thenable']).toBeUndefined()
   expect(typescriptConfig.rules?.['unicorn/consistent-conditional-object-spread']).toEqual(['warn', 'ternary'])
   expect(typescriptConfig.settings?.perfectionist).toEqual({type: 'natural'})
   expect(typescriptConfig.rules?.['perfectionist/sort-jsx-props']).toEqual([
