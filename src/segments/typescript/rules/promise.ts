@@ -9,6 +9,9 @@ export const promiseRules = (): Ruleset => ({
     noPromiseInCallback: [],
     noReturnInFinally: [],
     noReturnWrap: [],
-    paramNames: [],
+    paramNames: {
+      resolvePattern: '^_?resolve',
+      rejectPattern: '^_?reject',
+    },
   },
 })

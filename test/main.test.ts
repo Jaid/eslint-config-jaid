@@ -268,6 +268,17 @@ function getValue() {
     "'later' was used before it was defined.",
   ])
 }, timeout)
+test('constructor and Promise executor naming rules are relaxed', () => {
+  expect(typescriptConfig.rules?.['new-cap']).toEqual(['warn', {capIsNew: false}])
+  expect(typescriptConfig.rules?.['no-underscore-dangle']).toBeUndefined()
+  expect(typescriptConfig.rules?.['promise/param-names']).toEqual([
+    'warn',
+    {
+      rejectPattern: '^_?reject',
+      resolvePattern: '^_?resolve',
+    },
+  ])
+})
 test('overbroad Promise preferences are disabled', () => {
   expect(typescriptConfig.rules?.['promise/prefer-await-to-callbacks']).toBeUndefined()
   expect(typescriptConfig.rules?.['promise/prefer-await-to-then']).toBeUndefined()
@@ -447,10 +458,9 @@ test('conditional hooks trigger react-hooks/rules-of-hooks', async () => {
   const result = await lintFixture('react', reactConfig, {pattern: 'src/conditional-hook.tsx'})
   expect(result.ruleIds).toContain('react-hooks/rules-of-hooks')
 }, timeout)
-test('unknown DOM properties trigger react/dom-no-unknown-property', async () => {
-  const result = await lintFixture('react', reactConfig, {pattern: 'src/unknown-property.tsx'})
-  expect(result.ruleIds).toContain('react/dom-no-unknown-property')
-}, timeout)
+test('react/dom-no-unknown-property is disabled', () => {
+  expect(reactConfig.rules?.['react/dom-no-unknown-property']).toBeUndefined()
+})
 test('double-quoted JSX attributes trigger stylistic/jsx-quotes', async () => {
   const result = await lintFixture('react', reactConfig, {pattern: 'src/double-quotes.tsx'})
   expect(result.ruleIds).toContain('stylistic/jsx-quotes')

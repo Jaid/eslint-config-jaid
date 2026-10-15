@@ -16,15 +16,14 @@ export const eslintRules = (): Ruleset => {
       objectShorthand: [],
       noUselessRename: [],
       noElseReturn: [],
-      newCap: [],
+      newCap: {
+        capIsNew: false,
+      },
       noEqNull: [],
       noExtendNative: [],
       noLonelyIf: [],
       noMultiAssign: [],
       noObjectConstructor: [],
-      noUnderscoreDangle: {
-        allow: ['__REDUX_DEVTOOLS_EXTENSION_COMPOSE__'],
-      },
       noUnneededTernary: [],
       noWith: [],
       oneVar: 'never',

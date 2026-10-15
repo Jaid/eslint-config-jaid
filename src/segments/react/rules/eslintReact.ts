@@ -9,7 +9,6 @@ export const eslintReactRules = (): Ruleset => {
       domNoMissingButtonType: [],
       domNoRenderReturnValue: [],
       domNoStringStyleProp: [],
-      domNoUnknownProperty: [],
       domNoUnsafeTargetBlank: [],
       domNoUseFormState: [],
       domNoVoidElementsWithChildren: [],
